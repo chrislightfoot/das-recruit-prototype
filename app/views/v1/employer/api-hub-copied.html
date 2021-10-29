@@ -1,0 +1,70 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+API key copied - Recruitment API hub - Apprenticeships
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({
+      titleText: "Key copied"      
+    }) }}
+    <h1 class="govuk-heading-xl govuk-!-margin-top-9">Create keys for APIs</h1>
+      <p class="govuk-body">
+        You need to copy a key and give it to your developer so they can integrate your API. You can create new keys to use whenever you need to.
+      </p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Key name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            recruitment-api
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Update<span class="govuk-visually-hidden"> key name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Renewal date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            31 August 2021
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <!--<a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> renewal date</span>
+            </a>-->
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            API key
+          </dt>
+          <dd class="govuk-summary-list__value">
+            4353-3435-4466-1111-7897
+          </dd>
+          <dd class="govuk-summary-list__actions">            
+              Copied<span class="govuk-visually-hidden"> API key</span>
+          </dd>
+        </div>
+      </dl>
+      {{ govukButton({
+        text: "Get a new key",
+        classes: "govuk-button--secondary",
+        href: "api-hub-new-key"
+      }) }}
+    </div>
+</div>
+{% endblock %}
