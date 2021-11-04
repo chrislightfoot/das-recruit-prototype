@@ -17,12 +17,17 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "components/cookie-banner";
+
+//Summary card style
+@import "components/_summary-card";
+
 // Summary box styles
 // @import "components/_info-summary";
 // @import "components/_success-summary";
 
 // MA Floating menu styles
 @import "components/_ma-menu";
+
 // Select2 styles
 @import "components/_select2";
 @import "components/_autocomplete";
@@ -32,7 +37,6 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/_card"; // icon font styles
 @import "components/_das-card"; // icon font styles
 @import "components/_analytics"; // icon font styles
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .das-section-break--thick{
     border-bottom-width:4px;
