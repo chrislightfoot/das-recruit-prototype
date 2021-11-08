@@ -1,4 +1,4 @@
-{% extends "ma-layout.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
 Confirm renewal of API key - Manage apprenticeships - GOV.UK
@@ -48,7 +48,8 @@ Confirm renewal of API key - Manage apprenticeships - GOV.UK
 
       <p>
         {{ govukButton ({
-          text: "Continue"
+          text: "Continue",
+          href: "api-hub-new-key"
         })}}
       </p>
     </form>
