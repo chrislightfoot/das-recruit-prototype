@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set currentPage = "register" %}
+{% set currentPage = "login" %}
 
 {% block beforeContent %}
 {{ govukBackLink({
@@ -13,12 +13,12 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-xl">
-			Register using your email address
-		</h1>		
-		<p class="govuk-body">
-			Register with your email address to access the display advert API key.<br>
-			If you have an account, <a href="login" class="govuk-link govuk-link--no-visited-state">sign in</a>.
+			Sign in
+		</h1>
+		<p>
+			Sign in or <a href="register" class="govuk-link govuk-link--no-visited-state">register </a> to access APIs.
 		</p>
+
 		<form method="post" >
 			{{ govukInput({
 				label:
@@ -35,24 +35,32 @@
 			{{ govukInput({
 				label:
 				{
-					text: "Re-enter email address",
+					text: "Password",
 					classes: "govuk-!-width-three-quarters"
 				},
-				id: "reenter-email",
-				name: "reenter-email",
-				type: "email",
+				hint:
+				{
+					text: ""
+				},
+				id: "password",
+				name: "password",
+				type: "password",
 				classes: "govuk-!-width-three-quarters"
 			}) }}
 
 			<input type="hidden" value="" name="redirect">
-			<input type="hidden" value="true" name="registered">
+			<input type="hidden" value="true" name="logged-in">
 
 			{{ govukButton({
-				text: "Register",
-				href: "registered"
+				text: "Sign in",
+				href: "display-adverts-api-key"
 			}) }}
 		</form>
 
+
+		<ul class="govuk-list">
+			<li><a href="#" class="govuk-link govuk-link--no-visited-state">Forgotten your password?</a></li>
+		</ul>
 	</div>
 </div>
 

@@ -50,7 +50,7 @@
   }) }}
 
       {% block after_header %}
-      <div id="floating-menu-holder" class="tp-loating-menu">
+      <!--<div id="floating-menu-holder" class="tp-loating-menu">
           <div class="account-information floating-menu" role="navigation">
               <div class="js-float">
                   <p class="floating-head-text">Your training provider account</p>
@@ -63,16 +63,30 @@
                   </nav>
               </div>
           </div>
-      </div>
+      </div>-->
+      <div id="floating-menu-holder" class="tp-loating-menu">
+        <div class="account-information floating-menu" role="navigation">
+            <div class="js-float">
+                <p class="floating-head-text">Your training provider account</p>
+                <nav id="user-nav">
+                    <ul role="menubar">
+                        <li><a href="/" class="govuk-link sub-menu-item">XYZ Training UK</a></li>
+                        <li><a href="/notification-settings" class="govuk-link sub-menu-iteme">Notification settings</a></li>
+                        <li><a href="/signout">Sign out</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+      </div>  
 
       <div class="header-organisation" role="navigation">
           <nav class="header-inner">
               <ul role="menubar" id="global-nav-links">
-                  <li><a href="../home" role="menuitem">Home</a></li>                  
+                  <li><a href="account-home" role="menuitem">Home</a></li>                  
                   <li><a href="#" role="menuitem">Apprentice requests</a></li>
                   <li><a href="#" role="menuitem">Manage funding</a></li>
                   <li><a href="#" role="menuitem">Manage your apprentices</a></li>
-                  <li><a href="dashboard" class="selected" role="menuitem">Recruit apprentices</a></li>
+                  <li><a href="../dashboard" class="selected" role="menuitem">Recruit apprentices</a></li>
                   <li><a href="#" role="menuitem">Organisations and agreements</a></li>
               </ul>
           </nav>

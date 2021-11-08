@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set currentPage = "login" %}
+{% set currentPage = "register" %}
 
 {% block beforeContent %}
 {{ govukBackLink({
@@ -13,13 +13,37 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-xl">
-			Sign in
-		</h1>
-		<p>
-			Sign in or <a href="register" class="govuk-link govuk-link--no-visited-state">register </a> to access APIs.
+			Register using your email address
+		</h1>		
+		<p class="govuk-body">
+			Register with your email address to access the display advert API key.<br>
+			If you have an account, <a href="login" class="govuk-link govuk-link--no-visited-state">sign in</a>.
 		</p>
-
 		<form method="post" >
+			{{ govukInput({
+				label:
+				{
+					text: "First name",
+					classes: "govuk-!-width-three-quarters"
+				},
+				id: "fname",
+				name: "fname",
+				type: "text",
+				classes: "govuk-!-width-three-quarters"
+			}) }}
+
+			{{ govukInput({
+				label:
+				{
+					text: "Last name",
+					classes: "govuk-!-width-three-quarters"
+				},
+				id: "lname",
+				name: "lname",
+				type: "text",
+				classes: "govuk-!-width-three-quarters"
+			}) }}
+
 			{{ govukInput({
 				label:
 				{
@@ -38,10 +62,6 @@
 					text: "Password",
 					classes: "govuk-!-width-three-quarters"
 				},
-				hint:
-				{
-					text: ""
-				},
 				id: "password",
 				name: "password",
 				type: "password",
@@ -49,18 +69,14 @@
 			}) }}
 
 			<input type="hidden" value="" name="redirect">
-			<input type="hidden" value="true" name="logged-in">
+			<input type="hidden" value="true" name="registered">
 
 			{{ govukButton({
-				text: "Sign in",
-				href: "#"
+				text: "Register",
+				href: "email"
 			}) }}
 		</form>
 
-
-		<ul class="govuk-list">
-			<li><a href="#" class="govuk-link govuk-link--no-visited-state">Forgotten your password?</a></li>
-		</ul>
 	</div>
 </div>
 
