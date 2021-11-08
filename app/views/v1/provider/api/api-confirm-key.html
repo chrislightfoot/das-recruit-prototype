@@ -27,10 +27,13 @@ Confirm renewal of API key - Apprenticeships - GOV.UK
             classes: "govuk-fieldset__legend--xl govuk-!-margin-bottom-6"
           }
         },
+        hint: {
+          text: "Renewing the key will disable the previous key and will stop your API from working until you use the new key."
+        },
         items: [
         {
           value: "yes",
-          text: "Yes, renew the key",
+          text: "Yes",
           attributes:
           {
             required: required
@@ -38,7 +41,7 @@ Confirm renewal of API key - Apprenticeships - GOV.UK
         },
         {
           value: "no",
-          text: "No, don't renew"
+          text: "No"
         }
         ]
       }) }}
