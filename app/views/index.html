@@ -135,11 +135,15 @@
 <div class="govuk-grid-row">
   <!-- Sprints section starts -->
   <div class="govuk-grid-column-two-thirds">
-    {% include './v1/_summary.html' %}
+    {% include './v2/_summary.html' %}
                 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">
-      Past versions
+      Previous sprints and archive
     </h2>
+    {% set v1Html %}
+    {% include './v1/_summary.html' %}
+    {% endset %} 
+
     {% set archiveHtml %}
     {% include './archive/_summary.html' %}
     {% endset %} 
@@ -148,6 +152,20 @@
       id: "accordion-default",
       items:
       [      
+      {
+        heading:
+        {
+          text: "Design sprint 1"
+        },
+        content:
+        {
+          html: v1Html
+        },
+        summary:
+        {
+          html: '26th October &mdash; 9th November 2021'
+        }
+      },
       {
         heading:
         {
