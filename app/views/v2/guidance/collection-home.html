@@ -1,8 +1,8 @@
 
-{% extends "layout.html" %}
+{% extends "layout-guidance.html" %}
 
 {% block pageTitle %}
-  Mainstream guide example
+  Recruitment collection - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -15,11 +15,11 @@
       <a class="govuk-breadcrumbs__link" href="#">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Citizenship and living in the UK</a>
+      <a class="govuk-breadcrumbs__link" href="#">Apprenticeships</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item">
+    <!--<li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="#">Voting</a>
-    </li>
+    </li>-->
   </ol>
   </div>
   </div>
@@ -29,42 +29,42 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds contents-list">
-        <h1 class="govuk-heading-xl">
-          How to vote
-          </h1>
+        
+        <span class="govuk-caption-xl gem-c-title__context">Collection</span>
+        <h1 class="govuk-heading-xl">Recruitment</h1>
+        <p class="govuk-body-l">Information for training organisations about using the recruit an apprentice service.</p>
+        <!--<nav class="gem-c-contents-list part-navigation-container" aria-label="Pages in this guide" role="navigation" data-module="gem-track-click">
+            <h2 class="gem-c-contents-list__title">
+              Contents
+            </h2>
+            <ol class="gem-c-contents-list__list">
+                <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+                  Overview
 
-          <nav class="gem-c-contents-list part-navigation-container" aria-label="Pages in this guide" role="navigation" data-module="gem-track-click">
-              <h2 class="gem-c-contents-list__title">
-                Contents
-          </h2>
-              <ol class="gem-c-contents-list__list">
-                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
-                    Overview
+                </li>
+                <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                  <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/how-to-vote/voting-and-coronavirus" data-track-options="{&quot;dimension29&quot;:&quot;Voting and coronavirus (COVID-19)&quot;}" href="/how-to-vote/voting-and-coronavirus">Voting and coronavirus (COVID-19)</a>
 
-                  </li>
-                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                    <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/how-to-vote/voting-and-coronavirus" data-track-options="{&quot;dimension29&quot;:&quot;Voting and coronavirus (COVID-19)&quot;}" href="/how-to-vote/voting-and-coronavirus">Voting and coronavirus (COVID-19)</a>
+                </li>
+                <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                  <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 3" data-track-label="/how-to-vote/voting-in-person" data-track-options="{&quot;dimension29&quot;:&quot;Voting in person&quot;}" href="/how-to-vote/voting-in-person">Voting in person</a>
 
-                  </li>
-                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                    <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 3" data-track-label="/how-to-vote/voting-in-person" data-track-options="{&quot;dimension29&quot;:&quot;Voting in person&quot;}" href="/how-to-vote/voting-in-person">Voting in person</a>
+                </li>
+                <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                  <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="/how-to-vote/postal-voting" data-track-options="{&quot;dimension29&quot;:&quot;Voting by post&quot;}" href="/how-to-vote/postal-voting">Voting by post</a>
 
-                  </li>
-                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                    <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="/how-to-vote/postal-voting" data-track-options="{&quot;dimension29&quot;:&quot;Voting by post&quot;}" href="/how-to-vote/postal-voting">Voting by post</a>
+                </li>
+                <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                  <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 5" data-track-label="/how-to-vote/voting-by-proxy" data-track-options="{&quot;dimension29&quot;:&quot;Voting by proxy&quot;}" href="/how-to-vote/voting-by-proxy">Voting by proxy</a>
 
-                  </li>
-                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                    <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 5" data-track-label="/how-to-vote/voting-by-proxy" data-track-options="{&quot;dimension29&quot;:&quot;Voting by proxy&quot;}" href="/how-to-vote/voting-by-proxy">Voting by proxy</a>
+                </li>
+                <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                  <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 6" data-track-label="/how-to-vote/voting-from-abroad" data-track-options="{&quot;dimension29&quot;:&quot;Voting from abroad&quot;}" href="/how-to-vote/voting-from-abroad">Voting from abroad</a>
 
-                  </li>
-                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                    <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 6" data-track-label="/how-to-vote/voting-from-abroad" data-track-options="{&quot;dimension29&quot;:&quot;Voting from abroad&quot;}" href="/how-to-vote/voting-from-abroad">Voting from abroad</a>
-
-                  </li>
-              </ol>
+                </li>
+            </ol>
           </nav>
-          <!--
+          
           <p class="govuk-body-s">Contents</p>
               <ol class="govuk-list govuk-body-s contents">
                 <li>&mdash; Overview</li>
@@ -73,18 +73,16 @@
                 <li>&mdash; <a href="#">Voting by post</a></li>
                 <li>&mdash; <a href="#">Voting by proxy</a></li>
                 <li>&mdash; <a href="#">Voting from abroad</a></li>
-                </ol>
-
-                -->
+                </ol>-->
           </div>
-
+          
           <div class="govuk-grid-column-one-third">
           </div>
       </div>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds mainstream-guide-content">
-            <h2 class="govuk-heading-m">Overview</h2>
+            <!--<h2 class="govuk-heading-m">Overview</h2>-->
               <p>You need to be registered to vote before you can vote in UK elections or referendums.</p>
 
               <p> If you’re eligible, you can vote in person on the day of the election at a named polling station. You can also apply for a postal or proxy vote instead.</p>
