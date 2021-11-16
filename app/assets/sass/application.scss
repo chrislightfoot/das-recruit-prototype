@@ -37,6 +37,8 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/_card"; // icon font styles
 @import "components/_das-card"; // icon font styles
 @import "components/_analytics"; // icon font styles
+@import "components/_side-navigation"; // moj side nav styles
+@import "components/_login-nav"; // login nav styles
 
 .das-section-break--thick{
     border-bottom-width:4px;

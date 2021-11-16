@@ -1,8 +1,9 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Subscribe to an API - Apprenticeship services - GOV.UK
+Are you sure you want to subscribe to this API? - Apprenticeship services - GOV.UK
 {% endblock %}
+
 {% block beforeContent %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -14,10 +15,42 @@ Subscribe to an API - Apprenticeship services - GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Subscribe to an API</h1>
-      <p class="govuk-body" id="recruitment-api-live">
-        <a href="api-subscribed" class="govuk-link govuk-link--no-visited-state">Subscribe to Recruitment API (Live)</a>
-      </p>      
+    <form method="post" novalidate>
+      {{ govukRadios({
+        idPrefix: "confirm-key",
+        name: "confirm-key",
+        fieldset:
+        {
+          legend:
+          {
+            text: "Are you sure you want to subscribe to this API?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl govuk-!-margin-bottom-6"
+          }
+        },
+        items: [
+        {
+          value: "yes",
+          text: "Yes",
+          attributes:
+          {
+            required: required
+          }
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+        ]
+      }) }}
+
+      <p>
+        {{ govukButton ({
+          text: "Continue",
+          href: "api-subscribed"
+        })}}
+      </p>
+    </form>     
   </div>
 </div>
 {% endblock %}

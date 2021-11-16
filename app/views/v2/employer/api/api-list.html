@@ -15,7 +15,63 @@ List of APIs - Apprenticeship services - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">List of APIs</h1>
-      <p class="govuk-body" id="recruitment-api-live">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col"> API name </th>
+          <th class="govuk-table__header" scope="col"> Status </th>
+          <th class="govuk-table__header" scope="col"> Action </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Display adverts API
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag">
+              Subscribed
+            </strong>    
+          </td>
+          <td class="govuk-table__cell">
+            <a href="api-hub?api=display-adverts-api" class="govuk-link govuk-link--no-visited-state">
+              View
+            </a>  
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Recruitment API (Live)
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">
+              Not subscribed
+            </strong>    
+          </td>
+          <td class="govuk-table__cell">
+            <a href="api-subscribe" class="govuk-link govuk-link--no-visited-state">
+              Subscribe
+            </a>    
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Recruitment API (Sandbox)
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag">
+              Subscribed
+            </strong>    
+          </td>
+          <td class="govuk-table__cell">
+            <a href="api-hub?api=recruitment-api-sandbox" class="govuk-link govuk-link--no-visited-state">
+              View
+            </a>  
+          </td>
+        </tr>
+      </tbody>
+    </table>  
+    <!--<p class="govuk-body" id="recruitment-api-live">
         <a href="api-subscribe?api=recruitment-api" class="govuk-link govuk-link--no-visited-state">Recruitment API (Live)</a>
       </p>
       <ul class="govuk-list govuk-list-bullet">
@@ -35,7 +91,7 @@ List of APIs - Apprenticeship services - GOV.UK
       <ul class="govuk-list govuk-list-bullet">
         <li></li>
         <li></li>
-      </ul>
+      </ul>-->
   </div>
 </div>
 {% endblock %}
