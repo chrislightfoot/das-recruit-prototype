@@ -1,18 +1,20 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-List of APIs - Apprenticeship services - GOV.UK
+Subscribe to the APIs - Apprenticeship services - GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">List of APIs</h1>
+    <h1 class="govuk-heading-xl">Subscribe to the APIs</h1>
+    <p class="govuk-body">
+      You need to subscribe to the API to copy an API key and give it to your developer, this gives them permission to connect to the API on your behalf.
+    </p>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th class="govuk-table__header" scope="col"> API name </th>
-          <th class="govuk-table__header" scope="col"> Status </th>
           <th class="govuk-table__header" scope="col"> Action </th>
         </tr>
       </thead>
@@ -20,11 +22,6 @@ List of APIs - Apprenticeship services - GOV.UK
         <tr class="govuk-table__row">
           <td class="govuk-table__cell" id="display-adverts-api">
             Display adverts API
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              Not subscribed
-            </strong>    
           </td>
           <td class="govuk-table__cell">
             <a href="api-subscribe" class="govuk-link govuk-link--no-visited-state">
