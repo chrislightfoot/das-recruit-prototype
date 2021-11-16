@@ -30,7 +30,7 @@ Are you sure you want to subscribe to this API? - Apprenticeship services - GOV.
         },
         items: [
         {
-          value: "yes",
+          value: "yes~api-subscribed",
           text: "Yes",
           attributes:
           {
@@ -38,7 +38,7 @@ Are you sure you want to subscribe to this API? - Apprenticeship services - GOV.
           }
         },
         {
-          value: "no",
+          value: "no~api-list",
           text: "No"
         }
         ]
@@ -46,8 +46,7 @@ Are you sure you want to subscribe to this API? - Apprenticeship services - GOV.
 
       <p>
         {{ govukButton ({
-          text: "Continue",
-          href: "api-subscribed"
+          text: "Continue"
         })}}
       </p>
     </form>     
