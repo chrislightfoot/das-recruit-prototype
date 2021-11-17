@@ -6,7 +6,7 @@ API hub - Apprenticeships - GOV.UK
 {% block beforeContent %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+      <a href="api-list" class="govuk-back-link">Back to API list</a>
   </div>
 </div>
 {% endblock %}
@@ -14,7 +14,10 @@ API hub - Apprenticeships - GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Create keys for APIs</h1>
+    {{ govukPanel({
+      titleText: "Successfully suscribed to API"      
+    }) }}
+    <h1 class="govuk-heading-xl govuk-!-margin-top-9">Create keys for APIs</h1>
       <p class="govuk-body">
         You need to copy a key and give it to your developer, this gives them permission to connect to the API on your behalf.
       </p>
@@ -34,7 +37,7 @@ API hub - Apprenticeships - GOV.UK
         <div class="app-summary-card--content">
           <p class="govuk-body">
             Create an advert on any website and Find an apprenticeship.<br>
-            Give the key and <a href="../../guidance/recruitment-api-documentation" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer.
+            Give the key and <a href="" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer.
           </p>
           <dl class="govuk-summary-list govuk-summary-list__m">
             <div class="govuk-summary-list__row">
@@ -50,6 +53,16 @@ API hub - Apprenticeships - GOV.UK
                 </a>
               </dd>
             </div>            
+            <!--<div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Key name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                recruitment-api-live
+              </dd>
+              <dd class="govuk-summary-list__value">                
+              </dd>
+            </div>-->
           </dl>
           <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
@@ -157,9 +170,9 @@ API hub - Apprenticeships - GOV.UK
             </div>
           </details>
         </div>
-      </div>
+      </div>-->
 
-      <h2 class="govuk-heading-m">Recruitment API (Live)</h2>
+      <!--<h2 class="govuk-heading-m">Recruitment API (Live)</h2>
       <p class="govuk-body">
         Create an advert on any website and Find an apprenticeship.<br>
         Give the key and <a href="" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer

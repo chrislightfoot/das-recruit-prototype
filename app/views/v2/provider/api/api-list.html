@@ -1,0 +1,91 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+List of APIs - Apprenticeships - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">List of APIs</h1>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col"> API name </th>
+          <th class="govuk-table__header" scope="col"> Action </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" id="display-adverts-api">
+            Display adverts API (Live)
+          </td>
+          <td class="govuk-table__cell">
+            <a href="api-hub?api=display-adverts-api" class="govuk-link govuk-link--no-visited-state">
+              View
+            </a>  
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Recruitment API (Live)
+          </td>          
+          <td class="govuk-table__cell">
+            <a href="api-hub" class="govuk-link govuk-link--no-visited-state">
+              Get key
+            </a>    
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Recruitment API (Sandbox)
+          </td>
+          <td class="govuk-table__cell">
+            <a href="api-hub?api=recruitment-api-sandbox" class="govuk-link govuk-link--no-visited-state">
+              View
+            </a>  
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Example API (Live)
+          </td>
+          <td class="govuk-table__cell">
+            <a href="no-permission" class="govuk-link govuk-link--no-visited-state">
+              Get key
+            </a>  
+          </td>
+        </tr>
+      </tbody>
+    </table>  
+    <!--<p class="govuk-body" id="recruitment-api-live">
+        <a href="api-subscribe?api=recruitment-api" class="govuk-link govuk-link--no-visited-state">Recruitment API (Live)</a>
+      </p>
+      <ul class="govuk-list govuk-list-bullet">
+        <li></li>
+        <li></li>
+      </ul>
+      <p class="govuk-body" id="recruitment-api-sandbox">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Recruitment API (Sandbox)</a>
+      </p>
+      <ul class="govuk-list govuk-list-bullet">
+        <li></li>
+        <li></li>
+      </ul>
+      <p class="govuk-body" id="display-adverts-api">
+        <a href="display-adverts-api-key" class="govuk-link govuk-link--no-visited-state">Display adverts API (Live)</a>
+      </p>
+      <ul class="govuk-list govuk-list-bullet">
+        <li></li>
+        <li></li>
+      </ul>-->
+  </div>
+</div>
+{% endblock %}
