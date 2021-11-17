@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-API key copied - API hub - Manage apprenticeships - GOV.UK
+Display adverts API key - Manage apprenticeships - GOV.UK
 {% endblock %}
 {% block beforeContent %}
 <div class="govuk-grid-row">
@@ -14,12 +14,12 @@ API key copied - API hub - Manage apprenticeships - GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    {{ govukPanel({
+    <!--{{ govukPanel({
       titleText: "Key copied"      
-    }) }}
+    }) }}-->
         <h1 class="govuk-heading-xl">Display adverts API key</h1>
           <p class="govuk-body">
-            You need to copy a key and give it to your developer, this gives them permission to connect to the API on your behalf.
+            You need to copy the API key and give it to your developer, this gives them permission to connect to the API on your behalf.
           </p>          
           <div class="app-summary-card ">
             <header class="app-summary-card--header">
@@ -30,7 +30,7 @@ API key copied - API hub - Manage apprenticeships - GOV.UK
             <div class="app-summary-card--content">
               <p class="govuk-body">
                 Display recruitment adverts from Find an apprenticeship.<br>
-                Give the key and <a href="display-adverts-api-documentation" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer.
+                Give the API key and <a href="display-adverts-api-documentation" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer.
               </p>
               <dl class="govuk-summary-list govuk-summary-list__m">
                 <div class="govuk-summary-list__row">
@@ -41,9 +41,7 @@ API key copied - API hub - Manage apprenticeships - GOV.UK
                     <code style="color:darkred; font-size:14px;">32cfbdeb64f14277ac33d4dd06640ilj</code>
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="api-hub-copied">
-                      Copy<span class="govuk-visually-hidden"> key</span>
-                    </a>
+                    API key copied
                   </dd>
                 </div>            
                 <!--<div class="govuk-summary-list__row">
