@@ -1,7 +1,7 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-List of APIs - Apprenticeship services - GOV.UK
+API list - Apprenticeship services - GOV.UK
 {% endblock %}
 {% block beforeContent %}
 <div class="govuk-grid-row">
@@ -14,28 +14,19 @@ List of APIs - Apprenticeship services - GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">List of APIs</h1>
+    <h1 class="govuk-heading-xl">API list</h1>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th class="govuk-table__header" scope="col"> API name </th>
-          <th class="govuk-table__header" scope="col"> Action </th>
+          <th class="govuk-table__header" scope="col" style="width:12%;"> Action </th>
         </tr>
-      </thead>
+      </thead>      
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell" id="display-adverts-api">
-            Display adverts API (Live)
-          </td>
-          <td class="govuk-table__cell">
-            <a href="api-hub?api=display-adverts-api" class="govuk-link govuk-link--no-visited-state">
-              View
-            </a>  
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
+          <td class="govuk-table__cell" id="recruitment-api-live">
             Recruitment API (Live)
+            <span class="govuk-caption-m">Create an advert on any website and Find an apprenticeship.</span>
           </td>          
           <td class="govuk-table__cell">
             <a href="api-hub" class="govuk-link govuk-link--no-visited-state">
@@ -44,16 +35,29 @@ List of APIs - Apprenticeship services - GOV.UK
           </td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
+          <td class="govuk-table__cell" id="recruitment-api-sandbox">
             Recruitment API (Sandbox)
+            <span class="govuk-caption-m">Test creating an advert on any website and Find an apprenticeship.</span>
           </td>
           <td class="govuk-table__cell">
-            <a href="api-hub?api=recruitment-api-sandbox" class="govuk-link govuk-link--no-visited-state">
-              View
+            <a href="api-hub" class="govuk-link govuk-link--no-visited-state">
+              View key
             </a>  
           </td>
         </tr>
+      
         <tr class="govuk-table__row">
+          <td class="govuk-table__cell" id="display-adverts-api">
+            Display adverts API (Live)
+            <span class="govuk-caption-m">Display recruitment adverts from Find an apprenticeship.</span>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="api-hub" class="govuk-link govuk-link--no-visited-state">
+              View key
+            </a>  
+          </td>
+        </tr>
+        <!--<tr class="govuk-table__row">
           <td class="govuk-table__cell">
             Example API (Live)
           </td>
@@ -62,7 +66,7 @@ List of APIs - Apprenticeship services - GOV.UK
               Get key
             </a>  
           </td>
-        </tr>
+        </tr>-->
       </tbody>
     </table>  
     <!--<p class="govuk-body" id="recruitment-api-live">
