@@ -1,7 +1,7 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-API list - Apprenticeship services - GOV.UK
+API list - Manage apprenticeships - GOV.UK
 {% endblock %}
 {% block beforeContent %}
 <div class="govuk-grid-row">
@@ -24,8 +24,8 @@ API list - Apprenticeship services - GOV.UK
       </thead>      
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell" id="recruitment-api-live">
-            Recruitment API (Live)
+          <td class="govuk-table__cell" id="recruitment-api-live" name="api-name">
+            Recruitment API
             <span class="govuk-caption-m">Create an advert on any website and Find an apprenticeship.</span>
           </td>          
           <td class="govuk-table__cell">
@@ -35,7 +35,7 @@ API list - Apprenticeship services - GOV.UK
           </td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell" id="recruitment-api-sandbox">
+          <td class="govuk-table__cell" id="recruitment-api-sandbox" name="api-name">
             Recruitment API (Sandbox)
             <span class="govuk-caption-m">Test creating an advert on any website and Find an apprenticeship.</span>
           </td>
@@ -47,7 +47,7 @@ API list - Apprenticeship services - GOV.UK
         </tr>
       
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell" id="display-adverts-api">
+          <td class="govuk-table__cell" id="display-adverts-api" name="api-name">
             Display adverts API (Live)
             <span class="govuk-caption-m">Display recruitment adverts from Find an apprenticeship.</span>
           </td>
