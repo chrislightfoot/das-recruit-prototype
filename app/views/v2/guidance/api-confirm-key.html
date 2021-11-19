@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirm renewal of API key - Manage apprenticeships - GOV.UK
+Are you sure you want to renew this API key? - Apprenticeship services - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,17 +22,17 @@ Confirm renewal of API key - Manage apprenticeships - GOV.UK
         {
           legend:
           {
-            text: "Are you sure you want to renew this key?",
+            text: "Are you sure you want to renew this API key?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl govuk-!-margin-bottom-6"
           }
         },
         hint: {
-          text: "Renewing the key will disable the previous key and will stop your API from working until you use the new key."
+          text: "Renewing the API key will disable the previous key and will stop your API from working until you use the new key."
         },
         items: [
         {
-          value: "yes",
+          value: "yes~api-hub-new-key",
           text: "Yes",
           attributes:
           {
@@ -40,7 +40,7 @@ Confirm renewal of API key - Manage apprenticeships - GOV.UK
           }
         },
         {
-          value: "no",
+          value: "no~api-hub",
           text: "No"
         }
         ]
@@ -48,8 +48,7 @@ Confirm renewal of API key - Manage apprenticeships - GOV.UK
 
       <p>
         {{ govukButton ({
-          text: "Continue",
-          href: "api-hub-new-key"
+          text: "Continue"
         })}}
       </p>
     </form>
