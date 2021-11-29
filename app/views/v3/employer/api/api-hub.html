@@ -23,24 +23,34 @@ Key for API - Manage apprenticeships - GOV.UK
           </p>
           <div class="app-summary-card ">
             <header class="app-summary-card--header">
-              <h3 class="app-summary-card--title">Recruitment API</h3>
+              <h3 class="app-summary-card--title">
+                {% if data['apiName'] == "recruitment-api" %}
+                Recruitment API
+                {% elseif data['apiName'] == "recruitment-api-sandbox" %}
+                Recruitment API (Sandbox)
+                {% else %}
+                Display Adverts API
+                {% endif %}
+              </h3>
               <div class="app-summary-card__actions">
-                <!--<ul class="app-summary-card__actions-list">
-                  <li class="app-summary-card__actions-list-item">
-                    <a class="govuk-link" href="#">
-                      Copy key<span class="govuk-visually-hidden"></span>
-                    </a>
-                  </li>
-                </ul>-->
+
               </div>
             </header>
             <div class="app-summary-card--content">
               <p class="govuk-body">
                 Create an advert on Find an apprenticeship using your existing systems.<br>
-                Give the API key and <a href="../../guidance/recruitment-api-documentation" class="govuk-link govuk-link--no-visited-state">the link to the API page</a> to your developer.
+                <!--Copy the API key and <a href="../../guidance/recruitment-api-documentation" class="govuk-link govuk-link--no-visited-state">the link to the API page</a> to your developer.-->
+
+                You'll need to send the API key and the <a href="#" class="govuk-link">API page</a> to your developer. You can do this by copying the information below and pasting it into an email.<br><br>             
+
+                <!--<a class="govuk-link govuk-link--no-visited-state" href="api-hub-copied">Copy<span class="govuk-visually-hidden"> key</span></a><br><br>-->
+
+                <code style="color:darkgreen;">99cfbdeb64f14277ac33d4dd06640ede<br> https://developer.apprenticeships.education.gov.uk/recruitment-api-documentation</code>
+
+                
               </p>
               <dl class="govuk-summary-list govuk-summary-list__m">
-                <div class="govuk-summary-list__row">
+                <!--<div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     API key
                   </dt>
@@ -52,8 +62,22 @@ Key for API - Manage apprenticeships - GOV.UK
                       Copy<span class="govuk-visually-hidden"> key</span>
                     </a>
                   </dd>
-                </div>            
-                <!--<div class="govuk-summary-list__row">
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Developer link
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#" class="govuk-link govuk-link--no-visited-state">https://manage-apprenticeships.gov.uk/</a>
+                    https://manage-apprenticeships.gov.uk/
+                  </dd>
+                  <dd class="govuk-summary-list__actions">     
+                    <a class="govuk-link govuk-link--no-visited-state" href="api-hub-copied">
+                      Copy<span class="govuk-visually-hidden"> key</span>
+                    </a>
+                  </dd>
+                </div>           
+                <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Key name
                   </dt>
@@ -64,6 +88,7 @@ Key for API - Manage apprenticeships - GOV.UK
                   </dd>
                 </div>-->
               </dl>
+
               <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                   <span class="govuk-details__summary-text">
@@ -71,7 +96,7 @@ Key for API - Manage apprenticeships - GOV.UK
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  Renewing the key will disable the previous key and will stop your API from working until you use the new key. <a href="api-confirm-key" class="govuk-link govuk-link--no-visited-state">Renew key</a>.
+                  Reasons you might want to renew your key include security issues, a change in your systems or change of developer or staff.<br><br>Renewing the key will disable the previous key and will stop your API from working until you use the new key. <a href="api-confirm-key" class="govuk-link govuk-link--no-visited-state">Renew key</a>.
                 </div>
               </details>
             </div>
