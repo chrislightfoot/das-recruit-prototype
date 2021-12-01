@@ -66,8 +66,23 @@ Create an account - Apprenticeship services - GOV.UK
 					text: "Password",
 					classes: "govuk-!-width-three-quarters"
 				},
+				hint: {
+				  text: "Password requires upper and lowercase letters, a number and at least 8 characters."
+				},
 				id: "password",
 				name: "password",
+				type: "password",
+				classes: "govuk-!-width-three-quarters"
+			}) }}
+
+			{{ govukInput({
+				label:
+				{
+					text: "Confirm password",
+					classes: "govuk-!-width-three-quarters"
+				},
+				id: "password2",
+				name: "password2",
 				type: "password",
 				classes: "govuk-!-width-three-quarters"
 			}) }}
@@ -75,12 +90,16 @@ Create an account - Apprenticeship services - GOV.UK
 			<input type="hidden" value="" name="redirect">
 			<input type="hidden" value="true" name="registered">
 
+			<p class="govuk-body">
+				By continuing you accept the <a href="#" class="govuk-link govuk-link--no-visited-state">terms and conditions</a>.
+			</p>
+
 			{{ govukButton({
 				text: "Create account",
+				classes: "govuk-!-margin-top-6",
 				href: "awaiting-confirmation"
 			}) }}
 		</form>
-
 	</div>
 </div>
 
