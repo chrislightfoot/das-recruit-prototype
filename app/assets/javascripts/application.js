@@ -28,7 +28,7 @@ Copy.prototype.init = function () {
   var $button = document.createElement('button')
   $button.className = 'app-copy-button js-copy-button'
   $button.setAttribute('aria-live', 'assertive')
-  $button.textContent = 'Copy code'
+  $button.textContent = 'Copy key'
 
   $module.insertBefore($button, $module.firstChild)
   this.copyAction()
@@ -41,10 +41,10 @@ Copy.prototype.copyAction = function () {
         return trigger.nextElementSibling
       }
     }).on('success', function (e) {
-      e.trigger.textContent = 'Code copied'
+      e.trigger.textContent = 'Key copied'
       e.clearSelection()
       setTimeout(function () {
-        e.trigger.textContent = 'Copy code'
+        e.trigger.textContent = 'Copy key'
       }, 5000)
     })
   } catch (err) {
