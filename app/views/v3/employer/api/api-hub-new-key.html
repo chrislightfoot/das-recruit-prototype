@@ -32,23 +32,27 @@ Key for API - Manage apprenticeships - GOV.UK
     </h2>
     <p class="govuk-body">
       {% if data['apiName'] == "recruitment-api" %}
-        Create an advert on Find an apprenticeship using your existing systems. You'll need to send the API key to your developer. You can do this by copying the key below and pasting it into an email.
+        Create an advert on Find an apprenticeship using your existing systems.
       {% elseif data['apiName'] == "recruitment-api-sandbox" %}
-        Test creating an advert on Find an apprenticeship using your existing systems. You'll need to send the API key to your developer. You can do this by copying the key below and pasting it into an email.
+        Test creating an advert on Find an apprenticeship using your existing systems.
       {% else %}
-        Display recruitment adverts from Find an apprenticeship. You'll need to send the API key to your developer. You can do this by copying the key below and pasting it into an email.
+        Display recruitment adverts from Find an apprenticeship.
       {% endif %}                
-      <br><br>             
+      <br><br>
+      You'll need to send the API key and the API page to your developer. 
+      <br>
+      You can do this by copying the information below and pasting it into an email.
+      <br><br>                    
     </p>
     <div class="app-summary-card ">
       <header class="app-summary-card--header" data-module="app-copy">        
         {% if data['apiName'] == "recruitment-api" %}
-          <code style="color:darkgreen; font-size:16px;">33emdoflthy86klgh45obnvbnghderm8</code>
-        {% elseif data['apiName'] == "recruitment-api-sandbox" %}
-          <code style="color:darkgreen; font-size:16px;">33emdoflthy86klgh45obnvbnghderm8</code>
-        {% else %}
-          <code style="color:darkgreen; font-size:16px;">33emdoflthy86klgh45obnvbnghderm8</code>
-        {% endif %}
+            <code style="color:darkgreen; font-size:16px;">99cfbdeb64f14277ac33d4dd06640ede<br><br>https://developer.apprenticeships.education.gov.uk/recruitment-api-documentation</code>
+          {% elseif data['apiName'] == "recruitment-api-sandbox" %}
+            <code style="color:darkgreen; font-size:16px;">67tuhjkfki4kfkei4kfjj7iboto6908l<br><br>https://developer.apprenticeships.education.gov.uk/recruitment-api-sandbox-documentation</code>
+          {% else %}
+            <code style="color:darkgreen; font-size:16px;">34dkhjrjvjiojfivjoidjfem33435mfm<br><br>https://developer.apprenticeships.education.gov.uk/display-adverts-api-documentation</code>
+          {% endif %}  
       </header>
     </div>
     <details class="govuk-details govuk-!-margin-top-9" data-module="govuk-details">
