@@ -1,0 +1,59 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {{ govukDetails({
+      summaryText: "Sprint goals",
+      html: "<table class='govuk-table'>                    
+        <thead class='govuk-table__head'>
+          <tr class='govuk-table__row'>
+            <th scope='col' class='govuk-table__header'>What we did</th>
+            <th scope='col' class='govuk-table__header'>Why we did it</th>
+          </tr>
+        </thead>
+        <tbody class='govuk-table__body'>
+          <tr class='govuk-table__row'>
+            <td class='govuk-table__cell'>Researching the building an initial concept for the new APIs</td>
+            <td class='govuk-table__cell'>The ESFA are building improved APIs to make it quicker and easier for users to advertise their apprenticeships on digital platforms</td>
+          </tr>
+        </tbody>
+      </table>"
+    }) }}    
+    <ul class="govuk-list govuk-list--bullet">
+      <h3 class="govuk-heading-m">EPIC: Recruitment APIs</h3>
+        <ul class="govuk-list govuk-list--bullet">  
+          <h4 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom:10px;">Tickets</h4>                            
+          <li><a href="https://trello.com/c/jw8phPP1" class="govuk-link govuk-link--no-visited-state">#104 - Position and Design of the API registration entry point (Trello)</a></li>
+          <li><a href="https://trello.com/c/jjGCPgvm" class="govuk-link govuk-link--no-visited-state">#125 - Design Dev Hub for External users wanting to subscribe (Trello)</a></li> 
+          <h4 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom:10px;">Design artefacts</h4>
+          <li><a href="public/images/raa-api-user-journey-map-v0.3.jpg" class="govuk-link govuk-link--no-visited-state">Service design - user journey map version 0.3 (Image)</a></li>
+          <li><a href="https://miro.com/app/board/o9J_lqGAI0o=/" class="govuk-link govuk-link--no-visited-state">Design board (Miro)</a></li>
+          <h4 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom:10px;">Copy docs</h4>
+          <p class="govuk-body">External users accessing key - </p>
+          <li><a href="https://drive.google.com/drive/u/1/folders/1Q5KyiycHeLzsNcpXxNKi6ERjFRlr6o3Y" class="govuk-link govuk-link--no-visited-state">Create account for API key</a></li>
+          <li><a href="https://docs.google.com/document/d/1MzYRgpJ2RpAOinVcfECyrt_0HCqIeY-iAefXay7pX-w/edit" class="govuk-link govuk-link--no-visited-state">Email sent page</a></li>
+          <li><a href="https://docs.google.com/document/d/1MZ6hez8f3Q-2gGYmGbkQywMrzTf9OYoGEtAj6UH6DL4/edit" class="govuk-link govuk-link--no-visited-state">Create account email</a></li>
+          <li><a href="https://drive.google.com/drive/u/1/folders/1Szg--NOIFUKunq3lsJxROOdsnJnMQvO1" class="govuk-link govuk-link--no-visited-state">Create account success for API key</a></li>
+          <li><a href="https://docs.google.com/document/d/1FauCKdgeFp6NQihG8klfbk99lGB6_AaIWC9buGHRwl8/edit" class="govuk-link govuk-link--no-visited-state">Create key for API</a></li>
+          <p class="govuk-body govuk-!-margin-top-4">Renew API key are you sure - </p>
+          <li><a href="https://docs.google.com/document/d/1p-aYvzF_YhmzDakW8aB-IHE5dICov7WmttSg4oe_i9g/edit" class="govuk-link govuk-link--no-visited-state">Create account email</a></li>
+          <p class="govuk-body govuk-!-margin-top-4">Employer API key</p>
+            <li><a href="https://docs.google.com/document/d/1OdBZXmt6Sb6kGmS_BtkyUA_H3Lvah8zd0RPyeHHcrbk/edit" class="govuk-link govuk-link--no-visited-state">Employer dashboard</a></li>
+            <li><a href="https://docs.google.com/document/d/1yTlRWjcjego-0JxU8YYRPU7sDhSVL_CpEeBR0qClnu4/edit" class="govuk-link govuk-link--no-visited-state">Employer Get started page</a></li>
+            <li><a href="https://docs.google.com/document/d/1u4_QAoDbAI2KwDTL9DXFUUJjyX4G5udcYx2nyAfgBZ0/edit" class="govuk-link govuk-link--no-visited-state">Employer API Key page</a></li>
+            <li><a href="https://docs.google.com/document/d/1Y8fqB0xrMd82RKqRpNhaWqNV34gnFVYblQebB3yWnyY/edit" class="govuk-link govuk-link--no-visited-state">Employer API renew keys - are you sure page</a></li>
+            <li><a href="https://docs.google.com/document/d/1AQF1xTANSpRjHZG-4uaK2yhxZiFp8CZncvgjDGUeZsk/edit" class="govuk-link govuk-link--no-visited-state">Employer API owner permission - shutter page</a></li>
+          <p class="govuk-body govuk-!-margin-top-4">Provider API key</p> 
+            <li><a href="https://docs.google.com/document/d/1C0CbUWJhSAsscA6SgVbKNQbaKJP3zjmQH6ZQzMe2rDY/edit" class="govuk-link govuk-link--no-visited-state">Provider dashboard</a></li>
+            <li><a href="https://docs.google.com/document/d/1kKyODra4R3yhbelpze9_ZnPNOQY6f8TmCAijcGpLNgA/edit" class="govuk-link govuk-link--no-visited-state">Provider Get started page</a></li>
+            <li><a href="https://docs.google.com/document/d/1sxm2T9GaRm4Ulgz_l_29LX2AdxQEZrURvDYYBN5uFCQ/edit" class="govuk-link govuk-link--no-visited-state">Provider API Key page</a></li>
+            <li><a href="https://drive.google.com/drive/u/1/folders/1okMuxECjcfkcFPwIeZfKYSbQnjzxhkz0" class="govuk-link govuk-link--no-visited-state">Provider API renew keys - are you sure page</a></li>
+            <li><a href="https://docs.google.com/document/d/1vc3hkw7NN-BxbrD-iIM-bYe6oiRLqHzOdA5BO-GcrTg/edit" class="govuk-link govuk-link--no-visited-state">Provider API owner permission - shutter page</a></li>
+          <h4 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom:10px;">Protoype links</h4>                            
+            <li><a href="v1/guidance/api" class="govuk-link govuk-link--no-visited-state">gov.uk guidance</a></li>     
+            <li><a href="v1/employer/dashboard" class="govuk-link govuk-link--no-visited-state">Employer service (post-signin)</a></li>
+            <li><a href="v1/provider/account-home" class="govuk-link govuk-link--no-visited-state">Provider service (post-signin)</a></li>
+          <p class="govuk-body govuk-!-margin-top-4">Permissions pages</p>
+            <li><a href="v1/employer/api/no-permission" class="govuk-link govuk-link--no-visited-state">Employer - no permission</a></li>
+            <li><a href="v1/employer/api/no-permission" class="govuk-link govuk-link--no-visited-state">Provider - no permission</a></li>
+        </ul>
+  </div>
+</div>
