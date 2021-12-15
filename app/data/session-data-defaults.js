@@ -17,7 +17,7 @@ Example usage:
 
 */
 
-var moment = require('moment');
+//var moment = require('moment');
 var locations = require('./locations.json')
 var training = require('./training.json')
 var training_full = require('./training-full.json')
@@ -32,8 +32,8 @@ module.exports = {
   // Insert values here
   // Set defaults if any session data is not set
   "user" :                    "employer",
-  "today":                    moment().format('Do MMM YYYY'),
-  "last7days":                moment().subtract(7,'d').format('Do MMM YYYY'),
+  "today":                    "", //moment().format('Do MMM YYYY'),
+  "last7days":                "", //moment().subtract(7,'d').format('Do MMM YYYY'),
   "force_notifcation_setup":  "yes",
   "has_notifications" :       "no",
   "notifications" :           [],
