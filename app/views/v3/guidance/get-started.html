@@ -18,10 +18,12 @@ Get started - Apprenticeship services - GOV.UK
     <h1 class="govuk-heading-xl">Get started</h1>      
     <h2 class="govuk-heading-l">About the Recruitment and Display adverts APIs</h2>
     <p class="govuk-body">
-      <a href="recruitment-api-documentation" class="govuk-link govuk-link--no-visited-state">Recruitment API</a><br>
+      <a href="recruitment-api-documentation" class="govuk-link govuk-link--no-visited-state">Recruitment API</a>
+      <br>
       <span class="govuk-caption">Use this product to create and submit adverts.</span>
       <br><br>
-      <a href="recruitment-api-sandbox-documentation" class="govuk-link govuk-link--no-visited-state">Recruitment API sandbox</a><br><br>
+      <a href="recruitment-api-sandbox-documentation" class="govuk-link govuk-link--no-visited-state">Recruitment API sandbox</a>
+      <br><br>
       <a href="display-adverts-api-documentation" class="govuk-link govuk-link--no-visited-state">Display adverts API</a><br>
       <span class="govuk-caption">Use this product to retrieve adverts.</span>
       <br><br>
@@ -40,13 +42,13 @@ Get started - Apprenticeship services - GOV.UK
       <br><br>
       If you are not a software developer, you'll need someone with technical knowledge to connect your system with the API.
       <br><br>
-      You will need to <a href="register" class="govuk-link govuk-link--no-visited-state">create account or sign in to get an API key</a> to use the display advert API.
+      You will need to <a href="register" class="govuk-link govuk-link--no-visited-state">create an account or sign in to get an API key</a> to use the display advert API.
       <br><br>
       You can <a href="display-adverts-api-documentation" class="govuk-link govuk-link--no-visited-state">view the API</a>, but you will need a key before you can call the API.
     </p>
     <h2 class="govuk-heading-l">RESTful APIs</h2>
     <p class="govuk-body">
-      Apprenticeship Service APIs are RESTful. In a RESTful style of API, data resources are given unique URLs and are manipulated through standard HTTP verbs such as:
+      Apprenticeship service APIs are RESTful. In a RESTful style of API, data resources are given unique URLs and are manipulated through standard HTTP verbs such as:
     </p>
     <ul class="govuk-list govuk-list--bullet">
       <li><code style="color:darkgreen;">GET</code> to request a resource</li>
@@ -55,11 +57,11 @@ Get started - Apprenticeship services - GOV.UK
       <li><code style="color:darkgreen;">DELETE</code> to remove a resource</li>
     </ul>
     <p class="govuk-body">
-      All Apprenticeship Service APIs use the JSON data standard as the content type. JSON, or JavaScript Object Notation, is an open, standard format for storing and exchanging data. It can be used as a data format by any programming language, which makes it ideal for HTTP-based API services.
+      All Apprenticeship service APIs use the JSON data standard as the content type. JSON, or JavaScript Object Notation, is an open, standard format for storing and exchanging data. It can be used as a data format by any programming language, which makes it ideal for HTTP-based API services.
     </p>
     <h2 class="govuk-heading-l">API authentication</h2>
     <p class="govuk-body">
-      Apprenticeship Service APIs require authentication credentials to be sent with each request. Credentials are sent in the form of an API key which is contained within a custom HTTP request header.
+      Apprenticeship service APIs require authentication credentials to be sent with each request. Credentials are sent in the form of an API key which is contained within a custom HTTP request header.
     </p>
     <p class="govuk-body">
       The custom request header must be named <i>Ocp-Apim-Subscription-Key</i> and you must use your API key as the value for this custom request header in each API request.<br><br>
@@ -86,7 +88,7 @@ Get started - Apprenticeship services - GOV.UK
     </p>
     <h2 class="govuk-heading-l">API Versioning</h2>
     <p class="govuk-body">
-      All Apprenticeship Service APIs are versioned. This ensures API consumers receive a predictable response from an API, even when a newer version of an API is released.
+      All Apprenticeship service APIs are versioned. This ensures API consumers receive a predictable response from an API, even when a newer version of an API is released.
       <br><br>
       The version of the API you require must be specified within a custom HTTP request header.  
       <br><br>
@@ -109,12 +111,12 @@ Get started - Apprenticeship services - GOV.UK
       <li>the version specified does not exist</li>
     </ul>
     <p class="govuk-body">
-      The apprenticeship maintains the current version of an API, as well as the previous version for a limited period of time. <span style="color:red;">X</span> months after the release of a new version of an API, the previous version will be decommissioned, so you will need to update to the latest version within <span style="color:red;">X</span> months of the new one becoming available.
+      The Apprenticeship service maintains the current version of an API, as well as the previous version for a limited period of time. 3 months after the release of a new version of an API, the previous version will be decommissioned, so you will need to update to the latest version within 3 months of the new one becoming available.
     </p>
     
     <h2 class="govuk-heading-l">API Rate Limiting</h2>
     <p class="govuk-body">
-      Rate limiting is applied to the Apprenticeship Service APIs to ensure a high quality service is delivered for all users.<br><br>
+      Rate limiting is applied to the Apprenticeship service APIs to ensure a high quality service is delivered for all users.<br><br>
       You can make up to <span style="color:red;">XXXX</span> requests within a <span style="color:red;">X</span>  minute period. If you exceed this limit, you will receive a <code style="color:darkgreen;">429 Too Many Requests</code> HTTP status code for each request made within the rest of the <span style="color:red;">X</span>  minute timeframe. At the end of the time period, your rate limit will reset back to <span style="color:red;">XXXX</span> requests.
     </p>    
     <h2 class="govuk-heading-l">API Key Security</h2>
@@ -135,7 +137,7 @@ Get started - Apprenticeship services - GOV.UK
     </p>
     <h2 class="govuk-heading-l">Environments</h2>
     <p class="govuk-body">
-      Apprenticeship Service APIs are hosted in our live environment where production data is made available. A sandbox environment is also provided for some APIs, which run the same API versions as live to allow software developers to test their integration with Apprenticeship Service APIs in a safe place.
+      Apprenticeship service APIs are hosted in our live environment where production data is made available. A sandbox environment is also provided for some APIs, which run the same API versions as live to allow software developers to test their integration with Apprenticeship service APIs in a safe place.
     </p>
   </div>
 </div>
