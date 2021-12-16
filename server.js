@@ -1,6 +1,7 @@
 // Core dependencies
 const fs = require('fs')
 const path = require('path')
+const url = require('url')
 
 // NPM dependencies
 const bodyParser = require('body-parser')
@@ -55,9 +56,6 @@ var useHttps = process.env.USE_HTTPS || config.useHttps
 useHttps = useHttps.toLowerCase()
 
 var useDocumentation = (config.useDocumentation === 'true')
-
-// logging
-var useLogging = config.useLogging
 
 // Promo mode redirects the root to /docs - so our landing page is docs when published on heroku
 var promoMode = process.env.PROMO_MODE || 'false'
@@ -201,24 +199,6 @@ if (useAutoStoreData === 'true') {
   }
 }
 
-// Logging session data
-if (useLogging !== 'false') {
-  app.use((req, res, next) => {
-    const all = (useLogging === 'true')
-    const post = (useLogging === 'post' && req.method === 'POST')
-    const get = (useLogging === 'get' && req.method === 'GET')
-    if (all || post || get) {
-      const log = {
-        method: req.method,
-        url: req.originalUrl,
-        data: req.session.data
-      }
-      console.log(JSON.stringify(log, null, 2))
-    }
-    next()
-  })
-}
-
 // Clear all data in session if you open /prototype-admin/clear-data
 app.post('/prototype-admin/clear-data', function (req, res) {
   req.session.data = {}
@@ -321,7 +301,11 @@ if (useV6) {
 
 // Redirect all POSTs to GETs - this allows users to use POST for autoStoreData
 app.post(/^\/([^.]+)$/, function (req, res) {
-  res.redirect('/' + req.params[0])
+  res.redirect(url.format({
+    pathname: '/' + req.params[0],
+    query: req.query
+  })
+  )
 })
 
 // Catch 404 and forward to error handler
