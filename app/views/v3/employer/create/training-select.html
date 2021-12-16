@@ -1,19 +1,18 @@
 {% extends "ma-layout.html" %}
 
-
 {% block pageTitle %}
 Manage apprentices
 {% endblock %}
+
+
 {% block beforeContent %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-  </div>
-</div>
+{{super()}}
+{% if data.journey != "new" %}
+<a href="{% if data.edit != 'yes' %}create-vacancy{%else%}../vacancy-preview?edit=no{%endif%}" class="govuk-back-link">Back</a>
+{% endif %}
 {% endblock %}
+
 {% block content %}
-
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">What training will the apprentice take?</h1>
