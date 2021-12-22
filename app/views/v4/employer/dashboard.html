@@ -18,7 +18,8 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
         <h1 class="govuk-heading-xl ">Your apprenticeship adverts</h1>
       </div>
       <div class="govuk-grid-column-one-third" style="text-align: right;">
-        <a href="create/create-vacancy" class="govuk-button" data-module="govuk-button">Create an advert</a>
+        <!--<a href="create/create-vacancy" class="govuk-button" data-module="govuk-button">Create an advert</a>-->
+        <a href="create/{% if data.startpage == 1 %}start-page{% else %}task-list{% endif %}" class="govuk-button" data-module="govuk-button">Create an advert</a>
       </div>
       </div>
       <div class="govuk-grid-row govuk-!-margin-bottom-6">

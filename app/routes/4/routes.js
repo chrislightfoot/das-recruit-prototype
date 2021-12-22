@@ -148,17 +148,19 @@ module.exports = function(router) {
     res.redirect(301, '/' + base_url + req.params[0] + '/create/short-description')
   })
   router.post('/' + base_url + '*/create/positions', function(req, res) {
-    if (req.session.data.NumberOfEntities > 1) {
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/display-employer")
-    }
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/display-name")
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?section2=completed")
+    //if (req.session.data.NumberOfEntities > 1) {
+      //res.redirect(301, '/' + base_url + req.params[0] + "/create/display-employer")
+    //}
+    //res.redirect(301, '/' + base_url + req.params[0] + "/create/display-name")
 
   })
   router.post('/' + base_url + '*/create/display-employer', function(req, res) {
     res.redirect(301, '/' + base_url + req.params[0] + '/create/location')
   })
   router.post('/' + base_url + '*/create/location', function(req, res) {
-    res.redirect(301, '/' + base_url + req.params[0] + '/create/dates')
+    //res.redirect(301, '/' + base_url + req.params[0] + '/create/dates')
+    res.redirect(301, '/' + base_url + req.params[0] + '/create/positions')
   })
   //WAGES
   router.get('/' + base_url + '*/create/wages', function(req, res) {
@@ -219,7 +221,8 @@ module.exports = function(router) {
     if (req.session.data.edit == "yes") {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
     } else {
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/duration");
+      //res.redirect(301, '/' + base_url + req.params[0] + "/create/duration");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/location");
     }
   })
 
@@ -267,7 +270,7 @@ module.exports = function(router) {
   })
   router.post('/' + base_url + '*/create/long-description', function(req, res) {
     //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no")
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no")
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&section1=completed")
   })
   router.get('/' + base_url + '*/create/qualifications', function(req, res) {
     // create a new array if no array exists.

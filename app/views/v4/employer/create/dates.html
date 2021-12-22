@@ -1,15 +1,9 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+Important dates - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
-{% block beforeContent %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-  </div>
-</div>
-{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -22,7 +16,7 @@ Manage apprentices
       <div class="govuk-error-summary__body">
         <ul class="govuk-list govuk-error-summary__list">
           <li>
-            <a href="#passport-issued-error">The start date must be before 01 08 2022 when the apprenticeship training  closes to new starters.</a>
+            <a href="#passport-issued-error">The start date must be before 01 08 2022 when the apprenticeship training closes to new starters.</a>
           </li>
         </ul>
       </div>
@@ -48,7 +42,7 @@ Manage apprentices
             Application closing date
           </label>
           <span id="closing-hint" class="govuk-hint">
-            For example, 19 11 2021
+            For example, 20 02 2022
           </span>
           <div class="govuk-date-input" id="closing">
             <div class="govuk-date-input__item">
@@ -99,7 +93,7 @@ Manage apprentices
             {% elseif data.expiryDate and hasError %}
             You may want to <a href="training-select{% if data.edit=="yes" %}?edit=yes"{% else %}?edit=no"{% endif %} class="govuk-link">find different apprenticeship training</a> that doesnt have an ending date.<br><br>
             {% endif %}
-            For example, 02 12 2021
+            For example, 06 03 2022
           </span>
           <div class="govuk-date-input" id="dob">
             <div class="govuk-date-input__item">
@@ -147,7 +141,7 @@ Manage apprentices
               <input class="govuk-checkboxes__input" id="is-disability-confident" name="is-disability-confident" type="checkbox"
                 value="british" aria-describedby="is-disability-confident">
               <label class="govuk-label govuk-checkboxes__label" for="is-disability-confident">
-                This vacancy is <a href="https://www.gov.uk/government/collections/disability-confident-campaign" rel="noopener"
+                This advert is <a href="https://www.gov.uk/government/collections/disability-confident-campaign" rel="noopener"
                   target="_blank" title="Disability Confident employer scheme and guidance (opens in a new window)">Disability
                   Confident</a>.
               </label>
