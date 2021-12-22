@@ -1,13 +1,13 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+What do you want to call this advert? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
 {{super()}}
 {% if data.journey != "new" %}
-<a href="{% if data.edit != 'yes' %}create-vacancy{%else%}../vacancy-preview?edit=no{%endif%}" class="govuk-back-link">Back</a>
+<a href="../task-list?edit=no" class="govuk-back-link">Back</a>
 {% endif %}
 {% endblock %}
 

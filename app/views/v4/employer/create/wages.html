@@ -87,14 +87,17 @@ Manage apprentices
           </div>
         </fieldset>
       </div>
-
+       
       <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="250">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-!-font-weight-bold" for="WageAdditionalInformation">
-            Extra information about pay (optional)
-          </label>
-          <span class="govuk-hint">For example bonus schemes, performance increases or benefits</span>
-          <textarea class="govuk-textarea govuk-!-width-three-quarters js-character-count " id="WageAdditionalInformation" name="WageAdditionalInformation" rows="5"></textarea>
+          <p class="govuk-body govuk-!-font-weight-bold">Extra information about pay (optional)</p>
+          <div id="WageAdditionalInformation-hint" class="govuk-hint">
+            For example bonus schemes, performance increases or benefits
+          </div>
+          <textarea class="govuk-textarea govuk-!-width-three-quarters js-character-count" id="WageAdditionalInformation" name="WageAdditionalInformation" rows="5"></textarea>          
+        </div>
+        <div id="WageAdditionalInformation-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 250 characters
         </div>
       </div>
 
