@@ -33,8 +33,6 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           <span style="margin-left:170px;">           
             {% if data.title and data.training_level and data.found_training_provider and data.numberOfPositions and data.shortDescription and data.VacancyDescription %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% elseif data.title or data.training_level or data.found_training_provider or data.numberOfPositions or data.shortDescription or data.VacancyDescription %}
-            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In progress</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
@@ -127,11 +125,11 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">2.</span> Employment details {{data.WageType}} {{data.weekly-hours}}
+          <span class="app-task-list__section-number">2.</span> Employment details
           <span style="margin-left:220px;">
-            {% if data.WageType and data.weekly-hours %}
+            {% if data.WageType and data.weeklyHours and data.duration %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% if data.WageType or data.weekly-hours %}
+            {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </span>
@@ -172,7 +170,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.weekly-hours %}
+              {% if data.duration %}
               <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
                 Important dates
               </a>
@@ -189,7 +187,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.title %}
+              {% if data.duration %}
               <a href="location?return_url=task-list" aria-describedby="contact-details-status">
                 Where will the apprentice work?
               </a>

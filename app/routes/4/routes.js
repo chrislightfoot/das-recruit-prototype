@@ -206,9 +206,10 @@ module.exports = function(router) {
   })
   router.post('/' + base_url + '*/create/duration', function(req, res) {
     if (req.session.data.edit == "yes") {
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no");
     } else {
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/wages?error=");
+      //res.redirect(301, '/' + base_url + req.params[0] + "/create/wages?error=");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/dates?error=");
     }
   })
   router.post('/' + base_url + '*/create/dates', function(req, res) {

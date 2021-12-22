@@ -23,8 +23,8 @@ Manage apprentices
         <label class="govuk-label govuk-!-font-weight-bold" for="duration">
           How long is the whole apprenticeship, including work and training?
         </label>
-        <span class="govuk-hint">The apprenticeship must last at least 12 months</span>
-        <span class="govuk-hint">For {{data.training_level or "Food and Drink: Fish and Shellfish Industry Skills"}},  Typical length is 24 months</span>
+        <span class="govuk-hint">The apprenticeship must last for at least 12 months.</span>
+        <span class="govuk-hint">For {{data.training_level or "Food and Drink: Fish and Shellfish Industry Skills"}}, typical length is 18 months.</span><br>
         <input class="govuk-input govuk-input--width-4" id="duration" name="duration" type="text">
         <select class="govuk-select" id="sort" name="sort">
 
@@ -38,9 +38,13 @@ Manage apprentices
           <label class="govuk-label govuk-!-font-weight-bold" for="workingWeekDescription">
             Details of working week
           </label>
-          <span class="govuk-hint">For example, Monday to Friday 9am to 5pm, shifts, may work evenings and weekends</span>
-          <textarea class="govuk-textarea govuk-!-width-three-quarters js-character-count " id="workingWeekDescription"
-            name="workingWeekDescription" rows="5"></textarea>
+          <div id="workingWeekDescription-hint" class="govuk-hint">
+            For example, Monday to Friday 9am to 5pm, shifts, may work evenings and weekends.
+          </div>      
+          <textarea class="govuk-textarea govuk-!-width-three-quarters js-character-count" id="workingWeekDescription" name="workingWeekDescription" rows="5"></textarea>
+        </div>
+        <div id="shortDescription-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 250 characters
         </div>
       </div>
 
@@ -50,7 +54,7 @@ Manage apprentices
         </label>
 
         <input class="govuk-input govuk-input--width-4" id="weekly-hours" name="weeklyHours" type="text" {% if data.weeklyHours and data.edit == "yes"%} value="{{data.weeklyHours}}" {%endif%}>
-        <span class="govuk-body">hours</span>
+        <span class="govuk-body"> hours</span>
       </div>
       <div class="govuk-form-group">
       {% if data.edit != "yes"%}
