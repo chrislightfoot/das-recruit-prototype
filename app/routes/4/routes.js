@@ -399,6 +399,9 @@ module.exports = function(router) {
     //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
     res.redirect(301, '/' + base_url + req.params[0] + "/create/application-process");
   })
+  router.post('/' + base_url + '*/create/check-your-answers', function(req, res) {
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/confirmation");
+  })
 
 
 

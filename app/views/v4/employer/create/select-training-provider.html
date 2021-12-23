@@ -37,12 +37,13 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
         <p class="govuk-body">You will need to use a registered training provider who offers <span class="govuk-!-font-weight-bold">{% if data.training_level %}{{data.training_level}}{% else %}Aviation ground operative, Level: 2 (Standard){% endif %}</span> training.
           <!-- "<span class="govuk-!-font-weight-bold">{{data.training_level}}</span>"</p> -->
           <div class="govuk-form-group">
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">            
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="found_training_provider" name="has_training_provider" type="radio" value="yes" {% if data.has_training_provider=="yes" %}checked="checked" {%endif%}data-aria-controls="conditional-how-contacted-conditional-1">
                 <label class="govuk-label govuk-radios__label" for="found_training_provider">
                   Yes
-                </label> </div>
+                </label>               
+              </div>
               <div class="govuk-radios__conditional {% if not data.has_training_provider == " yes" and data.edit=="yes" %}govuk-radios__conditional--hidden{% endif %}" id="conditional-how-contacted-conditional-1">
                 <div class="govuk-form-group search-field search-field-darker {%if data.hasError and data.errorType == 'provider'%}govuk-form-group--error{% endif%}">
                   <input type="hidden" name="clientsFilter" value="new">
@@ -96,10 +97,7 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
             </div>
           </div>
       </fieldset>
-      <div class="govuk-form-group">
-        <button type="submit" class="govuk-button">Save and continue</button><br /><br />
-        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-      </div>
+
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -109,13 +107,13 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
               Have you found a training provider?
             </h1>
           </legend>
-          <div id="contact-hint" class="govuk-hint">
+          <div id="has_training_provider-hint" class="govuk-hint">
             You will need to use a registered training provider who offers <span class="govuk-!-font-weight-bold">{% if data.training_level %}{{data.training_level}}{% else %}Aviation ground operative, Level: 2 (Standard){% endif %}</span> training.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-              <label class="govuk-label govuk-radios__label" for="contact">
+              <input id="found_training_provider" name="has_training_provider" type="radio" value="yes" {% if data.has_training_provider=="yes" %} checked="checked" {%endif%} data-aria-controls="conditional-how-contacted-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="found_training_provider">
                 Yes
               </label>
             </div>
@@ -124,26 +122,32 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
                 <label class="govuk-label" for="contact-by-email">
                   Enter the training provider name or reference number (UKPRN). UKPRN is 8 numbers. For example, 12345678.
                 </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
-      
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>      
             </div>
+
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
               <label class="govuk-label govuk-radios__label" for="contact-2">
-                No
+                No, I'll choose one later
               </label>
             </div>
+
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-phone">
                   You will need to add a training provider before submitting the advert. If you need help, you can <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/SearchForFrameworkProviders?frameworkId=539-2-14">find a training provider (opens
                     in new tab or window)</a> based on the apprenticeship training.
                 </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
-      
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>      
             </div>            
+
           </div>      
         </fieldset>
+        
+        <div class="govuk-form-group govuk-!-margin-top-9">
+          <button type="submit" class="govuk-button">Save and continue</button><br /><br />
+          <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+        </div>
       </div>
     </form>
   </div>
