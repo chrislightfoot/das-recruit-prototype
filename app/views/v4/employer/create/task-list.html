@@ -54,7 +54,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.title %}
+              {% if data.section1 == "completed" %}
               <a href="training-select?return_url=task-list" aria-describedby="eligibility-status">
                 What training will the apprentice take?
               </a>
@@ -71,7 +71,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">              
-              {% if data.has_training_provider %}
+              {% if data.section1 == "completed" %}
               <a href="select-training-provider?return_url=task-list" aria-describedby="contact-details-status">
                 Have you found a training provider?
               </a>
@@ -88,7 +88,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.has_training_provider %}
+              {% if data.section1 == "completed" %}
               <a href="short-description?return_url=task-list" aria-describedby="contact-details-status">
                 Short description of the apprenticeship
               </a>
@@ -105,7 +105,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.shortDescription %}
+              {% if data.section1 == "completed" %}
               <a href="long-description?return_url=task-list" aria-describedby="contact-details-status">
                 Description of the apprenticeship
               </a>
@@ -140,7 +140,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           </li>-->
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section1 == "completed" %}
+              {% if data.section2 == "completed" %}
               <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
                 How much would you like to pay the apprentice?
               </a>
@@ -157,7 +157,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.WageType %}
+              {% if data.section2 == "completed" %}
               <a href="duration?return_url=task-list" aria-describedby="contact-details-status">
                 Duration and working hours
               </a>
@@ -174,7 +174,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.sort %}
+              {% if data.section2 == "completed" %}
               <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
                 Important dates
               </a>
@@ -191,7 +191,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.closing-day %}
+              {% if data.section2 == "completed" %}
               <a href="location?return_url=task-list" aria-describedby="contact-details-status">
                 Where will the apprentice work?
               </a>
@@ -208,7 +208,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.selected-organisation-id %}
+              {% if data.section2 == "completed" %}
               <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
                 How many positions are there<!-- for this apprenticeship-->?
               </a>
@@ -242,7 +242,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           </li>-->
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
+              {% if data.section3 == "completed" %}
               <a href="skills?return_url=task-list" aria-describedby="contact-details-status">
                 What skills and personal qualities would you like the applicant to have?
               </a>
@@ -259,7 +259,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
+              {% if data.section3 == "completed" %}
               <a href="qualification-question?return_url=task-list" aria-describedby="contact-details-status">
                 What qualifications would you like the applicant to have?
               </a>
@@ -276,7 +276,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
+              {% if data.section3 == "completed" %}
               <a href="things-to-consider?return_url=task-list" aria-describedby="contact-details-status">
                 What else would you like the applicant to consider? (optional)
               </a>
@@ -412,7 +412,6 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             </span>
             <span class="task-list-submit-enabled" style="display:none">
               <span class="app-task-list__task-name">
-                <!--<a href="check-your-answers" aria-describedby="list-convictions-status">-->
                   <a href="vacancy-preview" aria-describedby="list-convictions-status">  
                   Check your answers and submit your advert
                 </a>
@@ -423,7 +422,6 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
         </ul>
       </li>
     </ol>
-
   </div>
 </div>
 {% endblock %}

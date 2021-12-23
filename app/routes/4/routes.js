@@ -199,9 +199,11 @@ module.exports = function(router) {
       }
     }
     if (req.session.data.edit == "yes") {
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no&error=");
+      //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no&error=");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&error=");
     } else {
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/preview-start?error=");
+      //res.redirect(301, '/' + base_url + req.params[0] + "/create/preview-start?error=");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/duration?edit=no&error=");
     }
 
 
@@ -364,6 +366,7 @@ module.exports = function(router) {
       "query": req.query
     })
   })
+
   router.post('/' + base_url + '*/create/qualifications-list', function(req, res) {
     // if the rendered page is actually the qualification-question page
     if (req.body.show_qualifications == "yes") {
@@ -376,21 +379,25 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
     } else {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/qualifications-list");
+    }  
 
-    }
   })
+
   router.post('/' + base_url + '*/create/skills', function(req, res) {
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+    //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/qualifications?edit=no");
   })
   router.post('/' + base_url + '*/create/short-description', function(req, res) {
     //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
     res.redirect(301, '/' + base_url + req.params[0] + "/create/long-description?edit=no");
   })
   router.post('/' + base_url + '*/create/things-to-consider', function(req, res) {
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+    //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?section3=completed&edit=no");
   })
   router.post('/' + base_url + '*/create/contact', function(req, res) {
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+    //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/application-process");
   })
 
 

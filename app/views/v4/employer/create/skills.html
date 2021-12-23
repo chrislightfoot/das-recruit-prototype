@@ -1,7 +1,7 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+What skills and personal qualities does the applicants need to have? - Your apprenticeship advert - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,7 @@ Manage apprentices
         <h1 class="govuk-heading-xl">What skills and personal qualities does the applicants need to have?</h1>
         <form method="post" action="skills">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="SkillsHeading"></legend>
-          {{data.Skills}}
+          
           <p class="govuk-hint">Select all that apply or add your own</p>
           <div class="govuk-visually-hidden">
             {%  for skill in data.Skills %}
@@ -110,7 +110,7 @@ Manage apprentices
                 <label class="govuk-label" for="AddCustomSkillName">Add a new skill or personal quality</label>
                 <span class="error-message field-validation-valid" data-valmsg-for="AddCustomSkillName" data-valmsg-replace="true"></span>
                 <input value="" type="text" class="govuk-input govuk-input--width-20" maxlength="30" id="AddCustomSkillName" name="AddCustomSkillName">
-                <button name="AddCustomSkillAction" id="add-custom-skill" value="AddCustomSkill" type="submit" class="govuk-button das-button-secondary save-button">+ Add this skill</button>
+                <button name="AddCustomSkillAction" id="add-custom-skill" value="AddCustomSkill" type="submit" class="govuk-button save-button">Add this skill</button>
             </div>
               </div>
               <br>
@@ -121,7 +121,7 @@ Manage apprentices
                 <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
                 {%else%}
                 <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and preview" />
-                <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
+                <a href="task-list" class="govuk-body das-button--link">Cancel</a>
                 {%endif%}
               </div>
             </div>

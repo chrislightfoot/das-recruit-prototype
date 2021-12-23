@@ -104,24 +104,25 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">{%if data.training_level %}{{data.training_level}}{% else %}Business administration apprenticeship{%endif%}</span>
             <h1 class="govuk-fieldset__heading">
-              How would you prefer to be contacted?
+              Have you found a training provider?
             </h1>
           </legend>
           <div id="contact-hint" class="govuk-hint">
-            Select one option.
+            You will need to use a registered training provider who offers <span class="govuk-!-font-weight-bold">{% if data.training_level %}{{data.training_level}}{% else %}Aviation ground operative, Level: 2 (Standard){% endif %}</span> training.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
               <label class="govuk-label govuk-radios__label" for="contact">
-                Email
+                Yes
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-email">
-                  Email address
+                  Enter the training provider name or reference number (UKPRN). UKPRN is 8 numbers. For example, 12345678.
                 </label>
                 <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
       
@@ -129,41 +130,22 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
               <label class="govuk-label govuk-radios__label" for="contact-2">
-                Phone
+                No
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-phone">
-                  Phone number
+                  You will need to add a training provider before submitting the advert. If you need help, you can <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/SearchForFrameworkProviders?frameworkId=539-2-14">find a training provider (opens
+                    in new tab or window)</a> based on the apprenticeship training.
                 </label>
                 <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
       
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
-              <label class="govuk-label govuk-radios__label" for="contact-3">
-                Text message
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-text">
-                  Mobile phone number
-                </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel"></div>
-      
-            </div>
-          </div>
-      
+            </div>            
+          </div>      
         </fieldset>
       </div>
-
-
-
-
     </form>
-
   </div>
 </div>
 <div class="govuk-visually-hidden">

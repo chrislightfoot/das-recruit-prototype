@@ -1,11 +1,12 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+Which employer name do you want on your advert? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
+
 {% block beforeContent %}
 {{super()}}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<!--<a href="javascript:history.back()" class="govuk-back-link">Back</a>-->
 {% endblock %}
 
 {% block content %}
@@ -285,4 +286,5 @@ $(document).ready(function() {
 });
 
 </script>
+{% endblock %}
 {% endblock %}

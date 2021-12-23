@@ -1,17 +1,16 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-What name do you want to display on the vacancy and search results?
+What employer name do you want on your advert? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %} vacancy</span>
-    <h1 class="govuk-heading-xl">What name do you want to go on the vacancy?</h1>
-    <form method="post">
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl">What employer name do you want on your advert?</h1>
+    <form method="post" action="about-employer">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -26,7 +25,7 @@ What name do you want to display on the vacancy and search results?
               <input class="govuk-radios__input" id="display-name-trading" name="selected_display_name" type="radio"
                 value="trading" data-aria-controls="trading-name-conditional">
               <label class="govuk-label govuk-radios__label" for="display-name-trading">
-                a trading name
+                A trading name
               </label>
             </div>
             <div class="govuk-radios__conditional" id="trading-name-conditional">
@@ -40,8 +39,8 @@ What name do you want to display on the vacancy and search results?
               <input class="govuk-radios__input" id="display-name-anonymous" name="selected_display_name" type="radio"
                 value="anonymous" data-search-value="Organisation" data-aria-controls="anonymous-conditional">
               <label class="govuk-label govuk-radios__label" for="display-name-anonymous">
-                do not display a name (be anonymous)
-                <span class="govuk-hint">Applicants like to see an employer name</span>
+                I do not want an employer a name on my advert (be anonymous)<br>
+                <span class="govuk-hint">This could mean fewer people view your advert.</span>
               </label>
             </div>
             <div class="govuk-radios__conditional" id="anonymous-conditional">
@@ -83,10 +82,10 @@ What name do you want to display on the vacancy and search results?
 
         <div class="govuk-form-group">
           {% if query.edit != "yes"%}
-          <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue"/>
+            <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue"/><br><br>
             <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
           {%else%}
-            <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and continue"/>
+            <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and continue"/><br><br>
             <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
           {%endif%}
         </div>
@@ -95,9 +94,4 @@ What name do you want to display on the vacancy and search results?
 
   </div>
 </div>
-{% block help %}{% include "includes/service-help.html" %}{% endblock %}
-{% endblock %}
-{% block pageScripts %}
-
-
 {% endblock %}

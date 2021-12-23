@@ -57,7 +57,7 @@ GOV.UK Prototype Kit
             </div>
             <div class=" govuk-grid-column-one-half">
               <h3 class="govuk-heading-m">
-                <a href="dashboard">Your apprenticeship adverts</a>
+                <a href="{% if data.startpage == 1 %}create/start-page{% else %}dashboard{% endif %}">Your apprenticeship adverts</a>
               </h3>
               <p>Create adverts to post on find an apprenticeship, view applications, your previous adverts and adverts created by training providers.</p>
             </div>

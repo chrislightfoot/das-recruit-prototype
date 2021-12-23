@@ -1,7 +1,7 @@
-{% extends "tp-layout.html" %}
+{% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+Which organisation is this advert for? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -23,9 +23,11 @@ Manage apprentices
     </div>
     {% endif %}
     <!-- <span class="govuk-caption-xl">Recuitment</span> -->
-    <h1 class="govuk-heading-xl">Which of your employers do you want to create a vacancy for?</h1>
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl">Which organisation is this advert for?</h1>
 
-    <form method="post" id="employers-form" action="create-vacancy">
+    <!--<form method="post" id="employers-form" action="create-vacancy">-->
+    <form method="post" id="employers-form" action="display-name">
       {% if data.employerAmount > 10 %}
       <fieldset class="govuk-fieldset">
         <legend class="govuk-visually-hidden">Search your employers</legend>
@@ -57,7 +59,7 @@ Manage apprentices
       {% endif %}
       <div id="oranisation-list" class="govuk-form-group {% if query.error == "yes" %}govuk-form-group--error{%endif%}">
         <fieldset class="govuk-fieldset">
-          <h2 class="govuk-heading-s">Select employer</h2>
+          <!--<h2 class="govuk-heading-s">Select employer</h2>-->
           {% if query.error == 'yes' %}
           <span id="employer-error" class="govuk-error-message">You must select and employer</span>
           {% endif %}
@@ -126,7 +128,7 @@ Manage apprentices
       </div>
       {% endif %}
 
-      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button><br /><br />
+      <button type="submit" class="govuk-button" data-module="govuk-button">Save and continue</button><br /><br />
       <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
     </form>
 
