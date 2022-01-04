@@ -134,8 +134,8 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/confirm-training-provider?hasError=no&errorType=&providerName=" + name + "&UKPRN=" + ukprn)
 
     } else {
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/positions?providerName=")
-
+      //res.redirect(301, '/' + base_url + req.params[0] + "/create/positions?providerName=")
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/confirm-training-provider?hasError=no&errorType=&providerName=" + name + "&UKPRN=" + ukprn)
 
     }
 
@@ -162,6 +162,7 @@ module.exports = function(router) {
     //res.redirect(301, '/' + base_url + req.params[0] + '/create/dates')
     res.redirect(301, '/' + base_url + req.params[0] + '/create/positions')
   })
+  
   //WAGES
   router.get('/' + base_url + '*/create/wages', function(req, res) {
 
@@ -196,6 +197,7 @@ module.exports = function(router) {
       req.session.data.yearlyWage = "£" + tools.makeCurrancyValue(req.body.FixedWageYearlyAmount)
       if (parseInt(req.body.FixedWageYearlyAmount) < minWage) {
         res.redirect(301, '/' + base_url + req.params[0] + "/create/wages?error=wages");
+        //res.redirect(301, '/' + base_url + req.params[0] + "/create/duration?edit=no&error=");
       }
     }
     if (req.session.data.edit == "yes") {
@@ -205,9 +207,8 @@ module.exports = function(router) {
       //res.redirect(301, '/' + base_url + req.params[0] + "/create/preview-start?error=");
       res.redirect(301, '/' + base_url + req.params[0] + "/create/duration?edit=no&error=");
     }
-
-
   })
+
   router.post('/' + base_url + '*/create/duration', function(req, res) {
     if (req.session.data.edit == "yes") {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no");
@@ -216,6 +217,7 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/dates?error=");
     }
   })
+
   router.post('/' + base_url + '*/create/dates', function(req, res) {
     if (parseInt(req.session.data.start_month) > 3 && parseInt(req.session.data.start_year) > 2019) {
       req.session.data.nationalMinWage = 4
