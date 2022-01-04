@@ -140,7 +140,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           </li>-->
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
+              {% if data.section1 == "completed" %}
               <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
                 How much would you like to pay the apprentice?
               </a>
@@ -242,7 +242,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           </li>-->
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section3 == "completed" %}
+              {% if data.section2 == "completed" %}
               <a href="skills?return_url=task-list" aria-describedby="contact-details-status">
                 What skills and personal qualities would you like the applicant to have?
               </a>
@@ -298,7 +298,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">4.</span> About the employer
           <span style="margin-left:225px;">
-            {% if data.section4 == "completed" %}
+            {% if data.section3 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {%else%}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -329,7 +329,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section3 == "completed" %}
+              {% if data.section4 == "completed" %}
               <a href="employer?return_url=task-list" aria-describedby="list-convictions-status">
                 Which employer name do you want on your advert?
               </a>
@@ -346,7 +346,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section3 == "completed" %}
+              {% if data.section4 == "completed" %}
               <a href="about-employer?return_url=task-list" aria-describedby="list-convictions-status">
                 Add some information about the employer
               </a>
@@ -363,7 +363,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section3 == "completed" %}
+              {% if data.section4 == "completed" %}
               <a href="contact?return_url=task-list" aria-describedby="list-convictions-status">
                 Add contact information for the employer
               </a>
@@ -380,7 +380,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section3 == "completed" %}
+              {% if data.section4 == "completed" %}
               <a href="application-process?return_url=task-list" aria-describedby="list-convictions-status">
                 How would you like to receive applications?
               </a>

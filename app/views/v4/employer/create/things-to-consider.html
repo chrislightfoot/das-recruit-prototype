@@ -1,4 +1,4 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "ma-layout.html" %}
 
 {% block pageTitle %}
 What else do you want the applicant to consider? (optional) - Your apprenticeship advert - {{serviceName}} - GOV.UK
@@ -28,7 +28,7 @@ What else do you want the applicant to consider? (optional) - Your apprenticeshi
       </div>
       <!--<button type="submit" class="govuk-button" data-module="govuk-button">Save and preview</button>-->
       <button type="submit" class="govuk-button" data-module="govuk-button">Save and continue</button>
-      <a href="vacnacy-preview?edit=no" class="govuk-body das-button--link">Cancel</a>
+      <a href="vacancy-preview?edit=no" class="govuk-body das-button--link">Cancel</a>
     </form>
   </div>
 </div>
