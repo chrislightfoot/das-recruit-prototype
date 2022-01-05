@@ -567,14 +567,7 @@ module.exports = function(router) {
     });
   })
 
-
   // router.post('/' + base_url + '/*/create/confirm-employer', function (req, res) {
   //   res.redirect(301, '/' + base_url + '/'+ req.params[0] +'/create/location')
   // })
-
-
-
-
-
-
 }

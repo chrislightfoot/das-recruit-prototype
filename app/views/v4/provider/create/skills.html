@@ -110,7 +110,7 @@ Manage apprentices
                 <label class="govuk-label" for="AddCustomSkillName">Add a new skill or personal quality</label>
                 <span class="error-message field-validation-valid" data-valmsg-for="AddCustomSkillName" data-valmsg-replace="true"></span>
                 <input value="" type="text" class="govuk-input govuk-input--width-20" maxlength="30" id="AddCustomSkillName" name="AddCustomSkillName">
-                <button name="AddCustomSkillAction" id="add-custom-skill" value="AddCustomSkill" type="submit" class="govuk-button das-button-secondary save-button">+ Add this skill</button>
+                <button name="AddCustomSkillAction" id="add-custom-skill" value="AddCustomSkill" type="submit" class="govuk-button govuk-button-secondary save-button" data-module="govuk-button">&plus; Add this skill</button>
             </div>
               </div>
               <br>
@@ -132,15 +132,11 @@ Manage apprentices
 
   </main>
 </div>
-
-
 {% endblock %}
 
 {% block pageScripts %}
 {{super()}}
 <script>
-
-
 $(document).ready(function() {
   var skills=[]
   function checkExisting($value){
@@ -151,10 +147,6 @@ $(document).ready(function() {
       console.log("working")
     })
   })
-
 })
-
-  </script>
-
-
+</script>
 {% endblock %}
