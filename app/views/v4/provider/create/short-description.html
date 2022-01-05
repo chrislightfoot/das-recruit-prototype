@@ -1,7 +1,7 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+Short description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -38,5 +38,4 @@ Manage apprentices
     </form>
   </div>
 </div>
-{% block help %}{% include "includes/service-help.html" %}{% endblock %}
 {% endblock %}

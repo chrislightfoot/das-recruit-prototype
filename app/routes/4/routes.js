@@ -70,7 +70,7 @@ module.exports = function(router) {
 
   })
 
-  router.post('/' + base_url + '*/create/training-select', function(req, res) {
+  router.post('/' + base_url + '/create/training-select', function(req, res) {
     if (req.body.training_level == "different") {
       console.log("working")
 
@@ -80,7 +80,6 @@ module.exports = function(router) {
     }
     res.redirect(301, '/' + base_url + req.params[0] + '/create/training-confirm')
   })
-
 
   router.post('/' + base_url + '*/create/training-confirm', function(req, res) {
     if (req.session.data.user == "employer") {
@@ -92,6 +91,34 @@ module.exports = function(router) {
     }
   })
 
+  router.post('/' + base_url + '/create/std-select', function(req, res) {
+    //if (req.body.training_level == "different") {
+    //  console.log("working")
+
+    //  req.body.training_level = req.body.training_level_new
+    // req.session.data.training_level = req.body.training_level_new
+    //  console.log(req.body.training_level)
+    //}
+    if (req.session.data.journey == "new") {
+      res.redirect(301, '/' + base_url + req.params[0] + '/create/training-first-select')
+    }
+    //res.redirect(301, '/' + base_url + req.params[0] + '/create/std-confirm')
+    res.redirect(301, '/' + base_url + 'provider/create/std-confirm')
+  })
+    
+
+  router.post('/' + base_url + '*/create/std-confirm', function(req, res) {    
+      //res.redirect(301, '/' + base_url + req.params[0] + '/create/short-description')
+      res.redirect(301, '/' + base_url + 'provider/create/short-description')
+      console.log("prov")
+  })
+
+  router.post('/' + base_url + '*/create/tp-title', function(req, res) {
+    if (req.session.data.journey == "new") {
+      res.redirect(301, '/' + base_url + req.params[0] + '/create/training-first-select')
+    }
+    res.redirect(301, '/' + base_url + req.params[0] + '/create/std-select')    
+  })
 
   router.post('/' + base_url + '*/create/title', function(req, res) {
     if (req.session.data.journey == "new") {
@@ -99,7 +126,6 @@ module.exports = function(router) {
     }
     res.redirect(301, '/' + base_url + req.params[0] + '/create/training-select')    
   })
-
 
   router.post('/' + base_url + '*/create/select-training-provider', function(req, res) {
     var index = req.body.providerName.indexOf("100")
@@ -112,9 +138,6 @@ module.exports = function(router) {
     if (/[a-zA-Z]/.test(req.body.providerName.slice(0, index))) {
       console.log("setting name : " + req.body.providerName.slice(0, index))
       name = req.body.providerName.slice(0, index)
-
-
-
     } else {
       console.log("not setting name")
     }

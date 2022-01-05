@@ -1,36 +1,25 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
-
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+How would you like to receive applications? - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
-{% block beforeContent %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-  </div>
-</div>
-{% endblock %}
-{% block content %}
 
+{% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-
-    <form method="post">
+    <form method="post" action="task-list?section4=completed">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
-                  How do you want to get applications?
-                </h1>
-              </legend>
-              <p class="govuk-body">All vacancies will be published on Find an apprenticeship.</p>
+          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
+          <h1 class="govuk-fieldset__heading">How would you like to receive applications?</h1>
+        </legend>
+        <p class="govuk-body">We'll publish all vacancies on <a href="https://www.gov.uk/apply-apprenticeship" class="govuk-body govuk-link" rel="noopener" target="_blank">Find an apprenticeship (opens in a new tab or window)</a>.</p>
         <div class="govuk-form-group">
           <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="display-name-registered" name="selected_display_name" type="radio" value="registered">
               <label class="govuk-label govuk-radios__label" for="display-name-registered">
-                Through the <a href="https://www.gov.uk/apply-apprenticeship" class="govuk-body govuk-link" rel="noopener" target="_blank">Find an apprenticeship</a> service
+                Through the Find an apprenticeship service
               </label>
             </div>
 
@@ -43,7 +32,7 @@ Manage apprentices
             <div class="govuk-radios__conditional" id="trading-name-conditional">
               <div class="govuk-form-group" data-module="character-count" data-minlength="50" data-maxlength="500">
                 <label class="govuk-label" for="ApplicationUrl">
-                  Enter the web address candidates should use to apply for this vacancy
+                  Enter the web address candidates should use to apply for this apprenticeship
                 </label>
                 <input class="govuk-input govuk-input--width-30" id="ApplicationUrl" name="ApplicationUrl" type="text" value="{% if data.ApplicationUrl %}{{data.ApplicationUrl }}{% else %}{% endif %}">
               </div>
@@ -53,6 +42,9 @@ Manage apprentices
                     Explain the application process (optional)
                   </label>
                   <textarea class="govuk-textarea js-character-count" id="ApplicationInstructions" name="ApplicationInstructions" rows="5" aria-describedby="more-detail-hint">{% if data.ApplicationInstructions %}{{data.ApplicationInstructions }}{% else %}{% endif %}</textarea>
+                </div>
+                <div id="shortDescription-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                  You can enter up to 500 characters
                 </div>
               </div>
             </div>
@@ -67,7 +59,7 @@ Manage apprentices
 
         <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
         {%else%}
-        <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and preview" />
+        <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and continue" />
         <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
         {%endif%}
       </div>
@@ -75,7 +67,4 @@ Manage apprentices
 
   </div>
 </div>
-
-
-
 {% endblock %}

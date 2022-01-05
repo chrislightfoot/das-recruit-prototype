@@ -1,10 +1,11 @@
 {% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Create a vacancy - Recruitment - Apprenticeships - GOV.UK
+Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
+{{super()}}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
       <a href="javascript:history.back()" class="govuk-back-link">Back</a>
@@ -17,20 +18,20 @@ Create a vacancy - Recruitment - Apprenticeships - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Create a vacancy</h1>
     <p class="govuk-body">
-      We’ll approve or reject your advert within 24 hours. You can clone an advert once you’ve submitted it.
+      We’ll approve or reject your vacancy within 24 hours. You can clone a vacancy once you’ve submitted it.
     </p>
         <form method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                         <h1 class="govuk-fieldset__heading">
-                            Do you want to create a new advert?
+                            Do you want to create a new vacancy?
                         </h1>
                     </legend>
                     <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="" name="advert-create" type="radio" value="yes" {% if data.VacancyId=="yes" %}checked="checked" {%endif%}data-aria-controls="disability-confident-1">
-                            <label class="govuk-label govuk-radios__label" for="create-new">Yes, create new advert</label>
+                            <label class="govuk-label govuk-radios__label" for="create-new">Yes, create new vacancy</label>
                         </div><!--
                             <div class="govuk-radios__conditional {% if data.VacancyId == "yes" %}govuk-radios__conditional--hidden{% endif %}" id="disability-confident-1">
                               <h2>Is the new advert disability confident?</h2>

@@ -1,15 +1,14 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+What else do you want the applicant to consider? (optional) - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %} vacancy</span>
+  <div class="govuk-grid-column-two-thirds">    
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %} vacancy</span>
     <form method="post">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
      <h1 class="govuk-fieldset__heading">
@@ -23,10 +22,10 @@ Manage apprentices
           <textarea class="govuk-textarea js-character-count " id="ThingsToConsider" name="ThingsToConsider" rows="5"></textarea>
         </div>
       </div>
-      <button type="submit" class="govuk-button" data-module="govuk-button">Save and preview</button>
+      <!--<button type="submit" class="govuk-button" data-module="govuk-button">Save and preview</button>-->
+      <button type="submit" class="govuk-button" data-module="govuk-button">Save and continue</button>
       <a href="vacnacy-preview?edit=no" class="govuk-body das-button--link">Cancel</a>
     </form>
   </div>
 </div>
-{% block help %}{% include "includes/service-help.html" %}{% endblock %}
 {% endblock %}

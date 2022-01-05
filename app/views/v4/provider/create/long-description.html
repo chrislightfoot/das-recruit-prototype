@@ -1,7 +1,7 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -54,7 +54,7 @@ Manage apprentices
               <span class="govuk-visually-hidden">Error:</span> What the apprentice will be doing must not contain a banned word or phrase
             </span>
             {% endif %}
-            <textarea class="govuk-textarea govuk-textarea--error {% if 'VacancyDescription' in data.errorType %}govuk-textarea--error{% endif %} js-character-count " id="VacancyDescription" name="VacancyDescription" rows="9" aria-describedby="more-detail-hint">{% if data['VacancyDescription'] %}{{data['VacancyDescription'] }}{% else %}{% endif %}</textarea>
+            <textarea class="govuk-textarea {% if 'VacancyDescription' in data.errorType %}govuk-textarea--error{% endif %} js-character-count " id="VacancyDescription" name="VacancyDescription" rows="9" aria-describedby="more-detail-hint">{% if data['VacancyDescription'] %}{{data['VacancyDescription'] }}{% else %}{% endif %}</textarea>
           </div>
         </div>
         <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
@@ -76,7 +76,7 @@ Manage apprentices
               <span class="govuk-visually-hidden">Error:</span> Training and qualifications must not contain contain a banned word or phrase
             </span>
             {% endif %}
-            <textarea class="govuk-textarea js-character-count govuk-textarea--error {% if 'TrainingQualification' in data.errorType %}govuk-textarea--error{% endif %}" id="TrainingQualification" name="TrainingQualification" rows="9"
+            <textarea class="govuk-textarea js-character-count {% if 'TrainingQualification' in data.errorType %}govuk-textarea--error{% endif %}" id="TrainingQualification" name="TrainingQualification" rows="9"
               aria-describedby="more-detail-hint">{% if data['TrainingQualification']%}{{data['TrainingQualification']}}{% else %}{% endif %}</textarea>
           </div>
         </div>
@@ -98,7 +98,7 @@ Manage apprentices
           </div>
         </div>
         <div class="govuk-form-group">
-          <input type="submit" class="govuk-button" data-module="govuk-button" value="Save and preview" />
+          <input type="submit" class="govuk-button" data-module="govuk-button" value="Save and continue" />
           <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
         </div>
       </fieldset>
@@ -106,6 +106,4 @@ Manage apprentices
 
   </div>
 </div>
-
-{% block help %}{% include "includes/service-help.html" %}{% endblock %}
 {% endblock %}

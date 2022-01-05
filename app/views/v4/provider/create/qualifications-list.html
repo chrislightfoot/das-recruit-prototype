@@ -1,7 +1,7 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+Qualifications - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@ Manage apprentices
         </div>
         {% endif %}
         <h1 class="govuk-heading-xl">
-          <span class="govuk-caption-l">{% if data.title %}{{data.title}}{% else %}Developer apprenticeship{% endif %}</span>
+          <span class="govuk-caption-l">{% if data.title %}{{data.title}}{% else %}Business administration apprenticeship{% endif %}</span>
           Qualifications
         </h1>
         <table class="govuk-table responsive-table">
@@ -34,14 +34,14 @@ Manage apprentices
         </p>
 
         <form method="post">
-    <div class="govuk-form-group">
-
-          <input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">
+          <div class="govuk-form-group">
+            {{ govukButton({
+              text: "Save and continue",
+              href: "things-to-consider"
+            }) }}   
+            <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
           </div>
         </form>
           </div>
       </div>
-
-{% block help %}{% include "includes/service-help.html" %}{% endblock %}
-
 {% endblock %}
