@@ -70,7 +70,7 @@ module.exports = function(router) {
 
   })
 
-  router.post('/' + base_url + '/create/training-select', function(req, res) {
+  router.post('/' + base_url + '*/create/training-select', function(req, res) {
     if (req.body.training_level == "different") {
       console.log("working")
 
@@ -91,14 +91,14 @@ module.exports = function(router) {
     }
   })
 
-  router.post('/' + base_url + '/create/std-select', function(req, res) {
-    //if (req.body.training_level == "different") {
-    //  console.log("working")
+  router.post('/' + base_url + '*/create/std-select', function(req, res) {
+    if (req.body.training_level == "different") {
+      console.log("working")
 
-    //  req.body.training_level = req.body.training_level_new
-    // req.session.data.training_level = req.body.training_level_new
-    //  console.log(req.body.training_level)
-    //}
+      req.body.training_level = req.body.training_level_new
+     req.session.data.training_level = req.body.training_level_new
+      console.log(req.body.training_level)
+    }
     if (req.session.data.journey == "new") {
       res.redirect(301, '/' + base_url + req.params[0] + '/create/training-first-select')
     }
