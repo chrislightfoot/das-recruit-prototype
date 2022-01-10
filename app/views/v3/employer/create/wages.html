@@ -74,11 +74,11 @@ Manage apprentices
                 <label class="govuk-label">Yearly wage</label>
                 <p class="govuk-body govuk-hint">
                   This must be more than the <a href="https://www.gov.uk/national-minimum-wage-rates" rel="noopener" target="_blank">National Minimum Wage for apprentices (opens in a new tab or window)​</a>.</p>
-                <p class="govuk-body govuk-hint">From 1 April 2021, the National Minimum Wage for apprentices is £4.30 an hour. Based on working hours of {{data.weeklyHours}} hours per week, you'll need to pay a yearly figure of at least <span class="govuk-!-font-weight-bold">£{{minWage}}</span>
+                <p class="govuk-body govuk-hint">From 1 April 2021, the National Minimum Wage for apprentices is £4.30 an hour. Based on working hours of {{data.weeklyHours}} hours per week, you'll need to pay a yearly figure of at least <span class="govuk-!-font-weight-bold">£5,142.80</span>
                 </p>
                 {% if data.error == "wages"%}
                 <span id="yearly-wage-issue" class="govuk-error-message">
-                  <span class="govuk-visually-hidden">Error:</span> The yearly wage must be at least £{{minWage}}
+                  <span class="govuk-visually-hidden">Error:</span> The yearly wage must be at least £5,142.80
                 </span>
                 {% endif %}
                 <input class="govuk-input govuk-input--width-10 {% if data.error == "wages" %}govuk-input--error{% endif %}" id="FixedWageYearlyAmount" name="FixedWageYearlyAmount" type="text" {% if data.FixedWageYearlyAmount %}value="{{data.FixedWageYearlyAmount}}" {% endif %}>

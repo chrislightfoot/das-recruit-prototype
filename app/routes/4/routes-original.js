@@ -187,8 +187,42 @@ module.exports = function(router) {
   })
   
   //WAGES
+  router.get('/' + base_url + '*/create/wages', function(req, res) {
+
+    // create a new array if no array exists.
+    var hasError = false;
+    var errorType = "none"
+    // set default weeklyHours if not set
+    req.session.data.weeklyHours == req.session.data.weeklyHours || 23
+    if (req.session.data.WageType == "fixedWage") {
+      hasError = tools.isUnderMinWage(req.session.data)
+      errorType = "wages"
+    }
+
+    res.render(base_url + req.params[0] + "/create/wages", {
+      "minWage": tools.makeCurrancyValue(tools.getMinWage(req.session.data))
+    }, function(err, html) {
+      if (err) {
+
+        return res.render(file_url + "/create/wages");
+        throw err;
+      }
+      res.send(html);
+    });
+
+  })
   router.post('/' + base_url + '*/create/wages', function(req, res) {
-    
+    var minWage = tools.getMinWage(req.session.data)
+    if (req.session.data.WageType == "nationalMinWage") {
+      req.session.data.yearlyWage = "£8,736 - £16,286.40"
+    } else if (req.session.data.WageType == "nationalMinApprenticeWage") {} else {
+      var amount = parseFloat(req.session.data.yearlyWage).toLocaleString('en')
+      req.session.data.yearlyWage = "£" + tools.makeCurrancyValue(req.body.FixedWageYearlyAmount)
+      if (parseInt(req.body.FixedWageYearlyAmount) < minWage) {
+        res.redirect(301, '/' + base_url + req.params[0] + "/create/wages?error=wages");
+        //res.redirect(301, '/' + base_url + req.params[0] + "/create/duration?edit=no&error=");
+      }
+    }
     if (req.session.data.edit == "yes") {
       //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no&error=");
       res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&error=");
@@ -231,6 +265,7 @@ module.exports = function(router) {
 
     var hasError = false;
     var errorType = "none"
+    var mWage = tools.getMinWage(req.session.data)
     //var mWage = tools.getMinWage(req.session.data)
     var mWage = '4000'
 
