@@ -1,0 +1,52 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Create an advert - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% if data.journey != "new" %}
+<a href="{%if data.edit != 'yes' %}create-vacancy{%else%}../vacancy-preview?edit=no{%endif%}" class="govuk-back-link">Back</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Create an advert</h1>
+        <p class="govuk-body-l">Recruit an apprentice by creating an advert to post on <a href="#" class="govuk-link govuk-link--no-visited-state">Find an apprenticeship (opens in a new tab or window)</a>.</p>
+        
+        <h2 class="govuk-heading-m">Before you start</h2>
+        <p class="govuk-body">Before you create an advert, you must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>choose appropriate apprenticeship training</li>        
+            <li>get some information from your training provider - if you d o not have a training provider yet, you can <a href="#" class="govuk-link govuk-link--no-visited-state">find a provider (opens in a new tab or window)</a></li>
+        </ul>
+
+        <h2 class="govuk-heading-m">When you'll need</h2>
+        <p class="govuk-body">You'll need the following:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the name of the apprenticeship training and training provider</li> 
+            <li>the duration of the apprenticeship</li>
+            <li>the amount of hours spent working and training</li>
+            <li>the amount you'd like to pay your apprentice</li>
+        </ul>
+
+        <div class="govuk-inset-text">
+          It should take no longer than 30 minutes to create your first advert.
+        </div>
+
+      {% set _forwardLink = "task-list" %}
+
+      {{ govukButton({
+        text: "Start now",
+        href: _forwardLink,
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+        isStartButton: true
+      }) }}
+    </div>
+  </div>
+
+{% endblock %}
