@@ -16,10 +16,10 @@ What skills and personal qualities does the applicants need to have? - Your appr
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
-        <h1 class="govuk-heading-xl">What skills and personal qualities does the applicants need to have?</h1>
+        <h1 class="govuk-heading-xl">What skills and personal qualities do applicants need to have? </h1>
         <form method="post" action="skills">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="SkillsHeading"></legend>
-          
+         
           <p class="govuk-hint">Select all that apply or add your own</p>
           <div class="govuk-visually-hidden">
             {%  for skill in data.Skills %}

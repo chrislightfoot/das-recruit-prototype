@@ -40,7 +40,8 @@ Description of the vacancy - Your apprenticeship adverts - {{serviceName}} - GOV
     {% endif%}
 
     <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
-    <h1 class="govuk-heading-xl">Description of the apprenticeship</h1>
+    <h1 class="govuk-heading-xl">About the apprenticeship 
+    </h1>
     <form method="post">
       <fieldset class="govuk-fieldset">
         <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
@@ -48,12 +49,15 @@ Description of the vacancy - Your apprenticeship adverts - {{serviceName}} - GOV
             <label class="govuk-label govuk-!-font-weight-bold" for="VacancyDescription">
               What will the apprentice be doing?
             </label>
-            <span class="govuk-hint">Describe what an average day or week will be like and what tasks the apprentice could be doing.</span>
+            <span class="govuk-hint">Describe what an average day or week will be like and what takes the apprentice could be doing.</span>
             {% if 'VacancyDescription' in data.errorType %}
             <span id="VacancyDescription-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span> What the apprentice will be doing must not contain a banned word or phrase
             </span>
             {% endif %}
+            <div class="govuk-inset-text">
+              You must include at least 3 bullet points or your advert will be rejected.
+            </div>
             <!--<textarea class="govuk-textarea govuk-textarea--error {% if 'VacancyDescription' in data.errorType %}govuk-textarea--error{% endif %} js-character-count " id="VacancyDescription" name="VacancyDescription" rows="9" aria-describedby="more-detail-hint">{% if data['VacancyDescription'] %}{{data['VacancyDescription'] }}{% else %}{% endif %}</textarea>-->
             <textarea class="govuk-textarea {% if 'VacancyDescription' in data.errorType %}govuk-textarea--error{% endif %} js-character-count " id="VacancyDescription" name="VacancyDescription" rows="9" aria-describedby="more-detail-hint">{% if data['VacancyDescription'] %}{{data['VacancyDescription'] }}{% else %}{% endif %}</textarea>
             <div id="VacancyDescription-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">

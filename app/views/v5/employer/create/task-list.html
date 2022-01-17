@@ -42,7 +42,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="title?return_url=task-list" aria-describedby="eligibility-status">
-                What do you want to call this advert?
+                Advert title 
               </a>
             </span>
             <!--{% if data.title %}
@@ -56,10 +56,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="training-select?return_url=task-list" aria-describedby="eligibility-status">
-                What training will the apprentice take?
+                Training course 
               </a>
               {% else %}
-                What training will the apprentice take?
+              Training course 
               {% endif %}
             </span>
             <!--{% if data.import_no %}
@@ -73,10 +73,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">              
               {% if data.section1 == "completed" %}
               <a href="select-training-provider?return_url=task-list" aria-describedby="contact-details-status">
-                Have you found a training provider?
+                Training provider
               </a>
               {% else %}
-                Have you found a training provider?
+              Training provider
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -90,7 +90,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="short-description?return_url=task-list" aria-describedby="contact-details-status">
-                Short description of the apprenticeship
+                Short description of apprenticeship 
               </a>
               {% else %}
               Short description of the apprenticeship
@@ -107,10 +107,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="long-description?return_url=task-list" aria-describedby="contact-details-status">
-                Description of the apprenticeship
+                About the apprenticeship 
               </a>
               {% else %}
-                Description of the apprenticeship
+              About the apprenticeship 
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -142,10 +142,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
-                How much would you like to pay the apprentice?
+                Pay rate 
               </a>
               {% else %}
-                How much would you like to pay the apprentice?
+              Pay rate 
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -188,15 +188,31 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}-->
           </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section2 == "completed" %}
+              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
+                Number of positions <!-- for this apprenticeship-->?
+              </a>
+              {% else %}
+              Number of positions
+              {% endif %}
+            </span>
+            <!--{% if data.port_entry or data.port_export or data.transport_method %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
               <a href="location?return_url=task-list" aria-describedby="contact-details-status">
-                Where will the apprentice work?
+                Location
               </a>
               {% else %}
-                Where will the apprentice work?
+              Location
               {% endif %}
             </span>            
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -206,22 +222,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             {% endif %}-->
           </li>
 
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
-              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
-                How many positions are there<!-- for this apprenticeship-->?
-              </a>
-              {% else %}
-                How many positions are there?
-              {% endif %}
-            </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
-          </li>
+     
         </ul>
       </li>
 
@@ -244,10 +245,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
               <a href="skills?return_url=task-list" aria-describedby="contact-details-status">
-                What skills and personal qualities would you like the applicant to have?
+                Skills and personal qualities
               </a>
               {% else%}
-                What skills and personal qualities would you like the applicant to have?
+              Skills and personal qualities
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -261,10 +262,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="qualification-question?return_url=task-list" aria-describedby="contact-details-status">
-                What qualifications would you like the applicant to have?
+                Qualifications
               </a>
               {%else%}
-                What qualifications would you like the applicant to have?
+              Qualifications
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -278,10 +279,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="things-to-consider?return_url=task-list" aria-describedby="contact-details-status">
-                What else would you like the applicant to consider? (optional)
+                Other information
               </a>
               {%else%}
-                What else would you like the applicant to consider? (optional)
+              Other information
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -314,10 +315,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="employers-select?return_url=task-list" aria-describedby="list-convictions-status">
-                Which organisation is this advert for?
+                Name of organisation
               </a>
               {%else%}
-                Which organisation is this advert for?
+              Name of organisation
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -331,10 +332,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="employer?return_url=task-list" aria-describedby="list-convictions-status">
-                Which employer name do you want on your advert?
+                Name of employer on advert 
               </a>
               {%else%}
-                Which employer name do you want on your advert?
+              Name of employer on advert 
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -348,10 +349,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="about-employer?return_url=task-list" aria-describedby="list-convictions-status">
-                Add some information about the employer
+                Employer Information
               </a>
               {%else%}
-                Add some information about the employer
+              Employer Information
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -365,10 +366,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="contact?return_url=task-list" aria-describedby="list-convictions-status">
-                Add contact information for the employer
+                Contact details
               </a>
               {%else%}
-                Add contact information for the employer
+              Contact details
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -382,10 +383,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="application-process?return_url=task-list" aria-describedby="list-convictions-status">
-                How would you like to receive applications?
+               Website for application 
               </a>
               {%else%}
-                How would you like to receive applications?
+              Website for application 
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}

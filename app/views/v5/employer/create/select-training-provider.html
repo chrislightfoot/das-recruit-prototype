@@ -32,21 +32,15 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <span class="govuk-caption-l">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
             <h1 class="govuk-fieldset__heading">
-              Have you found a training provider?
+              Enter training provider name or UKPRN
             </h1>
           </legend>
           <div id="contact-hint" class="govuk-hint">
             You will need to use a registered training provider who offers <span class="govuk-!-font-weight-bold">{% if data.training_level %}{{data.training_level}}{% else %}Business administration, Level: 2 (Standard){% endif %}</span> training.
           </div>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="found_training_provider" name="has_training_provider" type="radio" value="email" data-aria-controls="conditional-contact">
-              <label class="govuk-label govuk-radios__label" for="contact">
-                Yes
-              </label>
-            </div>
+      
             <!--<div class="govuk-radios__conditional {% if not data.has_training_provider == "yes" and data.edit=="yes" %}govuk-radios__conditional--hidden{% endif %}" id="conditional-how-contacted-conditional-1">-->
-              <div class="govuk-radios__conditional {% if not data.has_training_provider == "yes" and data.edit=="yes" %}govuk-radios__conditional--hidden{% endif %}" id="conditional-contact">
+             
               <div class="govuk-form-group search-field search-field-darker {%if data.hasError and data.errorType == 'provider'%}govuk-form-group--error{% endif%}">
                 <input type="hidden" name="clientsFilter" value="new">
                 <div class="search-input ">
@@ -74,27 +68,23 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
                     </div>
                   </div>
                   <input class="form-control form-control-3-4" name="" id="searchClients-old" type="text" value="" style="display: none;">
-                </div>
+               
                 <div class="search-submit ">
                   <button class="button govuk-visually-hidden" type="submit" id="searchClientsSubmit" name="searchClientsSubmit" value="Search clients">Search clients</button>
                 </div>
                 <p class="govuk-body"><a href="#" id="clear-search" class="govuk-link">Clear search</a></p>
               </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="not_found_training_provider" name="has_training_provider" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-              <label class="govuk-label govuk-radios__label" for="contact-2">
-                No, I will choose one later
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-              <div class="govuk-form-group">
-                <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                  You will need to add a training provider before submitting the advert. If you need help, you can <a href="" class="govuk-link govuk-link--not-visited-state">find a training provider (opens in new tab or window)</a> based on the apprenticeship training.
-                </div>
+            </div><br>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                      What is a UK Provider Reference Number?
+                  </span>
+              </summary>
+              <div class="govuk-details__text">
+                  A UK Provider Reference Number (UKPRN) is a unique, 8-digit number that identifies a training provider. Your training provider can tell you their UKPRN.
               </div>
-            </div>            
-          </div>
+          </details>
       
         </fieldset>        
         <div class="govuk-form-group govuk-!-margin-top-9">

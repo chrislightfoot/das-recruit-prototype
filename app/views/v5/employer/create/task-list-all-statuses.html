@@ -149,6 +149,19 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
+              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
+                How many positions are there<!-- for this apprenticeship-->?
+              </a>
+            </span>
+            {% if data.port_entry or data.port_export or data.transport_method %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+          
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
               <a href="location?return_url=task-list" aria-describedby="contact-details-status">
                 Where will the apprentice work?
               </a>
@@ -160,18 +173,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             {% endif %}
           </li>
 
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
-                How many positions are there<!-- for this apprenticeship-->?
-              </a>
-            </span>
-            {% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}
-          </li>
+  
         </ul>
       </li>
 
