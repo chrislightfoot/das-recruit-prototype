@@ -171,7 +171,7 @@ module.exports = function(router) {
     res.redirect(301, '/' + base_url + req.params[0] + '/create/short-description')
   })
   router.post('/' + base_url + '*/create/positions', function(req, res) {
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?section2=completed")
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/location")
     //if (req.session.data.NumberOfEntities > 1) {
       //res.redirect(301, '/' + base_url + req.params[0] + "/create/display-employer")
     //}
@@ -183,7 +183,7 @@ module.exports = function(router) {
   })
   router.post('/' + base_url + '*/create/location', function(req, res) {
     //res.redirect(301, '/' + base_url + req.params[0] + '/create/dates')
-    res.redirect(301, '/' + base_url + req.params[0] + '/create/positions')
+    res.redirect(301, '/' + base_url + req.params[0] + '/create/task-list?section2=completed')
   })
   
   //WAGES
@@ -215,7 +215,7 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
     } else {
       //res.redirect(301, '/' + base_url + req.params[0] + "/create/duration");
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/location");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/positions");
     }
   })
 
