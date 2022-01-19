@@ -29,8 +29,8 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> Apprenticeship summary 
-          <span style="margin-left:170px;">           
+          <span class="app-task-list__section-number">1. </span> Advert summary
+          <span style="margin-left:260px;">           
             {% if data.section1 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
@@ -90,10 +90,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="short-description?return_url=task-list" aria-describedby="contact-details-status">
-                Short description of apprenticeship 
+                Summary of the apprenticeship 
               </a>
               {% else %}
-              Short description of the apprenticeship
+              Summary of the apprenticeship
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -245,10 +245,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
               <a href="skills?return_url=task-list" aria-describedby="contact-details-status">
-                Skills and personal qualities
+                Skills
               </a>
               {% else%}
-              Skills and personal qualities
+              Skills
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -279,10 +279,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="things-to-consider?return_url=task-list" aria-describedby="contact-details-status">
-                Other information
+                Other things to consider
               </a>
               {%else%}
-              Other information
+              Other things to consider
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
