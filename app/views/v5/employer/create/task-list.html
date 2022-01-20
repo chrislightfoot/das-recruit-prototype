@@ -402,7 +402,15 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">5.</span> Check and submit your advert
+          <span style="margin-left:120px;">
+            {% if data.section4 == "completed" %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {%else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {%endif%}
+          </span>
         </h2>
+
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <!--<span class="task-list-submit-disabled">
@@ -415,12 +423,14 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
               <span class="task-list-submit-enabled">
               <span class="app-task-list__task-name">
                   <!--<a href="vacancy-preview" aria-describedby="list-convictions-status">-->
-                <a href="check-your-answers" aria-describedby="list-convictions-status">  
+                {% if data.section4 == "completed" %}
+                <a href="check-your-answers" aria-describedby="list-convictions-status">
                   Check your answers and submit your advert
                 </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Not started</strong>
-            </span>
+                {%else%}
+                Check your answers and submit your advert
+                {%endif%}
+              
           </li>
         </ul>
       </li>
