@@ -4,6 +4,12 @@
 How much would you like to pay the apprentice? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
 {% block content %}
 
 <!-- {{minWage}} -->

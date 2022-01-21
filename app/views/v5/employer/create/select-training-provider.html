@@ -8,6 +8,7 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
 {{super()}}
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -32,7 +33,7 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <span class="govuk-caption-l">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
             <h1 class="govuk-fieldset__heading">
-              Enter training provider name or UKPRN
+              Enter the name of the training provider or UKPRN 
             </h1>
           </legend>
           <div id="contact-hint" class="govuk-hint">
@@ -46,7 +47,7 @@ Have you found a training provider? - Your apprenticeship adverts - {{serviceNam
                 <div class="search-input ">
                   <label class="govuk-label" for="contact-by-email">
                     <span class="govuk-hint">
-                      Enter the training provider name or reference number (UKPRN).
+                     
                     </span>
                   </label>
                   {% if data.hasError and data.errorType == "provider" %}

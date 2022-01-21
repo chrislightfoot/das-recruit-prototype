@@ -4,6 +4,11 @@
 Important dates - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -143,7 +148,7 @@ Important dates - Your apprenticeship adverts - {{serviceName}} - GOV.UK
               <label class="govuk-label govuk-checkboxes__label" for="is-disability-confident">
                 This employer has signed up to the <a href="https://www.gov.uk/government/collections/disability-confident-campaign" rel="noopener"
                   target="_blank" title="Disability Confident employer scheme and guidance (opens in a new window)">Disability
-                  Confident</a> scheme.
+                  Confident</a> scheme
               </label>
             </div>
           </div>
