@@ -55,6 +55,24 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
+              <a href="employers-select?return_url=task-list" aria-describedby="list-convictions-status">
+                Name of organisation
+              </a>
+              {%else%}
+              Name of organisation
+              {%endif%}
+            </span>
+            <!--{% if data.port_entry or data.port_export or data.transport_method %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
+
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section1 == "completed" %}
               <a href="training-select?return_url=task-list" aria-describedby="eligibility-status">
                 Training course 
               </a>
@@ -311,22 +329,6 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           <!--<li class="app-task-list__item" style="border-top:none;">
             Content explaining that the user needs to add employer information
           </li>-->
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              {% if data.section3 == "completed" %}
-              <a href="employers-select?return_url=task-list" aria-describedby="list-convictions-status">
-                Name of organisation
-              </a>
-              {%else%}
-              Name of organisation
-              {%endif%}
-            </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
-          </li>
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">

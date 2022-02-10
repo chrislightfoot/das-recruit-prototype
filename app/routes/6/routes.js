@@ -124,8 +124,15 @@ module.exports = function(router) {
     if (req.session.data.journey == "new") {
       res.redirect(301, '/' + base_url + req.params[0] + '/create/training-first-select')
     }
-    res.redirect(301, '/' + base_url + req.params[0] + '/create/training-select')    
+    res.redirect(301, '/' + base_url + req.params[0] + '/create/employers-select')    
   })
+
+  router.post('/' + base_url + '*/create/employers-select', function(req, res) {
+    //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/training-select");
+  })
+
+
 
   router.post('/' + base_url + '*/create/select-training-provider', function(req, res) {
     var index = req.body.providerName.indexOf("100")
