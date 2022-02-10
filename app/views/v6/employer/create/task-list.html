@@ -159,11 +159,11 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
-              <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
-                Pay rate 
+              <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
+                Important dates
               </a>
               {% else %}
-              Pay rate 
+                Important dates
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -190,14 +190,16 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             {% endif %}-->
           </li>
 
+
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
-              <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
-                Important dates
+              <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
+                Pay rate 
               </a>
               {% else %}
-                Important dates
+              Pay rate 
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -206,6 +208,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}-->
           </li>
+          
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
@@ -332,7 +335,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section4 == "completed" %}
+              {% if data.section3 == "completed" %}
               <a href="employer?return_url=task-list" aria-describedby="list-convictions-status">
                 Name of employer on advert 
               </a>

@@ -201,7 +201,7 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&error=");
     } else {
       //res.redirect(301, '/' + base_url + req.params[0] + "/create/preview-start?error=");
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/duration?edit=no&error=");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/positions?edit=no&error=");
     }
   })
 
@@ -210,7 +210,7 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no");
     } else {
       //res.redirect(301, '/' + base_url + req.params[0] + "/create/wages?error=");
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/dates?error=");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/wages?error=");
     }
   })
 
@@ -221,8 +221,8 @@ module.exports = function(router) {
     if (req.session.data.edit == "yes") {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no");
     } else {
-      //res.redirect(301, '/' + base_url + req.params[0] + "/create/duration");
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/positions");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/duration");
+      //res.redirect(301, '/' + base_url + req.params[0] + "/create/positions");
     }
   })
 
