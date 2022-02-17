@@ -177,21 +177,37 @@ module.exports = function(router) {
     //res.redirect(301, '/' + base_url + req.params[0] + '/create/positions')
     res.redirect(301, '/' + base_url + req.params[0] + '/create/short-description')
   })
-  router.post('/' + base_url + '*/create/positions', function(req, res) {
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/location")
-    //if (req.session.data.NumberOfEntities > 1) {
-      //res.redirect(301, '/' + base_url + req.params[0] + "/create/display-employer")
-    //}
-    //res.redirect(301, '/' + base_url + req.params[0] + "/create/display-name")
 
+
+
+  router.post('/' + base_url + '*/create/main-address', function(req, res) {
+    if(req.session.data['mainaddress'] == "no"){
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/add-address");
+    } else {
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/address-list");
+    }
   })
-  router.post('/' + base_url + '*/create/display-employer', function(req, res) {
-    res.redirect(301, '/' + base_url + req.params[0] + '/create/location')
+
+  router.post('/' + base_url + '*/create/add-address', function(req, res) {
+    //res.redirect(301, '/' + base_url + req.params[0] + '/create/dates')
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/address-list");
   })
-  router.post('/' + base_url + '*/create/location', function(req, res) {
+
+  router.post('/' + base_url + '*/create/add-address1', function(req, res) {
+    //res.redirect(301, '/' + base_url + req.params[0] + '/create/dates')
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/address-list");
+  })
+
+  router.post('/' + base_url + '*/create/address-list', function(req, res) {
     //res.redirect(301, '/' + base_url + req.params[0] + '/create/dates')
     res.redirect(301, '/' + base_url + req.params[0] + '/create/task-list?section2=completed')
   })
+
+
+
+
+
+
   
   //WAGES
   router.post('/' + base_url + '*/create/wages', function(req, res) {
@@ -201,7 +217,7 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&error=");
     } else {
       //res.redirect(301, '/' + base_url + req.params[0] + "/create/preview-start?error=");
-      res.redirect(301, '/' + base_url + req.params[0] + "/create/positions?edit=no&error=");
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/main-address");
     }
   })
 

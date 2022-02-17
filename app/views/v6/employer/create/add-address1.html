@@ -1,0 +1,56 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Add an address
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address2">
+              Enter the address or postcode
+            </label>
+            <input class="govuk-input govuk-input govuk-input--width-20" id="address2" name="address2" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="addresspositions2">
+              Number of positions for this address
+            </label>
+            <input class="govuk-input govuk-input govuk-input--width-4" id="addresspositions2" name="addresspositions2" type="text">
+          </div>
+                    
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

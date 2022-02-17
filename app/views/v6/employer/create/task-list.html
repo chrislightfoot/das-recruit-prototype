@@ -219,28 +219,11 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
-              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
-                Number of positions
+              <a href="main-address?return_url=task-list" aria-describedby="contact-details-status">
+                Address
               </a>
               {% else %}
-              Number of positions
-              {% endif %}
-            </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
-          </li>
-
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
-              <a href="location?return_url=task-list" aria-describedby="contact-details-status">
-                Location
-              </a>
-              {% else %}
-              Location
+              Address
               {% endif %}
             </span>            
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
