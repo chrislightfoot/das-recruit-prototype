@@ -24,10 +24,11 @@ Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}}
           </legend>
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="address2">
-              Enter the address or postcode
+            <label class="govuk-label" for="autocomplete-default">
+              Start typing the address or postcode
             </label>
-            <input class="govuk-input govuk-input govuk-input--width-20" id="address2" name="address2" type="text">
+            {# <input class="govuk-input" id="autocomplete-default" type="text"> #}
+            <div id="tt-default" class="autocomplete-wrapper"></div>
           </div>
 
           <div class="govuk-form-group">
@@ -52,5 +53,30 @@ Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}}
 
   </div>
 </div>
+
+<!-- AUTOCOMPLETE SCRIPT DATA -->
+
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+
+<script type="text/javascript">
+  var providers = [
+    "13 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "14 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "15 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "16 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "17 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+  ]
+</script>
+
+<script type="text/javascript">
+  var element = document.querySelector('#tt-default')
+  var id = 'autocomplete-default'
+  accessibleAutocomplete({
+    element: element,
+    id: id,
+    source: providers,
+    name: "address2"
+  })
+</script>
 
 {% endblock %}

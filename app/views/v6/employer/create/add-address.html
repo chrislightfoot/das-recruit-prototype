@@ -24,10 +24,11 @@ Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}}
           </legend>
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="address1">
-              Enter the address or postcode
+            <label class="govuk-label" for="autocomplete-default">
+              Start typing the address or postcode
             </label>
-            <input class="govuk-input govuk-input govuk-input--width-20" id="address1" name="address1" type="text">
+            {# <input class="govuk-input" id="autocomplete-default" type="text"> #}
+            <div id="tt-default" class="autocomplete-wrapper"></div>
           </div>
 
           <div class="govuk-form-group">
@@ -36,26 +37,7 @@ Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}}
             </label>
             <input class="govuk-input govuk-input govuk-input--width-4" id="addresspositions1" name="addresspositions1" type="text">
           </div>
-
-
-<!-- Pasted in -->
-
-<!--          <p class="govuk-body">
-           Start typing the address or postcode 
-          <p> 
-            
-          <div class="govuk-!-margin-bottom-6">
-          <label class="govuk-label" for="provider-name">
-            <span class="govuk-visually-hidden">Provider name</span>
-          </label>
-          <div class="body-text">
-            {# <input class="govuk-input" id="autocomplete-default" name="provider-name" type="text"> #}
-            <div id="tt-default" class="autocomplete-wrapper"></div>
-          </div>
-        </div>  -->
-
-<!-- End -->
-                    
+    
         </fieldset>
       </div>
 
@@ -93,10 +75,8 @@ Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}}
     element: element,
     id: id,
     source: providers,
-    name: "addressdata"
+    name: "address1"
   })
 </script>
-
-
 
 {% endblock %}
