@@ -7,7 +7,7 @@ What training will the apprentice take? - Your apprenticeship adverts - {{servic
 {% block beforeContent %}
 {{super()}}
 {% if data.journey != "new" %}
-<a href="{% if data.edit != 'yes' %}title{%else%}../task-list?edit=no{%endif%}" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endif %}
 {% endblock %}
 

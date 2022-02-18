@@ -7,7 +7,7 @@ What do you want to call this advert? - Your apprenticeship adverts - {{serviceN
 {% block beforeContent %}
 {{super()}}
 {% if data.journey != "new" %}
-<a href="../task-list?edit=no" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endif %}
 {% endblock %}
 
