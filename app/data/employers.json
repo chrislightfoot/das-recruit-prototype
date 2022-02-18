@@ -14,6 +14,13 @@
    "DClevel": "Committed"
  },
  {
+   "businessName": "Stagecoach",
+   "location": "Plymouth ",
+   "Postcode": "PL3",
+   "Sector": "Financial Services",
+   "DClevel": "Committed"
+ },
+ {
    "businessName": "1 Stop Healthcare",
    "location": "Colchester",
    "Postcode": "CO3",
@@ -22,6 +29,13 @@
  },
  {
    "businessName": "121 Captions Limited",
+   "location": "London",
+   "Postcode": "W1A",
+   "Sector": "Customer service",
+   "DClevel": "Committed"
+ },
+ {
+   "businessName": "G4S",
    "location": "London",
    "Postcode": "W1A",
    "Sector": "Customer service",
