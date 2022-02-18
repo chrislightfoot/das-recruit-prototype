@@ -120,18 +120,14 @@ What skills and personal qualities does the applicants need to have? - Your appr
                 <!--<button name="AddCustomSkillAction" id="add-custom-skill" value="AddCustomSkill" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">&plus; Add this skill</button>-->
                 <button class="govuk-button govuk-button--secondary" disabled>&plus; Add this skill</button>
             </div>
-              </div>
-              <br>
-              <div class="govuk-form-group">
-                {% if data.edit != "yes"%}
-                <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue" />
-                <!-- <a href="qualifications" class="govuk-button das-button-secondary govuk-!-margin-left-2" name="continueButton" value="Do this later">Skip</a> -->
-                <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-                {%else%}
-                <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and preview" />
-                <a href="task-list" class="govuk-body das-button--link">Cancel</a>
-                {%endif%}
-              </div>
+          </div>
+            <div class="govuk-button-group">
+              <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button>
+
+              <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+            </div>
             </div>
         </form>
 

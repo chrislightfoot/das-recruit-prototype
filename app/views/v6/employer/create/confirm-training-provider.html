@@ -22,18 +22,12 @@ Manage apprentices
 
 
     <form method="post">
-        <div class="govuk-form-group">
-          {% if data.change == "yes"%}
-            <button type="submit" class="govuk-button" data-module="govuk-button" name="previewdButton" value="Save and continue">Confirm and preview</button>
-            <a href="../account/preview-edit" class="govuk-body das-button--link">Cancel</a>
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
 
-          {% elseif data.edit != "yes"%}
-            <button type="submit" class="govuk-button" data-module="govuk-button" name="previewdButton" value="Save and continue">Confirm and continue</button>
-            <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-          {%else%}
-            <button type="submit" class="govuk-button" data-module="govuk-button" name="previewdButton" value="Save and continue">Confirm and preview</button><br /><br />
-            <a href="vacancy-preview?edit=no" class="govuk-body das-button--link">Cancel</a>
-          {%endif%}
+          <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
         </div>
       </form>
   </div>

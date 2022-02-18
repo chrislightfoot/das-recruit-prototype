@@ -55,14 +55,13 @@ Duration and working hours - Your apprenticeship adverts - {{serviceName}} - GOV
         <input class="govuk-input govuk-input--width-4" id="weekly-hours" name="weeklyHours" type="text" {% if data.weeklyHours and data.edit == "yes"%} value="{{data.weeklyHours}}" {%endif%}>
         <span class="govuk-body"> hours</span>
       </div>
-      <div class="govuk-form-group">
-      {% if data.edit != "yes"%}
-        <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue" />
-        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-      {%else%}
-        <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and continue" /><br /><br />
-        <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
-      {%endif%}
+      
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
       </div>
       </form>
   </div>

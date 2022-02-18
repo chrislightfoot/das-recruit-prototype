@@ -62,16 +62,15 @@ How would you like to receive applications? - Your apprenticeship adverts - {{se
           </div>
         </div>
       </fieldset>
-      <div class="govuk-form-group">
-        {% if data.edit != "yes"%}
-        <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue" />
+      
+      <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
 
-        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-        {%else%}
-        <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and continue" />
-        <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
-        {%endif%}
-      </div>
+          <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+        </div>
+          
     </form>
 
   </div>

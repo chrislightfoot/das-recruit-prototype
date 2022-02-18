@@ -40,13 +40,13 @@ Qualifications - Your apprenticeship advert - {{serviceName}} - GOV.UK
         </p>
 
         <form method="post">
-          <div class="govuk-form-group">
-            {{ govukButton({
-              text: "Save and continue",
-              href: "things-to-consider"
-            }) }}       
-            <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
+
+          <div class="govuk-button-group govuk-!-margin-top-7">
+            <a href="things-to-consider" class="govuk-button">Save and continue</a>
+
+            <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
           </div>
+
         </form>
 
       </div>

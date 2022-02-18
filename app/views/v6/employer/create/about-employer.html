@@ -41,15 +41,12 @@ Add some information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
         </label>
         <input class="govuk-input govuk-input--width-30" maxlength="100" type="text" id="EmployerWebsiteUrl" name="EmployerWebsiteUrl" value="{% if data.EmployerWebsiteUrl %}{{data.EmployerWebsiteUrl}}{%endif%}">
       </div>
-      <div class="govuk-form-group">
-        {% if data.edit=="yes"%}
-        <input type="submit" value="Save and continue" class="govuk-button save-button" data-automation="btn-continue">
-        {% else%}
-        <!--<a href="disability" class="govuk-button" data-module="govuk-button">Save and continue</a>-->
-        <a href="contact" class="govuk-button" data-module="govuk-button">Save and continue</a>
-        {% endif %}
-        <a class="govuk-body das-button--link" href="vacancy-preview/" data-automation="link-cancel">Cancel</a>
+
+      <div class="govuk-button-group govuk-!-margin-top-7">
+        <a href="contact" class="govuk-button">Save and continue</a>
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
       </div>
+
     </form>
   </div>
 </div>
