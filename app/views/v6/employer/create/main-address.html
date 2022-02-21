@@ -26,7 +26,7 @@ Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}}
           <p class="govuk-body">Your organisation’s main address is <strong>46 Gillingham Street, Pimlico, London, SW1V 1HU</strong></p>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="address-yes" name="mainaddress" type="radio" value="yes" data-aria-controls="conditional-contact">
+              <input class="govuk-radios__input" id="address-yes" name="mainaddress" type="radio" value="yes" data-aria-controls="conditional-contact" {{ checked("mainaddress", "yes") }}>
               <label class="govuk-label govuk-radios__label" for="address-yes">
                 Yes
               </label>
@@ -41,7 +41,7 @@ Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}}
 
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="address-no" name="mainaddress" type="radio" value="no">
+              <input class="govuk-radios__input" id="address-no" name="mainaddress" type="radio" value="no" {{ checked("mainaddress", "no") }}>
               <label class="govuk-label govuk-radios__label" for="address-no">
                 No
               </label>
