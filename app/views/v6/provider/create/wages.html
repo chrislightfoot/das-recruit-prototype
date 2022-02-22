@@ -24,15 +24,15 @@ How much would you like to pay the apprentice? - Recruitment - {{serviceName}} -
     </div>
     {% endif %}
     <div class="govuk-form-group">
-      <form method="post">
+      <form method="post" action="positions">
       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            How much would you like to pay the apprentice?
+            How much will the apprentice be paid? 
           </h1>
         </legend>
         <div id="contact-hint" class="govuk-hint">
-          Pay will show as a yearly figure on your advert. <a href="https://www.gov.uk/national-minimum-wage-rates" rel="noopener" target="_blank">View the​ ​National Minimum Wage for apprentices (opens in a new tab or window)​</a>.
+          Pay will show as a yearly figure on your advert. <a href="https://www.gov.uk/national-minimum-wage-rates" rel="noopener" target="_blank">View the​ ​National Minimum Wage for apprentices (opens in a new tab)​</a>.
         </div>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
@@ -106,7 +106,7 @@ How much would you like to pay the apprentice? - Recruitment - {{serviceName}} -
         <div class="govuk-form-group">
           <p class="govuk-body govuk-!-font-weight-bold">Extra information about pay (optional)</p>
           <div id="WageAdditionalInformation-hint" class="govuk-hint">
-            For example bonus schemes, performance increases or benefits
+            For example, bonus schemes, performance increases or benefits
           </div>
           <textarea class="govuk-textarea govuk-!-width-three-quarters js-character-count" id="WageAdditionalInformation" name="WageAdditionalInformation" rows="5"></textarea>          
         </div>

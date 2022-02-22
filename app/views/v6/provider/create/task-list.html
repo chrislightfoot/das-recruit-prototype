@@ -14,7 +14,7 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     {% if data.title %}<span class="govuk-caption-xl">{{data.title}}</span>{% endif%}
     <h1 class="govuk-heading-xl">
-      Create a vacancy
+      Create an apprenticeship vacancy
     </h1>
     
     <!--<p class="govuk-body">
@@ -29,8 +29,8 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> Apprenticeship summary 
-          <span style="margin-left:170px;">           
+          <span class="app-task-list__section-number">1. </span> Vacancy summary 
+          <span style="margin-left:249px;">           
             {% if data.section1 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
@@ -39,23 +39,13 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
           </span>
         </h2>
         <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">                            
-              <a href="employers-select?return_url=task-list" aria-describedby="contact-details-status">
-                Which employer do you want to create a vacancy for?
-              </a>              
-            </span>
-          
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              {% if data.section1 == "completed" %}
               <a href="title?return_url=task-list" aria-describedby="eligibility-status">
-                What do you want to call this vacancy?
+                Vacancy title
               </a>
-              {% else %}
-                What do you want to call this vacancy?
-              {% endif %}
-            </span>
+           </span>
             <!--{% if data.title %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else%}
@@ -64,13 +54,26 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
           </li>
 
           <li class="app-task-list__item">
+            <span class="app-task-list__task-name">   
+              {% if data.section1 == "completed" %}                         
+              <a href="employers-select?return_url=task-list" aria-describedby="contact-details-status">
+                Name of organisation
+              </a>
+              {%else%}
+                Name of organisation
+              {%endif%}             
+            </span>
+          </li>
+          
+
+          <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="training-select?return_url=task-list" aria-describedby="eligibility-status">
-                What training will the apprentice take?
+                Training course
               </a>
               {% else %}
-                What training will the apprentice take?
+                Training course
               {% endif %}
             </span>
             <!--{% if data.import_no %}
@@ -101,10 +104,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="short-description?return_url=task-list" aria-describedby="contact-details-status">
-                Short description of the apprenticeship
+                Summary of the apprenticeship
               </a>
               {% else %}
-              Short description of the apprenticeship
+              Summary of the apprenticeship
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -118,10 +121,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="long-description?return_url=task-list" aria-describedby="contact-details-status">
-                Description of the apprenticeship
+                About the apprenticeship
               </a>
               {% else %}
-                Description of the apprenticeship
+                About the apprenticeship
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -146,24 +149,17 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
           </span>
         </h2>        
         <ul class="app-task-list__items">
-          <!--<li class="app-task-list__item" style="border-top:none;">
-            Content explaining that the user needs to add employment details
-          </li>-->
-          <li class="app-task-list__item">
+  
+           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
-              <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
-                How much would you like to pay the apprentice?
+              <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
+                Important dates
               </a>
               {% else %}
-                How much would you like to pay the apprentice?
+                Important dates
               {% endif %}
             </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
           </li>
 
           <li class="app-task-list__item">
@@ -176,63 +172,49 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
                 Duration and working hours
               {% endif %}
             </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
           </li>
+
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
-              <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
-                Important dates
+              <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
+                Pay rate
               </a>
               {% else %}
-                Important dates
+                Pay rate
               {% endif %}
             </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
           </li>
 
+        
+         <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section2 == "completed" %}
+              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
+                Number of positions
+              </a>
+              {% else %}
+                Number of positions
+              {% endif %}
+            </span>
+   
+          </li>
+          
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
               <a href="location?return_url=task-list" aria-describedby="contact-details-status">
-                Where will the apprentice work?
+                Address
               </a>
               {% else %}
-                Where will the apprentice work?
+                Address
               {% endif %}
             </span>            
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
+
           </li>
 
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
-              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
-                How many positions are there<!-- for this apprenticeship-->?
-              </a>
-              {% else %}
-                How many positions are there?
-              {% endif %}
-            </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
-          </li>
+         
         </ul>
       </li>
 
@@ -255,10 +237,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
               <a href="skills?return_url=task-list" aria-describedby="contact-details-status">
-                What skills and personal qualities would you like the applicant to have?
+                Skills
               </a>
               {% else%}
-                What skills and personal qualities would you like the applicant to have?
+                Skills
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -272,10 +254,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="qualification-question?return_url=task-list" aria-describedby="contact-details-status">
-                What qualifications would you like the applicant to have?
+                Qualifications
               </a>
               {%else%}
-                What qualifications would you like the applicant to have?
+                Qualifications
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -289,10 +271,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="things-to-consider?return_url=task-list" aria-describedby="contact-details-status">
-                What else would you like the applicant to consider? (optional)
+                Other things to consider
               </a>
               {%else%}
-                What else would you like the applicant to consider? (optional)
+                Other things to consider
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -337,10 +319,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="employer?return_url=task-list" aria-describedby="list-convictions-status">
-                Which employer name do you want on your vacancy?
+                Name of employer on vacancy
               </a>
               {%else%}
-                Which employer name do you want on your vacancy?
+                Name of employer on vacancy
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -354,10 +336,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="about-employer?return_url=task-list" aria-describedby="list-convictions-status">
-                Add some information about the employer
+                Employer information
               </a>
               {%else%}
-                Add some information about the employer
+                Employer information
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -371,10 +353,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="contact?return_url=task-list" aria-describedby="list-convictions-status">
-                Add contact information for the employer
+                Contact details
               </a>
               {%else%}
-                Add contact information for the employer
+                Contact details
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -388,10 +370,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="application-process?return_url=task-list" aria-describedby="list-convictions-status">
-                How would you like to receive applications?
+                Application website
               </a>
               {%else%}
-                How would you like to receive applications?
+                Application website
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}

@@ -203,11 +203,6 @@ module.exports = function(router) {
     res.redirect(301, '/' + base_url + req.params[0] + '/create/task-list?section2=completed')
   })
 
-
-
-
-
-
   
   //WAGES
   router.post('/' + base_url + '*/create/wages', function(req, res) {

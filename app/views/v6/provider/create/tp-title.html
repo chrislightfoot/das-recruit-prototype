@@ -26,7 +26,7 @@ What do you want to call this vacancy? - Recruitment - {{serviceName}} - GOV.UK
             <div id="with-hint-hint" class="govuk-hint">
               Must include the word ‘apprentice’ or ‘apprenticeship’
             </div>
-            <input class="govuk-input govuk-!-margin-top-3 js-character-count" id="title" name="title" type="text" value="{% if data.title and data.edit == 'yes' %}{{data.title}}{%endif%}">
+            <input class="govuk-input js-character-count" id="title" name="title" type="text" value="{% if data.title and data.edit == 'yes' %}{{data.title}}{%endif%}">
           </div>
         
           <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">

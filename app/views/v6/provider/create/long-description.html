@@ -38,7 +38,7 @@ Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
 
     <h1 class="govuk-heading-xl">
       <span class="govuk-caption-l">{% if data.title %}{{data.title}}{% else %}Developer apprenticeship{% endif %}</span>
-      Description of the apprenticeship
+      About the apprenticeship
     </h1>
     <form method="post">
       <fieldset class="govuk-fieldset">
@@ -49,6 +49,11 @@ Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
               What will the apprentice be doing?
             </label>
             <span class="govuk-hint">Describe what an average day or week will be like and what tasks they could be doing.</span>
+
+            <div class="govuk-inset-text">
+             You must include at least 3 bullet points or your advert will be rejected.
+            </div>
+
             {% if 'VacancyDescription' in data.errorType %}
             <span id="VacancyDescription-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span> What the apprentice will be doing must not contain a banned word or phrase
