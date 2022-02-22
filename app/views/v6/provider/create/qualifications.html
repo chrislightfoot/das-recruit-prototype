@@ -83,15 +83,10 @@ What qualifications would you like the applicant to have? - Recruitment - {{serv
               </fieldset>
           </div>
 
-
-
-          <br>
-          <input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Save and continue">
-          {% if data.qualifications | length > 0 %}
-            <a class="govuk-body das-button--link" href="qualifications-list" data-automation="link-cancel">Cancel</a>
-          {% else %}
-            <a class="govuk-body das-button--link" href="vacancy-preview?edit=no" data-automation="link-cancel">Cancel</a>
-          {% endif %}
+         <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+            <a class="govuk-link" href="../dashboard">Cancel</a>
+          </div>
 
         </form>
           </div>

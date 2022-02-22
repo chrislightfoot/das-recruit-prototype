@@ -27,14 +27,11 @@ Short description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
           <textarea class="govuk-textarea js-character-count " id="shortDescription" name="shortDescription" rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
         </div>
       </div>
-      {% if data.edit != "yes"%}
-      <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue"/>
-      <!-- <a href="skills" class="govuk-button das-button-secondary govuk-!-margin-left-2" name="continueButton" value="Do this later">Skip</a> -->
-        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-      {%else%}
-        <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and preview"/>
-        <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
-      {%endif%}
+      
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <a class="govuk-link" href="../dashboard">Cancel</a>
+        </div>
     </form>
   </div>
 </div>

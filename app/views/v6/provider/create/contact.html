@@ -25,9 +25,9 @@ Add contact information - Recruitment - {{serviceName}} - GOV.UK
                   <label class="govuk-label" for="EmployerContactPhone">Contact number (optional)</label>
                   <input class="govuk-input govuk-input--width-20" type="tel" maxlength="16" id="EmployerContactPhone" name="EmployerContactPhone" value="{% if data.EmployerContactPhone %}{{data.EmployerContactPhone}}{%endif%}">
               </div>
-              <div class="govuk-form-group">
-                  <input type="submit" value="Save and continue" class="govuk-button save-button" data-automation="btn-continue">
-                  <a class="govuk-body das-button--link" href="vacancy-preview/" data-automation="link-cancel">Cancel</a>
+              <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+                <a class="govuk-link" href="../dashboard">Cancel</a>
               </div>
             </form>
           </div>

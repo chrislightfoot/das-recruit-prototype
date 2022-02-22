@@ -64,7 +64,6 @@ Which employer do you want to create a vacancy for? - Recruitment - {{serviceNam
       {% endif %}
       <div id="oranisation-list" class="govuk-form-group {% if query.error == "yes" %}govuk-form-group--error{%endif%}">
         <fieldset class="govuk-fieldset">
-          <h2 class="govuk-heading-s govuk-!-margin-bottom-6">Select employer</h2>
           {% if query.error == 'yes' %}
           <span id="employer-error" class="govuk-error-message">You must select and employer</span>
           {% endif %}

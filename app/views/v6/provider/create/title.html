@@ -35,15 +35,11 @@ What do you want to call this vacancy? - Recruitment - {{serviceName}} - GOV.UK
         
         </div>
 
-        <div class="govuk-form-group">
-          {% if data.edit != "yes"%}
-          <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue"/>
-            <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-          {%else%}
-            <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and preview"/>
-            <a href="../vacancy-preview" class="govuk-body das-button--link">Cancel</a>
-          {%endif%}
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <a class="govuk-link" href="../dashboard">Cancel</a>
         </div>
+
     </form>
   </div>
 </div>

@@ -36,15 +36,14 @@ Add some information - Recruitment - {{serviceName}} - GOV.UK
             <input class="govuk-input govuk-input--width-30" maxlength="100" type="text" id="EmployerWebsiteUrl" name="EmployerWebsiteUrl" value="{% if data.EmployerWebsiteUrl %}{{data.EmployerWebsiteUrl}}{%endif%}">
           </div>
           <div class="govuk-form-group">
-            {% if data.edit=="yes"%}
-            <input type="submit" value="Save and continue" class="govuk-button save-button" data-automation="btn-continue">
-            {% else%}
-            <!--<a href="disability" class="govuk-button" data-module="govuk-button">Save and continue</a>-->
-            <a href="contact" class="govuk-button" data-module="govuk-button">Save and continue</a>
-            {% endif %}
-            <a class="govuk-body das-button--link" href="vacancy-preview/" data-automation="link-cancel">Cancel</a>
+            {{ govukButton({
+              text: "Save and continue",
+              href: "contact"
+            }) }}   
+            <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+            <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
           </div>
-        </form>
+  </form>
       </div>
     </div>
 

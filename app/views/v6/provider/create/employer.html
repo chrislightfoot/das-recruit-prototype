@@ -43,8 +43,6 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
 				</fieldset>
         {% endif %}
 
-
-    <h2 class="govuk-heading-s">Select the organisation</h2>
       <div id="oranisation-list" class="govuk-form-group" data-amount="{{data.NumberOfEntities}}">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios">
@@ -128,13 +126,15 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
                 </div> -->
                 {% endif %}
 
-                {% if query.edit != "yes"%}
-                <a href="about-employer" type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue">Save and continue</a><br /><br />
+                <div class="govuk-form-group">
+                  {{ govukButton({
+                    text: "Save and continue",
+                    href: "about-employer"
+                  }) }}   
                   <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-                {%else%}
-                  <input type="submit" class="govuk-button" data-module="govuk-button" name="previewButton" value="Save and continue"/><br /><br />
-                  <a href="vacancy-preview" class="govuk-body das-button--link">Cancel</a>
-                {%endif%}
+                  <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
+                </div>
+
 
 </form>
 

@@ -11,8 +11,7 @@ How many positions are there for this apprenticeship? - Recruitment - {{serviceN
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-
+  <div class="govuk-grid-column-two-thirds">
     <form method="post" action="location">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -23,15 +22,11 @@ How many positions are there for this apprenticeship? - Recruitment - {{serviceN
         <div class="govuk-form-group govuk-!-margin-bottom-8">
           <input class="govuk-input govuk-input--width-4" id="numberOfPositions" name="numberOfPositions" type="text" value="{% if data.numberOfPositions %}{%else%}{%endif%}">
         </div>
-        <div class="govuk-form-group">
-          {% if query.edit != "yes"%}
-            <input type="submit" class="govuk-button" data-module="govuk-button" name="continueButton" value="Save and continue"/><br /><br />
-            <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-          {%else%}
-          <input type="submit" class="govuk-button" data-module="govuk-button" name="previewdButton" value="Save and continue"/><br /><br />
-          <a href="../vacancy-preview" class="govuk-body das-button--link">Cancel</a>
-          {%endif%}
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <a class="govuk-link" href="../dashboard">Cancel</a>
         </div>
+          
         </fieldset>
       </form>
   </div>

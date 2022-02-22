@@ -13,14 +13,14 @@ Confirm apprenticeship training - Recruitment - {{serviceName}} - GOV.UK
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Confirm apprenticeship training course</h1>
 
     <!-- <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %} vacancy</span>
     <h1 class="govuk-heading-xl">
       Confirm the training provider
     </h1> -->
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
     <div class="das-confirm-card" style="background-color:#f4f4f4;padding:20px;margin-bottom:30px;">
     <h2 class="govuk-heading-m">{%if data.training_level %}{{data.training_level}}{% else %}Accountancy Taxation Professional{%endif%}<span class="govuk-caption-m">
       Level: 3 advanced (equivalent to A levels)
@@ -45,15 +45,9 @@ Confirm apprenticeship training - Recruitment - {{serviceName}} - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0"><a href="std-select?change=yes">Change apprenticeship training</a><br></p>
     </div>
     <form method="post">
-        <div class="govuk-form-group">
-
-            {% if data.edit != "yes"%}
-            <button type="submit" class="govuk-button" data-module="govuk-button" name="previewdButton" value="Save and continue">Confirm and continue</button><br /><br />
-            <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-            {% else %}
-            <a href="../vacancy-preview?edit=no" type="submit" class="govuk-button" data-module="govuk-button" name="previewdButton" value="Save and preview">Save and preview</a><br /><br />
-            <a href="../vacancy-preview?edit=no" class="govuk-body das-button--link">Cancel</a>
-            {% endif %}
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <a class="govuk-link" href="../dashboard">Cancel</a>
         </div>
       </form>
   </div>
