@@ -444,9 +444,6 @@ $govuk-assets-path: '/govuk/assets/';
     @include govuk-typography-common();
 }
 
-.govuk-details__text {
-    width: 160%;
-}
 .no-button{padding:0px;margin:0px;background-color:none;border:none;cursor: pointer}
 .govuk-input__suffix{color:#1d70b8;background-color:#1d70b8;cursor: pointer;}
 .sort {
