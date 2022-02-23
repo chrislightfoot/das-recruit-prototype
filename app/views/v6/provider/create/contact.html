@@ -17,17 +17,18 @@ Add contact information - Recruitment - {{serviceName}} - GOV.UK
             <h1 class="govuk-heading-xl"><span class="govuk-caption-l">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
               Contact details for {% if data.user == "employer" %}{{data.orgName}}{% else %}{{ data.providerName}}{% endif %} (optional)
             </h1>
+            <p>This should be someone an applicant can contact to ask questions about the apprenticeship position.</p>
             <form method="post" action="application-process">
               <div class="govuk-form-group">
-                  <label class="govuk-label" for="EmployerContactName">Contact name (optional)</label>
+                  <label class="govuk-label" for="EmployerContactName">First and last name (optional)</label>
                   <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactName" name="EmployerContactName" value="{% if data.EmployerContactName %}{{data.EmployerContactName}}{%endif%}">
               </div>
               <div class="govuk-form-group">
-                  <label class="govuk-label" for="EmployerContactEmail">Contact email (optional)</label>
+                  <label class="govuk-label" for="EmployerContactEmail">Email address (optional)</label>
                   <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactEmail" name="EmployerContactEmail" value="{% if data.EmployerContactEmail %}{{data.EmployerContactEmail}}{%endif%}">
               </div>
               <div class="govuk-form-group">
-                  <label class="govuk-label" for="EmployerContactPhone">Contact number (optional)</label>
+                  <label class="govuk-label" for="EmployerContactPhone">Phone number (optional)</label>
                   <input class="govuk-input govuk-input--width-20" type="tel" maxlength="16" id="EmployerContactPhone" name="EmployerContactPhone" value="{% if data.EmployerContactPhone %}{{data.EmployerContactPhone}}{%endif%}">
               </div>
               <div class="govuk-button-group">
