@@ -4,7 +4,13 @@
 How would you like to receive applications? - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form method="post" action="task-list?section4=completed">

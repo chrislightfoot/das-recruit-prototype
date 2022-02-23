@@ -5,6 +5,11 @@
 Add contact information - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
 {% block content %}
 
     <div class="govuk-grid-row">

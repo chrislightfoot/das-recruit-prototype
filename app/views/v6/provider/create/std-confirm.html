@@ -6,9 +6,7 @@ Confirm apprenticeship training - Recruitment - {{serviceName}} - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-{% if data.journey != "new" %}
-<a href="{%if data.edit != 'yes' %}create-vacancy{%else%}../vacancy-preview?edit=no{%endif%}" class="govuk-back-link">Back</a>
-{% endif %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
