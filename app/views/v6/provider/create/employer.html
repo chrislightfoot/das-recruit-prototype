@@ -13,7 +13,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Which employer name do you want on your vacancy?</h1>
+    <h1 class="govuk-heading-xl">Which employer is this vacancy for?</h1>
     <form method="POST">
         {% if  data.NumberOfEntities > 10 %}
 				<fieldset class="govuk-fieldset">
@@ -130,7 +130,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
                 <div class="govuk-form-group">
                   {{ govukButton({
                     text: "Save and continue",
-                    href: "about-employer"
+                    href: "std-select"
                   }) }}   
                   <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
                   <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
