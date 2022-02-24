@@ -53,7 +53,7 @@ Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
             <label class="govuk-label govuk-!-font-weight-bold" for="VacancyDescription">
               What will the apprentice be doing?
             </label>
-            <span class="govuk-hint">Describe what an average day or week will be like and what tasks they could be doing.</span>
+            <div class="govuk-hint">Describe what an average day or week will be like and what tasks they could be doing.</div>
 
             <div class="govuk-inset-text">
              You must include at least 3 bullet points or your advert will be rejected.
@@ -95,9 +95,9 @@ Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
             <label class="govuk-label govuk-!-font-weight-bold" for="OutcomeDescription">
               What is the expected career progression after this apprenticeship?
             </label>
-            <span id="more-detail-hint" class="govuk-hint ">
+            <div id="more-detail-hint" class="govuk-hint ">
               You may want to mention specific routes they could take once qualified.
-            </span>
+            </div>
             {% if 'OutcomeDescription' in data.errorType %}
             <span id="OutcomeDescription-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span> Expected career progression must not contain contain a banned word or phrase

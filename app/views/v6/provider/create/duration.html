@@ -20,8 +20,7 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
         <label class="govuk-label govuk-!-font-weight-bold" for="duration">
           How long is the whole apprenticeship, including work and training?
         </label>
-        <span class="govuk-hint">The apprenticeship must last at least 12 months.</span>
-        <span class="govuk-hint">For {{data.training_level or "Food and Drink: Fish and Shellfish Industry Skills"}}, the typical length is 24 months.</span><br>
+        <div class="govuk-hint">The apprenticeship must last at least 12 months. For {{data.training_level or "Food and Drink: Fish and Shellfish Industry Skills"}}, the typical length is 24 months.</div>
         <input class="govuk-input govuk-input--width-4" id="duration" name="duration" type="text">
         <select class="govuk-select" id="sort" name="sort">
 
@@ -35,7 +34,7 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
           <label class="govuk-label govuk-!-font-weight-bold" for="workingWeekDescription">
             Details of working week
           </label>
-          <span class="govuk-hint">For example, Monday to Friday 9am to 5pm, shifts, may work evenings and weekends</span>
+          <div class="govuk-hint">For example, Monday to Friday 9am to 5pm, shifts, may work evenings and weekends</div>
           <textarea class="govuk-textarea govuk-!-width-three-quarters js-character-count " id="workingWeekDescription"
             name="workingWeekDescription" rows="5"></textarea>
         </div>
@@ -46,8 +45,10 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
           How many hours will the apprentice work each week, including training?
         </label>
 
-        <input class="govuk-input govuk-input--width-4" id="weekly-hours" name="weeklyHours" type="text" {% if data.weeklyHours and data.edit == "yes"%} value="{{data.weeklyHours}}" {%endif%}>
-        <span class="govuk-body">hours</span>
+        <div class="govuk-input__wrapper">
+          <input class="govuk-input govuk-input--width-4" id="weekly-hours" name="weeklyHours" type="text" {% if data.weeklyHours and data.edit == "yes"%} value="{{data.weeklyHours}}" {%endif%}>
+          <div class="govuk-input__suffix" aria-hidden="true">hours</div>
+        </div>
       </div>
       <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">Save and continue</button>
