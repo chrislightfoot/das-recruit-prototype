@@ -37,7 +37,7 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">1. </span> Vacancy summary 
-          <span style="margin-left:249px;">           
+          <span style="margin-left:261px;">           
             {% if data.section1 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
@@ -128,10 +128,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="long-description?return_url=task-list" aria-describedby="contact-details-status">
-                About the apprenticeship
+                Tasks and training details
               </a>
               {% else %}
-                About the apprenticeship
+                Tasks and training details
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -147,7 +147,7 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">2.</span> Employment details
-          <span style="margin-left:220px;">
+          <span style="margin-left:237px;">
             {% if data.section2 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
@@ -161,10 +161,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
-                Important dates
+                Closing and start dates
               </a>
               {% else %}
-                Important dates
+                Closing and start dates
               {% endif %}
             </span>
           </li>
@@ -227,8 +227,8 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
 
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3.</span> Skills and qualifications
-          <span style="margin-left:185px;">
+          <span class="app-task-list__section-number">3.</span>Requirements and prospects
+          <span style="margin-left:144px;">
             {% if data.section3 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else%}
@@ -267,11 +267,18 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
                 Qualifications
               {%endif%}
             </span>
-            <!--{% if data.port_entry or data.port_export or data.transport_method %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section3 == "completed" %}
+              <a href="future-prospects?return_url=task-list" aria-describedby="contact-details-status">
+                Future prospects
+              </a>
+              {%else%}
+                Future prospects
+              {%endif%}
+            </span>
           </li>
 
           <li class="app-task-list__item">
@@ -297,7 +304,7 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">4.</span> About the employer
-          <span style="margin-left:225px;">
+          <span style="margin-left:239px;">
             {% if data.section4 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {%else%}
