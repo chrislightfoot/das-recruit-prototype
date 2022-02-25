@@ -14,6 +14,7 @@ Add some information - Recruitment - {{serviceName}} - GOV.UK
 <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
         <h1 class="govuk-heading-xl">Information about {{data.orgName}}</h1>
         <!--{% if data.EmployerDescription and data.journey != 'new' %}
         <p class="govuk-body">Updating the employer information will also update the employer information on any unapproved vacancies eg. draft, pending review or rejected vacancies.</p>

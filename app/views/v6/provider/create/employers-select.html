@@ -26,8 +26,7 @@ Which employer do you want to create a vacancy for? - Recruitment - {{serviceNam
       </div>
     </div>
     {% endif %}
-    <!-- <span class="govuk-caption-xl">Recuitment</span> -->
-
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
     <h1 class="govuk-heading-xl">Which organisation do you want to create a vacancy for?</h1>
     <form method="post" id="employers-form" action="">
     <!--<form method="post" id="employers-form" action="create-vacancy">-->

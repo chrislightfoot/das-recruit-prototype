@@ -16,6 +16,7 @@ How many positions are there for this apprenticeship? - Recruitment - {{serviceN
     <form method="post" action="location">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
           <h1 class="govuk-fieldset__heading">
             How many positions are available?
           </h1>

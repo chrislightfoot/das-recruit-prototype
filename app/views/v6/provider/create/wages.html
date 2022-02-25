@@ -32,6 +32,7 @@ How much would you like to pay the apprentice? - Recruitment - {{serviceName}} -
       <form method="post" action="positions">
       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
           <h1 class="govuk-fieldset__heading">
             How much will the apprentice be paid? 
           </h1>

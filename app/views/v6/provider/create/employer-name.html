@@ -13,6 +13,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
     <h1 class="govuk-heading-xl">What employer name do you want to go on the vacancy?</h1>
     <form method="post" action="about-employer">
       <div class="govuk-form-group">
