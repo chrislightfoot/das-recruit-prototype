@@ -14,7 +14,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
-    <h1 class="govuk-heading-xl">What employer name do you want to go on the vacancy?</h1>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">What employer name do you want to go on the vacancy?</h1>
     <form method="post" action="about-employer">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -35,7 +35,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
             </div>
             <div class="govuk-radios__conditional" id="trading-name-conditional">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-!-font-weight-bold" for="tradingName">Enter employer name</label>
+                <label class="govuk-label" for="tradingName">Enter employer name</label>
                 <input class="govuk-input govuk-input--width-20" id="tradingName" name="tradingName" type="text">
               </div>
             </div>

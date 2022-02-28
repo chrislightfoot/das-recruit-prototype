@@ -28,7 +28,7 @@ Important dates - Recruitment - {{serviceName}} - GOV.UK
     </div>
     {% endif %}
     <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
-    <h1 class="govuk-heading-xl">Closing and start dates</h1>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Closing and start dates</h1>
     <!-- {% if data.expiryDate %}
     <div class="govuk-warning-text">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -44,12 +44,12 @@ Important dates - Recruitment - {{serviceName}} - GOV.UK
     <form method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="closing-hint" role="group">
-          <label class="govuk-label govuk-!-font-weight-bold" for="shortDescription">
+          <label class="govuk-label govuk-label--m" for="shortDescription">
             Application closing date
           </label>
-          <span id="closing-hint" class="govuk-hint">
+          <div id="closing-hint" class="govuk-hint">
             For example, 19 11 2021
-          </span>
+          </div>
           <div class="govuk-date-input" id="closing">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
@@ -84,7 +84,7 @@ Important dates - Recruitment - {{serviceName}} - GOV.UK
 
       <div class="govuk-form-group {% if hasError and errorType == "dates" %}govuk-form-group--error{%endif%}">
         <fieldset class="govuk-fieldset" aria-describedby="start-hint" role="group">
-          <label class="govuk-label govuk-!-font-weight-bold" for="shortDescription">
+          <label class="govuk-label govuk-label--m" for="shortDescription">
             Apprenticeship start date
 
           </label>
@@ -93,14 +93,14 @@ Important dates - Recruitment - {{serviceName}} - GOV.UK
               <span class="govuk-visually-hidden">Error:</span> The start date must be before 01 08 2022 when the apprenticeship training closes to new starters.
           </span>
           {% endif %}
-          <span id="start-hint" class="govuk-hint">
+          <div id="start-hint" class="govuk-hint">
             {% if data.expiryDate and not hasError %}
             The start date must be before the {% if data.training_level %} {{data.training_level}} {%else%}Animal Care, Level: 2{%endif%} closes to new starters on 01 08 2022 <br> <br>
             {% elseif data.expiryDate and hasError %}
             You may want to <a href="training-select{% if data.edit=="yes" %}?edit=yes"{% else %}?edit=no"{% endif %} class="govuk-link">find different apprenticeship training</a> that doesnt have an ending date.<br><br>
             {% endif %}
             For example, 02 12 2021
-          </span>
+          </div>
           <div class="govuk-date-input" id="dob">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">

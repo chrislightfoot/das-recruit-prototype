@@ -10,29 +10,35 @@ What else do you want the applicant to consider? (optional) - Recruitment - {{se
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">    
-      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
-    <form method="post">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-     <h1 class="govuk-fieldset__heading">
-       What else do you want the applicant to consider? (optional)
-     </h1>
-   </legend>
-      <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="350">
-        <div class="govuk-form-group">
-
-          <p class="govuk-hint">For example, if the vacancy will involve working outdoors or lifting heavy objects</p>
-          <textarea class="govuk-textarea js-character-count " id="ThingsToConsider" name="ThingsToConsider" rows="5"></textarea>
+  <div class="govuk-grid-column-two-thirds">
+  
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
+      <div class="govuk-form-group">
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--xl" for="ThingsToConsider">
+            What else do you want the applicant to consider? (optional)
+          </label>
+        </h1>
+        <div id="with-hint-hint" class="govuk-hint">
+          For example, if the vacancy will involve working outdoors or lifting heavy objects
         </div>
+        <textarea class="govuk-textarea govuk-js-character-count" id="ThingsToConsider" name="ThingsToConsider" rows="5" aria-describedby="ThingsToConsider-info ThingsToConsider-hint"></textarea>
       </div>
-      <!--<button type="submit" class="govuk-button" data-module="govuk-button">Save and preview</button>-->
+
+      <div id="ThingsToConsider-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 200 characters
+      </div>
+    </div>
+    
+    <form method="post">
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
         <a class="govuk-link" href="../dashboard">Cancel</a>
       </div>
     </form>
+
   </div>
 </div>
 {% endblock %}

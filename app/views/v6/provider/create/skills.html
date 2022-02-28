@@ -18,11 +18,13 @@ Manage apprentices
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
-        <h1 class="govuk-heading-xl">What skills and personal qualities do applicants need to have?</h1>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">What skills and personal qualities do applicants need to have?</h1>
         <form method="post" action="skills">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="SkillsHeading"></legend>
           {{data.Skills}}
-          <p class="govuk-hint">Select all that apply or add your own</p>
+          <div class="govuk-hint">
+            Select all that apply or add your own
+          </div>
           <div class="govuk-visually-hidden">
             {%  for skill in data.Skills %}
             <li class="data-checked">{{skill}}</li>
