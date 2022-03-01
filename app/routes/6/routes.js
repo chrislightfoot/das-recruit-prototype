@@ -103,13 +103,13 @@ module.exports = function(router) {
       res.redirect(301, '/' + base_url + req.params[0] + '/create/training-first-select')
     }
     //res.redirect(301, '/' + base_url + req.params[0] + '/create/std-confirm')
-    res.redirect(301, '/' + base_url + 'provider/create/std-confirm')
+    res.redirect(301, '/' + base_url + req.params[0] + '/create/std-confirm')
   })
     
 
   router.post('/' + base_url + '*/create/std-confirm', function(req, res) {    
       //res.redirect(301, '/' + base_url + req.params[0] + '/create/short-description')
-      res.redirect(301, '/' + base_url + 'provider/create/short-description')
+      res.redirect(301, '/' + base_url + req.params[0] + '/create/short-description')
       console.log("prov")
   })
 
