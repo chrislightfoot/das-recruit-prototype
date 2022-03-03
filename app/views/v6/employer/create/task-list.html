@@ -417,14 +417,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
-            <!--<span class="task-list-submit-disabled">
-              <span class="app-task-list__task-name">
-                Check your answers and submit your advert
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
-            </span>-->
-            <!--<span class="task-list-submit-enabled" style="display:none">-->
-              <span class="task-list-submit-enabled">
+            <span class="task-list-submit-enabled">
               <span class="app-task-list__task-name">
                   <!--<a href="vacancy-preview" aria-describedby="list-convictions-status">-->
                 {% if data.section4 == "completed" %}
@@ -434,7 +427,8 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
                 {%else%}
                 Check your answers and submit your advert
                 {%endif%}
-              
+              </span>
+            </span>
           </li>
         </ul>
       </li>
