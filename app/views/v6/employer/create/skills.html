@@ -13,17 +13,12 @@ What skills and personal qualities does the applicants need to have? - Your appr
 
 {% block content %}
 
- 
 
-
-  <div class="govuk-width-container">
-
-  <main class="govuk-main-wrapper">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
-        <h1 class="govuk-heading-xl">What skills and personal qualities do applicants need to have?</h1>
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">What skills and personal qualities do applicants need to have?</h1>
         <form method="post" action="skills">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="SkillsHeading"></legend>
          
@@ -134,8 +129,6 @@ What skills and personal qualities does the applicants need to have? - Your appr
       </div>
   </div>
 
-  </main>
-</div>
 
 
 {% endblock %}

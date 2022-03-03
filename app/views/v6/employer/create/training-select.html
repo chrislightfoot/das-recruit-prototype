@@ -14,8 +14,11 @@ What training will the apprentice take? - Your apprenticeship adverts - {{servic
 {% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What training course will the apprentice take? 
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--xl" for="searchClients">What training course will the apprentice take?
         </h1>
+
         <div class="" style="display:none;">
           {% for item in data.training %}
           <span class="data-name">{{item}}</span>
@@ -31,9 +34,9 @@ What training will the apprentice take? - Your apprenticeship adverts - {{servic
               <input type="hidden" name="clientsFilter" value="new">
               <div class="search-input ">
                 <label class="govuk-label" for="contact-by-email">
-                  <span class="govuk-hint">
+                  <div class="govuk-hint">
                     Enter apprenticeship training course title
-                  </span>
+                  </div>
                 </label>
                 <div class="autocomplete__parent_wrapper govuk-!-margin-bottom-2">
                   <div class="autocomplete__wrapper">

@@ -17,7 +17,7 @@ How would you like to receive applications? - Your apprenticeship adverts - {{se
     <form method="post" action="task-list?section4=completed">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %}</span>
+          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
           <h1 class="govuk-fieldset__heading">How would you like to receive applications?</h1>
         </legend>
         <p class="govuk-body">We’ll publish all adverts on <a href="https://www.gov.uk/apply-apprenticeship" class="govuk-body govuk-link" rel="noopener" target="_blank">Find an apprenticeship (opens in a new tab)</a> but you can include a link to your website where applicants can directly apply. </p>
@@ -47,7 +47,7 @@ How would you like to receive applications? - Your apprenticeship adverts - {{se
               </div>
               <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="TrainingDescription">
+                  <label class="govuk-label" for="ApplicationInstructions">
                     Explain the application process (optional)
                   </label>
                   <textarea class="govuk-textarea js-character-count" id="ApplicationInstructions" name="ApplicationInstructions" rows="5" aria-describedby="more-detail-hint">{% if data.ApplicationInstructions %}{{data.ApplicationInstructions }}{% else %}{% endif %}</textarea>

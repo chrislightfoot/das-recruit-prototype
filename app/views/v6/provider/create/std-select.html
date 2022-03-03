@@ -16,7 +16,9 @@ What training will the apprentice take? - Recruitment - {{serviceName}} - GOV.UK
   <div class="govuk-grid-column-two-thirds">
         <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
 
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="searchClients">What training course will the apprentice take?</h1>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--xl" for="searchClients">What training course will the apprentice take?
+        </h1>
         <div class="" style="display:none;">
           {% for item in data.training %}
           <span class="data-name">{{item}}</span>

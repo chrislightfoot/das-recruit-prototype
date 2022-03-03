@@ -13,13 +13,16 @@ How many positions are there for this apprenticeship? - Your apprenticeship adve
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-column-two-thirds">
 
     <form method="post" action="location">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-          <h1 class="govuk-fieldset__heading">
-            How many positions are available?
+          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--xl" for="numberOfPositions">
+              How many positions are available?
+            </label>
           </h1>
         </legend>
         <div class="govuk-form-group govuk-!-margin-bottom-8">
