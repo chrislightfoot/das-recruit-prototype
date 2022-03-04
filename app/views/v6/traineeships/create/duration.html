@@ -19,14 +19,14 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
     <form method="post">
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="duration">
-          How long is the whole traineeship, including work and training?
+          How long is the traineeship?
         </label>
-        <div class="govuk-hint">The traineeship must last at least 12 months. For {{data.training_level or "Food and Drink: Fish and Shellfish Industry Skills"}}, the typical length is 24 months.</div>
+        <div class="govuk-hint">A traineeship can last from 6 weeks up to 12 months, though most traineeships last for less than 6 months.</div>
         <input class="govuk-input govuk-input--width-4" id="duration" name="duration" type="text">
         <select class="govuk-select" id="sort" name="sort">
 
+          <option value="published">Weeks</option>
           <option value="published">Months</option>
-          <option value="published">Year(s)</option>
         </select>
       </div>
 
@@ -43,7 +43,7 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="weekly-hours">
-          How many hours will the trainee work each week, including training?
+          How many hours will the trainee be on placement each week?
         </label>
 
         <div class="govuk-input__wrapper">
