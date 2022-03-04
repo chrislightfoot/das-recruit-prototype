@@ -147,7 +147,7 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">2.</span> Placement details
-          <span style="margin-left:237px;">
+          <span style="margin-left:246px;">
             {% if data.section2 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
@@ -215,7 +215,7 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">3.</span>Requirements and prospects
-          <span style="margin-left:144px;">
+          <span style="margin-left:130px;">
             {% if data.section3 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else%}
@@ -279,7 +279,7 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">4.</span> About the employer
-          <span style="margin-left:239px;">
+          <span style="margin-left:227px;">
             {% if data.section4 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {%else%}
@@ -378,16 +378,17 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">5.</span> Check and submit your vacancy
+          <span style="margin-left:105px;">
+            {% if data.section4 == "completed" %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {%else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {%endif%}
+          </span>
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
-            <span class="task-list-submit-disabled">
-              <span class="app-task-list__task-name">
-                Check your answers and submit your vacancy
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
-            </span>
-            <span class="task-list-submit-enabled" style="display:none">
+            <span class="task-list-submit-enabled">
               <span class="app-task-list__task-name">
                   <!--<a href="vacancy-preview" aria-describedby="list-convictions-status">-->
                 {% if data.section4 == "completed" %}
@@ -398,7 +399,6 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
                   Check your answers and submit your vacancy
                 {%endif%}
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Not started</strong>
             </span>
           </li>
         </ul>
