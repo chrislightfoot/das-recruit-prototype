@@ -38,21 +38,18 @@ How would you like to receive applications? - Recruitment - {{serviceName}} - GO
             <div class="govuk-radios__conditional" id="trading-name-conditional">
               <div class="govuk-form-group" data-module="character-count" data-minlength="50" data-maxlength="500">
                 <label class="govuk-label" for="ApplicationUrl">
-                  Enter the web address candidates should use to apply for this apprenticeship
+                  Enter the website candidates should use to apply for this apprenticeship
                 </label>
                 <input class="govuk-input govuk-input--width-30" id="ApplicationUrl" name="ApplicationUrl" type="text" value="{% if data.ApplicationUrl %}{{data.ApplicationUrl }}{% else %}{% endif %}">
               </div>
-              <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
+
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="TrainingDescription">
                     Explain the application process (optional)
                   </label>
-                  <textarea class="govuk-textarea js-character-count" id="ApplicationInstructions" name="ApplicationInstructions" rows="5" aria-describedby="more-detail-hint">{% if data.ApplicationInstructions %}{{data.ApplicationInstructions }}{% else %}{% endif %}</textarea>
+                  <textarea class="govuk-textarea" id="ApplicationInstructions" name="ApplicationInstructions" rows="5" aria-describedby="more-detail-hint">{% if data.ApplicationInstructions %}{{data.ApplicationInstructions }}{% else %}{% endif %}</textarea>
                 </div>
-                <div id="shortDescription-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-                  You can enter up to 500 characters
-                </div>
-              </div>
+
             </div>
 
 

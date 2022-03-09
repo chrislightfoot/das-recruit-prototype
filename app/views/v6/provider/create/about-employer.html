@@ -23,15 +23,20 @@ Add some information - Recruitment - {{serviceName}} - GOV.UK
         {%endif%}-->
         <p>Updating the employer information will also update the employer information on any unapproved vacancies, for example, draft, pending review or rejected vacancies.</p>
         <form method="post">
-          <div class="govuk-character-count govuk-input--width-50" data-module="character-count" data-minlength="50" data-maxlength="500">
+ 
             <div class="govuk-form-group">
-              <label class="govuk-label visiual" for="EmployerDescription">Tell us about the organisation</label>
+              <label class="govuk-label visiual" for="EmployerDescription">Tell us about the employer</label>
               <!--<textarea class="govuk-textarea js-character-count" rows="5" data-val-length-max="500" id="EmployerDescription" name="EmployerDescription">{% if data.EmployerDescription and data.journey != 'new' %}{{ data.EmployerDescription}}{%endif%}</textarea>-->
-              <textarea class="govuk-textarea js-character-count" rows="5" data-val-length-max="500" id="EmployerDescription" name="EmployerDescription"></textarea>
-              <div id="shortDescription-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-                You can enter up to 500 characters
-              </div>
+              <textarea class="govuk-textarea" rows="5" data-val-length-max="500" id="EmployerDescription" name="EmployerDescription"></textarea>
+      
             </div>
+
+      
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="EmployerWebsiteUrl">
+              The employer's website (optional)
+            </label>
+            <input class="govuk-input govuk-input--width-30" maxlength="100" type="text" id="EmployerWebsiteUrl" name="EmployerWebsiteUrl" value="{% if data.EmployerWebsiteUrl %}{{data.EmployerWebsiteUrl}}{%endif%}">
           </div>
 
           <div class="govuk-form-group">
@@ -52,13 +57,6 @@ Add some information - Recruitment - {{serviceName}} - GOV.UK
                 </div>
               </div>
             </fieldset>
-          </div>
-      
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="EmployerWebsiteUrl">
-              The organisation's website (optional)
-            </label>
-            <input class="govuk-input govuk-input--width-30" maxlength="100" type="text" id="EmployerWebsiteUrl" name="EmployerWebsiteUrl" value="{% if data.EmployerWebsiteUrl %}{{data.EmployerWebsiteUrl}}{%endif%}">
           </div>
           <div class="govuk-form-group">
             {{ govukButton({
