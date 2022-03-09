@@ -91,6 +91,14 @@ module.exports = function(router) {
     }
   })
 
+  router.post('/' + base_url + '*/create/occupational-traineeship', function(req, res) {
+    if(req.session.data['occupational'] == "no"){
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/std-select");
+    } else {
+      res.redirect(301, '/' + base_url + req.params[0] + "/create/traineeship-sector");
+    }
+  })
+
   router.post('/' + base_url + '*/create/std-select', function(req, res) {
     if (req.body.training_level == "different") {
       console.log("working")
