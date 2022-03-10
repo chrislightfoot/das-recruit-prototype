@@ -20,10 +20,17 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="display-name-registered" name="selected_display_name" type="radio"
+              <input class="govuk-radios__input" id="registered-name" name="selected_display_name" type="radio"
                 value="registered" >
-              <label class="govuk-label govuk-radios__label" for="display-name-registered">
-                {{data.orgName}}
+              <label class="govuk-label govuk-radios__label" for="registered-name">
+                1 Stop Healthcare (registered name) 
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="trading-name" name="selected_display_name" type="radio"
+                value="registered" >
+              <label class="govuk-label govuk-radios__label" for="trading-name">
+                {{data.orgName}} (trading name)
               </label>
             </div>
             <div class="govuk-radios__item " data-module="business-name-vacancy-panel">
@@ -35,7 +42,8 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
             </div>
             <div class="govuk-radios__conditional" id="trading-name-conditional">
               <div class="govuk-form-group">
-                <label class="govuk-label" for="tradingName">Enter employer name</label>
+                <label class="govuk-label" for="tradingName">Add a new trading name</label>
+                <div class="govuk-hint">This will also change the trading name on all your vacancies which are in draft or rejected</div>
                 <input class="govuk-input govuk-input--width-20" id="tradingName" name="tradingName" type="text">
               </div>
             </div>
@@ -55,7 +63,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
                           <label class="govuk-label" for="name">
                               Brief description of what the employer does
                           </label>
-                          <div class="govuk-hint">For example, car manufacturer or clothing retailer.</div>
+                          <div class="govuk-hint">For example, car manufacturer or clothing retailer. This information will show on your vacancy.</div>
                           <input class="govuk-input " id="name" name="name" type="text">
                       </div>
                    
@@ -64,7 +72,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
                           <label class="govuk-label" for="reason">
                               Reason for being anonymous
                           </label>
-                          <div class="govuk-hint"> This will help our vacancy reviewers validate your request to remain anonymous. This information will not be displayed on the vacancy.</div>
+                          <div class="govuk-hint"> We’ll use it to help us decide whether you can be anonymous. This information will not show on your vacancy. </div>
                           <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count" data-module="character-count" data-minlength="50" data-maxlength="200" rows="5" id="reason" name="reason" type="text"></textarea>
                         
                         </div>
