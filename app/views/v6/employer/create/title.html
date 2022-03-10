@@ -23,10 +23,13 @@ What do you want to call this advert? - Your apprenticeship adverts - {{serviceN
           </h1>
         </legend>
         <p class="govuk-body">To make sure your advert appears in search results, use a title that relates to the apprenticeship training.</p>
-      <div class="govuk-character-count" data-module="character-count" data-maxlength="100">
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="100">
         <div class="govuk-form-group govuk-!-margin-bottom-8">
           <div class="govuk-hint">You must include the word ‘apprentice’ or ‘apprenticeship’ </div>
-          <input class="govuk-input govuk-!-width-three-quarters js-character-count" id="title" name="title" type="text" value="{% if data.title and data.edit == 'yes' %}{{data.title}}{%endif%}">
+          <input class="govuk-input govuk-!-width-three-quarters govuk-js-character-count" id="title" name="title" type="text" value="{% if data.title and data.edit == 'yes' %}{{data.title}}{%endif%}">
+        </div>
+        <div id="title-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 100 characters
         </div>
       </div>
       

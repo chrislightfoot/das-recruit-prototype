@@ -60,9 +60,7 @@ Description of the vacancy - Your apprenticeship adverts - {{serviceName}} - GOV
             </div>
             <!--<textarea class="govuk-textarea govuk-textarea--error {% if 'VacancyDescription' in data.errorType %}govuk-textarea--error{% endif %} js-character-count " id="VacancyDescription" name="VacancyDescription" rows="9" aria-describedby="more-detail-hint">{% if data['VacancyDescription'] %}{{data['VacancyDescription'] }}{% else %}{% endif %}</textarea>-->
             <textarea class="govuk-textarea {% if 'VacancyDescription' in data.errorType %}govuk-textarea--error{% endif %} js-character-count " id="VacancyDescription" name="VacancyDescription" rows="9" aria-describedby="more-detail-hint">{% if data['VacancyDescription'] %}{{data['VacancyDescription'] }}{% else %}{% endif %}</textarea>
-            <div id="VacancyDescription-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 500 characters
-            </div>
+       
           </div>
         </div>
         <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
@@ -86,9 +84,7 @@ Description of the vacancy - Your apprenticeship adverts - {{serviceName}} - GOV
               <textarea class="govuk-textarea js-character-count {% if 'TrainingQualification' in data.errorType %}govuk-textarea--error{% endif %}" id="TrainingQualification" name="TrainingQualification" rows="9"
               aria-describedby="more-detail-hint">{% if data['TrainingQualification']%}{{data['TrainingQualification']}}{% else %}{% endif %}</textarea>
           </div>
-          <div id="TrainingQualification-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-            You can enter up to 500 characters
-          </div>
+
         </div>
         <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
           <div class="govuk-form-group {% if 'OutcomeDescription' in data.errorType %}govuk-form-group--error{% endif%}">
@@ -106,9 +102,7 @@ Description of the vacancy - Your apprenticeship adverts - {{serviceName}} - GOV
 
             <textarea class="govuk-textarea js-character-count {% if 'OutcomeDescription' in data.errorType %}govuk-textarea--error{% endif %}" id="OutcomeDescription" name="OutcomeDescription" rows="9" aria-describedby="more-detail-hint">{% if data['OutcomeDescription'] %}{{data['OutcomeDescription']}}{% else %}{% endif %}</textarea>
           </div>
-          <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-            You can enter up to 500 characters
-          </div>
+  
         </div>
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">

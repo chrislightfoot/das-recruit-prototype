@@ -30,14 +30,17 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
         </select>
       </div>
 
-      <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="250">
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--m" for="workingWeekDescription">
             Details of working week
           </label>
           <div class="govuk-hint">For example, Monday to Friday 9am to 5pm, shifts, may work evenings and weekends</div>
-          <textarea class="govuk-textarea govuk-!-width-three-quarters js-character-count " id="workingWeekDescription"
+          <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count " id="workingWeekDescription"
             name="workingWeekDescription" rows="5"></textarea>
+        </div>
+        <div id="workingWeekDescription-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 250 characters
         </div>
       </div>
 

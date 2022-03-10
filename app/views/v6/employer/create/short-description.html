@@ -21,7 +21,7 @@ Short description of the apprenticeship - Your apprenticeship adverts - {{servic
       </label>
     </h1>
     <form method="post">
-      <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="350">
+      <div class="govuk-character-count" data-module="govuk-character-count" data-minlength="50" data-maxlength="350">
         <div class="govuk-form-group">
           <p class="govuk-body">Write a few sentences about the apprenticeship to attract applicants. <br>This information will appear under your advert title when applicants look through a list of adverts - make it stand out. </p>
           <p class="govuk-body">This could be: </p>
@@ -29,12 +29,9 @@ Short description of the apprenticeship - Your apprenticeship adverts - {{servic
             <li>what you are offering </li>
             <li>why the applicant should apply</li>
           </ul>
-          <div id="shortDescription-hint" class="govuk-hint">
-              You must enter at least 50 characters.
-          </div>
-          <textarea class="govuk-textarea js-character-count" id="shortDescription" name="shortDescription" rows="5"  aria-describedby="shortDescription-info shortDescription-hint">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription" rows="5"  aria-describedby="shortDescription-info shortDescription-hint">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
         </div>
-        <div id="shortDescription-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        <div id="shortDescription-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
           You can enter up to 350 characters
         </div>
       </div>
