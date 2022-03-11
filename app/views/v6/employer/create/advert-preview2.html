@@ -1,7 +1,7 @@
-{% extends "tp-layout.html" %}
+{% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Preview your vacancy - Recruitment - {{serviceName}} - GOV.UK
+Check your answers before submitting your advert - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block beforeContent%}
@@ -13,7 +13,7 @@ Preview your vacancy - Recruitment - {{serviceName}} - GOV.UK
 <form action="" method="post">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-l">Preview your vacancy</h1>
+      <h1 class="govuk-heading-l">Preview your advert</h1>
     </div>
 
     <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
@@ -211,19 +211,19 @@ Preview your vacancy - Recruitment - {{serviceName}} - GOV.UK
 
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h2 class="govuk-heading-m">Now submit your vacancy</h2>
+      <h2 class="govuk-heading-m">Now submit your advert</h2>
 
-      <p class="govuk-body">By submitting this vacancy you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <p class="govuk-body">By submitting this advert you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
       <form action="/form-handler" method="post" novalidate>
         <div class="govuk-button-group">
           <input type="hidden" name="answers-checked" value="true">
           
           <button class="govuk-button" data-module="govuk-button">
-            Submit vacancy
+            Submit advert
           </button>
 
-          <a href="check-your-answers" class="govuk-button govuk-button--secondary">Change your answers</a>
+          <a href="check-your-answers" class="govuk-button govuk-button--secondary">Change your advert</a>
         </div>
 
       </form>
