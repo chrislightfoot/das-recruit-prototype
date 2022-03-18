@@ -39,13 +39,17 @@ Short description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
           You can enter up to 350 characters
         </div>
       </div>
+
+      <div class="govuk-form-group">
+        {{ govukButton({
+          text: "Save and continue",
+          href: "training-provided"
+        }) }}   
+        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+     
+      </div>
      
 
-          
-        <div class="govuk-button-group">
-          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-          <a class="govuk-link" href="../dashboard">Cancel</a>
-        </div>
     </form>
   </div>
 </div>

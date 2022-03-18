@@ -127,11 +127,11 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
-              <a href="long-description?return_url=task-list" aria-describedby="contact-details-status">
-                Tasks and training details
+              <a href="training-provided?return_url=task-list" aria-describedby="contact-details-status">
+                Training provided
               </a>
               {% else %}
-                Tasks and training details
+                Training provided
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -165,6 +165,18 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
               </a>
               {% else %}
                 Closing and start dates
+              {% endif %}
+            </span>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section1 == "completed" %}
+              <a href="work-experience-provided?return_url=task-list" aria-describedby="contact-details-status">
+                Work experience provided
+              </a>
+              {% else %}
+                Work experience provided
               {% endif %}
             </span>
           </li>

@@ -291,6 +291,10 @@ module.exports = function(router) {
     //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no")
     res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&section1=completed")
   })
+  router.post('/' + base_url + '*/create/training-provided', function(req, res) {
+    //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no")
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&section1=completed")
+  })
   router.get('/' + base_url + '*/create/qualifications', function(req, res) {
     // create a new array if no array exists.
     req.session.data.qualifications = req.session.data.qualifications || [];
