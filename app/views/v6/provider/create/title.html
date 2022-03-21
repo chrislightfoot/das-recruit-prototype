@@ -33,10 +33,11 @@ What do you want to call this vacancy? - Recruitment - {{serviceName}} - GOV.UK
         
         </div>
 
-        <div class="govuk-button-group">
-          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-          <a class="govuk-link" href="../dashboard">Cancel</a>
-        </div>
+        {{ govukButton({
+          text: "Save and continue",
+          href: "employer"
+        }) }}      
+        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
 
     </form>
   </div>
