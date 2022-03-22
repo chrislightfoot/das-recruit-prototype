@@ -16,14 +16,15 @@ What training will the apprentice take? - Recruitment - {{serviceName}} - GOV.UK
   <div class="govuk-grid-column-two-thirds">
         <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Optical Assistant Traineeship{% endif %}</span>
 
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="searchClients">What sector will the traineeship be in?</h1>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--xl" for="sort">
+            Select the traineeship sector
+          </label>
+        </h1>
 
         <form method="post">
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="sort">
-              Select the traineeship sector
-            </label>
             <select class="govuk-select" id="sort" name="sort">
                <option value="published selected">Select an option</option>
               <option value="published">Agriculture, environmental and animal care</option>
