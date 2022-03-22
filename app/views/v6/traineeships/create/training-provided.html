@@ -52,11 +52,9 @@ Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
 
         <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
           <div class="govuk-form-group {% if 'TrainingQualification' in data.errorType %}govuk-form-group--error{% endif %}">
-            <p class="govuk-body">You must include information about the following:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>the training and support they’ll get on the placement</li>
-              <li>the skills they can expect to develop during the traineeship </li>
-            </ul>
+            <div class="govuk-hint">
+              For example, work preparation training, Maths and English support, CV and interview skills
+            </div>
             {% if 'TrainingQualification' in data.errorType %}
             <span id="TrainingQualification-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span> Training and qualifications must not contain contain a banned word or phrase
