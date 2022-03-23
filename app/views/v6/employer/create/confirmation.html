@@ -28,18 +28,12 @@ Advert submitted for approval - Your apprenticeship adverts - {{serviceName}} - 
     {% endif %}
     <p class="govuk-body">When we approve your advert, it will appear on the ​<a href="https://www.gov.uk/apply-apprenticeship">Find an apprenticeship service</a> (opens in a new tab or window).</p>
     <form method="post">
-    <div class="form-group inline">
-      <div class="form-group">
-        <a class="govuk-button" href="create-vacancy">Create another advert</a><br /><br />
-          {% if data.journey=='new'%}
-          <a href="../dashboard-one" class="govuk-link govuk-link--no-visited-state">Return to dashboard</a>
-          <!--<a href="../dashboard-one" class="govuk-body das-button--link" data-module="govuk-button" type="submit">Return to dashboard</a>-->
-          {% else %}
-          <a href="../dashboard" class="govuk-link govuk-link--no-visited-state">Return to dashboard</a>
-          <!--<a href="../dashboard?user=employer" class="govuk-button" data-module="govuk-body das-button--link" type="submit">Return to dashboard</a>-->
-          {% endif %}
+
+      <div class="govuk-button-group govuk-!-margin-top-5">
+        <a class="govuk-button" href="task-list">Create another advert</a>
       </div>
-    </div>
+      <a class="govuk-link" href="../dashboard">Return to dashboard</a>
+
     </form>
   </div>
 </div>
