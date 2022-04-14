@@ -1,10 +1,11 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "tp-layout.html" %}
 
 
 {% block pageTitle %}
 Manage apprentices
 {% endblock %}
 {% block beforeContent %}
+{{super()}}
   <a href="javascript:history.back()" class="govuk-back-link">Back to vacancies</a>
 {% endblock %}
 {% block content %}

@@ -1,4 +1,4 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+{% extends "tp-layout.html" %}
 
 
 {% block pageTitle %}
@@ -24,12 +24,13 @@ Manage apprentices
 </style>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <div class="govuk-info-summary govuk-!-margin-top-6" role="alert" tabindex="-1">
+        <div class="govuk-info-summary das-success-summary govuk-!-margin-bottom-6 govuk-!-margin-bottom-6 govuk-!-padding-3" role="alert" tabindex="-1">
             <h3 class="govuk-heading-m govuk-!-margin-top-0">You can change the following information:</h3>
             <ul class="govuk-list">
-                <li><a href="#trainingProvider" class="govuk-link govuk-link--no-visited-state">Training provider</a></li>
+             
                 <li><a href="#closingDateSection" class="govuk-link govuk-link--no-visited-state">Closing date</a></li>
                 <li><a href="#possibleStartDateSection" class="govuk-link govuk-link--no-visited-state">Possible start date</a></li>
+              
             </ul>
         </div>
     </div>
@@ -236,14 +237,14 @@ Manage apprentices
     <div>
       <h3 class="govuk-heading-s">Training provider</h3>
       <p class="govuk-body">{{data.providerName}}</p>
-      <p><a href="../create/select-training-provider?edit=yes" class="govuk-link">Change</a></p>
+<!--       <p><a href="../create/select-training-provider?edit=yes" class="govuk-link">Change</a></p> -->
     </div>
 
     {% else %}
     <div >
       <h3 class="govuk-heading-s">Training provider</h3>
       <p class="govuk-body">Training provider will be selected later based on the candidates location</p>
-      <p><a href="../create/select-training-provider?change=yes&has_training_provider=no" class="govuk-link">Change</a></p>
+<!--       <p><a href="../create/select-training-provider?change=yes&has_training_provider=no" class="govuk-link">Change</a></p> -->
 
     </div>
     <br>

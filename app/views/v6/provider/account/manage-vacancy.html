@@ -1,8 +1,11 @@
-{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
-
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Manage apprentices
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
 {% endblock %}
 
 {% block content %}
@@ -19,7 +22,7 @@ Manage apprentices
       </div>
     </div>
     {% endif %}
-    <h1 class="govuk-heading-xl">Manage advert</h1>
+    <h1 class="govuk-heading-xl">Manage vacancy</h1>
     <div class="govuk-grid-row govuk-!-margin-bottom-4">
       <div class="govuk-grid-column-one-half ">
         <span class="govuk-body govuk-!-font-weight-bold">Status</span>
@@ -30,7 +33,7 @@ Manage apprentices
     </div>
     <div class="govuk-grid-row govuk-!-margin-bottom-4">
       <div class="govuk-grid-column-one-half">
-        <span class="govuk-body govuk-!-font-weight-bold">Advert title</span>
+        <span class="govuk-body govuk-!-font-weight-bold">Vacancy title</span>
       </div>
       <div class="govuk-grid-column-one-half">
         <span class="govuk-body">Business Apprenticeship</span>
@@ -38,7 +41,7 @@ Manage apprentices
     </div>
     <div class="govuk-grid-row govuk-!-margin-bottom-4">
       <div class="govuk-grid-column-one-half">
-        <span class="govuk-body govuk-!-font-weight-bold">Advert reference number</span>
+        <span class="govuk-body govuk-!-font-weight-bold">Vacancy reference number</span>
       </div>
       <div class="govuk-grid-column-one-half">
         <span class="govuk-body">VAC1000000997</span>
@@ -72,16 +75,16 @@ Manage apprentices
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <div class="govuk-!-margin-top-6">
-          <a class="govuk-button" data-module="govuk-button" href="preview">View advert</a>
+          <a class="govuk-button" data-module="govuk-button" href="preview">View vacancy</a>
         </div>
       </div>
     </div>
     <div class="grid-row">
       <div class="column-full">
         <ul class="govuk-list das-action-links">
-          <li><a class="govuk-link button-link  govuk-link--no-visited-state" href="preview-edit">Edit advert</a></li>
-          <li><a class="govuk-link button-link  govuk-link--no-visited-state" href="clone-dates">Clone advert</a></li>
-          <li><a class="govuk-link button-link  govuk-link--no-visited-state" href="close">Close advert</a></li>
+          <li><a class="govuk-link button-link  govuk-link--no-visited-state" href="preview-edit">Edit vacancy</a></li>
+          <li><a class="govuk-link button-link  govuk-link--no-visited-state" href="clone-dates">Clone vacancy</a></li>
+          <li><a class="govuk-link button-link  govuk-link--no-visited-state" href="close">Close vacancy</a></li>
         </ul>
         <p class="govuk-body">
         </p>

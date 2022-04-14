@@ -13,35 +13,41 @@ Manage apprentices
 </style>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <p class="govuk-body">This is how the vacancy will appear to candidates on <a href="https://www.gov.uk/apply-apprenticeship" rel="noopener" target="_blank">Find an apprenticeship</a></p>
 
-    <div class="govuk-info-summary das-referred-summary" aria-labelledby="info-summary-title" role="alert" tabindex="-1" data-module="info-summary">
-      <p class="govuk-body">
-        You need to complete these sections:
-      </p>
-      <div class="govuk-info-summary__body" >
-          <h2 class="heading-medium error-summary-heading">
-            <span class="das-icon-cross das-icon-error"  aria-label="Edits are needed to this section">&times;</span> Edits needed
-          </h2>
-          <p>Call us on 08000 150 600 and select the employer option if you need to discuss any of our vacancy review comments.</p>
-          <p>Try again...</p>
-          <ul class="list">
-            <li><a class="summary-link" href="#Title">The title is not common for apprenticeships with the training standard 176 - Accident Repair Technician.</a></li>
-            <li><a class="summary-link" href="#ApplicationUrl">Apply now web address requires edit</a></li>
-          </ul>
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Edits needed
+      </h2>
+      <div class="govuk-error-summary__body">
+        <p>Call us on 08000 150 600 and select the employer option if you need to discuss any of our vacancy review comments.</p>
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a class="summary-link" href="#Title">The title is not common for apprenticeships with the training standard 176 - Accident Repair Technician.</a>
+          </li>
+          <li>
+            <a class="summary-link" href="#ApplicationUrl">Apply now web address requires edit</a>
+          </li>
+        </ul>
       </div>
     </div>
+
   </div>
 </div>
 <div class="govuk-grid-row govuk-!-margin-bottom-6">
   <div class="govuk-grid-column-two-thirds">
-    <div class="das-referred--section">
-    <h2 id="Title" class="govuk-heading-xl govuk-!-margin-bottom-6">
-      <span class="das-icon-cross das-icon-error"  aria-label="Edits are needed to this section">&times;</span> {% if data.title %}{{data.title}}{%else%}Software Support and Development Apprentice{%endif%}
-      <span class="govuk-caption-l">{{data.orgName}}</span>
-    </h2>
-    <a href="#" class="govuk-link das-edit-link">Change</a>
+
+    <div class="govuk-form-group govuk-form-group--error">
+      <p id="Title" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> The title is not common for apprenticeships with the training standard 176 - Accident Repair Technician.
+      </p>
+      <h2 class="govuk-heading-xl govuk-!-margin-bottom-3">
+        {% if data.title %}{{data.title}}{%else%}Software Support and Development Apprentice{%endif%}
+        <span class="govuk-caption-l">{{data.orgName}}</span>
+      </h2>
+      <p><a href="#" class="govuk-link">Change</a></p>
     </div>
+
+
   </div>
 </div>
 
@@ -49,12 +55,12 @@ Manage apprentices
   <div class="govuk-grid-column-two-thirds">
     <h3 class="govuk-heading-s">Brief overview</h3>
     <p class="govuk-body">Ever wondered how a computer program works? Our client has an exciting new opportunity for an aspiring Software Developer who will help the company develop and grow their team further into the future.</p>
-    <a href="#" class="govuk-link das-edit-link">Change</a>
+    <p><a href="#" class="govuk-link das-edit-link">Change</a></p>
   </div>
   <div class="govuk-grid-column-one-third">
     <h3 class="govuk-heading-s">Closing date</h3>
     <p class="govuk-body">01 Jan 2022</p>
-    <a href="#" class="govuk-link das-edit-link">Change</a>
+    <p><a href="#" class="govuk-link das-edit-link">Change</a></p>
   </div>
 </div>
 
@@ -224,13 +230,13 @@ Manage apprentices
       </li>
       <li>
         {%if not data.EmployerWebsiteUrl %}
-        <div class="das-preview-empty">
+
 
           <h3 class="govuk-heading-s">Website (optional)</h3>
           <p class="govuk-body">{%if data.EmployerWebsiteUrl %}{{data.EmployerWebsiteUrl}} {%endif%}</p>
           <!-- <a href="#" class="govuk-link">Edit</a> -->
-          <a class="das-button-secondary" data-automation="link-things-to-consider" href="about-employer">Add</a>
-        </div>
+          <p><a href="about-employer">Add</a></p>
+
         {% else %}
 
         <h3 class="govuk-heading-s">Website (optional)</h3>
@@ -290,7 +296,7 @@ Manage apprentices
 
       </p>
       <!-- <a href="#" class="govuk-link">Edit</a> -->
-      <a class="govuk-link" data-automation="link-things-to-consider" href="employer-contact-details">Edit</a>
+      <p><a class="govuk-link" data-automation="link-things-to-consider" href="employer-contact-details">Edit</a></p>
     {% else %}
     <h3 class="govuk-heading-s">Contact details (optional)</h3>
     <p class="govuk-body">
@@ -313,16 +319,20 @@ Manage apprentices
   <div class="govuk-grid-column-two-thirds">
     {% if not data.ApplicationUrl %}
     <p class="govuk-body">This apprenticeship requires you to apply through the employer's website.</p>
-    <div class="das-referred--section">
-    <h3 id="ApplicationUrl" class="govuk-heading-s"> <span class="das-icon-cross das-icon-error"  aria-label="Edits are needed to this section">&times;</span> Apply now web address</h3>
-    <p class="govuk-body">
-      {% if data.ApplicationUrl %}{{data.ApplicationUrl}}
-      {% else %}
-      https://recruit.test-eas.apprenticeships.sfa.bis.gov.uk
-      {% endif %}
-    </p>
-    <p><a href="application-process" class="govuk-link">Edit</a></p>
+
+    <div class="govuk-form-group govuk-form-group--error">
+      <p id="ApplicationUrl" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> Apply now web address requires edit</p>
+       <h3 class="govuk-heading-s">Apply now web address</h3>
+        <p class="govuk-body">
+        {% if data.ApplicationUrl %}{{data.ApplicationUrl}}
+        {% else %}
+        https://recruit.test-eas.apprenticeships.sfa.bis.gov.uk
+        {% endif %}
+      </p>
+      <p><a href="application-process" class="govuk-link">Edit</a></p>
     </div>
+
 
     <h3 class="govuk-heading-s">Explain the application process (optional)</h3>
     <p class="govuk-body">
