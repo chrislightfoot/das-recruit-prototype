@@ -6,206 +6,165 @@ Manage apprentices
 
 
 {% block content %}
-<style media="screen">
-  .das-preview-change-link{
-    margin-top: -15px;
-    display:block;
-    font-size: 19px;
-  }
-  .govuk-heading-s{margin-bottom:10px;}
-  .das-not-shown{
-    color:  #6f777b;
-  }
-  .das-todo-list--header{
-    background:#005ea5;
-    margin-bottom:0;
-    padding:20px;
-  }
-  .das-todo-list--header h2, .das-todo-list--header h2 .govuk-caption-m{
-    margin-bottom:0;
-    color: #fff;
-  }
-    .govuk-heading-s{
-      margin-bottom: .3125em;
-    }
-    .das-edit-link{margin-top:-10px}
 
-</style>
-<div class="govuk-info-summary das-success-summary govuk-!-margin-bottom-4" aria-labelledby="info-summary-title" role="alert" tabindex="-1" data-module="info-summary">
-  <p class="govuk-body govuk-!-margin-bottom-0">
-    Advert successfully cloned
-  </p>
-</div>
-<div class=="das-todo-list govuk-!-margin-bottom-6">
-  <div class="das-todo-list--header ">
-    <h2 class="govuk-heading-m">
-    <span class="das-required-count">All</span> required sections complete
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
     </h2>
   </div>
-</div>
-<div class="govuk-grid-row govuk-!-margin-bottom-6 govuk-!-margin-top-8"">
-
-    <div class="govuk-grid-column-three-quarters">
-
-        <h2 class="govuk-heading-xl govuk-!-margin-bottom-2">{%if data.title %}{{data.title}}{%else%}Test Apprenticeship{%endif%}<br>
-            <span class="govuk-caption-l">{%if data.orgName %}{{data.orgName}}{%else%}COMPANY LIMITED{%endif%}</span>
-        </h2>
-      <a href="title?edit=yes" style="line-height:25px;display:block;" class="govuk-link govuk-!-font-size-19 govuk-!-font-weight-regular">Change</a>
-    </div>
-    <div class="govuk-grid-column-one-third">
-
-    </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Advert successfully cloned
+    </h3>
+    <p class="govuk-body">Reference number: VAC1000031062</p>
+  </div>
 </div>
 
 <div class="govuk-grid-row govuk-!-margin-bottom-6">
-    <div class="govuk-grid-column-two-thirds">
-        <h3 class="govuk-heading-s">Brief overview</h3>
-        <p class="govuk-body">{%if data.shortDescription%}{{data.shortDescription}}{%else%}As a Software Developer Apprentice, you will be undertaking a recognised apprenticeship qualification, including Microsoft certifications, at the same time as working as part of the company’s Software Development team.{%endif%}</p>
-        <a href="short-description?edit=yes" class="govuk-link das-preview-change-link">Change</a>
-    </div>
-    <div class="govuk-grid-column-one-third">
-            <h3 class="govuk-heading-s">Closing date</h3>
-            <p class="govuk-body">03 May 2022</p>
-            <a href="dates?edit=yes" class="govuk-link das-preview-change-link">Change</a>
-    </div>
-</div>
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Apprenticeship summary</h2>
-    </div>
-</div>
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <ul class="govuk-list">
-          <li>
-            <h3 class="govuk-heading-s">Working week</h3>
-            <p class="govuk-body">Monday to Friday 9am to 5pm<br>Total hours per week: 40</p>
-            <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-
-          </li>
-          <li>
-            <h3 class="govuk-heading-s">Yearly wage</h3>
-            <p class="govuk-body">£3,494.40 - £6,514.56</p>
-            <p><p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p></p>
-          </li>
-          <li>
-            <h3 class="govuk-heading-s">Expected duration</h3>
-            <p class="govuk-body">1 Year</p>
-            <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-          </li>
-          <li>
-            <h3 class="govuk-heading-s">Possible start date</h3>
-            <p class="govuk-body">24 Dec 2018</p>
-            <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-          </li>
-          <li>
-            <h3 class="govuk-heading-s">Apprenticeship level</h3>
-            <p class="govuk-body">Advanced <br>Level 3 (equivalent to A Level)</p>
-            <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-          </li>
-          <li>
-            <h3 class="govuk-heading-s">Positions</h3>
-            <p class="govuk-body">{%if data.numberOfPositions %}{{numberOfPositions}}{%else%}2{%endif%} positions available</p>
-            <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-          </li>
-      </ul>
-    </div>
-    <div class="govuk-grid-column-two-thirds" id="vacancyDescription">
-      <ul class="govuk-list">
-        <li>
-          <h3 class="govuk-heading-s">What you will do in your working day</h3>
-          <p class="govuk-body">You’ll work as part of the team to learn about the latest technologies used to deliver what is needed, including C# within the MVC framework, supported by the use of test driven development (TDD), continuous integration using Team City and continuous deployment using Octopus Deploy.</p>
-          <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-        </li>
-        <li>
-          <h3 class="govuk-heading-s">The training you will be getting</h3>
-          <ul class="govuk-list govuk-list--bullet">
-        	<li>Learning how to collate feature requests</li>
-        	<li>Providing frontline helpdesk support</li>
-        	<li>Growing into projects</li>
-        	<li>Basic Programming</li>
-        	<li>Becoming a valued part of the Software Development team</li>
-        	<li>Helping existing staff with front-end development using Octopus Deploy Technology</li>
-        	<li>Being responsible for extracting data and processing the extracted data</li>
-        	<li>Gaining on the job experience and being able to utilise the skills you have gained over the duration of your apprenticeship</li>
-        	<li>Learning and developing skills in integration management using Team City technology</li>
-        	<li>Updating software and systems development</li>
-        </ul>
-        <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-        </li>
-        <li>
-          <h3 class="govuk-heading-s">What to expect at the end of your apprenticeship</h3>
-          <p class="govuk-body">There are lots of opportunities to develop your career within our expanding Dealer Network. Your early development is carefully mapped through your Apprenticeship journey with your learning focussed toward achieving an industry recognised qualification that's recognised across the Motor Industry.
-
-This is the grounding for your future development within the network and opportunities exist, once qualified, to further develop your skills and to move into new roles.</p>
-          <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-        </li>
-      </ul>
-    </div>
-</div>
-
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-              <h2 class="govuk-heading-l">Requirements and prospects</h2>
-      </div>
-  </div>
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
-      <h3 class="govuk-heading-s">Desired skills and personal qualities</h3>
-    <ul class="govuk-list govuk-list--bullet">
-  	<li>Experience within a customer service, administration or sales role is preferred but not essential</li>
-  	<li>Excellent communication skills</li>
-  	<li>Fantastic customer service skills</li>
-  </ul>
-    <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-
-
-        <h3 class="govuk-heading-s">Qualifications</h3>
-        <p class="govuk-body"></p>
-        <ul class="govuk-list govuk-list--bullet">
-	<li>You must have at least a C grade for Maths &amp; English at GCSE (or equivalent)</li>
-	<li>A GCSE, BTEC or A/S Level in Business Admin or Business Studies would be beneficial</li>
-</ul>
-<p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-xl govuk-!-margin-bottom-1 govuk-!-width-three-quarters">
+            {% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}
+            <div class="govuk-caption-xl govuk-!-margin-top-1">ABC Opticians.</div>
+          </h2>
+          <p><a href="title?edit=yes">Change</a></p>
+        </div>
       </div>
 
-    <div class="govuk-grid-column-one-half">
-      <h3 class="govuk-heading-s">Things to consider (optional)</h3>
-      <p class="govuk-body">We welcome applications from everyone irrespective of gender and ethnic group and appointment will be based on merit alone. Being committed to equal opportunities, if you have a disability please state this during the application process. Measures will be put in place to support you through your application and apprenticeship journey.</p>
-      <p class="govuk-body">Our Dealers dictate the remuneration that our learners receive. All Dealers are required to pay, at least, The National Minimum Wage. The current National Minimum Wage for an apprentice is £3.70 from April 2018. This rate applies to apprentices under 19 and those aged 19 or over who are in their first year.</p>
-      <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-    </div>
-</div>
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">About the employer</h2>
-    </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <ul class="govuk-list">
-        <li>
-          <h3 class="govuk-heading-s">Description</h3>
-          <p class="govuk-body">Founded in 2005, we have a long history of helping businesses become more efficient, saving time and money, and ultimately opening the door to greater productivity. Our process and products have evolved over our 13-year journey, but our mission has remained the same.</p>
-          <p class="govuk-body"><a href="short-description" class="govuk-link das-preview-change-link">Change</a></p>
-        </li>
-        <li>
-          <h3 class="govuk-heading-s">Employer</h3>
-          <p class="govuk-body">Organisation 1</p>
-          <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-        </li>
-        <li>
-          <h3 class="govuk-heading-s das-not-shown">Disability Confident (not visibile to candidate)<span class="govuk-hint">This is an optional section</span></h3>
+      <div class="govuk-grid-row govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-two-thirds">
 
-          <!-- <img src="https://recruit.test-eas.apprenticeships.sfa.bis.gov.uk/img/disability-confident_545x172.png" class="das-disability-confident-logo" alt="A logo confirming that the employer is registered as disability confident"> -->
-          <!-- <details class="govuk-details">
+          <p class="govuk-body govuk-!-margin-bottom-1">We currently have requirements for Electronic Engineering Technician Apprentices and Mechanical Engineering Technician Apprentices to join our team from September 2022 on a Level 3 Apprenticeship, following the Science Industry Maintenance Technician Standard (ST0249) and Engineering Technician Standard (ST0457) respectively.</p>
+          <p><a href="short-description?edit=yes">Change</a></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-1">This apprenticeship requires you to apply through the employer's website.</p>
+          <p><a href="application-process?edit=yes">Change</a></p>
+
+          <p class="govuk-body-s govuk-!-margin-bottom-1">Closing date: 31 Mar 2022</p>
+          <p><a href="dates?edit=yes">Change</a></p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row" id="apprenticeshipSummary">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Apprenticeship summary</h2>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list">
+            <li>
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Annual wage</h3>
+              <p id="vacancy-wage">
+                  £14,608.00
+              </p>
+              <p class="govuk-!-margin-bottom-1">Salary increases yearly with the progression of the apprenticeship</p>
+              <p><a href="#">Change</a></p>
+            </li>
+            <li>
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Working week</h3>
+              <p class="govuk-!-margin-bottom-1">Flexible working, Full-time, Compressed Hours<br>
+                Total hours per week: 37
+              </p>
+              <p><a href="#">Change</a></p>
+            </li>
+            <li>
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Expected duration</h3>
+              <p class="govuk-!-margin-bottom-1">45 Months</p>
+              <p><a href="#">Change</a></p>
+            </li>
+            <li>
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Possible start date</h3>
+              <p class="govuk-!-margin-bottom-1" id="vacancy-start-date">01 Sep 2022</p>
+              <p><a href="#">Change</a></p>
+            </li>
+            <li>
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Date posted</h3>
+                <p class="govuk-!-margin-bottom-1">28 Feb 2022</p>
+                <p><a href="#">Change</a></p>
+            </li>
+            <li>
+            </li>
+            <li>
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Apprenticeship level</h3>
+                <p class="govuk-!-margin-bottom-1">
+                    Advanced
+                <br>Level 3 (A level)</p>
+                <p><a href="#">Change</a></p>
+            </li>
+            <li>
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Positions</h3>
+                    <p class="govuk-!-margin-bottom-1">10 available</p>
+                    <p><a href="#">Change</a></p>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="govuk-grid-column-two-thirds" id="vacancyDescription">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What will the apprentice be doing?</h3>
+          <p class="govuk-!-margin-bottom-1">With these structured training programmes you’ll divide your time between the classroom and electronics or mechanical engineering workshop. Our schemes follow Institute for Apprenticeships’ Level 3 standards, with bespoke modules added to prepare you for a career in Defence. Start your apprenticeship with a year at college, then gradually move onto work placements on real projects in our laboratories and workshops.</p>
+          <p><a href="#">Change</a></p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What training will the apprentice take and what qualification will the apprentice get at the end?</h3>
+          <p>You will spend your first year full time at college, developing theoretical and practical skills whilst studying for BTEC Diploma in Engineering at an appropriate level to your prior experience. More details can be found on the Civil Service Jobs website (below).</p>
+          <p class="govuk-!-margin-bottom-1">Following this, you will follow a structured work placement program, working on real projects in our groups.</p>
+          <p><a href="#">Change</a></p>
+        </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Requirements and prospects</h2>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Desired skills and personal qualities</h3>
+          <p class="govuk-!-margin-bottom-1">Communication skills, Attention to detail, Organisation skills, Problem solving skills, Logical, Team working, Creative, Initiative</p>
+          <p><a href="#">Change</a></p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Qualifications</h3>
+          <p class="govuk-!-margin-bottom-1">GCSE or equivalent five inc. Maths, English, any Science (Grade 5 or above) Essential<br>
+          BTEC or equivalent Engineering (Grade Diploma L3) Desired<br>
+          BTEC or equivalent Engineering (Electrical/Electronic or Mechanical) (Grade L3 Extended Diploma) Desired</p>
+          <p><a href="#">Change</a></p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What is the expected career progression after this apprenticeship?</h3>
+          <p class="govuk-!-margin-bottom-1">Upon successful completion of the Level 3 Apprenticeship you will apply for a permanent role in your chosen team; this will include further career development opportunities according to the role.</p>
+          <p><a href="#">Change</a></p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Things to consider (optional)</h3>
+          <p><a href="#">Add</a></p>
+
+        </div>
+
+
+      </div>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">About the employer</h2>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-margin-bottom-1">DSTL has set out a bold new vision as the government agency that provides the science inside UK defence and security. To make this a reality, we are looking for motivated individuals who are inquisitive and have a desire to understand how technology and systems fundamentally operate, who can bring their developing technical experience into play to ensure that DSTL can meet the constantly evolving challenges of the digital age.</p>
+          <p><a href="#">Change</a></p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Employer</h3>
+          <p class="govuk-!-margin-bottom-1">ABC Opticions.</p>
+          <p><a href="#">Change</a></p>
+     
+          <img src="https://www.findapprenticeship.service.gov.uk/Content/_assets/img/disability-confident.png" class="das-disability-confident-logo" alt="A logo confirming that the employer is registered as disability confident">
+          <details class="govuk-details govuk-!-margin-bottom-1">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                 About disability confident
@@ -218,97 +177,91 @@ This is the grounding for your future development within the network and opportu
 
               <p>The disability confident scheme supports employers to make the most of the talents disabled people can bring to your workplace.provide your nationality, you’ll have to send copies of identity documents through the post.</p>
             </div>
-          </details> -->
-          <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Add</a></p>
-        </li>
-        <li>
-            <h3 class="govuk-heading-s das-not-shown">Website (not visibile to candidate)</h3>
-            <p class="govuk-body"></p>
-            <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Add</a></p>
-        </li>
-    </ul>
-  </div>
-  <div class="govuk-grid-column-one-third">
-      <h3 class="govuk-heading-s">Contact details</h3>
-      <p class="govuk-body">
-      Bill Shoggins<br>
-      bill@shogginsIT.co.uk<br>
-      Tel: 090 0034 3234
-    </p>
-    <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-      <h3 class="govuk-heading-s">Location</h3>
-      <ul class="govuk-list">
-        <li>Cheylsmore House</li>
-        <li>5 Quinton Road</li>
-        <li>Coventry</li>
-        <li>West Midlands</li>
-        <li>CV1 2WT</li>
-      </ul>
-      <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-  </div>
-  <div class="govuk-grid-column-one-half">
-      <img id="static-map" src="https://maps.googleapis.com/maps/api/staticmap?markers=52.400997,-1.508122&amp;size=465x256&amp;zoom=12&amp;client=gme-skillsfundingagency&amp;signature=lCuCTEI-K25bn1YgDLOSpzopvFk=" alt="Location map">
-  </div>
-</div>
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Training</h2>
-    </div>
-    <div class="govuk-grid-column-two-thirds">
-        <h3 class="govuk-heading-s">Training provider</h3>
-        <p class="govuk-body">CALEX UK LTD</p>
-        <ul class="govuk-list govuk-list--bullet">
-	<li>Level 2&nbsp;Customer service practitioner</li>
-	<li>Our Apprenticeship Programme is an excellent way of ensuring we have high quality people working within our business. We're looking for ambitious candidates ready to take ownership of their development, work hard to achieve their potential and grow with an ambitious employer.</li>
-	<li>The programme typically lasts for 18&nbsp;months and you'll achieve a nationally recognised qualification - Customer Service Practitioner.&nbsp;We will support you to gain your functional skills,&nbsp;if you require them in maths and English.</li>
-	<li>Block training is complemented by a combination of regular coaching visits from one of our experienced coaches as well as virtual classroom sessions and e-Learning modules.</li>
-</ul>
-          <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-      <ul class="govuk-list">
-        <li>
-          <h3 class="govuk-heading-s">Apprenticeship Framework</h3>
-          <p class="govuk-body">{%if data.training_standard %}{{data.training_standard}}{%else%}Technical Theatre, Lighting, Sound and Stage: Lighting{%endif%}</p>
-          <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-        </li>
-      </ul>
-    </div>
-
-</div>
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Application process</h2>
-    </div>
-    <div class="govuk-grid-column-full">
-      <p class="govuk-body">Candidates will apply through the <a href="https://www.gov.uk/apply-apprenticeship" rel="noopener" target="_blank">Find an apprenticeship service</a></p>
-      <p class="govuk-body"><a href="#" class="govuk-link das-preview-change-link">Change</a></p>
-    </div>
-</div>
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+          </details>
+          <p><a href="#">Change</a></p>
 
 
-<form method="post" action="confirmation">
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-          <a href="delete" class="govuk-button das-delete-button">Delete advert</a>
+        </div>
+
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Address</h3>
+          <ul class="govuk-list govuk-!-margin-bottom-1">
+            <li>Unit Dc1</li>
+            <li>Boscombe Road</li>
+            <li>Coventry</li>
+            <li>Dunstable</li>
+            <li>LU5 4FE</li>
+          </ul>
+          <p><a href="#">Change</a></p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Website (not visibile to candidate)</h3>
+          <p><a href="#">Add</a></p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Contact</h3>
+          <p>ABC Opticians Recrtuiment Team</p>
+          <p class="govuk-!-margin-bottom-1"><a href="#">abcopticiansrecrtuiment@abc.gov.uk</a></p>
+          <p><a href="#">Change</a></p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <img style="width:100%" id="static-map" src="https://maps.googleapis.com/maps/api/staticmap?markers=52.400997,-1.508122&amp;size=465x256&amp;zoom=12&amp;client=gme-skillsfundingagency&amp;signature=lCuCTEI-K25bn1YgDLOSpzopvFk=" alt="Location map">
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Training</h2>
+        </div>
+      
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Training provider</h3>
+          <p class="govuk-!-margin-bottom-1">WILTSHIRE COLLEGE</p>
+          <p><a href="#">Change</a></p>
+          
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Apprenticeship standard</h3>
+          <p class="govuk-!-margin-bottom-1">Safety, health and environment technician<br>
+          Level 3 (A level)</p>
+          <p><a href="#">Change</a></p>
+  
+        </div>
+  
+      </div>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">
+            Employer's application instructions
+          </h2>
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+          <p class="govuk-!-margin-bottom-8">Please apply through the Civil Service Jobs website.</p>
+          <p class="govuk-!-margin-bottom-1">This apprenticeship requires you to apply through the employer's website.</p>
+          <p><a href="#">Change</a></p>
+   
+          <p class="govuk-body-s govuk-!-margin-bottom-1">Closing date: 31 Mar 2022</p>
+          <p><a href="#">Change</a></p>
+        </div>
       </div>
 
+      
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <input type="submit" class="govuk-button" data-module="govuk-button" value="Submit advert">
-    </div>
+<div class="govuk-button-group">
+  <input type="hidden" name="answers-checked" value="true">
+  
+  <button class="govuk-button" data-module="govuk-button">
+    Submit advert
+  </button>
+
+  <a href="delete" class="govuk-button govuk-button--secondary">Delete advert</a>
 </div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <a href="../dashboard" class="govuk-body das-button--link">Save and return to your adverts</a>
-    </div>
-</div>
-</form>
+
+<p><a href="../dashboard">Save and return to your adverts</a></p>
+
 {% endblock %}
