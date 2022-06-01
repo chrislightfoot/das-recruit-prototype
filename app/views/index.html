@@ -135,11 +135,16 @@
 <div class="govuk-grid-row">
   <!-- Sprints section starts -->
   <div class="govuk-grid-column-two-thirds">
-    {% include './v6/_summary.html' %}
+    {% include './v7/_summary.html' %}
                 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">
       Previous sprints and archive
     </h2>
+
+    {% set v6Html %}
+    {% include './v6/_summary.html' %}
+    {% endset %} 
+
     {% set v5Html %}
     {% include './v5/_summary.html' %}
     {% endset %} 
