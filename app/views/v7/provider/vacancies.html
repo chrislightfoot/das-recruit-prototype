@@ -184,14 +184,16 @@ Vacancies
       <div class="row-group">
         <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
           <fieldset class="govuk-fieldset">
+            
             <div class="form-group search-field search-field-darker">
-              <input type="hidden" name="clientsFilter" value="new">
               <div class="search-input search-input-with-button">
                 <label class="govuk-label" for="search">
+                  
                   <!-- Client reference -->
                   Search vacancies
                   <!-- <span class="govuk-hint">Search for a team member by name, role or2 email</span> -->
                 </label>
+                
 
 
 
@@ -230,9 +232,9 @@ Vacancies
     <p id="table-header" class="govuk-body">
       {% if data.filter == 'any' or not data.filter %}{% if search%}{%else%}All{%endif%} <span class="displayTotal">36</span> vacancies {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> <a href="vacancies?filter=any&page=1"
         class="govuk-!-font-weight-regular govuk-component__link govuk-!-font-size-19">Show all vacancies</a>{%endif%}
-      {% elseif data.filter == 'live' %}<span class="displayTotal">11</span> <span class="govuk-!-font-weight-bold">live</span> vacancies {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%}&nbsp; <a href="vacancies?filter=any&page=1"
+      {% elseif data.filter == 'live' %}<span class="displayTotal">11</span> <span class="govuk-!-font-weight-bold">11 live vacancies </span>{%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%}&nbsp; <a href="vacancies?filter=any&page=1"
         class="govuk-!-font-weight-regular govuk-component__link govuk-!-font-size-19">Show all vacancies</a>
-      {% elseif data.filter == 'new' %}<span class="displayTotal">2</span> vacancies <span class="govuk-!-font-weight-bold">with new applications</span> {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%} &nbsp; <a
+      {% elseif data.filter == 'new' %}<span class="displayTotal">2</span>  <span class="govuk-!-font-weight-bold">3 vacancies with new applications</span> {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%} &nbsp; <a
         href="vacancies?filter=any&page=1" class="govuk-!-font-weight-regular govuk-component__link govuk-!-font-size-19">Show all vacancies</a>
 
       {% elseif data.filter == 'withApplication' %}<span class="displayTotal">2</span> vacancies <span class="govuk-!-font-weight-bold">with applications</span> {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%}
@@ -245,7 +247,7 @@ Vacancies
 
       {% elseif data.filter == 'closed' %}<span class="displayTotal">11</span> <span class="govuk-!-font-weight-bold">closed</span> vacancies {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%} &nbsp; <a href="vacancies?filter=any&page=1"
         class="govuk-!-font-weight-regular govuk-component__link govuk-!-font-size-19">Show all vacancies</a>
-      {% elseif data.filter == 'pending review' %}<span class="displayTotal">2</span> <span class="govuk-!-font-weight-bold">vacancies pending review</span> {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%}
+      {% elseif data.filter == 'pending review' %}<span class="displayTotal">2</span> <span class="govuk-!-font-weight-bold">2 vacancies pending review</span> {%if query.search %}with <span class="govuk-!-font-weight-bold">{{query.search}}</span> {%endif%}
       &nbsp; <a href="vacancies?filter=any&page=1" class="govuk-!-font-weight-regular govuk-component__link govuk-!-font-size-19">Show all vacancies</a>
 
       {% elseif data.filter == 'closing' %}<span class="displayTotal">3 </span> <span class="govuk-!-font-weight-bold">live</span> vacancies <span class="govuk-!-font-weight-bold">closing soon</span><span class="govuk-!-font-weight-bold"> {% if
@@ -339,7 +341,7 @@ Vacancies
       </div>
       {% endif %}
       {% if totalVacancies != 0%}
-      <div class="das-pager-summary">Showing {{currentMin}} to {% if currentMax < totalVacancies %}{{currentMax}}{%else%}{{totalVacancies}}{%endif%} of <span id="totalVacancies">{{totalVacancies}}</span> vacancies</div>
+      <!-- <div class="das-pager-summary">Showing {{currentMin}} to {% if currentMax < totalVacancies %}{{currentMax}}{%else%}{{totalVacancies}}{%endif%} of <span id="totalVacancies">{{totalVacancies}}</span> vacancies</div> -->
       {% else %}
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
