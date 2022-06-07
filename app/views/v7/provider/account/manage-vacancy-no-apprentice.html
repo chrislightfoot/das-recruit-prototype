@@ -6,7 +6,7 @@ Manage apprentices
 {% endblock %}
 {% block beforeContent %}
 {{super()}}
-  <a href="javascript:history.back()" class="govuk-back-link">Back to vacancies</a>
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 {% block content %}
 
@@ -36,61 +36,71 @@ line-height: 1.25 !important; */
 </style>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
+  <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">Manage vacancy</h1>
-    <div class="govuk-grid-row govuk-!-margin-bottom-4">
-      <div class="govuk-grid-column-one-half ">
-        <span class="govuk-body govuk-!-font-weight-bold">Status</span>
-      </div>
-      <div class="govuk-grid-column-one-half">
-        <span class="govuk-body">Live</span>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+
+        
+
+<!-- ////START SUMMARY//// -->
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Pending employer review
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Vacancy title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Apprentice Bricklayer
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Vacancy reference
+    </dt>
+    <dd class="govuk-summary-list__value">
+      VAC1000000997
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Closing date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">01 Jan 2022</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Possible start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">01 Aug 2022</p>
+    </dd>
+  </div>
+</dl>
+<!-- ////END SUMMARY//// -->
       </div>
     </div>
-    <div class="govuk-grid-row govuk-!-margin-bottom-4">
-      <div class="govuk-grid-column-one-half">
-        <span class="govuk-body govuk-!-font-weight-bold">Vacancy title</span>
-      </div>
-      <div class="govuk-grid-column-one-half">
-        <span class="govuk-body">Apprentice Bricklayer</span>
-      </div>
-    </div>
-    <div class="govuk-grid-row govuk-!-margin-bottom-4">
-      <div class="govuk-grid-column-one-half">
-        <span class="govuk-body govuk-!-font-weight-bold">Vacancy ref</span>
-      </div>
-      <div class="govuk-grid-column-one-half">
-        <span class="govuk-body">VAC1000000997</span>
-      </div>
-    </div>
-    <div class="govuk-grid-row govuk-!-margin-bottom-4">
-      <div class="govuk-grid-column-one-half govuk-!-font-weight-bold">
-        <span class="govuk-body">Closing date</span>
-      </div>
-      <div class="govuk-grid-column-one-half ">
-        <span class="govuk-body">01 Jan 2019
-      </div>
-    </div>
-    <div class="govuk-grid-row govuk-!-margin-bottom-4">
-      <div class="govuk-grid-column-one-half">
-        <span class="govuk-body govuk-!-font-weight-bold">Possible start date</span>
-      </div>
-      <div class="govuk-grid-column-one-half">
-        <span class="govuk-body">01 Feb 2019</span>
-      </div>
-    </div>
+
+
     <div class="grid-row">
       <div class="column-full">
-        <ul class="govuk-list">
-          <li><a class="govuk-link button-link" href="preview-edit">Edit vacancy</a></li>
-          <li><a class="govuk-linkbutton-link" href="clone-dates">Clone vacancy</a></li>
-          <li><a class="govuk-linkbutton-link" target="_blank" href="preview">View vacancy</a></li>
-          <li><a class="govuk-link button-link" href="#">Close vacancy</a></li>
-        </ul>
+
         <p class="govuk-body">
 
+          <a class="govuk-linkbutton-link" href="preview">View vacancy</a> &nbsp;
+          <a class="govuk-linkbutton-link" href="clone-dates">Clone vacancy</a>
+
         </p>
-
-
 
       </div>
     </div>
@@ -98,7 +108,9 @@ line-height: 1.25 !important; */
   </div>
 
 </div>
+
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h2 class="govuk-heading-l">Manage applications</h2>

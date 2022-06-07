@@ -1,25 +1,24 @@
 {% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-Manage vacancy
+Preview your vacancy - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
 
-{% block beforeContent %}
+{% block beforeContent%}
 {{super()}}
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
 {% endblock %}
 
 {% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">View your vacancy</h1>
+    </div>
 
-<style media="screen">
-  .govuk-heading-s{
-    margin-bottom: .3125em;
-  }
-  .das-edit-link{margin-top:-10px}
-</style>
+    <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
+    <div class="govuk-!-padding-7" style="border:1px solid #b1b4b6">
 
-<div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-row govuk-!-margin-bottom-6">
         <div class="govuk-grid-column-full">
           <h2 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-width-three-quarters">
             {% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}
@@ -102,7 +101,8 @@ Manage vacancy
           <p>You will spend your first year full time at college, developing theoretical and practical skills whilst studying for BTEC Diploma in Engineering at an appropriate level to your prior experience. More details can be found on the Civil Service Jobs website (below).</p>
           <p>Following this, you will follow a structured work placement program, working on real projects in our groups.</p>
 
-    
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What is the expected career progression after this apprenticeship?</h3>
+          <p>Upon successful completion of the Level 3 Apprenticeship you will apply for a permanent role in your chosen team; this will include further career development opportunities according to the role.</p>
         </div>
       </div>
 
@@ -127,13 +127,6 @@ Manage vacancy
 
   
         </div>
-
-        <div class="govuk-grid-column-one-half">
-          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What is the expected career progression after this apprenticeship?</h3>
-          <p>Upon successful completion of the Level 3 Apprenticeship you will apply for a permanent role in your chosen team; this will include further career development opportunities according to the role.</p>
-  
-        </div>
-
 
       </div>
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
@@ -213,7 +206,7 @@ Manage vacancy
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
           <h2 class="govuk-heading-l">
-            Employer's application instructions
+            Employer's Application Instructions
           </h2>
         </div>
         <div class="govuk-grid-column-three-quarters">
@@ -223,12 +216,10 @@ Manage vacancy
           <p class="govuk-body-s">Closing date: 31 Mar 2022</p>
         </div>
       </div>
+     
+    </div>
+    </div>
 
-      
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-      <a href="../dashboard" class="govuk-link">Return to dashboard</a>
+  </div>
 </div>
-
 {% endblock %}
