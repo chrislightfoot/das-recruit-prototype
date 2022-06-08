@@ -143,7 +143,7 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
           <div class="das-card--content">
             <h3 class="govuk-heading-m das-card--heading">
               <span class="das-card--stat">2</span>
-              <a class="card-link" href="vacancies?filter=rejected">
+              <a class="card-link" href="#">
                 Rejected adverts
               </a>
             </h3>
@@ -158,7 +158,7 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
           <div class="das-card--content">
             <h3 class="govuk-heading-m das-card--heading">
               <span class="das-card--stat">11</span>
-              <a class="card-link" href="vacancies?filter=live">
+              <a class="card-link" href="3a-live">
                 Live adverts
               </a>
             </h3>
@@ -180,17 +180,15 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
           <div class="das-card--content">
             <h3 class="govuk-heading-m das-card--heading">
               <span class="das-card--stat">20</span>
-              <a class="card-link" href="vacancies?filter=new">
+              <a class="card-link" href="2a-new-applications">
                   New applications
               </a>
 
             </h3>
-            <p class="govuk-body das-card--description">Applications from Find an apprenticeship service.</p>
-            <!--  <ul class="das-card--tasks govuk-list">
-                <li>
-                  <a class="ga-track-anchor-click" href="vacancies?filter=withApplication" data-ga-event-category="link - click" >View all applications</a>
-                </li>
-              </ul>-->
+            <p class="govuk-body das-card--description">Applications from Find an apprenticeship service.<br><br>
+              <a href="#">View all applications</a>
+              <br></p>
+
           </div>
 
         </div>
@@ -202,7 +200,7 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
           <div class="das-card--content">
             <h3 class="govuk-heading-m das-card--heading">
               <span class="das-card--stat">11</span>
-              <a class="card-link" href="vacancies?filter=any">
+              <a class="card-link" href="4a-closed">
                 Closed adverts
               </a>
             </h3>
@@ -212,29 +210,29 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
       </div>
     </div>
 
-    <a href="vacancies?filter=any" class="govuk-link govuk-!-font-size-24 govuk-!-font-weight-bold govuk-link--no-visited-state" name="button">View all your adverts (54)</a>
+    <a href="#" class="govuk-link govuk-!-font-size-24 govuk-!-font-weight-bold govuk-link--no-visited-state" name="button">View all your adverts (54)</a>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
     <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-one-third ">
-        <h3 class="govuk-heading-s"><a class="govuk-link  govuk-link--no-visited-state" href="permissions/providers-none">Set up permission</a></h3>
+        <h3 class="govuk-heading-s"><a class="govuk-link  govuk-link--no-visited-state" href="#">Set up permission</a></h3>
         <p class="govuk-body">Give training providers permission to add apprentice records, recruit apprentices and create job adverts on your behalf.</p>
       </div>
 
       <div class="govuk-grid-column-one-third ">
         <h3 class="govuk-heading-s">
           {% if data.has_notifications == "yes" %}
-          <a href="notifications/notification-preferences">Manage your emails</a>
+          <a href="#">Manage your emails</a>
           {% else %}
-          <a href="notifications/notification-preferences-new">Manage your emails</a>
+          <a href="#">Manage your emails</a>
           {% endif%}
         </h3>
         <p class="govuk-body">Set up and manage the emails you receive about your {%if data.user== "employer" %}adverts{%else%}vacancies{%endif%} and applications.</p>
       </div>
 
       <div class="govuk-grid-column-one-third ">
-        <h3 class="govuk-heading-s"><a class="govuk-link govuk-link--no-visited-state" href="api/api">Recruitment APIs</a></h3>
+        <h3 class="govuk-heading-s"><a class="govuk-link govuk-link--no-visited-state" href="#">Recruitment APIs</a></h3>
         <p class="govuk-body">Integrate our APIs to create adverts using your own systems and display adverts on your websites.</p>
       </div>
     </div>

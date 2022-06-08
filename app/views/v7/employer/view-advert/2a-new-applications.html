@@ -120,12 +120,12 @@ Adverts
         <select class="govuk-select" id="filter" name="filter" aria-haspopup="listbox" aria-labelledby="exp_elem exp_button">
           <optgroup label="Status">
 
-            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>adverts  pending review</option>
-            <option value="closing-no-applications" {% if data.filter=='closing-no-applications' %}selected="selected" {%endif%}>closing soon with no applications</option>
+            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>with new applications</option>
 
           </optgroup>
           <optgroup label="Other">
-            
+            <option value="closing-no-applications" {% if data.filter=='closing-no-applications' %}selected="selected" {%endif%}>closing soon with no applications</option>
+
           </optgroup>
         </select>
       </div>
@@ -165,7 +165,7 @@ Adverts
 </div>
 <!-- SEARCH end -->
 
-  <p class="govuk-body"><b>2 adverts pending review</b> &nbsp;
+  <p class="govuk-body"><b>2 adverts with new applications</b> &nbsp;
     <a href="#">Show all adverts</a>
   </p>
 
@@ -184,10 +184,10 @@ Adverts
           <tr class="govuk-table__row govuk-body-s">
             <td class="govuk-table__cell">Electronic Engineering Technician Apprentice</td>
               <td class="govuk-table__cell">VAC10000039295</td>
-              <td class="govuk-table__cell"> - </td>
+              <td class="govuk-table__cell"> 3 <b>(1 new)</b> </td>
               <td class="govuk-table__cell">01 Jun 2022</td>             
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Pending review</strong></td>
-              <td class="govuk-table__cell"><a href="1b-manage-advert" class="govuk-link">Manage</a></td>   
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">closed</strong></td>
+              <td class="govuk-table__cell"><a href="2b-manage-advert" class="govuk-link">Manage</a></td>   
           </tr>
 
           <tr class="govuk-table__row govuk-body-s">
@@ -195,7 +195,7 @@ Adverts
               <td class="govuk-table__cell">VAC10000039295</td>
               <td class="govuk-table__cell"> - </td>
               <td class="govuk-table__cell">01 Jun 2022</td>             
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Pending review</strong></td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">closed</strong></td>
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Manage</a></td>   
           </tr>
   </tbody>
