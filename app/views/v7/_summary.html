@@ -26,7 +26,8 @@
       </table>"
     }) }}    
 
-    <h3 class="govuk-heading-m">EPIC: Create vacancy for employers and providers</h3>
+ 
+
      
     <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Design tickets (in Trello)</h4> 
     <ul class="govuk-list govuk-list--bullet"> 
@@ -58,7 +59,33 @@
 
       <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Traineeship 'view advert' journey</h4>                                              
       <div class="govuk-button-group">
-        <a href="v7/employer/login" class="govuk-button" style="background: #417F82" data-module="govuk-button">View vacancy</a>
+        <a href="v7/provider/login" class="govuk-button" style="background: #417F82" data-module="govuk-button">View vacancy</a>
       </div>
+
+      {{ govukDetails({
+        summaryText: "Changes we've made this sprint",
+        html: "<table class='govuk-table'>                    
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>What</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>View vacancy/advert</td>
+              <td class='govuk-table__cell'>
+                <li>ADDED in header 'View you vacancy/advert'</li>
+                <li>ADDED in back link</li>
+                <li>CHANGED so page no longer opens in a new tab</li>
+                <li>CHANGED so advert/vacancy is in a box (consistent with how the advert/vacancy is presented when Previewing)</li>
+                <li>ADDED in the secondary employer/provider nav bar</li>
+  
+              </td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}   
+
   </div>
 </div>
