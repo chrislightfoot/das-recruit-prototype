@@ -1,0 +1,91 @@
+<h2 class="govuk-heading-l" id="sprint-8">
+  <span class="govuk-tag">LATEST version</span><br>
+  Design sprint 8
+  <span class="govuk-caption-l">
+    8 June 2022 &ndash; 21st June 2022
+  </span>
+</h2>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {{ govukDetails({
+      summaryText: "Sprint goals",
+      html: "<table class='govuk-table'>                    
+        <thead class='govuk-table__head'>
+          <tr class='govuk-table__row'>
+            <th scope='col' class='govuk-table__header'>What we're doing</th>
+            <th scope='col' class='govuk-table__header'>Why we're doing it</th>
+          </tr>
+        </thead>
+        <tbody class='govuk-table__body'>
+          <tr class='govuk-table__row'>
+            <td class='govuk-table__cell'>Updating parts of the employer recruit journey</td>
+            <td class='govuk-table__cell'>There is so it's consistent with the training provider journey</td>
+          </tr>
+        </tbody>
+      </table>"
+    }) }}    
+
+ 
+
+     
+    <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Design tickets (in Trello)</h4> 
+    <ul class="govuk-list govuk-list--bullet"> 
+      <!-- <li><a href="https://trello.com/c/Nsimx4WS/202-202-employer-dashboard-deep-links" class="govuk-link govuk-link--no-visited-state">#202 Employer Dashboard deep links</a></li>  
+      <li><a href="https://trello.com/c/eKqQSfuN/201-201-provider-dashboard-deep-links" class="govuk-link govuk-link--no-visited-state">#201 Provider Dashboard deep links</a></li>  
+      <li><a href="https://trello.com/c/wXuKlerw/213-213-traineeship-dashboard-view-vacancy-links" class="govuk-link govuk-link--no-visited-state">#213 Traineeship Dashboard View Vacancy links</a></li>   -->
+    </ul>
+
+    <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Journey flow</h4>  
+    <ul class="govuk-list govuk-list--bullet">                           
+      <!-- <li><a href="https://lucid.app/lucidspark/75df8cd3-1247-466f-b7c6-7980cf119bf5/edit?existing=1&docId=75df8cd3-1247-466f-b7c6-7980cf119bf5&shared=true&invitationId=inv_295930d0-a2eb-4b25-a72a-e25f0aea5c39#" class="govuk-link govuk-link--no-visited-state">Lucid board</a></li> -->
+    </ul>
+
+
+      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Employer 'view advert' journey</h4>                                              
+      <div class="govuk-button-group">
+        <a href="v8/employer/login" class="govuk-button" style="background: #6F72AF" data-module="govuk-button">View advert</a>
+
+        <!-- <a href="v7/employer/login?startpage=1" class="govuk-button" style="background: #6F72AF" data-module="govuk-button">Create an advert (new user)</a> -->
+      </div>
+
+      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Provider 'view vacancy' journey</h4>
+
+      <div class="govuk-button-group">
+        <a href="v8/provider/login" class="govuk-button" style="background:#F47737" data-module="govuk-button">View vacancy</a> 
+
+        <!-- <a href="v7/provider/login?startpage=1" class="govuk-button" style="background: #F47737" data-module="govuk-button">Create a vacancy (new user)</a> -->
+      </div>
+
+      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Traineeship 'view vacancy' journey</h4>                                              
+      <div class="govuk-button-group">
+        <a href="v8/provider/login" class="govuk-button" style="background: #417F82" data-module="govuk-button">View vacancy</a>
+      </div>
+
+      {{ govukDetails({
+        summaryText: "Changes we've made this sprint",
+        html: "<table class='govuk-table'>                    
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>What</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>View vacancy/advert</td>
+              <td class='govuk-table__cell'>
+                <li>ADDED in header 'View you vacancy/advert'</li>
+                <li>ADDED in back link</li>
+                <li>CHANGED so page no longer opens in a new tab</li>
+                <li>CHANGED so advert/vacancy is in a box (consistent with how the advert/vacancy is presented when Previewing)</li>
+                <li>ADDED in the secondary employer/provider nav bar</li>
+  
+              </td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}   
+
+  </div>
+</div>
