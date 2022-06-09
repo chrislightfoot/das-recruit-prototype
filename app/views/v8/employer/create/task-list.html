@@ -132,10 +132,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="long-description?return_url=task-list" aria-describedby="contact-details-status">
-                About the apprenticeship 
+                Tasks and training details 
               </a>
               {% else %}
-              About the apprenticeship 
+              Tasks and training details 
               {% endif %}
             </span>
             <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
@@ -167,10 +167,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section1 == "completed" %}
               <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
-                Important dates
+                Closing and start dates
               </a>
               {% else %}
-                Important dates
+              Closing and start dates
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -248,7 +248,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
 
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3.</span> Skills and qualifications
+          <span class="app-task-list__section-number">3.</span> Requirements and prospects
           <span style="margin-left:185px;">
             {% if data.section3 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
@@ -295,6 +295,23 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             {% endif %}-->
           </li>
 
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section3 == "completed" %}
+              <a href="future-prospects?return_url=task-list" aria-describedby="contact-details-status">
+                Future prospects
+              </a>
+              {%else%}
+              Future prospects
+              {%endif%}
+            </span>
+            <!--{% if data.port_entry or data.port_export or data.transport_method %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
+          
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
