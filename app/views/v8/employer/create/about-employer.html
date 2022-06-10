@@ -1,7 +1,7 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Add some information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+Employer information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
 
@@ -38,6 +38,26 @@ Add some information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
           Website for organisation (optional)
         </label>
         <input class="govuk-input govuk-input--width-30" maxlength="100" type="text" id="EmployerWebsiteUrl" name="EmployerWebsiteUrl" value="{% if data.EmployerWebsiteUrl %}{{data.EmployerWebsiteUrl}}{%endif%}">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+          <legend class="govuk-label govuk-label--m" for="shortDescription">
+            Disability Confident employer (optional) 
+          </legend>
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="is-disability-confident" name="is-disability-confident" type="checkbox"
+                value="british" aria-describedby="is-disability-confident">
+              <label class="govuk-label govuk-checkboxes__label" for="is-disability-confident">
+                This employer has signed up to the <a href="https://www.gov.uk/government/collections/disability-confident-campaign" rel="noopener"
+                  target="_blank" title="Disability Confident employer scheme and guidance (opens in a new window)">Disability
+                  Confident</a> scheme
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
 
       <div class="govuk-button-group govuk-!-margin-top-7">
