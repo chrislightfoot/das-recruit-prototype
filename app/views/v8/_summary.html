@@ -41,51 +41,79 @@
       <!-- <li><a href="https://lucid.app/lucidspark/75df8cd3-1247-466f-b7c6-7980cf119bf5/edit?existing=1&docId=75df8cd3-1247-466f-b7c6-7980cf119bf5&shared=true&invitationId=inv_295930d0-a2eb-4b25-a72a-e25f0aea5c39#" class="govuk-link govuk-link--no-visited-state">Lucid board</a></li> -->
     </ul>
 
-
-      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Employer 'view advert' journey</h4>                                              
+<!-- ////EMPLOYER//// -->
+      <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Employer 'view advert' journey</h4>                                              
       <div class="govuk-button-group">
         <a href="v8/employer/login" class="govuk-button" style="background: #6F72AF" data-module="govuk-button">View advert</a>
-
-        <!-- <a href="v7/employer/login?startpage=1" class="govuk-button" style="background: #6F72AF" data-module="govuk-button">Create an advert (new user)</a> -->
       </div>
 
-      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Provider 'view vacancy' journey</h4>
+      <table class='govuk-table'>                    
+        <thead class='govuk-table__head'>
+          <tr class='govuk-table__row'>
+            <th scope='col' class='govuk-table__header'>Page</th>
+            <th scope='col' class='govuk-table__header'>What</th>
+          </tr>
+        </thead>
+        <tbody class='govuk-table__body'>
+          <tr class='govuk-table__row'>
+            <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state" href="/v8/employer/view-advert/3b-manage-advert-closed">Close vacancy</a></td>
+            <td class='govuk-table__cell'>
+              <li>UPDATED content into banner once user has closed an advert</li>
+            </td>
+          </tr>
+        </tbody>
+      </table>  
+
+<!-- //// PROVIDER//// -->
+      <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Provider journey</h4>
 
       <div class="govuk-button-group">
         <a href="v8/provider/login" class="govuk-button" style="background:#F47737" data-module="govuk-button">View vacancy</a> 
-
-        <!-- <a href="v7/provider/login?startpage=1" class="govuk-button" style="background: #F47737" data-module="govuk-button">Create a vacancy (new user)</a> -->
       </div>
 
-      <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Traineeship 'view vacancy' journey</h4>                                              
+      <table class='govuk-table'>                    
+        <thead class='govuk-table__head'>
+          <tr class='govuk-table__row'>
+            <th scope='col' class='govuk-table__header'>Page</th>
+            <th scope='col' class='govuk-table__header'>What</th>
+          </tr>
+        </thead>
+        <tbody class='govuk-table__body'>
+          <tr class='govuk-table__row'>
+            <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state" href="/v8/provider/view-vacancy/3b-manage-vacancy-closed">Close vacancy</a></td>
+            <td class='govuk-table__cell'>
+              <li>UPDATED content into banner once user has closed a vacancy</li>
+            </td>
+          </tr>
+        </tbody>
+      </table>  
+
+
+<!-- ////TRAINEESHIP -->
+      <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Traineeship journey</h4>  
+
       <div class="govuk-button-group">
         <a href="v8/provider/login" class="govuk-button" style="background: #417F82" data-module="govuk-button">View vacancy</a>
       </div>
 
-      {{ govukDetails({
-        summaryText: "Changes we've made this sprint",
-        html: "<table class='govuk-table'>                    
-          <thead class='govuk-table__head'>
-            <tr class='govuk-table__row'>
-              <th scope='col' class='govuk-table__header'>Page</th>
-              <th scope='col' class='govuk-table__header'>What</th>
-            </tr>
-          </thead>
-          <tbody class='govuk-table__body'>
-            <tr class='govuk-table__row'>
-              <td class='govuk-table__cell'>View vacancy/advert</td>
-              <td class='govuk-table__cell'>
-                <li>ADDED in header 'View you vacancy/advert'</li>
-                <li>ADDED in back link</li>
-                <li>CHANGED so page no longer opens in a new tab</li>
-                <li>CHANGED so advert/vacancy is in a box (consistent with how the advert/vacancy is presented when Previewing)</li>
-                <li>ADDED in the secondary employer/provider nav bar</li>
-  
-              </td>
-            </tr>
-          </tbody>
-        </table>"
-      }) }}   
+      <table class='govuk-table'>                    
+        <thead class='govuk-table__head'>
+          <tr class='govuk-table__row'>
+            <th scope='col' class='govuk-table__header'>Page</th>
+            <th scope='col' class='govuk-table__header'>What</th>
+          </tr>
+        </thead>
+        <tbody class='govuk-table__body'>
+          <tr class='govuk-table__row'>
+            <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state" href="/v8/traineeships/view-vacancy/3b-manage-vacancy-closed">Close vacancy</a></td>
+            <td class='govuk-table__cell'>
+              <li>UPDATED content into banner once user has closed a vacancy</li>
+            </td>
+          </tr>
+        </tbody>
+      </table>                                            
+
+
 
   </div>
 </div>
