@@ -14,14 +14,6 @@ Preview your vacancy - Recruitment - {{serviceName}} - GOV.UK
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-xl">Preview your vacancy</h1>
-
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          Proofread your vacancy for spelling and formatting to avoid it being rejected by our QA team.
-        </strong>
-      </div>
       
     </div>
 
@@ -243,11 +235,17 @@ Preview your vacancy - Recruitment - {{serviceName}} - GOV.UK
 
       <p class="govuk-body">By submitting this vacancy you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Proofread your vacancy for spelling and formatting to avoid it being rejected by our QA team.
+        </strong>
+      </div>
+      
       <form action="/form-handler" method="post" novalidate>
         <div class="govuk-button-group">
           <input type="hidden" name="answers-checked" value="true">
-          
-
          
             <a href="confirmation" class="govuk-button" data-module="govuk-button">Submit vacancy</a>
         
