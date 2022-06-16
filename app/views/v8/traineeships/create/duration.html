@@ -33,9 +33,9 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--m" for="workingWeekDescription">
-            Details of work experience
+            Weekly hours on the traineeship
           </label>
-          <div class="govuk-hint">For example, Monday to Friday 9am to 5pm, shifts, may work evenings and weekends</div>
+          <div class="govuk-hint">Include the hours and days of the week the trainee will be in training and on placement.</div>
           <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count " id="workingWeekDescription"
             name="workingWeekDescription" rows="5"></textarea>
         </div>
@@ -44,16 +44,6 @@ Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
         </div>
       </div>
 
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="weekly-hours">
-          How many hours will the trainee be on placement in total?
-        </label>
-
-        <div class="govuk-input__wrapper">
-          <input class="govuk-input govuk-input--width-4" id="weekly-hours" name="weeklyHours" type="text" {% if data.weeklyHours and data.edit == "yes"%} value="{{data.weeklyHours}}" {%endif%}>
-          <div class="govuk-input__suffix" aria-hidden="true">hours</div>
-        </div>
-      </div>
       <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">Save and continue</button>
           <a class="govuk-link" href="../dashboard">Cancel</a>
