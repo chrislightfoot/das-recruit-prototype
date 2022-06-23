@@ -11,8 +11,31 @@ Manage advert
 {% endblock %}
 
 {% block content %}
+
+<style>
+  .govuk-notification-banner__content > * {
+    box-sizing: border-box;
+   max-width: 100%; }
+</style>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+    
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Success
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <h3 class="govuk-notification-banner__heading">
+              The advert dates for “test apprenticeship” have been updated.        </h3>
+          </div>
+        </div>
 
     <h1 class="govuk-heading-xl">Manage advert</h1>
 
@@ -71,6 +94,7 @@ Manage advert
 </dl>
 <!-- ////END SUMMARY//// -->
     
+
     <div class="grid-row">
       <div class="column-full">
 

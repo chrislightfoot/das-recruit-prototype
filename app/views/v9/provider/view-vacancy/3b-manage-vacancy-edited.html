@@ -11,19 +11,27 @@ Manage vacancy
 {% endblock %}
 
 {% block content %}
+<style>
+  .govuk-notification-banner__content > * {
+    box-sizing: border-box;
+   max-width: 100%; }
+</style>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    {% if data.alert=="clone" and data.user=='employer'%}
-    <div class="govuk-info-basic ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <!-- <span class="govuk-!-font-weight-bold">Activity</span> -->
-          <p class="govuk-body">You can now clone from the any vacancy management page. From your vacancies dashabord search for a vacancy and click manage.</p>
-          <p class="govuk-body govuk-!-margin-bottom-0"><a href="?alert=none" class="govuk-link--no-visited-state">Dismiss this notification</a></p>
-        </div>
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          The vacancy dates for “test apprenticeship” have been updated.        </h3>
       </div>
     </div>
-    {% endif %}
+
     <h1 class="govuk-heading-xl">Manage vacancy</h1>
 
 
