@@ -1,4 +1,4 @@
-{% extends "trainee-layout.html" %}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
 Which employer do you want to create a vacancy for? - Recruitment - {{serviceName}} - GOV.UK
@@ -12,10 +12,10 @@ Which employer do you want to create a vacancy for? - Recruitment - {{serviceNam
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-   
+    
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Which organisation do you want to create a vacancy for?</h1>
 
-    <form method="post" action="employers-select-0">
+    <form method="post" action="employers-select">
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -57,55 +57,11 @@ Which employer do you want to create a vacancy for? - Recruitment - {{serviceNam
       </fieldset>
       
 
-		
-          <!-- TABLE RESULTS -->
-          <table class="govuk-table govuk-!-margin-bottom-8" id="order-table-one">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header" onclick="sortTableOne(0)"><span class="icon sort">Organisation</th>
-            <th scope="col" class="govuk-table__header" onclick="sortTableOne(0)"><span class="icon sort">Account name</th>
-            <th scope="col" class="govuk-table__header">Agreement ID</th>
-            <th scope="col" class="govuk-table__header"></th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Abbotsford Care Limited</td>
-            <td class="govuk-table__cell">Abbotsford Care Limited </td>
-            <td class="govuk-table__cell">X4JKRY</td>
-            <td class="govuk-table__cell"><a href="employers-confirm">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">ACCOUNTANT LTD</td>
-              <td class="govuk-table__cell">ACCOUNTANT LTD</td>
-              <td class="govuk-table__cell">3W5D6J</td>
-              <td class="govuk-table__cell"><a href="employers-confirm">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">BAC LIMITED</td>
-              <td class="govuk-table__cell">BAC LIMITED</td>
-              <td class="govuk-table__cell">3W5D6J</td>
-              <td class="govuk-table__cell"><a href="employers-confirm">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">ESFA LTD</td>
-              <td class="govuk-table__cell">ESFA LTD</td>
-              <td class="govuk-table__cell">7XZ66W</td>
-              <td class="govuk-table__cell"><a href="employers-confirm">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">SAINSBURY'S</td>
-              <td class="govuk-table__cell">SAINSBURY'S </td>
-              <td class="govuk-table__cell">P4JKRY</td>
-              <td class="govuk-table__cell"><a href="employers-confirm">Select</a></td>
-            </tr>
-    
-    
-            </tr>
-          </tbody>
-          </table>		
-        </div>
-      </div>
+      <p class="govuk-body"><a href="employers-select">Clear search</a></p>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">0 organisations match <b>'sjhfgsjfg'</b></p>
+
+         
     </form>
 
   </div>

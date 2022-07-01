@@ -1094,3 +1094,13 @@ margin-top: -40px;
   }
 }
 
+// TABLE SORT
+.sort {
+  display: inline-block;
+  padding-left: 1.25em;
+  margin: 0 0 0em 0;
+  background: url(../images/sort-blue.svg) no-repeat 0% 15%;
+  background-size: 0.65em;
+  text-decoration: underline;
+  color: #1d70b8;
+}

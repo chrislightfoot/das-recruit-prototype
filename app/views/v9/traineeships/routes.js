@@ -23,4 +23,16 @@ router.get('*/manage-your-apprentices', function (req, res) {
   )
  })
   
+
+
+
+   //Create vacancy - Confirm organisation
+   router.post('/v9/traineeships/create/employers-confirm', (req, res) => {
+      if(req.session.data['create-vacancy'] == 'yes'){
+         res.redirect('/v9/traineeships/create/task-list')
+      } else {
+         res.redirect('/v9/traineeships/create/employers-select')
+      }
+   })
+
   module.exports = router
