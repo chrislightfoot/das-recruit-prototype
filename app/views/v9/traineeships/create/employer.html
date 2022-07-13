@@ -45,7 +45,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
 				</fieldset>
         {% endif %}
 
-      <div id="oranisation-list" class="govuk-form-group" data-amount="{{data.NumberOfEntities}}">
+      <!-- <div id="oranisation-list" class="govuk-form-group" data-amount="{{data.NumberOfEntities}}">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios">
             {% for i in data.locations %}
@@ -61,34 +61,23 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
             {% endfor %}
           </div>
         </fieldset>
-      </div>
+      </div> -->
 
-      <div id="oranisation-list-1" class="govuk-form-group" style="display:none;">
+
+
+      <div id="oranisation-list-2" class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios">
             <div class="govuk-radios__item selection-item" data-item-id="2" aria-hidden="false">
-              <input class="govuk-radios__input" id="selected-organisation-id-2" name="selected_organisation_id" type="radio" value="ABC opticians Coventry" data-search-value="Organisation 2">
+              <input class="govuk-radios__input" id="orgName" name="orgName" type="radio" value="ABC opticians Coventry" data-search-value="Organisation 2" checked="yes">
               <label class="govuk-label govuk-radios__label" for="selected-organisation-id-2">
-                ABC opticians Coventry
-              </label>
-            </div>
-        </fieldset>
-      </div>
-
-
-      <div id="oranisation-list-2" class="govuk-form-group" style="display:none;">
-        <fieldset class="govuk-fieldset">
-          <div class="govuk-radios">
-            <div class="govuk-radios__item selection-item" data-item-id="2" aria-hidden="false">
-              <input class="govuk-radios__input" id="selected-organisation-id-2" name="selected_organisation_id" type="radio" value="ABC opticians Coventry" data-search-value="Organisation 2">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id-2">
-                 ABC opticians Coventry
+                ABC opticians
               </label>
             </div>
             <div class="govuk-radios__item selection-item" data-item-id="2" aria-hidden="false">
-              <input class="govuk-radios__input" id="selected-organisation-id-2" name="selected_organisation_id" type="radio" value="ABC opticians Wycombe" data-search-value="Organisation 2">
+              <input class="govuk-radios__input" id="orgName" name="orgName" type="radio" value="ABC opticians Wycombe" data-search-value="Organisation 2">
               <label class="govuk-label govuk-radios__label" for="selected-organisation-id-2">
-                ABC opticians Wycombe
+                Accountant Ltd
               </label>
             </div>
           </div>
@@ -131,7 +120,7 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
                 <div class="govuk-form-group">
                   {{ govukButton({
                     text: "Save and continue",
-                    href: "traineeship-sector"
+                    href: "title"
                   }) }}   
                   <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
                   <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->

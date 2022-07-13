@@ -37,11 +37,11 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">1. </span> Vacancy summary 
-          <span style="margin-left:261px;">           
+          <span style="margin-left:248px;">           
             {% if data.section1 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">In progress</strong>
             {% endif %}
           </span>
         </h2>
@@ -49,27 +49,18 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="title?return_url=task-list" aria-describedby="eligibility-status">
-                Vacancy title
+              <a href="employer" aria-describedby="eligibility-status">
+                Name of employer
               </a>
-           </span>
-            <!--{% if data.title %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else%}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}-->
+           </span> 
           </li>
 
           <li class="app-task-list__item">
-            <span class="app-task-list__task-name">   
-              {% if data.section1 == "completed" %}                         
-              <a href="employer?return_url=task-list" aria-describedby="contact-details-status">
-                Name of employer
+            <span class="app-task-list__task-name">
+              <a href="title?return_url=task-list" aria-describedby="eligibility-status">
+                Vacancy title
               </a>
-              {%else%}
-                Name of employer
-              {%endif%}             
-            </span>
+           </span> 
           </li>
           
 
