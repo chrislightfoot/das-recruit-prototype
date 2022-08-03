@@ -22,11 +22,15 @@
 <div class="govuk-grid-row">
   <!-- Sprints section starts -->
   <div class="govuk-grid-column-two-thirds">
-    {% include './v9/_summary.html' %}
+    {% include './v10/_summary.html' %}
                 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">
       Previous sprints archive
     </h2>
+
+    {% set v9Html %}
+    {% include './v9/_summary.html' %}
+    {% endset %} 
 
     {% set v8Html %}
     {% include './v8/_summary.html' %}
@@ -68,6 +72,20 @@
       id: "accordion-default",
       items:
       [  
+      {
+        heading:
+        {
+          text: "Design sprint 9"
+        },
+        content:
+        {
+          html: v9Html
+        },
+        summary:
+        {
+          html: '22 June &mdash; 5 July 2022'
+        }
+      }, 
       {
         heading:
         {
