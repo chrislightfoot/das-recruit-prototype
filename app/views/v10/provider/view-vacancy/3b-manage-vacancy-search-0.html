@@ -179,60 +179,21 @@ Manage vacancy
               <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
             </div>
           </div>
-          <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="">
+          <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="Faizal">
         </div>
         <div class="search-submit">
-          <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
+          <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search applications</button>
         </div>
       </div>
     </fieldset>
 
+    <p class="govuk-body"><a href="employers-select">Clear search</a></p>
+
+    <p class="govuk-body govuk-!-margin-bottom-6">0 applications match <b>'hazel'</b></p>
+    
   </div>
 </div>
   <!-- search box END -->
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-  
-    <table class="govuk-table responsive-table">
-      <thead class="govuk-table__header">
-        <tr class="govuk-table__row" role="row">
-          <th class="govuk-table__cell" role="gridcell" class="bold">Name</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Application ID</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Status</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Date applied</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Disability</th>
-
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="application-failed">Faizal Dawood</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C5662EA</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">Successful</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2018</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="application-succesful">Bill Shoggins</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C3432TR</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">Unsuccessful</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2018</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="application-new">Rolo Tomasi</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C8824ED</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">New</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2018</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
 
 {% endblock %}
