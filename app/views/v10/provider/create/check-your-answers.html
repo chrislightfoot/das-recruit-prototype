@@ -281,6 +281,7 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
           </div>          
         </dl>
 
+<!-- section start -->
         <h2 class="govuk-heading-m">About the employer</h2>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -375,6 +376,38 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
           </div>     
 
         </dl>
+<!-- section end -->
+
+<!-- section start -->
+<h2 class="govuk-heading-m">Application</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Question 1
+      <br>
+      <br>
+      <br>
+      Question 2
+      <br>
+      <br>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [[show question or 'None' if they haven't enter one]]
+      <br>
+      <br>
+      [[show question or 'None' if they haven't enter one]]
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> description</span>
+      </a>
+    </dd>
+  </div>   
+
+</dl>
+<!-- section end -->
 
         <h2 class="govuk-heading-m">Now submit your vacancy</h2>
 
@@ -411,10 +444,12 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
 
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+<!-- delete vacancy START -->
       <h1 class="govuk-heading-s">No longer need this vacancy?</h1>
 
       <a href="delete" class="govuk-button govuk-button--warning">Delete vacancy</a>
-      
+<!-- delete vacancy END -->
+
       </div>
 </div>
 {% endblock %}
