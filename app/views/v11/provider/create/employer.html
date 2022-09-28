@@ -9,128 +9,60 @@ Which employer name do you want on your vacancy? - Recruitment - {{serviceName}}
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
-{% block content %}
 
+
+{% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    
     <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Which employer is this vacancy for?</h1>
-    <form method="POST">
-        {% if  data.NumberOfEntities > 10 %}
-				<fieldset class="govuk-fieldset">
-					<legend class="govuk-visually-hidden">Search for the legal entity</legend>
-					<div class="govuk-form-group search-field search-field-darker govuk-input--width-30">
 
-						<div class="search-input search-input-with-button">
-							<label class="govuk-label" for="query">
-								<!--Client reference-->
-								Search for the legal entity
-							</label>
-							<div class="autocomplete__parent_wrapper">
-                <div class="autocomplete__wrapper">
-                  <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                    <span>No search results.</span>
-                    <span>,,</span>
-                  </div>
-                  <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="{% if query %}{{query}}{% endif %}">
-                </div>
-              </div>
-              <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery"   value="">
-						</div>
-						<div class="search-submit">
-							<button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
-						</div>
-					</div>
-          <p class="" data-clear-filter="" aria-hidden="false"><a id="clearSearch" href="#">Clear search</a></p>
-				</fieldset>
-        {% endif %}
-
-      <!-- <div id="oranisation-list" class="govuk-form-group" data-amount="{{data.NumberOfEntities}}">
+    <form method="post" action="">
+      
+      
+      <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <div class="govuk-radios">
-            {% for i in data.locations %}
-              {% if loop.index <= data.NumberOfEntities %}
-            <div class="govuk-radios__item selection-item" data-item-id="{{loop.index+1}}">
-              <input class="govuk-radios__input" id="selected-organisation-id-{{loop.index+1}}" name="selected_organisation_id" type="radio"
-                value="{% if data.currentEmployer %}{{data.currentEmployer}}{%else%}ABC opticians{%endif%} {{i}}" data-search-value="Organisation {{loop.index+1}}">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id-{{loop.index+1}}">
-                {% if data.currentEmployer %}{{data.currentEmployer}}{%else%}ABC opticians{%endif%} {{i}}
-              </label>
-            </div>
-            {% endif %}
-            {% endfor %}
+
+             <h3 class="govuk-heading-m">ABC opticians</h3>
+             <span class="govuk-caption-m">Account name: ABC opticians<br>
+             Agreement ID: X4JKRY
+             </span>
+
+             <p><h3 class="govuk-heading-s">Is this the employer you'd like to create a vacancy for?</h3></p>
+
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="vacancy_employer_yes" name="vacancy_employer" type="radio" value="yes" checked="checked">
+            <label class="govuk-label govuk-radios__label" for="vacancy_employer-yes">
+              Yes, use ABC opticians
+            </label>
           </div>
-        </fieldset>
-      </div> -->
-
-
-      <div id="oranisation-list-2" class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <div class="govuk-radios">
-            <div class="govuk-radios__item selection-item" data-item-id="2" aria-hidden="false">
-              <input class="govuk-radios__input" id="orgName" name="orgName" type="radio" value="ABC opticians Coventry" data-search-value="Organisation 2" checked="yes">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id-2">
-                ABC opticians
-              </label>
-            </div>
-            <div class="govuk-radios__item selection-item" data-item-id="2" aria-hidden="false">
-              <input class="govuk-radios__input" id="orgName" name="orgName" type="radio" value="ABC opticians Wycombe" data-search-value="Organisation 2">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id-2">
-                Accountant Ltd
-              </label>
-            </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="vacancy_employer_no" name="vacancy_employer" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="vacancy_employer_no">
+              No, choose a different employer
+            </label>
           </div>
-        </fieldset>
-      </div>
+        </div>
+    
+      </fieldset>
+    </div>
+      
+    <div class="govuk-form-group">
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}   
+      <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+      <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
+    </div>
 
-      <p id="oranisation-list-no-result" style="display:none;">0 matches for <span class="querytext"></span></p>
-
-
-      {% if  data.NumberOfEntities > 10 %}
-      <div class="pager das-pager" aria-hidden="false" style="margin-top:0" data-paging="">
-				<div class="pager-controls das-pager-controls">
-					<a class="pager-prev das-pager-prev hidden" href="#" aria-hidden="true" hidden="hidden">Prev</a>
-					<ul class="govuk-list pager-items das-pager-items"><li data-page-number="1">1</li><li data-page-number="2"><a href="#">2</a></li><li data-page-number="3"><a href="#">3</a></li><li data-page-number="4"><a href="#">4</a></li><li data-page-number="5"><a href="#">5</a></li></ul>
-					<a class="pager-next das-pager-next" href="#" aria-hidden="false">Next</a>
-				</div>
-				<div class="das-pager-summary">Showing 1 - 25 of 87 legal entities</div>
-			</div>
-      <!-- <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                        <h2 class="govuk-fieldset__heading">
-                          Anonymous vacancies
-                        </h2>
-                      </legend>
-                      <label class="form-label-bold" for="anonymous-vacancy">
-
-                      </label>
-                      <span class="govuk-hint">Your name will not appear on the vacancy or in any searches on <a href-="#">find an apprenticeship.</a> This could mean fewer people see your vacancy</span>
-                      <div class="govuk-checkboxes"">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="anonymous-vacancy" name="anonymous-vacancy" type="checkbox" value="anonymous"data-aria-controls="anonymous-vacancy-panel" aria-expanded="false">
-                            <label class="govuk-label govuk-checkboxes__label" nfor="anonymous-vacancy">The vacancy is anonymous</label>
-                        </div>
-                    </div>
-                    </fieldset>
-                </div> -->
-                {% endif %}
-
-                <div class="govuk-form-group">
-                  {{ govukButton({
-                    text: "Save and continue",
-                    href: "title"
-                  }) }}   
-                  <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
-                  <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
-                </div>
-
-
-</form>
+    </form>
 
   </div>
 </div>
 {% endblock %}
+
 
 {% block pageScripts %}
 {{super()}}

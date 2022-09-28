@@ -598,6 +598,29 @@ module.exports = function(router) {
   // })
 
 
+  // CONFIRM EMPLOYER
+
+  router.post('/' + base_url + '*/create/employers-confirm', function(req, res) {
+
+    if (req.body.confirm_employer == "no") {
+      res.redirect(301, '/' + base_url + req.params[0] + '/create/employers-select')
+    } else {
+      res.redirect(301, '/' + base_url + req.params[0] + '/create/task-list')
+
+    }
+
+  })
+
+  router.post('/' + base_url + '*/create/employer', function(req, res) {
+
+    if (req.body.vacancy_employer == "no") {
+      res.redirect(301, '/' + base_url + req.params[0] + '/create/employers-select')
+    } else {
+      res.redirect(301, '/' + base_url + req.params[0] + '/create/title')
+
+    }
+
+  })
 
   // API
 
