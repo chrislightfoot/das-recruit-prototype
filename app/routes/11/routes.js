@@ -598,4 +598,18 @@ module.exports = function(router) {
   // })
 
 
+
+  // API
+
+  router.post('/' + base_url + '*/api/api-confirm-delete', function(req, res) {
+
+    if (req.body.api_delete == "no") {
+      res.redirect(301, '/' + base_url + req.params[0] + '/api/api-hub')
+    } else {
+      res.redirect(301, '/' + base_url + req.params[0] + '/api/api-list-deleted')
+
+    }
+
+  })
+
 }

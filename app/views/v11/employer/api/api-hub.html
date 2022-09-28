@@ -63,13 +63,11 @@ Key for API - Manage apprenticeships - GOV.UK
       </div>
     </details>
     
-    <form method="post" action="api-confirm-delete">
-
-      <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-        Delete API key
-      </button>
-
-    </form>
+    {{ govukButton({
+      text: "Delete API key",
+      classes: "govuk-button--warning",
+      href: "api-confirm-delete"
+    }) }}
 
   </div>
 </div>

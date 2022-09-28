@@ -19,19 +19,21 @@ Key for API - Apprenticeships - GOV.UK
         Deleting the key will disable the previous key and will stop your API from working until you get a new key.
       </p>
 
+      <form method="post" action="">
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
 
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              <input class="govuk-radios__input" id="api_delete_yes" name="api_delete" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="api-delete-no">
                 Yes, delete API key
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              <input class="govuk-radios__input" id="api_delete_no" name="api_delete" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="api_delete_no">
                 No, do not delete API key
               </label>
             </div>
@@ -39,9 +41,6 @@ Key for API - Apprenticeships - GOV.UK
       
         </fieldset>
       </div>
-
-
-    <form method="post" action="api-list-deleted">
 
       <button class="govuk-button" data-module="govuk-button">
         Save
@@ -51,3 +50,14 @@ Key for API - Apprenticeships - GOV.UK
    </div>
 </div>
 {% endblock %}
+
+<!-- {% block pageScripts %}
+{{super()}}
+<script src="/public/javascripts/select2.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#apprenticeship-type').select2();
+  });
+</script>
+
+{% endblock %} -->
