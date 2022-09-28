@@ -16,38 +16,39 @@ Which employer do you want to create a vacancy for? - Recruitment - {{serviceNam
     <!-- <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span> -->
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Confirm employer</h1>
 
-    <form method="post" action="task-list">
+    <form method="post" action="">
       
       
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
 
-          <h3 class="govuk-heading-m">ABC opticians</h3>
-          <span class="govuk-caption-m">Account name: ABC opticians<br>
-          Agreement ID: X4JKRY
-          </span>
+             <h3 class="govuk-heading-m">ABC opticians</h3>
+             <span class="govuk-caption-m">Account name: ABC opticians<br>
+             Agreement ID: X4JKRY
+             </span>
 
-          <p><h3 class="govuk-heading-s">Is this the employer you'd like to create a vacancy for?</h3></p>
+             <p><h3 class="govuk-heading-s">Is this the employer you'd like to create a vacancy for?</h3></p>
 
-     <div class="govuk-radios">
-       <div class="govuk-radios__item">
-         <input class="govuk-radios__input" id="create-vacancy-yes" name="create-vacancy" type="radio" value="yes">
-         <label class="govuk-label govuk-radios__label" for="create-vacancy-yes">
-           Yes, use ABC opticians
-         </label>
-       </div>
-       <div class="govuk-radios__item">
-         <input class="govuk-radios__input" id="create-vacancy-no" name="create-vacancy" type="radio" value="no">
-         <label class="govuk-label govuk-radios__label" for="create-vacancy-no">
-           No, choose a different employer
-         </label>
-       </div>
-     </div>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="confirm_employer_yes" name="confirm_employer" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="create-vacancy-yes">
+              Yes, use ABC opticians
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="confirm_employer_no" name="confirm_employer" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="confirm_employer_no">
+              No, choose a different employer
+            </label>
+          </div>
+        </div>
     
       </fieldset>
     </div>
       
     <button class="govuk-button" data-module="govuk-button">
+      
       Save and continue
     </button>
       
