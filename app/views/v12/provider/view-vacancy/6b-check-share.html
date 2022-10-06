@@ -6,7 +6,7 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<a href="6a-share-applications" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -23,11 +23,21 @@ Manage vacancy
           These applications will be shared anonymously with the employer to view in their Apprenticeship service account:
         </p>
         <ul class="govuk-list govuk-list--bullet">
-            {% for applicant in data['applications'] %}
-            <li>{{ applicant }}</li>
+
+
+            {% if data['applications'] is string %}
+
+            <li>{{ data[data['applications'] + '-name'] }}: {{ data['applications'] }}</li>
+
             {% else %}
-            <li>No applicants selected</li>
-            {% endfor %}
+
+                {% for applicantID in data['applications'] %}
+                <li>{{ data[applicantID + '-name'] }}: {{ applicantID }}</li>
+                {% else %}
+                <li>No applicants selected</li>
+                {% endfor %}
+
+            {% endif %}
         </ul>
 <!-- list END -->
 

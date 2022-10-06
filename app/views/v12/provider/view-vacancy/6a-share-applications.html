@@ -115,11 +115,14 @@ Manage vacancy
         <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-checkboxes--small">
             <div class="govuk-checkboxes__item govuk-!-padding-left-1">
-              <input class="govuk-checkboxes__input" id="application-{{ loop.index }}" name="applications" type="checkbox" value="{{ applicant.name }}">
+              <input class="govuk-checkboxes__input" id="application-{{ loop.index }}" name="applications" type="checkbox" value="{{ applicant.id }}" {{ checked("applications", applicant.id) }}>
               <label class="govuk-label govuk-checkboxes__label" for="application-{{ loop.index }}">&nbsp;</label>
             </div>
           </td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="#" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a></td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Name">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
+            <input type="hidden" name="{{ applicant.id }}-name" value="{{ applicant.name }}">
+          </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>
           <td class="govuk-table__cell" role="gridcell" data-label="Status">{{ applicant.status }}</td>
           <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
@@ -138,6 +141,7 @@ Manage vacancy
 {% endblock %}
 
 {% block scripts %}
+{{super()}}
 <script>
   const selectAllCB = document.getElementById("select-all-applications");
   const allApplicantsCB = document.getElementsByName('applications');
