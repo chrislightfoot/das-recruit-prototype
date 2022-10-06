@@ -56,50 +56,147 @@ Manage vacancy
 </div>
 <!-- search box END -->
 
-<!-- table START -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+{%
+  set appsTableData = [
+    {
+      name: "Faizal Dawood",
+      id: "C5662EA",
+      status: "Successful",
+      date: "18 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
+      name: "Bill Shoggins",
+      id: "C3432TR",
+      status: "Unsuccessful",
+      date: "18 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
+      name: "Rolo Tomasi",
+      id: "C8824ED",
+      status: "New",
+      date: "18 Oct 2022",
+      disability: "Prefer not to say"
+    }
+]
+%}
 
-    <table class="govuk-table responsive-table">
+<!-- table START -->
+  <form action="6b-check-share.html">
+    <table class="govuk-table responsive-table" data-module="das-table-sort">
       <thead class="govuk-table__header">
         <tr class="govuk-table__row" role="row">
-          <th class="govuk-table__cell" role="gridcell" class="bold">Name</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Application ID</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Status</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Date applied</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Disability</th>
-
+          <th class="govuk-table__cell  govuk-checkboxes--small" style="width: 20px">
+            <div class="govuk-checkboxes__item govuk-!-padding-left-1">
+              <input class="govuk-checkboxes__input" id="select-all-applications" name="_select-all-applications" type="checkbox">
+              <label class="govuk-label govuk-checkboxes__label" for="select-all-applications">&nbsp;</label>
+            </div>
+          </th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Application ID</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Status</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Date applied</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Disability</a>
+          </th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="#">Faizal Dawood</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C5662EA</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">Successful</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-
+      <tbody class="govuk-table__body">
+        {% for applicant in appsTableData %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item govuk-!-padding-left-1">
+              <input class="govuk-checkboxes__input" id="application-{{ loop.index }}" name="applications" type="checkbox" value="{{ applicant.name }}">
+              <label class="govuk-label govuk-checkboxes__label" for="application-{{ loop.index }}">&nbsp;</label>
+            </div>
+          </td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="#" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a></td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Status">{{ applicant.status }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ applicant.disability }}</td>
         </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="#">Bill Shoggins</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C3432TR</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">Unsuccessful</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="#">Rolo Tomasi</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C8824ED</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">New</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
-  </div>
-</div>
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button">Submit</button>
+    </div>
+</form>
+
 <!-- table END -->
 
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const selectAllCB = document.getElementById("select-all-applications");
+  const allApplicantsCB = document.getElementsByName('applications');
+  selectAllCB.addEventListener('change', function () {
+    let newState = this.checked
+    for(let i=0; i<allApplicantsCB.length; i++){
+        allApplicantsCB[i].checked = newState;
+    }
+  })
+  const tableSort = () => {
+    const getCellValue = (tr, idx) => {
+      return tr.children[idx].innerText || tr.children[idx].textContent
+    };
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    const sortableTable = document.querySelector('[data-module="das-table-sort"]');
+    const allSortLinks = sortableTable.querySelectorAll('.govuk-table__header .govuk-link');
+
+    const handleClick = event => {
+      event.preventDefault();
+      const sortLink = event.target
+
+      allSortLinks.forEach(link => {
+        if (link === event.target) return false;
+        link.parentNode.classList.add("das-table--double-arrows")
+        link.classList.remove("das-table__sort--asc", "das-table__sort--desc")
+        link.setAttribute("aria-sort", "none")
+      });
+
+      if (sortLink.classList.contains("das-table__sort--asc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--asc", "das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      } else if (sortLink.classList.contains("das-table__sort--desc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--desc", "das-table__sort--asc")
+        sortLink.setAttribute("aria-sort", "ascending")
+      } else {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.add("das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      }
+
+      Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
+              .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
+                      .indexOf(sortLink.parentNode), this.asc = !this.asc))
+              .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
+    }
+
+    allSortLinks.forEach(link => {
+      link.addEventListener('click', handleClick)
+    });
+  }
+
+  if (document.querySelector('[data-module="das-table-sort"]')) {
+    tableSort();
+  }
+</script>
 {% endblock %}

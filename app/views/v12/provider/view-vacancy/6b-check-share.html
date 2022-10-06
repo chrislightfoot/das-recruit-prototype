@@ -23,9 +23,11 @@ Manage vacancy
           These applications will be shared anonymously with the employer to view in their Apprenticeship service account:
         </p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>[show selected applicant name and application ID]</li>
-          <li>[show selected applicant name and application ID]</li>
-          <li>[show selected applicant name and application ID]</li>
+            {% for applicant in data['applications'] %}
+            <li>{{ applicant }}</li>
+            {% else %}
+            <li>No applicants selected</li>
+            {% endfor %}
         </ul>
 <!-- list END -->
 

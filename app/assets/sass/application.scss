@@ -6,14 +6,15 @@ $govuk-new-link-styles: true;
 $govuk-assets-path: '/govuk/assets/';
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import "lib/extensions/extensions";
+@import ".tmp/sass/extensions";
 
 // Patterns that aren't in Frontend
-@import "patterns/step-by-step-header";
-@import "patterns/step-by-step-nav";
-@import "patterns/step-by-step-related";
-@import "patterns/task-list";
+@import "patterns/contents-list";
+@import "patterns/mainstream-guide";
+@import "patterns/pagination";
 @import "patterns/related-items";
+@import "patterns/task-list";
+
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "components/cookie-banner";
@@ -30,6 +31,7 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Select2 styles
 @import "components/_select2";
+
 @import "components/_autocomplete";
 @import "components/_accordion";
 @import "components/_provider"; // Provider header styles
@@ -39,6 +41,8 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/_analytics"; // icon font styles
 @import "components/_side-navigation"; // moj side nav styles
 @import "components/_login-nav"; // login nav styles
+@import "components/das-table";
+
 
 .das-section-break--thick{
     border-bottom-width:4px;
