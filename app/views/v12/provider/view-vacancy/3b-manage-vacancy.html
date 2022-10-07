@@ -42,14 +42,6 @@ Manage vacancy
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Vacancy title
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Electronic Engineering Technician Apprentice
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
       Vacancy reference
     </dt>
     <dd class="govuk-summary-list__value">
@@ -95,204 +87,75 @@ Manage vacancy
       </div>
     </div>
 
-    <br>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Vacancy analytics
-    </button>
+<!-- analytics START -->
 
-  
-  </div>
-</div>
-
-
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-<!-- Application actions -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-l">Manage applications</h2>
-
-
-    <div class="govuk-grid-row" >
-      <div class="govuk-grid-column-two-thirds" >
-  
-        
-        <p class="govuk-body" >
-          <a href="6a-share-applications">Share applications with employer</a>
-  
-          <br>
-          <br>
-  
-          <a href="#">Make multiple applications unsuccessful</a>
-        </p>
-  
+    <h2 class="govuk-heading-l">Vacancy analytics
+      <span class="govuk-caption-l">Showing stats from 12th Oct 2022 to 17th Oct 2022</span>
+    </h2>
+    <p class="govuk-body">Analytics show the total amount and the change from the previous 7 days</p>
+    <div id="analytics" class="govuk-grid-row">
+      <div class="analytics--block govuk-grid-column-one-half">
+        <!-- <h3 class="analytics--header govuk-heading-s">Appeared in search</h3> -->
+        <h3 class="govuk-heading-s">Appeared in search</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">68 <span class="govuk-visually-hidden">times</span></div> -->
+          <p class="analytics--info">68</p>
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+12</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div>
+        <!-- <div class="analytics--summary">
+          <div class="analytics--numeric">68 <span class="govuk-visually-hidden">times</span></div>
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+12</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div> -->
+      </div>
+      <div class="analytics--block govuk-grid-column-one-half">
+        <!-- <h3 class="analytics--header govuk-heading-s">Total times viewed</h3> -->
+        <h3 class="govuk-heading-s">Total times viewed</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">12</div> -->
+          <p class="analytics--info">12</p>
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+5</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div>
+      </div>
+      <div class="analytics--block govuk-grid-column-one-half">
+        <!-- <h3 class="analytics--header govuk-heading-s">Total applications started</h3> -->
+        <h3 class="govuk-heading-s">Total applications started</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">7</div> -->
+          <p class="analytics--info">7</p>
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+1</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div>
+      </div>
+      <div class="analytics--block govuk-grid-column-one-half">
+        <!-- <h3 class="analytics--header govuk-heading-s">Total applications submitted</h3> -->
+        <h3 class="govuk-heading-s">Total applications submitted</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">1</div> -->
+          <p class="analytics--info">12</p>
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">No</span> increase</p>
+        </div>
       </div>
     </div>
-  <!-- end application actions -->
-
-  <br>
-  <br>
-  
-  <!-- search box START -->
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-visually-hidden">Search employer name or account name</legend>
-      <div class="govuk-form-group search-field search-field-darker">
-
-        <div class="search-input search-input-with-button">
-          <label class="govuk-label" for="query">
-            <!--Client reference-->
-            Search applicant name
-          </label>
-
-          <div class="autocomplete__parent_wrapper">
-            <div class="autocomplete__wrapper">
-              <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                <span>No search results.</span>
-                <span>,,</span>
-              </div>
-              <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
-            </div>
-          </div>
-          <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="">
-        </div>
-        <div class="search-submit">
-          <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
-        </div>
-      </div>
-    </fieldset>
-
   </div>
 </div>
-  <!-- search box END -->
+<!-- ////END ANALYTICS//// -->
+
+<br>
+
+{{ govukButton({
+  text: "Manage applications",
+  href: "3c-manage-applications"
+}) }}
+
+  
+  </div>
+</div>
 
 
-{%
-  set appsTableData = [
-    {
-      name: "Faizal Dawood",
-      id: "C5662EA",
-      status: "Successful",
-      date: "18 Oct 2022",
-      disability: "Prefer not to say"
-    },
-    {
-      name: "Bill Shoggins",
-      id: "C3432TR",
-      status: "Unsuccessful",
-      date: "18 Oct 2022",
-      disability: "Prefer not to say"
-    },
-    {
-      name: "Rolo Tomasi",
-      id: "C8824ED",
-      status: "New",
-      date: "18 Oct 2022",
-      disability: "Prefer not to say"
-    }
-]
-%}
 
-<!-- table START -->
-    <table class="govuk-table responsive-table" data-module="das-table-sort">
-      <thead class="govuk-table__header">
-        <tr class="govuk-table__row" role="row">
 
-          <th scope="col" class="govuk-table__header" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Application ID</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Status</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Date applied</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Disability</a>
-          </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        {% for applicant in appsTableData %}
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" role="gridcell" data-label="Name">
-            <a href="../account/application-new" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
-            <input type="hidden" name="{{ applicant.id }}-name" value="{{ applicant.name }}">
-          </td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">{{ applicant.status }}</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ applicant.disability }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-
-<!-- table END -->
-
-{% endblock %}
-
-{% block scripts %}
-{{super()}}
-<script>
-  const selectAllCB = document.getElementById("select-all-applications");
-  const allApplicantsCB = document.getElementsByName('applications');
-
-  const tableSort = () => {
-    const getCellValue = (tr, idx) => {
-      return tr.children[idx].innerText || tr.children[idx].textContent
-    };
-
-    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
-                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
-    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
-
-    const sortableTable = document.querySelector('[data-module="das-table-sort"]');
-    const allSortLinks = sortableTable.querySelectorAll('.govuk-table__header .govuk-link');
-
-    const handleClick = event => {
-      event.preventDefault();
-      const sortLink = event.target
-
-      allSortLinks.forEach(link => {
-        if (link === event.target) return false;
-        link.parentNode.classList.add("das-table--double-arrows")
-        link.classList.remove("das-table__sort--asc", "das-table__sort--desc")
-        link.setAttribute("aria-sort", "none")
-      });
-
-      if (sortLink.classList.contains("das-table__sort--asc")) {
-        sortLink.parentNode.classList.remove("das-table--double-arrows")
-        sortLink.classList.replace("das-table__sort--asc", "das-table__sort--desc")
-        sortLink.setAttribute("aria-sort", "descending")
-      } else if (sortLink.classList.contains("das-table__sort--desc")) {
-        sortLink.parentNode.classList.remove("das-table--double-arrows")
-        sortLink.classList.replace("das-table__sort--desc", "das-table__sort--asc")
-        sortLink.setAttribute("aria-sort", "ascending")
-      } else {
-        sortLink.parentNode.classList.remove("das-table--double-arrows")
-        sortLink.classList.add("das-table__sort--desc")
-        sortLink.setAttribute("aria-sort", "descending")
-      }
-
-      Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
-              .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
-                      .indexOf(sortLink.parentNode), this.asc = !this.asc))
-              .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
-    }
-
-    allSortLinks.forEach(link => {
-      link.addEventListener('click', handleClick)
-    });
-  }
-
-  if (document.querySelector('[data-module="das-table-sort"]')) {
-    tableSort();
-  }
-</script>
 
 {% endblock %}
