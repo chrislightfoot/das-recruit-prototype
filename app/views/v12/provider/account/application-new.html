@@ -145,7 +145,7 @@ Manage apprentices
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Decision
+                Status
               </h1>
             </legend>
 
@@ -216,9 +216,13 @@ Manage apprentices
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="application_unsuccessful">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-text">
-                    Feedback
+                    <b>Feedback</b>
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="application_decision_unsuccessful" name="application_decision_unsuccessful" type="tel" autocomplete="tel">
+                  <div id="sign-in-hint" class="govuk-hint">
+                    Explain why the application has been unsuccessful, your comments will be sent to the applicant.
+                  </div>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  <!-- <input class="govuk-input govuk-!-width-two-thirds" id="application_decision_unsuccessful" name="application_decision_unsuccessful" type="tel" autocomplete="tel"> -->
                 </div>
         
               </div>
@@ -229,8 +233,13 @@ Manage apprentices
               
       </form>
 
-      <a href="manage-vacancy" class="govuk-button">Save</a>
-        <a href="manage-vacancy" class="govuk-link">Cancel</a>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+      
+        <a class="govuk-link" href="#">Cancel</a>
+      </div>
       
 
 

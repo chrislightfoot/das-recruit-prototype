@@ -167,76 +167,132 @@ Manage vacancy
 </div>
   <!-- search box END -->
 
-  
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
 
-    <table class="govuk-table responsive-table">
+{%
+  set appsTableData = [
+    {
+      name: "Faizal Dawood",
+      id: "C5662EA",
+      status: "Successful",
+      date: "18 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
+      name: "Bill Shoggins",
+      id: "C3432TR",
+      status: "Unsuccessful",
+      date: "18 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
+      name: "Rolo Tomasi",
+      id: "C8824ED",
+      status: "New",
+      date: "18 Oct 2022",
+      disability: "Prefer not to say"
+    }
+]
+%}
+
+<!-- table START -->
+    <table class="govuk-table responsive-table" data-module="das-table-sort">
       <thead class="govuk-table__header">
         <tr class="govuk-table__row" role="row">
-          <th class="govuk-table__cell" role="gridcell" class="bold">Name</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Application ID</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Status</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Date applied</th>
-          <th class="govuk-table__cell" role="gridcell" class="bold">Disability</th>
 
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Application ID</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Status</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Date applied</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Disability</a>
+          </th>
         </tr>
       </thead>
-      <tbody>
-
-
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="../account/application-new">Rolo Tomasi</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C8824ED</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status"><strong class="govuk-tag govuk-tag--blue">New</strong></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
+      <tbody class="govuk-table__body">
+        {% for applicant in appsTableData %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" role="gridcell" data-label="Name">
+            <a href="../account/application-new" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
+            <input type="hidden" name="{{ applicant.id }}-name" value="{{ applicant.name }}">
+          </td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Status">{{ applicant.status }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ applicant.disability }}</td>
         </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="../account/application-new">Rolo Tomasi</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C8824ED</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status"><strong class="govuk-tag govuk-tag--blue">Employer reviewed</strong></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="../account/application-new">Rolo Tomasi</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C8824ED</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status"><strong class="govuk-tag govuk-tag--yellow">In review</strong></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="../account/application-new">Rolo Tomasi</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C8824ED</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status"><strong class="govuk-tag govuk-tag--yellow">Shared</strong></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="../account/application-new">Rolo Tomasi</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C8824ED</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status"><strong class="govuk-tag govuk-tag--yellow">Shortlisted</strong></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="../account/application-succesful">Faizal Dawood</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C5662EA</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status"><strong class="govuk-tag govuk-tag--green">Offer made</strong></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-        </tr>
-        <tr>
-          <td class="govuk-table__cell" role="gridcell" data-label="Name"><a href="../account/application-failed">Bill Shoggins</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">C3432TR</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status"> <strong class="govuk-tag govuk-tag--red">Unsuccessful</strong></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">18 Oct 2022</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Prefer not to say">Prefer not to say</td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
-  </div>
-</div>
+
+<!-- table END -->
+
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script>
+  const selectAllCB = document.getElementById("select-all-applications");
+  const allApplicantsCB = document.getElementsByName('applications');
+
+  const tableSort = () => {
+    const getCellValue = (tr, idx) => {
+      return tr.children[idx].innerText || tr.children[idx].textContent
+    };
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    const sortableTable = document.querySelector('[data-module="das-table-sort"]');
+    const allSortLinks = sortableTable.querySelectorAll('.govuk-table__header .govuk-link');
+
+    const handleClick = event => {
+      event.preventDefault();
+      const sortLink = event.target
+
+      allSortLinks.forEach(link => {
+        if (link === event.target) return false;
+        link.parentNode.classList.add("das-table--double-arrows")
+        link.classList.remove("das-table__sort--asc", "das-table__sort--desc")
+        link.setAttribute("aria-sort", "none")
+      });
+
+      if (sortLink.classList.contains("das-table__sort--asc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--asc", "das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      } else if (sortLink.classList.contains("das-table__sort--desc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--desc", "das-table__sort--asc")
+        sortLink.setAttribute("aria-sort", "ascending")
+      } else {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.add("das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      }
+
+      Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
+              .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
+                      .indexOf(sortLink.parentNode), this.asc = !this.asc))
+              .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
+    }
+
+    allSortLinks.forEach(link => {
+      link.addEventListener('click', handleClick)
+    });
+  }
+
+  if (document.querySelector('[data-module="das-table-sort"]')) {
+    tableSort();
+  }
+</script>
 
 {% endblock %}
