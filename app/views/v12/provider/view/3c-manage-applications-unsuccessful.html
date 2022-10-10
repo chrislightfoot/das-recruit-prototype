@@ -11,9 +11,25 @@ Manage vacancy
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
 
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          [Applicant name] has been made unsuccessful
+        </h3>
+      </div>
+    </div>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        
         <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
     <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
 
@@ -84,14 +100,6 @@ Manage vacancy
       id: "C5662EA",
       status: "In review",
       classes: "govuk-tag--yellow",
-      date: "13 Oct 2022",
-      disability: "Prefer not to say"
-    },
-    {
-      name: "Keith Stewart",
-      id: "678CFR0",
-      status: "New",
-      classes: "govuk-tag--blue",
       date: "13 Oct 2022",
       disability: "Prefer not to say"
     },
@@ -222,6 +230,14 @@ Manage vacancy
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
+    },
+    {
+      name: "Keith Stewart",
+      id: "678CFR0",
+      status: "Unsuccessful",
+      classes: "govuk-tag--red",
+      date: "13 Oct 2022",
+      disability: "Prefer not to say"
     },
     {
       name: "Ellen Collins",

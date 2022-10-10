@@ -15,7 +15,7 @@ Manage vacancy
   <div class="govuk-grid-column-two-thirds">
 
 
-    <h1 class="govuk-heading-l">Are you sure you want to tell this applicant that they have not been accepted?</h1>
+    <h1 class="govuk-heading-l">Are you sure you want to make this applicant unsuccessful?</h1>
 
     
 
@@ -24,9 +24,13 @@ Manage vacancy
         </p>
 
 
-{{ govukInsetText({
-  text: "[playback unsuccessful message entered]"
-}) }}
+        <p class="govuk-body" >
+          Your message to the applicant:
+        </p>
+
+        <div class="govuk-inset-text">
+          {{ data['contact-by-unsuccessful'] }}
+        </div>
 
 {{ govukWarningText({
   text: "This action cannot be undone.",
@@ -37,7 +41,7 @@ Manage vacancy
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
 
-            <form method="post" action="3b-manage-vacancy-shared">
+            <form method="post" action="3c-manage-applications-unsuccessful">
 
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
