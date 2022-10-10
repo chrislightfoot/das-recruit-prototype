@@ -636,7 +636,6 @@ module.exports = function(router) {
   })
 
     // APPLICATION ACTIONS
-
     router.post('/' + base_url + '*/account/application-new', function(req, res) {
 
       if (req.body.application == "review") {
