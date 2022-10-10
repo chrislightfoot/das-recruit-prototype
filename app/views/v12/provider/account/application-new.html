@@ -152,6 +152,8 @@ Manage apprentices
      
       <form method="post">
    
+
+
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -161,100 +163,8 @@ Manage apprentices
             </legend>
 
             <div class="govuk-radios" data-module="govuk-radios">
-
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application_decision_in_review" name="application_decision" type="radio" value="in_review">
-                <label class="govuk-label govuk-radios__label" for="application_decision_in_review">
-                  Review 
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="share">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-email">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="application_decision_in_review" name="application_decision" type="email" spellcheck="false">
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application_decision_share" name="application_decision" type="radio" value="share">
-                <label class="govuk-label govuk-radios__label" for="application_decision_share">
-                  Share with employer
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="application_decision_share">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-email">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="application_decision_share" name="application_decision" type="email" spellcheck="false" autocomplete="email">
-                </div>
-              </div>
-              
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application_decision_shortlist" name="application_decision" type="radio" value="shortlisted">
-                <label class="govuk-label govuk-radios__label" for="application_decision_shortlist">
-                  Shortlist for employer 
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="application_decision_shortlist">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-phone">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="application_decision_shortlist" name="aapplication_decision" type="tel" autocomplete="tel">
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application_decision_successful" name="application_decision" type="radio" value="successful">
-                <label class="govuk-label govuk-radios__label" for="application_decision_successful">
-                  Make job offer
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="application_decision_successful">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-phone">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="application_decision_successful" name="application_decision" type="tel" autocomplete="tel">
-                </div>
-              </div>
-              
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application_decision_unsuccessful" name="application_decision" type="radio" value="unsuccessful" data-aria-controls="application_unsuccessful">
-                <label class="govuk-label govuk-radios__label" for="application_decision_unsuccessful">
-                  Make unsuccessful
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="application_unsuccessful">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-text">
-                    <b>Feedback</b>
-                  </label>
-                  <div id="sign-in-hint" class="govuk-hint">
-                    Explain why the application has been unsuccessful, your comments will be sent to the applicant.
-                  </div>
-                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                  <!-- <input class="govuk-input govuk-!-width-two-thirds" id="application_decision_unsuccessful" name="application_decision_unsuccessful" type="tel" autocomplete="tel"> -->
-                </div>
-        
-              </div>
-            </div>
-        
-          </fieldset>
-        </div>
-
-<!-- ///////// testing radios -->
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                How would you prefer to be contacted?
-              </h1>
-            </legend>
-
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application" name="application" type="radio" value="review" data-aria-controls="conditional-contact">
+                <input class="govuk-radios__input" id="application" name="application" type="radio" value="review">
                 <label class="govuk-label govuk-radios__label" for="application">
                   Review
                 </label>
@@ -262,7 +172,6 @@ Manage apprentices
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-email">
-                    Email address
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
                 </div>
@@ -278,14 +187,13 @@ Manage apprentices
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-phone">
-                    Phone number
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
                 </div>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist" data-aria-controls="conditional-contact-3">
+                <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
                 <label class="govuk-label govuk-radios__label" for="application-3">
                   Shortlist for employer
                 </label>
@@ -293,14 +201,13 @@ Manage apprentices
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-text">
-                    Mobile phone number
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
                 </div>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-4" name="application" type="radio" value="successful" data-aria-controls="conditional-contact-4">
+                <input class="govuk-radios__input" id="application-4" name="application" type="radio" value="successful">
                 <label class="govuk-label govuk-radios__label" for="application-4">
                   Make job offer
                 </label>
@@ -308,7 +215,6 @@ Manage apprentices
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-successful">
-                    Email address
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="contact-by-successful" name="contact-by-successful" type="successful" spellcheck="false" autocomplete="email">
                 </div>
@@ -324,9 +230,13 @@ Manage apprentices
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-5">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-unsuccessful">
-                    Email address
+                    Feedback
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-unsuccessful" name="contact-by-unsuccessful" type="unsuccessful" spellcheck="false" autocomplete="email">
+                  <div id="sign-in-hint" class="govuk-hint">
+                    Explain why the application has been unsuccessful, your comments will be sent to the applicant.
+                  </div>
+                  <textarea class="govuk-textarea" id="contact-by-unsuccessful" name="contact-by-unsuccessful" type="unsuccessful" rows="5" spellcheck="false" aria-describedby="more-detail-hint"></textarea>
+                
                 </div>
               </div>
 
