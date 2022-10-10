@@ -16,6 +16,8 @@ Manage apprentices
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+
     <section>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
         Keith Stewart
@@ -35,6 +37,7 @@ Manage apprentices
       </div>
     </section>
 
+<!-- ABOUT YOU -->
     <section>
       <h2 class="govuk-heading-l">About you</h2>
 
@@ -54,6 +57,7 @@ Manage apprentices
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+<!-- EDUCATION -->
     <section>
       <h2 class="govuk-heading-l">Education</h2>
 
@@ -79,6 +83,7 @@ Manage apprentices
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+<!-- QUALIFICATIONS -->
     <section>
       <h2 class="govuk-heading-l">Qualifications</h2>
 
@@ -101,6 +106,7 @@ Manage apprentices
 
     </section>
 
+<!-- SKILLS -->
     <section>
       <h2 class="govuk-heading-l">Skills the Employer wants</h2>
 
@@ -111,6 +117,7 @@ Manage apprentices
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+<!-- EMPLOYER QUESTIONS -->
     <section>
       <h2 class="govuk-heading-l">Questions from the employer</h2>
 
@@ -124,6 +131,7 @@ Manage apprentices
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+<!-- ADDITIONAL QUESTIONS -->
     <section>
       <h2 class="govuk-heading-l">Additional questions</h2>
 
@@ -139,8 +147,8 @@ Manage apprentices
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     </section>
 
-  <!-- decision START -->
-    <section>
+<!-- RADIO BUTTONS     -->
+<section>
      
       <form method="post">
    
@@ -233,8 +241,100 @@ Manage apprentices
         
           </fieldset>
         </div>
-              
 
+<!-- ///////// testing radios -->
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How would you prefer to be contacted?
+              </h1>
+            </legend>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application" name="application" type="radio" value="review" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="application">
+                  Review
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    Email address
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                </div>
+              </div>
+
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-2" name="application" type="radio" value="share">
+                <label class="govuk-label govuk-radios__label" for="application-2">
+                  Share with employer
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Phone number
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist" data-aria-controls="conditional-contact-3">
+                <label class="govuk-label govuk-radios__label" for="application-3">
+                  Shortlist for employer
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    Mobile phone number
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-4" name="application" type="radio" value="successful" data-aria-controls="conditional-contact-4">
+                <label class="govuk-label govuk-radios__label" for="application-4">
+                  Make job offer
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-successful">
+                    Email address
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-successful" name="contact-by-successful" type="successful" spellcheck="false" autocomplete="email">
+                </div>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-5" name="application" type="radio" value="unsuccessful" data-aria-controls="conditional-contact-5">
+                <label class="govuk-label govuk-radios__label" for="application-4">
+                  Make unsuccessful
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-5">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-unsuccessful">
+                    Email address
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-unsuccessful" name="contact-by-unsuccessful" type="unsuccessful" spellcheck="false" autocomplete="email">
+                </div>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+              
+<!-- BUTTONS -->
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">
           Save

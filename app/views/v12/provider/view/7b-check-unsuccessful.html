@@ -6,7 +6,7 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="6a-share-applications" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -15,33 +15,23 @@ Manage vacancy
   <div class="govuk-grid-column-two-thirds">
 
 
-    <h1 class="govuk-heading-l">Do you want to share these applications?</h1>
+    <h1 class="govuk-heading-l">Are you sure you want to tell this applicant that they have not been accepted?</h1>
 
     
-  <!-- list START       -->
+
         <p class="govuk-body" >
-          These applications will be shared anonymously with <b>Gloucestershire Health and Care NHS Foundation Trust</b> to view in their Apprenticeship service account:
+          This will notify [applicant name] to say that they have not been accepted for this apprenticeship.
         </p>
-        <ul class="govuk-list govuk-list--bullet">
 
 
-            {% if data['applications'] is string %}
+{{ govukInsetText({
+  text: "[playback unsuccessful message entered]"
+}) }}
 
-            <li>{{ data[data['applications'] + '-name'] }}: {{ data['applications'] }}</li>
-
-            {% else %}
-
-                {% for applicantID in data['applications'] %}
-                <li>{{ data[applicantID + '-name'] }}: {{ applicantID }}</li>
-                {% else %}
-                <li>No applicants selected</li>
-                {% endfor %}
-
-            {% endif %}
-        </ul>
-<!-- list END -->
-
-<br>
+{{ govukWarningText({
+  text: "This action cannot be undone.",
+  iconFallbackText: "Fallback text"
+}) }}
 
 <!-- radio buttons START -->
         <div class="govuk-form-group">
@@ -53,13 +43,13 @@ Manage vacancy
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio" value="yes">
                 <label class="govuk-label govuk-radios__label" for="share_applications_yes">
-                  Yes, share these applications with employer
+                  Yes, notify the applicant
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio" value="no">
                 <label class="govuk-label govuk-radios__label" for="share_applications_no">
-                  No, don't share these applications with employer
+                  No
                 </label>
               </div>
             </div>

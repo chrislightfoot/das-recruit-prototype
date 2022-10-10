@@ -635,4 +635,22 @@ module.exports = function(router) {
 
   })
 
+    // APPLICATION ACTIONS
+
+    router.post('/' + base_url + '*/account/application-new', function(req, res) {
+
+      if (req.body.application == "review") {
+        res.redirect(301, '/' + base_url + req.params[0] + '/account/application-review')
+      } else if (req.body.application == "share") {
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/6b-check-share");
+      } else if (req.body.application == "shortlist") {
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/3c-manage-applications-shortlist");
+      } else if (req.body.application == "successful") {
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/7a-check-successful");
+      } else if (req.body.application == "unsuccessful") {
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/7b-check-unsuccessful");
+      }
+  
+    })
+
 }
