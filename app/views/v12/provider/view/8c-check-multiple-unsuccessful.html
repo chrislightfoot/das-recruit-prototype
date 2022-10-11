@@ -20,8 +20,10 @@ Manage vacancy
     
   <!-- list START       -->
 
+                 
+  <div style="background-color: #f3f2f1; padding: 15px;">
+    
         <ul class="govuk-list govuk-list--bullet">
-
 
             {% if data['unsuccessful'] is string %}
 
@@ -36,12 +38,16 @@ Manage vacancy
                 {% endfor %}
 
             {% endif %}
+
         </ul>
+
+    </div>
 <!-- list END -->
 
-<p>
-  These applicants will be notified with this message:
-</p>
+<br>
+<br>
+
+<h2 class="govuk-heading-m">These applicants will be notified with this message:</h2>
 
 <div class="govuk-inset-text">
   {{ data['give-feedback'] }}
@@ -58,13 +64,13 @@ Manage vacancy
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio" value="yes">
                 <label class="govuk-label govuk-radios__label" for="share_applications_yes">
-                  Yes, share these applications with employer
+                  Yes, notify these applicants they are unsuccessful
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio" value="no">
                 <label class="govuk-label govuk-radios__label" for="share_applications_no">
-                  No, don't share these applications with employer
+                  No, don't notify these applicants they are unsuccessful
                 </label>
               </div>
             </div>
