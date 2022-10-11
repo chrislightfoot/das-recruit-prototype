@@ -6,67 +6,32 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="3b-manage-vacancy" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Success
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <h3 class="govuk-notification-banner__heading">
-          Keith Stewart has had a job offer made
-        </h3>
-        <p><a href="#" class="govuk-link govuk-link--no-visited-state">Notify all other applicants </a>their applications are unsuccessful </p>
-      </div>
-    </div>
+  
+    <h1 class="govuk-heading-l">Make multiple applications unsuccessful</h1>
 
+    
         
-        <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
-    <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
+        <p class="govuk-body" >
+          Select the applications that are unsuccessful. This will notify the applicants that they have not got the role.
+        </p>
 
-
-  </div>
-</div>
-
-
-<!-- Application actions -->
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <div class="govuk-inset-text">
-      <p class="govuk-body" >
-        <a href="6a-share-applications" class="govuk-link govuk-link--no-visited-state">Share applications with employer</a>
-      </p>
-      <p class="govuk-body">
-        <a href="#8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications unsuccessful</a>
-      </p>
-    </div>
+        <br>
   
-      </div>
-    </div>
-  <!-- end application actions -->
-
-  
-  <!-- search box START -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      
+<!-- search box START -->
     <fieldset class="govuk-fieldset">
       <legend class="govuk-visually-hidden">Search employer name or account name</legend>
       <div class="govuk-form-group search-field search-field-darker">
 
         <div class="search-input search-input-with-button">
           <label class="govuk-label" for="query">
-            <!--Client reference-->
             Search applicant name
           </label>
 
@@ -90,72 +55,79 @@ Manage vacancy
   </div>
 </div>
 <!-- search box END -->
-
-<!-- table START -->
 {%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 {%
   set appsTableData = [
-  {
-    name: "Faizal Dawood",
-    id: "C5662EA",
-    status: "shared",
-    link: "",
-    classes: "govuk-tag--yellow",
-    date: "13 Oct 2022",
-    disability: "Prefer not to say"
-  },
-  {
-    name: "Keith Stewart",
-    id: "678CFR0",
-    status: "offer made",
-    link: "",
-    classes: "govuk-tag--green",
-    date: "13 Oct 2022",
-    disability: "Prefer not to say"
-  },
-  {
-    name: "Cynthia Perez",
-    id: "FL13JK0",
-    status: "in review",
-    link: "",
-    classes: "govuk-tag--yellow",
-    date: "15 Oct 2022",
-    disability: "No"
-  },
-  {
-    name: "Susie Noble",
-    id: "LL13J9H",
-    status: "shortlisted",
-    link: "",
-    classes: "govuk-tag--yellow",
-    date: "15 Oct 2022",
-    disability: "No"
-  },
-  {
-    name: "Charles Davis",
-    id: "B2LH789",
-    status: "employer reviewed",
-    link: "",
-    classes: "govuk-tag--blue",
-    date: "15 Oct 2022",
-    disability: "Prefer not to say"
-  },
-  {
-    name: "Neena Patel",
-    id: "78BH067",
-    status: "shared",
-    link: "",
-    classes: "govuk-tag--yellow",
-    date: "15 Oct 2022",
-    disability: "No"
-  },
     {
-      name: "Jose Robinson",
-      id: "LY6TY44",
+      name: "Faizal Dawood",
+      id: "C5662EA",
+      status: "in review",
+      link: "../account/application-new",
+      classes: "govuk-tag--yellow",
+      date: "13 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
+      name: "Keith Stewart",
+      id: "678CFR0",
       status: "shared",
       link: "",
       classes: "govuk-tag--yellow",
+      date: "13 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
+      name: "Cynthia Perez",
+      id: "FL13JK0",
+      status: "new",
+      link: "",
+      classes: "govuk-tag--blue",
+      date: "15 Oct 2022",
+      disability: "No"
+    },
+    {
+      name: "Susie Noble",
+      id: "LL13J9H",
+      status: "In review",
+      link: "",
+      classes: "govuk-tag--yellow",
+      date: "15 Oct 2022",
+      disability: "No"
+    },
+    {
+      name: "Judy Ward",
+      id: "897DW5T",
+      status: "in review",
+      link: "",
+      classes: "govuk-tag--yellow",
+      date: "15 Oct 2022",
+      disability: "No"
+    },
+    {
+      name: "Charles Davis",
+      id: "B2LH789",
+      status: "in review",
+      link: "",
+      classes: "govuk-tag--yellow",
+      date: "15 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
+      name: "Neena Patel",
+      id: "78BH067",
+      status: "in review",
+      link: "",
+      classes: "govuk-tag--yellow",
+      date: "15 Oct 2022",
+      disability: "No"
+    },
+    {
+      name: "Jose Robinson",
+      id: "LY6TY44",
+      status: "New",
+      link: "",
+      classes: "govuk-tag--blue",
       date: "15 Oct 2022",
       disability: "Prefer not to say"
     },
@@ -250,15 +222,6 @@ Manage vacancy
       disability: "No"
     },
     {
-      name: "Judy Ward",
-      id: "897DW5T",
-      status: "unsuccessful",
-      link: "../account/application-employer-reviewed-no",
-      classes: "govuk-tag--red",
-      date: "15 Oct 2022",
-      disability: "No"
-    },
-    {
       name: "Ellen Collins",
       id: "6H0IL55",
       status: "Unsuccessful",
@@ -278,12 +241,21 @@ Manage vacancy
     }
 ]
 %}
+
+
+<!-- table START -->
+  <form action="8b-feedback-unsuccessful">
     <table class="govuk-table responsive-table" data-module="das-table-sort">
       <thead class="govuk-table__header">
         <tr class="govuk-table__row" role="row">
-
+          <th class="govuk-table__cell  govuk-checkboxes--small" style="width: 20px">
+            <div class="govuk-checkboxes__item govuk-!-padding-left-1">
+              <input class="govuk-checkboxes__input" id="select-all-unsuccessful" name="_select-all-unsuccessful" type="checkbox">
+              <label class="govuk-label govuk-checkboxes__label" for="select-all-unsuccessful">&nbsp;</label>
+            </div>
+          </th>
           <th scope="col" class="govuk-table__header" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name </a>
+            <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name</a>
           </th>
           <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
             <a href="#" class="govuk-link das-table__sort">Application ID</a>
@@ -300,25 +272,36 @@ Manage vacancy
         </tr>
       </thead>
       <tbody class="govuk-table__body">
-        {% for applicant in appsTableData %}
+        {% for unsuccessful in appsTableData %}
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell" role="gridcell" data-label="Name">
-            <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
-            <input type="hidden" name="{{ applicant.id }}-name" value="{{ applicant.name }}">
+          <td class="govuk-table__cell govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item govuk-!-padding-left-1">
+              <input class="govuk-checkboxes__input" id="unsuccessful-{{ loop.index }}" name="unsuccessful" type="checkbox" value="{{ unsuccessful.id }}" {{ checked("unsuccessful", unsuccessful.id) }}>
+              <label class="govuk-label govuk-checkboxes__label" for="unsuccessful-{{ loop.index }}">&nbsp;</label>
+            </div>
           </td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Name">
+            <a href="{{ unsuccessful.link }}" class="govuk-link govuk-link--no-visited-state">{{ unsuccessful.name }}</a>
+            <input type="hidden" name="{{ unsuccessful.id }}-name" value="{{ unsuccessful.name }}">
+          </td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ unsuccessful.id }}</td>
           <td class="govuk-table__cell" role="gridcell" data-label="Status">
             {{ govukTag({
-              text: applicant.status, 
-              classes: applicant.classes
+              text: unsuccessful.status, 
+              classes: unsuccessful.classes
             }) }}
           </td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ applicant.disability }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ unsuccessful.date }}</td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ unsuccessful.disability }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button">Continue</button>
+    </div>
+</form>
+
 <!-- table END -->
 
 {% endblock %}
@@ -326,9 +309,14 @@ Manage vacancy
 {% block scripts %}
 {{super()}}
 <script>
-  const selectAllCB = document.getElementById("select-all-applications");
-  const allApplicantsCB = document.getElementsByName('applications');
-
+  const selectAllCB = document.getElementById("select-all-unsuccessful");
+  const allUnsuccessfulCB = document.getElementsByName('unsuccessful');
+  selectAllCB.addEventListener('change', function () {
+    let newState = this.checked
+    for(let i=0; i<allUnsuccessfulCB.length; i++){
+        allUnsuccessfulCB[i].checked = newState;
+    }
+  })
   const tableSort = () => {
     const getCellValue = (tr, idx) => {
       return tr.children[idx].innerText || tr.children[idx].textContent
@@ -381,5 +369,4 @@ Manage vacancy
     tableSort();
   }
 </script>
-
 {% endblock %}

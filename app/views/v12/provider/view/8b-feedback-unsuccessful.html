@@ -1,0 +1,34 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l"> Explain why these applications have been unsuccessful. Your comment will be sent to all the applicants you have selected.</h1>
+
+    
+        <textarea class="govuk-textarea" id="give-feedback" name="give-feedback" rows="10" spellcheck="false"></textarea>
+
+<form method="post" action="8c-check-multiple-unsuccessful">
+
+ <button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</form>
+
+  </div>
+</div>
+
+{% endblock %}

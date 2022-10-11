@@ -12,22 +12,22 @@ Manage vacancy
 
 {% block content %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
     {% if data.alert=="clone" and data.user=='employer'%}
     <div class="govuk-info-basic ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+
           <!-- <span class="govuk-!-font-weight-bold">Activity</span> -->
           <p class="govuk-body">You can now clone from the any vacancy management page. From your vacancies dashabord search for a vacancy and click manage.</p>
           <p class="govuk-body govuk-!-margin-bottom-0"><a href="?alert=none" class="govuk-link--no-visited-state">Dismiss this notification</a></p>
         </div>
-      </div>
-    </div>
+ 
     {% endif %}
 
         <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
     <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
 
+  </div>
+</div>
 
 
 <!-- ////START SUMMARY//// -->
@@ -134,7 +134,7 @@ Manage vacancy
         <h3 class="govuk-heading-s">Total applications submitted</h3>
         <div class="analytics--summary">
           <!-- <div class="analytics--numeric">1</div> -->
-          <p class="analytics--info">12</p>
+          <p class="analytics--info">20</p>
           <p class="analytics--info"><span class="govuk-!-font-weight-bold">No</span> increase</p>
         </div>
       </div>

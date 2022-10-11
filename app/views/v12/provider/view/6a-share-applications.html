@@ -281,7 +281,7 @@ Manage vacancy
             </div>
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Name">
-            <a href="../account/application-new" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
+            <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
             <input type="hidden" name="{{ applicant.id }}-name" value="{{ applicant.name }}">
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>

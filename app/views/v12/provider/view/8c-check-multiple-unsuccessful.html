@@ -15,29 +15,44 @@ Manage vacancy
   <div class="govuk-grid-column-two-thirds">
 
 
-    <h1 class="govuk-heading-l">Do you want to share these applications?</h1>
+    <h1 class="govuk-heading-l">Are you sure you want to make these applications unsuccessful?</h1>
 
     
   <!-- list START       -->
-        <p class="govuk-body" >
-          These applications will be shared anonymously with <b>Gloucestershire Health and Care NHS Foundation Trust</b> to view in their Apprenticeship service account:
-        </p>
+
         <ul class="govuk-list govuk-list--bullet">
 
 
-                <!-- <li>No applicants selected</li> -->
-                <li>Keith Stewart: 678CFR0</li>
+            {% if data['unsuccessful'] is string %}
 
+            <li>{{ data[data['unsuccessful'] + '-name'] }}: {{ data['unsuccessful'] }}</li>
+
+            {% else %}
+
+                {% for applicantID in data['unsuccessful'] %}
+                <li>{{ data[applicantID + '-name'] }}: {{ applicantID }}</li>
+                {% else %}
+                <li>No applicants selected</li>
+                {% endfor %}
+
+            {% endif %}
         </ul>
 <!-- list END -->
 
+<p>
+  These applicants will be notified with this message:
+</p>
+
+<div class="govuk-inset-text">
+  {{ data['give-feedback'] }}
+</div>
 <br>
 
 <!-- radio buttons START -->
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
 
-            <form method="post" action="3c-manage-applications-shared">
+            <form method="post" action="3c-manage-applications-unsuccessful-multiple">
 
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
