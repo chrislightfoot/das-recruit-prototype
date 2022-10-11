@@ -34,8 +34,7 @@ Manage vacancy
                 {% for applicantID in data['applications'] %}
                 <li>{{ data[applicantID + '-name'] }}: {{ applicantID }}</li>
                 {% else %}
-                <!-- <li>No applicants selected</li> -->
-                <li>Keith Stewart: 678CFR0</li>
+                <li>No applicants selected</li>
                 {% endfor %}
 
             {% endif %}
@@ -48,7 +47,7 @@ Manage vacancy
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
 
-            <form method="post" action="3c-manage-applications-shared">
+            <form method="post" action="3c-manage-applications-shared-multiple">
 
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">

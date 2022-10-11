@@ -6,12 +6,14 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<a href="3b-manage-vacancy" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
     <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
@@ -21,20 +23,18 @@ Manage vacancy
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          [Applicant name] has been made unsuccessful
+          Judy Ward has been made unsuccessful
         </h3>
       </div>
     </div>
 
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
         
         <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
     <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
 
 
-
+  </div>
+</div>
 
 
 <!-- Application actions -->
@@ -95,59 +95,66 @@ Manage vacancy
 
 {%
   set appsTableData = [
-    {
-      name: "Faizal Dawood",
-      id: "C5662EA",
-      status: "In review",
-      classes: "govuk-tag--yellow",
-      date: "13 Oct 2022",
-      disability: "Prefer not to say"
-    },
-    {
-      name: "Cynthia Perez",
-      id: "FL13JK0",
-      status: "In review",
-      classes: "govuk-tag--yellow",
-      date: "15 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Susie Noble",
-      id: "LL13J9H",
-      status: "In review",
-      classes: "govuk-tag--yellow",
-      date: "15 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Judy Ward",
-      id: "897DW5T",
-      status: "New",
-      classes: "govuk-tag--blue",
-      date: "15 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Charles Davis",
-      id: "B2LH789",
-      status: "New",
-      classes: "govuk-tag--blue",
-      date: "15 Oct 2022",
-      disability: "Prefer not to say"
-    },
-    {
-      name: "Neena Patel",
-      id: "78BH067",
-      status: "New",
-      classes: "govuk-tag--blue",
-      date: "15 Oct 2022",
-      disability: "No"
-    },
+  {
+    name: "Faizal Dawood",
+    id: "C5662EA",
+    status: "shared",
+    link: "",
+    classes: "govuk-tag--yellow",
+    date: "13 Oct 2022",
+    disability: "Prefer not to say"
+  },
+  {
+    name: "Keith Stewart",
+    id: "678CFR0",
+    status: "employer reviewed",
+    link: "../account/application-employer-reviewed-yes",
+    classes: "govuk-tag--blue",
+    date: "13 Oct 2022",
+    disability: "Prefer not to say"
+  },
+  {
+    name: "Cynthia Perez",
+    id: "FL13JK0",
+    status: "in review",
+    link: "",
+    classes: "govuk-tag--yellow",
+    date: "15 Oct 2022",
+    disability: "No"
+  },
+  {
+    name: "Susie Noble",
+    id: "LL13J9H",
+    status: "shortlisted",
+    link: "",
+    classes: "govuk-tag--yellow",
+    date: "15 Oct 2022",
+    disability: "No"
+  },
+  {
+    name: "Charles Davis",
+    id: "B2LH789",
+    status: "employer reviewed",
+    link: "",
+    classes: "govuk-tag--blue",
+    date: "15 Oct 2022",
+    disability: "Prefer not to say"
+  },
+  {
+    name: "Neena Patel",
+    id: "78BH067",
+    status: "shared",
+    link: "",
+    classes: "govuk-tag--yellow",
+    date: "15 Oct 2022",
+    disability: "No"
+  },
     {
       name: "Jose Robinson",
       id: "LY6TY44",
-      status: "New",
-      classes: "govuk-tag--blue",
+      status: "shared",
+      link: "",
+      classes: "govuk-tag--yellow",
       date: "15 Oct 2022",
       disability: "Prefer not to say"
     },
@@ -155,6 +162,7 @@ Manage vacancy
       name: "John Smith",
       id: "39DBE1A",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "16 Oct 2022",
       disability: "Yes"
@@ -163,6 +171,7 @@ Manage vacancy
       name: "Danielle Price",
       id: "HAK9F56",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "16 Oct 2022",
       disability: "Yes"
@@ -171,6 +180,7 @@ Manage vacancy
       name: "Bryant Cantu",
       id: "5J9L5BF",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
@@ -179,6 +189,7 @@ Manage vacancy
       name: "Loretta Giles",
       id: "3LN79HH",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
@@ -187,6 +198,7 @@ Manage vacancy
       name: "Blake Peterson",
       id: "FL7J007",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
@@ -195,6 +207,7 @@ Manage vacancy
       name: "Regina Carey",
       id: "98J98FG",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
@@ -203,6 +216,7 @@ Manage vacancy
       name: "Millicent Thompson",
       id: "NJLP6GF",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
@@ -211,6 +225,7 @@ Manage vacancy
       name: "Deena Lawson",
       id: "C78N0LK",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
@@ -219,6 +234,7 @@ Manage vacancy
       name: "Garland Valenzuela",
       id: "45DL0HV",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
@@ -227,22 +243,25 @@ Manage vacancy
       name: "Jerome Cross",
       id: "79ML444",
       status: "New",
+      link: "",
       classes: "govuk-tag--blue",
       date: "17 Oct 2022",
       disability: "No"
     },
     {
-      name: "Keith Stewart",
-      id: "678CFR0",
-      status: "Unsuccessful",
+      name: "Judy Ward",
+      id: "897DW5T",
+      status: "unsuccessful",
+      link: "../account/application-employer-reviewed-no",
       classes: "govuk-tag--red",
-      date: "13 Oct 2022",
-      disability: "Prefer not to say"
+      date: "15 Oct 2022",
+      disability: "No"
     },
     {
       name: "Ellen Collins",
       id: "6H0IL55",
       status: "Unsuccessful",
+      link: "",
       classes: "govuk-tag--red",
       date: "13 Oct 2022",
       disability: "No"
@@ -251,6 +270,7 @@ Manage vacancy
       name: "Wes Arnold",
       id: "PL67D9F",
       status: "Unsuccessful",
+      link: "",
       classes: "govuk-tag--red",
       date: "13 Oct 2022",
       disability: "No"
@@ -282,7 +302,7 @@ Manage vacancy
         {% for applicant in appsTableData %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell" role="gridcell" data-label="Name">
-            <a href="../account/application-new" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
+            <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
             <input type="hidden" name="{{ applicant.id }}-name" value="{{ applicant.name }}">
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>

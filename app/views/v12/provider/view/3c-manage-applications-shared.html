@@ -6,13 +6,13 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<a href="3b-manage-vacancy" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
     <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
@@ -31,7 +31,8 @@ Manage vacancy
     <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
 
 
-
+  </div>
+</div>
 
 
 <!-- Application actions -->
@@ -95,8 +96,8 @@ Manage vacancy
     {
       name: "Faizal Dawood",
       id: "C5662EA",
-      status: "Shared",
-      link: "3c-manage-applications-successful",
+      status: "in review",
+      link: "",
       classes: "govuk-tag--yellow",
       date: "13 Oct 2022",
       disability: "Prefer not to say"
@@ -104,8 +105,8 @@ Manage vacancy
     {
       name: "Keith Stewart",
       id: "678CFR0",
-      status: "Shared",
-      link: "../account/application-new",
+      status: "shared",
+      link: "",
       classes: "govuk-tag--yellow",
       date: "13 Oct 2022",
       disability: "Prefer not to say"
@@ -113,9 +114,9 @@ Manage vacancy
     {
       name: "Cynthia Perez",
       id: "FL13JK0",
-      status: "Shared",
+      status: "new",
       link: "",
-      classes: "govuk-tag--yellow",
+      classes: "govuk-tag--blue",
       date: "15 Oct 2022",
       disability: "No"
     },
@@ -131,7 +132,7 @@ Manage vacancy
     {
       name: "Judy Ward",
       id: "897DW5T",
-      status: "Shared",
+      status: "in review",
       link: "",
       classes: "govuk-tag--yellow",
       date: "15 Oct 2022",
@@ -140,7 +141,7 @@ Manage vacancy
     {
       name: "Charles Davis",
       id: "B2LH789",
-      status: "Shared",
+      status: "in review",
       link: "",
       classes: "govuk-tag--yellow",
       date: "15 Oct 2022",
@@ -149,7 +150,7 @@ Manage vacancy
     {
       name: "Neena Patel",
       id: "78BH067",
-      status: "Shared",
+      status: "in review",
       link: "",
       classes: "govuk-tag--yellow",
       date: "15 Oct 2022",
