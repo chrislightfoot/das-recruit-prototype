@@ -18,13 +18,21 @@ Manage vacancy
 
     <h1 class="govuk-heading-l"> Give feedback to unsuccessful applicants</h1>
 
-    <p>
-      Your feedback will be sent to all applicants you have selected as unsuccessful.
-    </p>
 
-    <div class="govuk-form-group">
-        <textarea class="govuk-textarea" id="give-feedback" name="give-feedback" rows="5" spellcheck="false"></textarea>
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+      <div class="govuk-form-group">
+        <p>
+          Your feedback will be sent to all applicants you have selected as unsuccessful.
+        </p>
+        <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="give-feedback" rows="5" aria-describedby="word-count-info"></textarea>
       </div>
+    
+      <div id="word-count-info" class="govuk-hint govuk-character-count__message">
+        You can enter up to 200 words
+      </div>
+    
+    </div>
+
 
 
     <button class="govuk-button" data-module="govuk-button">

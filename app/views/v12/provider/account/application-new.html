@@ -119,7 +119,7 @@ Manage apprentices
 
 <!-- EMPLOYER QUESTIONS -->
     <section>
-      <h2 class="govuk-heading-l">Questions from the employer</h2>
+      <h2 class="govuk-heading-l">Additional questions</h2>
 
       <h3 class="govuk-heading-s">Why are you interested in this role?</h3>
       <p>[applicant answer]</p>
@@ -133,7 +133,7 @@ Manage apprentices
 
 <!-- ADDITIONAL QUESTIONS -->
     <section>
-      <h2 class="govuk-heading-l">Additional questions</h2>
+      <h2 class="govuk-heading-l">Equality questions</h2>
 
       <h3 class="govuk-heading-s">Do you have a learning difficulty, disability or health problem?</h3>
       <p>No</p>
@@ -151,8 +151,6 @@ Manage apprentices
 <section>
      
       <form method="post" action="application-new">
-   
-
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -227,18 +225,21 @@ Manage apprentices
                   Make unsuccessful
                 </label>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-5">
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-character-count" id="conditional-contact-5" data-module="govuk-character-count" data-maxwords="200">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-unsuccessful">
-                    Feedback
+                    <b>Feedback</b>
                   </label>
                   <div id="sign-in-hint" class="govuk-hint">
                     Explain why the application has been unsuccessful, your comments will be sent to the applicant.
                   </div>
                   <textarea class="govuk-textarea" id="contact-by-unsuccessful" name="contact-by-unsuccessful" type="unsuccessful" rows="5" spellcheck="false" aria-describedby="more-detail-hint"></textarea>
-                
+                </div>
+                <div id="word-count-info" class="govuk-hint govuk-character-count__message">
+                  You can enter up to 200 words
                 </div>
               </div>
+
 
             </div>
           </fieldset>
