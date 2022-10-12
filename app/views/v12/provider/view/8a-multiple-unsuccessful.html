@@ -275,10 +275,12 @@ Manage vacancy
         {% for unsuccessful in appsTableData %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-checkboxes--small">
+            {% if (unsuccessful.status|lower !== "offer made") and (unsuccessful.status|lower !== "unsuccessful") %}
             <div class="govuk-checkboxes__item govuk-!-padding-left-1">
               <input class="govuk-checkboxes__input" id="unsuccessful-{{ loop.index }}" name="unsuccessful" type="checkbox" value="{{ unsuccessful.id }}" {{ checked("unsuccessful", unsuccessful.id) }}>
               <label class="govuk-label govuk-checkboxes__label" for="unsuccessful-{{ loop.index }}">&nbsp;</label>
             </div>
+            {% endif %}
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Name">
             <a href="{{ unsuccessful.link }}" class="govuk-link govuk-link--no-visited-state">{{ unsuccessful.name }}</a>
