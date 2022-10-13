@@ -119,7 +119,7 @@ Vacancies
         </label>
         <select class="govuk-select" id="filter" name="filter" aria-haspopup="listbox" aria-labelledby="exp_elem exp_button">
           <optgroup label="Status">
-            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>employer reviewed</option>
+            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>reviewed applications</option>
             <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live vacancies</option>
             <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected vacancies</option>
             <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>live vacancies</option>
