@@ -1,0 +1,70 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Adverts
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="6-shared" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Application B19D31F reviewed
+        </h3>
+        <p class="govuk-body">Your response has been sent to the training provider.</p>
+      </div>
+    </div>
+
+    <span class="govuk-caption-l">Entry Level Development Engineer Apprentice</span>
+    <h1 class="govuk-heading-l">Shared applications</h1>
+
+<table class="govuk-table das-table--responsive">           
+  <thead class="govuk-table__head govuk-body-s">
+      <tr>
+          <th scope="col" class="govuk-table__header">Application ID</th>
+          <th scope="col" class="govuk-table__header">Reviewed</th>
+          <th scope="col" class="govuk-table__header">Response</th>
+
+      </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+          <tr class="govuk-table__row govuk-body-s">
+            <td class="govuk-table__cell"><a href="../account/application-shared">87967BE</a></td>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell"> - </td>
+          </tr>
+
+          <tr class="govuk-table__row govuk-body-s">
+            <td class="govuk-table__cell"><a href="#">B19D31F</a></td>
+              <td class="govuk-table__cell"> <span id='date'></span> </td>
+              <td class="govuk-table__cell"> No, I don't want to interview </td>
+          </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+  
+<script>
+ var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var n = new Date();
+var y = n.getFullYear();
+var m = n.getMonth();
+var d = n.getDate();
+document.getElementById("date").innerHTML = d + " " + months[m] + " " + y;
+  </script>
+    
+{% endblock %}

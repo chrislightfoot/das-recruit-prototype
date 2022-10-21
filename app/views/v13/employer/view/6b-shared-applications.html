@@ -1,0 +1,48 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Adverts
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="6-shared" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Entry Level Development Engineer Apprentice</span>
+    <h1 class="govuk-heading-l">Shared applications</h1>
+
+<table class="govuk-table das-table--responsive">           
+  <thead class="govuk-table__head govuk-body-s">
+      <tr>
+          <th scope="col" class="govuk-table__header">Application ID</th>
+          <th scope="col" class="govuk-table__header">Reviewed</th>
+          <th scope="col" class="govuk-table__header">Response</th>
+
+      </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+          <tr class="govuk-table__row govuk-body-s">
+            <td class="govuk-table__cell"><a href="../account/application-shared">87967BE</a></td>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell"> - </td>
+          </tr>
+
+          <tr class="govuk-table__row govuk-body-s">
+            <td class="govuk-table__cell"><a href="#">B19D31F</a></td>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell"> - </td>
+          </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+  
+    
+{% endblock %}
