@@ -141,78 +141,23 @@ Manage apprentices
 
     <section>
 
-      <form method="post">
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Respond to training provider
-              </h1>
-            </legend>
-            <!-- <div id="contact-hint" class="govuk-hint">
-              Select one option.
-            </div> -->
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact" name="response" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="contact">
-                  Yes, I would like to interview this applicant
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-email">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
-                </div>
-        
-              </div>
+      <h2 class="govuk-heading-l">
+        Your response to the training provider
+      </h2>
 
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="response" type="radio" value="no" data-aria-controls="conditional-contact-3">
-                <label class="govuk-label govuk-radios__label" for="contact-3">
-                  No, I don't want to interview this applicant
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-character-count" id="conditional-contact-3" data-module="govuk-character-count" data-maxwords="200">
-                <div class="govuk-form-group">
-                  <div id="with-hint-hint" class="govuk-hint">
-                    Explain why the applicant has been unsuccessful. Your feedback will be sent to the training provider so they can inform the applicant.
-                  </div>
-                  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="response-no" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
-              
-                <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-                  You can enter up to 200 words
-                </div>               
-              </div>
+      <p>
+        No, I don't want to interview this applicant.
+      </p>
 
-
-              
+      {{ govukInsetText({
+        text: "[reason given]"
+      }) }}
+                  
+ 
 
 
 
-
-
-
-            </div>
-          </fieldset>
-        </div>
-
-
-
-<!-- Buttons -->
-
-<div class="govuk-button-group">
-  <button class="govuk-button" data-module="govuk-button">
-    Save
-  </button>
-
-  <a class="govuk-link" href="manage-vacancy">Cancel</a>
-</div>
-
-    </section>
-  </form>
 
 
   </div>
