@@ -155,19 +155,12 @@ Manage apprentices
                                 </label>
                             </div>
 
-                            <div class="govuk-radios__item" data-target="unsuccessful-reason" >
-                                <input id="govuk-radios__input" class="govuk-radios__input  " name="outcome" type="radio" value="False" data-aria-controls="unsuccessful-reason" aria-expanded="false">
-                                <label for="outcome-unsuccessful" class="govuk-label govuk-radios__label">
-                                    Unsuccessful
-                                </label>
-                            </div>
-                            <div id="unsuccessful-reason" class="govuk-radios__conditional">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label" for="reason">Feedback</label>
-                                    <span class="govuk-hint">Explain why the application has been unsucessful, your comments will be sent to the candidate.</span>
-                                    <textarea class="govuk-textarea" cols="50" rows="6"  id="reason" name="reason" size="12" type="text"></textarea>
-                                </div>
-                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="outcome-successful" name="outcome" type="radio" value="True">
+                              <label for="outcome-successful" class="govuk-label govuk-radios__label" >
+                                  Unsuccessful
+                              </label>
+                          </div>
                           </div>
                     </div>
 
