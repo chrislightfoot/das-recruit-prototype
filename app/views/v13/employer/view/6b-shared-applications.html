@@ -1,7 +1,7 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Adverts
+Manage vacancy
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,164 +17,205 @@ Adverts
     <span class="govuk-caption-l">Entry Level Development Engineer Apprentice</span>
     <h1 class="govuk-heading-l">Shared applications</h1>
 
-<table class="govuk-table das-table--responsive">           
-  <thead class="govuk-table__head govuk-body-s">
-      <tr>
-          <th scope="col" class="govuk-table__header">Application ID</th>
-          <th scope="col" class="govuk-table__header">Reviewed</th>
-          <th scope="col" class="govuk-table__header">Response</th>
 
-      </tr>
-  </thead>
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">87967BE</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
+<!-- table START -->
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
+{%
+  set appsTableData = [
+    {
+      id: "C5662EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C5782EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C9068EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C1554EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C5768EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C9759EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C3444EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C6456EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C0873EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C1778EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C5545EA",
+      status: "INTERVIEWING",
+      link: "../account/application-shared-yes",
+      classes: "govuk-tag--yellow",
+      date: "7 Nov 2022"
+    },
+    {
+      id: "C5676EA",
+      status: "UNSUCCESSFUL",
+      link: "../account/application-shared-no",
+      classes: "govuk-tag--red",
+      date: "4 Nov 2022"
+    }
+]
+%}
+    <table class="govuk-table responsive-table" data-module="das-table-sort">
+      <thead class="govuk-table__header">
+        <tr class="govuk-table__row" role="row">
 
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared">B19D31F</a></td>
-<td class="govuk-table__cell">Not reviewed</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--blue">
-Response needed
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared-yes">87967BE</a></td>
-<td class="govuk-table__cell">28 Oct 2022</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--green">
-Interviewing
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared-yes">B19D31F</a></td>
-<td class="govuk-table__cell">28 Oct 2022</td>
-<td class="govuk-table__cell">         
-<strong class="govuk-tag govuk-tag--red">
-Unsuccessful
-</strong> </td>
-</tr>
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared-yes">87967BE</a></td>
-<td class="govuk-table__cell">27 Oct 2022</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--green">
-Interviewing
-</strong> </td> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared-yes">B19D31F</a></td>
-<td class="govuk-table__cell">27 Oct 2022</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--green">
-Interviewing
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared-yes">87967BE</a></td>
-<td class="govuk-table__cell">27 Oct 2022</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--green">
-Interviewing
-</strong> </td> 
-</tr>
-
-<tr class="govuk-table__row govuk-body-s">
-<td class="govuk-table__cell"><a href="../account/application-shared-yes">B19D31F</a></td>
-<td class="govuk-table__cell">26 Oct 2022</td>
-<td class="govuk-table__cell">               
-<strong class="govuk-tag govuk-tag--green">
-Interviewing
-</strong> </td> 
-</tr>
-          
-  </tbody>
-</table>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Application ID</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Reviewed</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Response</a>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        {% for applicant in appsTableData %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
+            <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a></td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }} </td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Status">
+            {{ govukTag({
+              text: applicant.status, 
+              classes: applicant.classes
+            }) }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+<!-- table END -->
 
 </div>
 </div>
-  
-    
+
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+
+<!-- Today's date -->
+<script>
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+ var n = new Date();
+ var y = n.getFullYear();
+ var m = n.getMonth();
+ var d = n.getDate();
+ document.getElementById("date").innerHTML = d + " " + months[m] + " " + y;
+   </script>
+
+<!-- Table sorts -->
+<script>
+  const selectAllCB = document.getElementById("select-all-applications");
+  const allApplicantsCB = document.getElementsByName('applications');
+
+  const tableSort = () => {
+    const getCellValue = (tr, idx) => {
+      return tr.children[idx].innerText || tr.children[idx].textContent
+    };
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    const sortableTable = document.querySelector('[data-module="das-table-sort"]');
+    const allSortLinks = sortableTable.querySelectorAll('.govuk-table__header .govuk-link');
+
+    const handleClick = event => {
+      event.preventDefault();
+      const sortLink = event.target
+
+      allSortLinks.forEach(link => {
+        if (link === event.target) return false;
+        link.parentNode.classList.add("das-table--double-arrows")
+        link.classList.remove("das-table__sort--asc", "das-table__sort--desc")
+        link.setAttribute("aria-sort", "none")
+      });
+
+      if (sortLink.classList.contains("das-table__sort--asc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--asc", "das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      } else if (sortLink.classList.contains("das-table__sort--desc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--desc", "das-table__sort--asc")
+        sortLink.setAttribute("aria-sort", "ascending")
+      } else {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.add("das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      }
+
+      Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
+              .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
+                      .indexOf(sortLink.parentNode), this.asc = !this.asc))
+              .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
+    }
+
+    allSortLinks.forEach(link => {
+      link.addEventListener('click', handleClick)
+    });
+  }
+
+  if (document.querySelector('[data-module="das-table-sort"]')) {
+    tableSort();
+  }
+</script>
+
 {% endblock %}
