@@ -275,10 +275,12 @@ Manage vacancy
         {% for applicant in appsTableData %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-checkboxes--small">
+            {% if (applicant.status|lower !== "shared") and (applicant.status|lower !== "employer reviewed") and (applicant.status|lower !== "interviewing") and (applicant.status|lower !== "successful") and (applicant.status|lower !== "unsuccessful") %}
             <div class="govuk-checkboxes__item govuk-!-padding-left-1">
               <input class="govuk-checkboxes__input" id="application-{{ loop.index }}" name="applications" type="checkbox" value="{{ applicant.id }}" {{ checked("applications", applicant.id) }}>
               <label class="govuk-label govuk-checkboxes__label" for="application-{{ loop.index }}">&nbsp;</label>
             </div>
+            {% endif %}
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Name">
             <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>

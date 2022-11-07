@@ -41,7 +41,7 @@ Manage vacancy
 
     <div class="govuk-inset-text">
       <p class="govuk-body" >
-        <a href="6a-share-applications" class="govuk-link govuk-link--no-visited-state">Share applications with employer</a>
+        <a href="6a-share-applications" class="govuk-link govuk-link--no-visited-state">Share multiple applications with employer</a>
       </p>
       <p class="govuk-body">
         <a href="8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications unsuccessful</a>
@@ -291,9 +291,6 @@ Manage vacancy
           <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
             <a href="#" class="govuk-link das-table__sort">Date applied</a>
           </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Disability</a>
-          </th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -311,7 +308,6 @@ Manage vacancy
             }) }}
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ applicant.disability }}</td>
         </tr>
         {% endfor %}
       </tbody>
