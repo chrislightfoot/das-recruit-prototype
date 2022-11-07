@@ -112,7 +112,7 @@ Vacancies
 <!-- FILTER start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <form method="post" action="vacancies" {% if query.search %}data-query="{{query.search}}" {%endif%}>
+    <form action="0-vacancies-search" method="post" >
       <div class="govuk-form-group">
         <label class="govuk-label" for="sort">
           Filter vacancies by
@@ -151,7 +151,7 @@ Vacancies
             <div class="form-group search-field search-field-darker">
               <div class="search-input search-input-with-button">
                 <label class="govuk-label" for="search">
-                  Search by vacancy title, reference number, employer or applicant
+                  Search by vacancy, reference, employer or applicant
                 </label>
 
                 <div class="autocomplete__parent_wrapper">

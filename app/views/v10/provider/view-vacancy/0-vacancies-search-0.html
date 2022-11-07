@@ -112,7 +112,7 @@ Vacancies
 <!-- FILTER start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <form action="0-vacancies-search" method="post" >
+    <form method="post" action="vacancies" {% if query.search %}data-query="{{query.search}}" {%endif%}>
       <div class="govuk-form-group">
         <label class="govuk-label" for="sort">
           Filter vacancies by
@@ -122,7 +122,7 @@ Vacancies
             <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all vacancies</option>
             <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live vacancies</option>
             <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected vacancies</option>
-            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>with new applications</option>
+            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>live vacancies</option>
             <option value="draft" {% if data.filter=='draft' %}selected="selected" {%endif%}>draft vacancies</option>
             <option value="closed" {% if data.filter=='closed' %}selected="selected" {%endif%}>closed vacancies</option>
           </optgroup>
@@ -143,7 +143,7 @@ Vacancies
 
 <!-- SEARCH start -->
   <div class="govuk-grid-column-two-thirds">
-    <form action="vacancies" method="get" >
+    <form action="0-vacancies-search" method="get" >
       <div class="row-group">
         <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
           <fieldset class="govuk-fieldset">
@@ -173,34 +173,8 @@ Vacancies
 </div>
 <!-- SEARCH end -->
 
-  <p class="govuk-body"><b>1 vacancy with new applications</b> &nbsp;
-    <a href="#">Show all vacancies</a>
-  </p>
-
-<table class="govuk-table das-table--responsive">           
-  <thead class="govuk-table__head govuk-body-s">
-      <tr>
-          <th scope="col" class="govuk-table__header"><span class="no-wrap">Vacancy</span></th>
-          <th scope="col" class="govuk-table__header">Employer</th>
-          <th scope="col" class="govuk-table__header">Applications</th>
-          <th scope="col" class="govuk-table__header">Closing</th>
-          <th scope="col" class="govuk-table__header">Status</th>
-          <th scope="col" class="govuk-table__header"></th>
-      </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-          <tr class="govuk-table__row govuk-body-s">
-            <td class="govuk-table__cell">Entry Level Development Engineer Apprentice</td>
-              <td class="govuk-table__cell">FENDI LTD</td>
-              <td class="govuk-table__cell"><b>1 (1 new)</b> </td>
-              <td class="govuk-table__cell">01 Jun 2022</td>             
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">closed</strong></td>
-              <td class="govuk-table__cell"><a href="4b-manage-vacancy" class="govuk-link">Manage</a></td>   
-          </tr>
-
-
-  </tbody>
-</table>
+<h2 class="govuk-heading-m">0 vacancies with 'FENDI LTD'</h1>
+  <p class="govuk-body"><a href="3a-live">Clear search</a></p>
 
 </div>
 </div>
