@@ -69,15 +69,6 @@ Manage vacancy
     disability: "Prefer not to say"
   },
   {
-    name: "Keith Stewart",
-    id: "678CFR0",
-    status: "offer made",
-    link: "",
-    classes: "govuk-tag--green",
-    date: "13 Oct 2022",
-    disability: "Prefer not to say"
-  },
-  {
     name: "Cynthia Perez",
     id: "FL13JK0",
     status: "in review",
@@ -213,6 +204,15 @@ Manage vacancy
       disability: "No"
     },
     {
+      name: "Keith Stewart",
+      id: "678CFR0",
+      status: "offer made",
+      link: "",
+      classes: "govuk-tag--green",
+      date: "13 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
       name: "Judy Ward",
       id: "897DW5T",
       status: "unsuccessful",
@@ -266,9 +266,6 @@ Manage vacancy
           <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
             <a href="#" class="govuk-link das-table__sort">Date applied</a>
           </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Disability</a>
-          </th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -294,7 +291,6 @@ Manage vacancy
             }) }}
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ unsuccessful.date }}</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ unsuccessful.disability }}</td>
         </tr>
         {% endfor %}
       </tbody>
