@@ -156,99 +156,41 @@ Manage apprentices
       <p>No, the employer does not want to interview this applicant.</p>
 
       {{ govukInsetText({
-        text: "[reason given by employer]"
+        html: "[Reason given by employer] <Br><br><br><br>"
       }) }}
 
-      <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> -->
+      <br>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     </section>
 
 <!-- RADIO BUTTONS     -->
 <section>
      
-      <form method="post" action="application-new">
-   
-        <h1 class="govuk-heading-m">
-          Make applications unsuccessful
-        </h1>
+      <form method="post" action="../view/7b-check-unsuccessful">
 
-         <label class="govuk-label" for="contact-by-unsuccessful">
-                    <b>Feedback</b>
-                  </label>
-                  <div id="sign-in-hint" class="govuk-hint">
-                    Explain why the application has been unsuccessful, your comments will be sent to the applicant.
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+                  <div class="govuk-form-group">
+                    <h1 class="govuk-heading-l">
+                      Make application unsuccessful
+                    </h1>
+                    <div id="sign-in-hint" class="govuk-hint">
+                      Explain why the application has been unsuccessful, your comments will be sent to the applicant.
+                    </div>
+                    <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="8" aria-describedby="word-count-info"></textarea>
                   </div>
-                  <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="5" aria-describedby="word-count-info"></textarea>                
-                <div id="word-count-info" class="govuk-hint govuk-character-count__message">
-                  You can enter up to 200 words
-                </div>
-
-        <!-- <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                What do you want to do with this application?
-              </h1>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
-                <label class="govuk-label govuk-radios__label" for="application-3">
-                  Interview with employer
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-text">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-4" name="application" type="radio" value="successful">
-                <label class="govuk-label govuk-radios__label" for="application-4">
-                  Make job offer
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-successful">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-successful" name="contact-by-successful" type="successful" spellcheck="false" autocomplete="email">
-                </div>
-              </div>
-
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-5" name="application" type="radio" value="unsuccessful" data-aria-controls="conditional-contact-5">
-                <label class="govuk-label govuk-radios__label" for="application-4">
-                  Make unsuccessful
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-character-count" id="conditional-contact-5" data-module="govuk-character-count" data-maxwords="200">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-unsuccessful">
-                    <b>Feedback</b>
-                  </label>
-                  <div id="sign-in-hint" class="govuk-hint">
-                    Explain why the application has been unsuccessful, your comments will be sent to the applicant.
+                
+                  <div id="word-count-info" class="govuk-hint govuk-character-count__message">
+                    You can enter up to 200 words
                   </div>
-                  <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="5" aria-describedby="word-count-info"></textarea>                
+                
                 </div>
-                <div id="word-count-info" class="govuk-hint govuk-character-count__message">
-                  You can enter up to 200 words
-                </div>
-              </div>
 
-            </div>
-          </fieldset>
-        </div> -->
               
 <!-- BUTTONS -->
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">
-          Save
+          Continue
         </button>
       
         <a class="govuk-link" href="#">Cancel</a>

@@ -22,7 +22,7 @@ Manage vacancy
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          Keith Stewart has been offered this job
+          Keith Stewart has been made successful 
         </h3>
         <p>Now let the other applicants know they are unsuccessful.</p>
       </div>
@@ -78,15 +78,6 @@ Manage vacancy
     status: "shared",
     link: "",
     classes: "govuk-tag--yellow",
-    date: "13 Oct 2022",
-    disability: "Prefer not to say"
-  },
-  {
-    name: "Keith Stewart",
-    id: "678CFR0",
-    status: "offer made",
-    link: "",
-    classes: "govuk-tag--green",
     date: "13 Oct 2022",
     disability: "Prefer not to say"
   },
@@ -226,6 +217,15 @@ Manage vacancy
       disability: "No"
     },
     {
+      name: "Keith Stewart",
+      id: "678CFR0",
+      status: "successful",
+      link: "",
+      classes: "govuk-tag--green",
+      date: "13 Oct 2022",
+      disability: "Prefer not to say"
+    },
+    {
       name: "Judy Ward",
       id: "897DW5T",
       status: "unsuccessful",
@@ -285,7 +285,7 @@ Manage vacancy
         {% for unsuccessful in appsTableData %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-checkboxes--small">
-            {% if (unsuccessful.status|lower !== "offer made") and (unsuccessful.status|lower !== "unsuccessful") %}
+            {% if (unsuccessful.status|lower !== "successful") and (unsuccessful.status|lower !== "unsuccessful") %}
             <div class="govuk-checkboxes__item govuk-!-padding-left-1">
               <input class="govuk-checkboxes__input" id="unsuccessful-{{ loop.index }}" name="unsuccessful" type="checkbox" value="{{ unsuccessful.id }}" {{ checked("unsuccessful", unsuccessful.id) }}>
               <label class="govuk-label govuk-checkboxes__label" for="unsuccessful-{{ loop.index }}">&nbsp;</label>
