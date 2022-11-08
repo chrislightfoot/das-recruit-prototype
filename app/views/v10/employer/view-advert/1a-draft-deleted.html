@@ -159,34 +159,34 @@ Your adverts
 <!-- FILTER end -->
 
 <!-- SEARCH start -->
-  <div class="govuk-grid-column-two-thirds">
-    <form action="vacancies" method="get" >
-      <div class="row-group">
-        <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
-          <fieldset class="govuk-fieldset">
-            
-            <div class="form-group search-field search-field-darker">
-              <div class="search-input search-input-with-button">
-                <label class="govuk-label" for="search">
-                  Search by advert title, reference number, employer or applicant
-                </label>
+<div class="govuk-grid-column-two-thirds">
+  <form action="0-vacancies-search" method="post" >
+    <div class="row-group">
+      <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
+        <fieldset class="govuk-fieldset">
+          
+          <div class="form-group search-field search-field-darker">
+            <div class="search-input search-input-with-button">
+              <label class="govuk-label" for="search">
+                Search by advert title, reference number or employer
+              </label>
 
-                <div class="autocomplete__parent_wrapper">
-                  <div class="autocomplete__wrapper">
-                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search" name="search" placeholder="" role="combobox" type="text" value="{%if query.search %}{{query.search}}{%endif%}">
-                  </div>
+              <div class="autocomplete__parent_wrapper">
+                <div class="autocomplete__wrapper">
+                  <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search" name="search" placeholder="" role="combobox" type="text" value="{%if query.search %}{{query.search}}{%endif%}">
                 </div>
+              </div>
 
-              </div>
-              <div class="search-submit">
-                <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search clients</button>
-              </div>
             </div>
-          </fieldset>
-        </div>
+            <div class="search-submit">
+              <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search clients</button>
+            </div>
+          </div>
+        </fieldset>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
+</div>
 </div>
 <!-- SEARCH end -->
 

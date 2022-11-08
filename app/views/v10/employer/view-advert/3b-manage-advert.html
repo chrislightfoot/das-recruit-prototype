@@ -148,11 +148,49 @@ Manage advert
 </div>
 
 <!-- ////END ANALYTICS//// -->
-<br>
-<br>
-<div class="govuk-grid-row">
-<div class="govuk-grid-column-full">
-<h2 class="govuk-heading-l">Manage applications</h2>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Manage applications</h2>
+  
+    <!-- search box START -->
+  
+    <form action="3b-manage-advert-search" method="post" >
+  
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-visually-hidden">Search employer name or account name</legend>
+        <div class="govuk-form-group search-field search-field-darker">
+  
+          <div class="search-input search-input-with-button">
+            <label class="govuk-label" for="query">
+              <!--Client reference-->
+              Search applicant name
+            </label>
+  
+            <div class="autocomplete__parent_wrapper">
+              <div class="autocomplete__wrapper">
+                <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                  <span>No search results.</span>
+                  <span>,,</span>
+                </div>
+                <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
+              </div>
+            </div>
+            <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="">
+          </div>
+          <div class="search-submit">
+            <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    </div>
+  </div>
+
 <table class="govuk-table responsive-table">
   <thead class="govuk-table__header">
     <tr class="govuk-table__row" role="row">

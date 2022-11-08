@@ -1,7 +1,7 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-Adverts
+Vacancies
 {% endblock %}
 
 {% block beforeContent %}
@@ -104,7 +104,7 @@ Adverts
   </div>
   <div class="govuk-grid-column-one-third" style="text-align:right;">
 
-      <p class="govuk-body govuk-!-margin-bottom-0"><a href="../create/start-page" class="govuk-button govuk-!-margin-bottom-2">Create an advert</a></p>
+      <p class="govuk-body govuk-!-margin-bottom-0"><a href="../create/start-page" class="govuk-button govuk-!-margin-bottom-2">Create advert</a></p>
 
   </div>
 </div>
@@ -119,13 +119,21 @@ Adverts
         </label>
         <select class="govuk-select" id="filter" name="filter" aria-haspopup="listbox" aria-labelledby="exp_elem exp_button">
           <optgroup label="Status">
-
-            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>adverts  pending review</option>
-            <option value="closing-no-applications" {% if data.filter=='closing-no-applications' %}selected="selected" {%endif%}>closing soon with no applications</option>
-
+            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all vacancies</option>
+            <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live vacancies</option>
+            <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected vacancies</option>
+            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>live vacancies</option>
+            <option value="draft" {% if data.filter=='draft' %}selected="selected" {%endif%}>draft vacancies</option>
+            <option value="closed" {% if data.filter=='closed' %}selected="selected" {%endif%}>closed vacancies</option>
           </optgroup>
           <optgroup label="Other">
-            
+            <option value="new" {% if data.filter=='new' %}selected="selected" {%endif%}>with new applications</option>
+            <option value="withApplication" {% if data.filter=='withApplication' %}selected="selected" {%endif%}>with applications</option>
+            <option value="closing-no-applications" {% if data.filter=='closing-no-applications' %}selected="selected" {%endif%}>closing soon with no applications</option>
+            <option value="closing" {% if data.filter=='closing' %}selected="selected" {%endif%}>closing soon</option>
+            {% if data.user == 'employer' %}
+            <option value="transferred" {% if data.filter=='transferred' %}selected="selected" {%endif%}>transferred from provider</option>
+            {% endif %}
           </optgroup>
         </select>
       </div>
@@ -135,7 +143,7 @@ Adverts
 
 <!-- SEARCH start -->
   <div class="govuk-grid-column-two-thirds">
-    <form action="vacancies" method="get" >
+    <form action="0-vacancies-search" method="get" >
       <div class="row-group">
         <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
           <fieldset class="govuk-fieldset">
@@ -148,7 +156,7 @@ Adverts
 
                 <div class="autocomplete__parent_wrapper">
                   <div class="autocomplete__wrapper">
-                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search" name="search" placeholder="" role="combobox" type="text" value="{%if query.search %}{{query.search}}{%endif%}">
+                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search" name="search" placeholder="" role="combobox" type="text" value="Faizal">
                   </div>
                 </div>
 
@@ -165,41 +173,8 @@ Adverts
 </div>
 <!-- SEARCH end -->
 
-  <p class="govuk-body"><b>2 adverts pending review</b> &nbsp;
-    <a href="#">Show all adverts</a>
-  </p>
-
-<table class="govuk-table das-table--responsive">           
-  <thead class="govuk-table__head govuk-body-s">
-      <tr>
-          <th scope="col" class="govuk-table__header"><span class="no-wrap">Advert title</span></th>
-          <th scope="col" class="govuk-table__header">Advert reference number</th>
-          <th scope="col" class="govuk-table__header">Applications</th>
-          <th scope="col" class="govuk-table__header">Closing date</th>
-          <th scope="col" class="govuk-table__header">Status</th>
-          <th scope="col" class="govuk-table__header">Action</th>
-      </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-          <tr class="govuk-table__row govuk-body-s">
-            <td class="govuk-table__cell">Electronic Engineering Technician Apprentice</td>
-              <td class="govuk-table__cell">VAC10000039295</td>
-              <td class="govuk-table__cell"> - </td>
-              <td class="govuk-table__cell">01 Jun 2022</td>             
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Pending review</strong></td>
-              <td class="govuk-table__cell"><a href="1b-manage-advert" class="govuk-link">Manage</a></td>   
-          </tr>
-
-          <tr class="govuk-table__row govuk-body-s">
-            <td class="govuk-table__cell">Electronic Engineering Technician Apprentice</td>
-              <td class="govuk-table__cell">VAC10000039295</td>
-              <td class="govuk-table__cell"> - </td>
-              <td class="govuk-table__cell">01 Jun 2022</td>             
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Pending review</strong></td>
-              <td class="govuk-table__cell"><a href="#" class="govuk-link">Manage</a></td>   
-          </tr>
-  </tbody>
-</table>
+<h2 class="govuk-heading-m">0 adverts with 'Faizal'</h1>
+  <p class="govuk-body"><a href="3a-live">Clear search</a></p>
 
 </div>
 </div>
