@@ -100,7 +100,7 @@ Vacancies
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Vacancies</h1>
+    <h1 class="govuk-heading-xl">Your adverts</h1>
   </div>
   <div class="govuk-grid-column-one-third" style="text-align:right;">
 
@@ -119,12 +119,12 @@ Vacancies
         </label>
         <select class="govuk-select" id="filter" name="filter" aria-haspopup="listbox" aria-labelledby="exp_elem exp_button">
           <optgroup label="Status">
-            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all vacancies</option>
-            <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live vacancies</option>
-            <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected vacancies</option>
-            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>live vacancies</option>
-            <option value="draft" {% if data.filter=='draft' %}selected="selected" {%endif%}>draft vacancies</option>
-            <option value="closed" {% if data.filter=='closed' %}selected="selected" {%endif%}>closed vacancies</option>
+            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all adverts</option>
+            <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live adverts</option>
+            <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected adverts</option>
+            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>live adverts</option>
+            <option value="draft" {% if data.filter=='draft' %}selected="selected" {%endif%}>draft adverts</option>
+            <option value="closed" {% if data.filter=='closed' %}selected="selected" {%endif%}>closed adverts</option>
           </optgroup>
           <optgroup label="Other">
             <option value="new" {% if data.filter=='new' %}selected="selected" {%endif%}>with new applications</option>
@@ -151,7 +151,7 @@ Vacancies
             <div class="form-group search-field search-field-darker">
               <div class="search-input search-input-with-button">
                 <label class="govuk-label" for="search">
-                  Search by advert, reference, employer or applicant
+                  Search by advert, reference or applicant
                 </label>
 
                 <div class="autocomplete__parent_wrapper">
