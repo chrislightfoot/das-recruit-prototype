@@ -118,14 +118,14 @@ Adverts
       status: "INTERVIEWING",
       link: "../account/application-shared-yes",
       classes: "govuk-tag--yellow",
-      date: "7 Nov 2022"
+      date: "today"
     },
     {
       id: "C5676EA",
       status: "UNSUCCESSFUL",
       link: "../account/application-shared-no",
       classes: "govuk-tag--red",
-      date: "4 Nov 2022"
+      date: "today"
     }
 ]
 %}
@@ -149,7 +149,13 @@ Adverts
         <tr class="govuk-table__row">
           <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
             <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }} </td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">
+            {% if applicant.date == "today" %}
+              <span class="todays-date"></span>
+            {% else %}
+              {{ applicant.date }}
+            {% endif %}
+          </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Status">
             {{ govukTag({
               text: applicant.status, 
@@ -172,13 +178,17 @@ Adverts
 
 <!-- Today's date -->
 <script>
-  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
- var n = new Date();
- var y = n.getFullYear();
- var m = n.getMonth();
- var d = n.getDate();
- document.getElementById("date").innerHTML = d + " " + months[m] + " " + y;
-   </script>
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var n = new Date();
+var y = n.getFullYear();
+var m = n.getMonth();
+var d = n.getDate();
+var todaysDate = d + " " + months[m] + " " + y;
+var td = document.getElementsByClassName("todays-date");
+for (let i = 0; i < td.length; i++) {
+  td[i].textContent = todaysDate
+}
+</script>
 
 <!-- Table sorts -->
 <script>
