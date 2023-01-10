@@ -20,23 +20,23 @@ Manage apprentices
     <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Success
+          Done
         </h2>
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          Application is in review
+          Application status changed to 'in review'.
         </h3>
       </div>
     </div>
 
     <section>
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
+      <span class="govuk-caption-l">Entry Level Development Engineer Apprentice</span>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
         Keith Stewart
       </h1>
-      <div class="govuk-!-margin-bottom-6">
-        <span class="govuk-!-font-weight-bold">Application ID: </span>678CFR0
-      </div>
+
+      <p class="govuk-body-l">Application ID: 678CFR0</p>
 
       <div class="panel panel-border-narrow">
         <p class="govuk-body">
@@ -162,115 +162,108 @@ Manage apprentices
 <!-- RADIO BUTTONS     -->
 <section>
      
-      <form method="post" action="application-new">
-   
+  <form method="post" action="application-new">
 
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What do you want to do with this application?
+          </h1>
+        </legend>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                What do you want to do with this application?
-              </h1>
-            </legend>
-
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application" name="application" type="radio" value="review" checked="checked">
-                <label class="govuk-label govuk-radios__label" for="application">
-                  Review
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-email">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
-                </div>
-              </div>
-
-              
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-2" name="application" type="radio" value="share">
-                <label class="govuk-label govuk-radios__label" for="application-2">
-                  Share with employer
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-phone">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
-                <label class="govuk-label govuk-radios__label" for="application-3">
-                  Interview with employer
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-text">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-4" name="application" type="radio" value="successful" data-aria-controls="conditional-contact-4">
-                <label class="govuk-label govuk-radios__label" for="application-4">
-                  Make successful
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
-                <div class="govuk-form-group">
-                  <div id="sign-in-hint" class="govuk-hint">                    
-                    This will send a message to the applicant to let them know they have been successful.
-                  </div>
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="application-5" name="application" type="radio" value="unsuccessful" data-aria-controls="conditional-contact-5">
-                <label class="govuk-label govuk-radios__label" for="application-4">
-                  Make unsuccessful
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-character-count" id="conditional-contact-5" data-module="govuk-character-count" data-maxwords="200">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-unsuccessful">
-                    <b>Feedback</b>
-                  </label>
-                  <div id="sign-in-hint" class="govuk-hint">
-                    Explain why the application has been unsuccessful, your comments will be sent to the applicant.
-                  </div>
-                  <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="5" aria-describedby="word-count-info"></textarea>                
-                </div>
-                <div id="word-count-info" class="govuk-hint govuk-character-count__message">
-                  You can enter up to 200 words
-                </div>
-              </div>
-
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="application" name="application" type="radio" value="review" checked="selected">
+            <label class="govuk-label govuk-radios__label" for="application">
+              Give 'review' status
+            </label>
+            <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              Label this applicant as under consideration. The applicant and employer will not be notified.
             </div>
-          </fieldset>
-        </div>
-              
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-email">
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+            </div>
+          </div>
+
+          
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="application-2" name="application" type="radio" value="share">
+            <label class="govuk-label govuk-radios__label" for="application-2">
+              Share with employer
+            </label>
+            <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+              Share an anonymised version of this application with the employer to review.
+            </div>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-phone">
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
+            <label class="govuk-label govuk-radios__label" for="application-3">
+              Give 'interviewing' status
+            </label>
+            <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
+              Label this applicant to be interviewed by the employer. The applicant and employer will not be notified.
+            </div>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-text">
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="application-4" name="application" type="radio" value="successful" data-aria-controls="conditional-contact-4">
+            <label class="govuk-label govuk-radios__label" for="application-4">
+              Make successful
+            </label>
+            <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+              Notify the applicant that they're being offered the apprenticeship.
+            </div>
+          </div>
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="application-5" name="application" type="radio" value="unsuccessful" data-aria-controls="conditional-contact-5">
+            <label class="govuk-label govuk-radios__label" for="application-4">
+              Make unsuccessful
+            </label>
+            <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+              Notify the applicant that they aren't successful and give them feedback.
+            </div>
+          </div>
+
+
+      </fieldset>
+    </div>
+          
 <!-- BUTTONS -->
-      <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-          Save
-        </button>
-      
-        <a class="govuk-link" href="#">Cancel</a>
-      </div>
-      
-    </form>
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+  
+    <a class="govuk-link" href="#">Cancel</a>
+  </div>
+  
+</form>
 
 
 
-    </section>
+</section>
 
 
   </div>

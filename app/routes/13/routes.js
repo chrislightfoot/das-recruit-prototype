@@ -647,7 +647,7 @@ module.exports = function(router) {
       } else if (req.body.application == "successful") {
         res.redirect(301, '/' + base_url + req.params[0] + "/view/7a-check-successful");
       } else if (req.body.application == "unsuccessful") {
-        res.redirect(301, '/' + base_url + req.params[0] + "/view/7b-check-unsuccessful");
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/8b-feedback-unsuccessful-single");
       }
   
     })
