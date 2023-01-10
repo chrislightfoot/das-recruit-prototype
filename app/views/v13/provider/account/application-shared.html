@@ -159,13 +159,15 @@ Manage apprentices
                 What do you want to do with this application?
               </h1>
             </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
                 <label class="govuk-label govuk-radios__label" for="application-3">
-                  Interview with employer
+                  Give 'interviewing' status
                 </label>
+                <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  The applicant and employer will not be notified.
+                </div>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
                 <div class="govuk-form-group">
@@ -180,38 +182,23 @@ Manage apprentices
                 <label class="govuk-label govuk-radios__label" for="application-4">
                   Make successful
                 </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
-                <div class="govuk-form-group">
-                  <div id="sign-in-hint" class="govuk-hint">                    
-                    This will send a message to the applicant to let them know they have been successful.
-                  </div>
+                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                  Notify the applicant that they're being offered the apprenticeship.
                 </div>
               </div>
+  
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="application-5" name="application" type="radio" value="unsuccessful" data-aria-controls="conditional-contact-5">
                 <label class="govuk-label govuk-radios__label" for="application-4">
                   Make unsuccessful
                 </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-character-count" id="conditional-contact-5" data-module="govuk-character-count" data-maxwords="200">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-unsuccessful">
-                    <b>Feedback</b>
-                  </label>
-                  <div id="sign-in-hint" class="govuk-hint">
-                    Explain why the application has been unsuccessful, your comments will be sent to the applicant.
-                  </div>
-                  <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="8" aria-describedby="word-count-info"></textarea>                
-                </div>
-                <div id="word-count-info" class="govuk-hint govuk-character-count__message">
-                  You can enter up to 200 words
+                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                  Notify the applicant that they aren't successful and give them feedback.
                 </div>
               </div>
 
-
-            </div>
+    
           </fieldset>
         </div>
               

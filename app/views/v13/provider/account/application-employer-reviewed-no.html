@@ -156,7 +156,10 @@ Manage apprentices
       <p>No, the employer does not want to interview this applicant.</p>
 
       {{ govukInsetText({
-        html: "[Reason given by employer] <Br><br><br><br>"
+        html: "Hi, <br><br>
+        Unfortunately to a high demand in applicants this candidate hasn’t met some of the desirable criteria and therefore we won’t continue with the application. Please check back for future vacancies.
+        <br><br>
+        Thanks"
       }) }}
 
       <br>
@@ -175,7 +178,7 @@ Manage apprentices
                       Make application unsuccessful
                     </h1>
                     <div id="sign-in-hint" class="govuk-hint">
-                      Explain why the application has been unsuccessful, your comments will be sent to the applicant.
+                      Help the applicant understand why their application was unsuccessful. Your comments will be sent to the applicant.
                     </div>
                     <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="8" aria-describedby="word-count-info"></textarea>
                   </div>
