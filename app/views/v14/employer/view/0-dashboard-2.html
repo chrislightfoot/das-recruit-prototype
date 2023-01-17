@@ -9,33 +9,8 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
 {% endblock %}
 
 {% block content %}
-
-<style>
-  .govuk-notification-banner__content > * {
-    box-sizing: border-box;
-   max-width: 100%; }
- </style>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Important
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <p class="govuk-notification-banner__heading">
-          You have applications sent to you by training providers to review:
-          <ul class="govuk-list govuk-list--bullet">
-            <li> <a class="govuk-notification-banner__link" href="6b-shared-applications">Entry Level Development Engineer Apprentice</a> </li>
-
-          </ul>
-        </p>
-      </div>
-    </div>
-
     <!-- Header -->
     <div class="govuk-grid-row govuk-!-margin-top-4">
       <div class="govuk-grid-column-two-thirds">
@@ -128,7 +103,7 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
               <span class="das-card--stat">0</span>
                   Review adverts
             </h3>
-            <p class="govuk-body das-card--description">If you want to review adverts before they are published you need to <a href="#" class="govuk-link govuk-link--no-visited-state">manage your permissions</a>.</p>
+            <p class="govuk-body das-card--description">You don't allow your training provider to create adverts for you. <br><br> <a href="#" class="govuk-link govuk-link--no-visited-state">Manage your permissions</a>.</p>
             <!--<span class="das-card--stat">2</span>
             <a class="card-link" href="vacancies?filter=pending review">
               Review adverts
@@ -147,7 +122,7 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
             <h3 class="govuk-heading-m das-card--heading">
               <span class="das-card--stat">2</span>
               <a class="card-link" href="1a-pending-review">
-                Pending review
+                Adverts pending DfE review
               </a>
             </h3>
               <p class="govuk-body das-card--description">Adverts that you've sent for review.</p>
@@ -212,8 +187,7 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
             </h3>
             <p class="govuk-body das-card--description">Applications from Find an apprenticeship service.<br><br>
               <a href="#">View all applications</a>
-              <br>
-            </p>
+              <br></p>
 
           </div>
 
@@ -236,23 +210,18 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
         </div>
       </div>
 
-    <div class="govuk-grid-column-one-third">
-      <div class="das-card">
-        <div class="das-card--content">
-          <h3 class="govuk-heading-m das-card--heading">
-            <span class="das-card--stat">2</span>
-            <a class="card-link" href="6-shared-new">
-              Applications shared to review
-            </a>
-          </h3>
-          <p class="govuk-body das-card--description">Review applications shared with you by a training provider <br><br>
-          <a href="6-shared-all"> View all shared applications </a>
-          <br><br>
-        </p>
+      <div class="govuk-grid-column-one-third">
+        <div class="das-card">
+          <div class="das-card--content">
+            <h3 class="govuk-heading-m das-card--heading">
+              <span class="das-card--stat">0</span>
+                Applications shared to review
+            </h3>
+            <p class="govuk-body das-card--description">You don't allow your training provider to create adverts for you. <br><br> <a href="#" class="govuk-link govuk-link--no-visited-state">Manage your permissions</a>.</p><br>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
     <a href="#" class="govuk-link govuk-!-font-size-24 govuk-!-font-weight-bold govuk-link--no-visited-state" name="button">View all your adverts (54)</a>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">

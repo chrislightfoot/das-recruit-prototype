@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Apprenticeship services',
+  serviceName: 'Apprenticeship service',
   maServiceName: 'Manage apprenticeships',
   tpServiceName: 'Apprenticeships',
   qaServiceName: 'QA',
