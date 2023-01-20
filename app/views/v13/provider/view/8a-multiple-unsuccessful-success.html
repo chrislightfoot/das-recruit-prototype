@@ -6,7 +6,7 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<a href="3c-manage-applications-successful" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -17,7 +17,7 @@ Manage vacancy
     <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Success
+          Done
         </h2>
       </div>
       <div class="govuk-notification-banner__content">
@@ -73,39 +73,30 @@ Manage vacancy
 {%
   set appsTableData = [
   {
-    name: "Faizal Dawood",
-    id: "C5662EA",
-    status: "shared",
-    link: "",
-    classes: "govuk-tag--yellow",
-    date: "13 Oct 2022",
-    disability: "Prefer not to say"
-  },
-  {
     name: "Cynthia Perez",
     id: "FL13JK0",
     status: "in review",
-    link: "",
+    link: "#",
     classes: "govuk-tag--yellow",
-    date: "15 Oct 2022",
+    date: "15 Jan 2023",
     disability: "No"
   },
   {
     name: "Susie Noble",
     id: "LL13J9H",
-    status: "Interviewing",
+    status: "in review",
     link: "",
     classes: "govuk-tag--yellow",
-    date: "15 Oct 2022",
+    date: "15 Jan 2023",
     disability: "No"
   },
   {
     name: "Charles Davis",
     id: "B2LH789",
-    status: "employer reviewed",
+    status: "shared",
     link: "",
-    classes: "govuk-tag--blue",
-    date: "15 Oct 2022",
+    classes: "govuk-tag--yellow",
+    date: "15 Jan 2023",
     disability: "Prefer not to say"
   },
   {
@@ -114,7 +105,7 @@ Manage vacancy
     status: "shared",
     link: "",
     classes: "govuk-tag--yellow",
-    date: "15 Oct 2022",
+    date: "15 Jan 2023",
     disability: "No"
   },
     {
@@ -123,7 +114,7 @@ Manage vacancy
       status: "shared",
       link: "",
       classes: "govuk-tag--yellow",
-      date: "15 Oct 2022",
+      date: "15 Jan 2023",
       disability: "Prefer not to say"
     },
     {
@@ -132,7 +123,7 @@ Manage vacancy
       status: "New",
       link: "",
       classes: "govuk-tag--blue",
-      date: "16 Oct 2022",
+      date: "16 Jan 2023",
       disability: "Yes"
     }
 ]
