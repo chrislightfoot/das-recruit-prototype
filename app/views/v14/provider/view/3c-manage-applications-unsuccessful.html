@@ -6,7 +6,7 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="3a-live" class="govuk-back-link">Back</a>
+<a href="6-employer-reviewed" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -165,15 +165,6 @@ Manage vacancy
 {%
   set appsTableData = [
   {
-    name: "Faizal Dawood",
-    id: "C5662EA",
-    status: "shared",
-    link: "",
-    classes: "govuk-tag--yellow",
-    date: "13 Jan 2023",
-    disability: "Prefer not to say"
-  },
-  {
     name: "Keith Stewart",
     id: "678CFR0",
     status: "employer reviewed",
@@ -194,7 +185,7 @@ Manage vacancy
   {
     name: "Susie Noble",
     id: "LL13J9H",
-    status: "Interviewing",
+    status: "in review",
     link: "",
     classes: "govuk-tag--yellow",
     date: "15 Jan 2023",
@@ -203,9 +194,9 @@ Manage vacancy
   {
     name: "Charles Davis",
     id: "B2LH789",
-    status: "employer reviewed",
+    status: "shared",
     link: "",
-    classes: "govuk-tag--blue",
+    classes: "govuk-tag--yellow",
     date: "15 Jan 2023",
     disability: "Prefer not to say"
   },
@@ -237,96 +228,6 @@ Manage vacancy
       disability: "Yes"
     },
     {
-      name: "Judy Ward",
-      id: "897DW5T",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "15 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Danielle Price",
-      id: "HAK9F56",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "16 Jan 2023",
-      disability: "Yes"
-    },
-    {
-      name: "Bryant Cantu",
-      id: "5J9L5BF",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Loretta Giles",
-      id: "3LN79HH",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Blake Peterson",
-      id: "FL7J007",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Regina Carey",
-      id: "98J98FG",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Millicent Thompson",
-      id: "NJLP6GF",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Deena Lawson",
-      id: "C78N0LK",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Garland Valenzuela",
-      id: "45DL0HV",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Jerome Cross",
-      id: "79ML444",
-      status: "unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "17 Jan 2023",
-      disability: "No"
-    },
-    {
       name: "Ellen Collins",
       id: "6H0IL55",
       status: "Unsuccessful",
@@ -336,12 +237,12 @@ Manage vacancy
       disability: "No"
     },
     {
-      name: "Wes Arnold",
-      id: "PL67D9F",
-      status: "Unsuccessful",
-      link: "",
+      name: "Judy Ward",
+      id: "897DW5T",
+      status: "unsuccessful",
+      link: "../account/application-employer-reviewed-no",
       classes: "govuk-tag--red",
-      date: "13 Jan 2023",
+      date: "15 Jan 2023",
       disability: "No"
     }
 ]
