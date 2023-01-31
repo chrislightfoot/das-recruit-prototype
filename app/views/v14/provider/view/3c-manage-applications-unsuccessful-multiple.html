@@ -28,138 +28,134 @@ Manage vacancy
       </div>
     </div>
 
-        
-        <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
-    <h1 class="govuk-heading-xl">Entry Level Development Engineer Apprentice</h1>
-
-
-  </div>
-</div>
-
-<!-- ////START SUMMARY//// -->
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Status
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Live
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Vacancy reference
-    </dt>
-    <dd class="govuk-summary-list__value">
-      VAC1000000997
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Closing date
-    </dt>
-    <dd class="govuk-summary-list__value">
-      <p class="govuk-body">31 Jan 2023</p>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Possible start date
-    </dt>
-    <dd class="govuk-summary-list__value">
-      <p class="govuk-body">01 Feb 2023</p>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Disability confident
-    </dt>
-    <dd class="govuk-summary-list__value">
-      <p class="govuk-body">Yes</p>
-    </dd>
-  </div>
-</dl>
-<!-- ////END SUMMARY//// -->
     
-<!-- vacnacy actions START -->
-    <div class="grid-row">
-      <div class="column-full">
-
-        <p class="govuk-body">
-          <a class="govuk-link button-link  govuk-link--no-visited-state" href="view">View vacancy</a> &nbsp;
-          <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone vacancy</a> &nbsp;
-          <a class="govuk-link button-link  govuk-link--no-visited-state" href="3c-dates">Edit vacancy dates</a> &nbsp;
-          <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Close vacancy</a> 
-        </p>
+            <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
+        <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
+    
+      
+        <p class="govuk-body-l">Vacancy reference: VAC1000000997</p>
+    
+    
+    <!-- ////START vacancy summry//// -->
+    <h2 class="govuk-heading-m">Vacancy summary</h2>
+    
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green">
+            Live
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Close vacancy</span>
+          </a>
+        </dd>
+      </div>
+    
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Closing date
+          <br>
+          <br>
+          Possible start date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          31 Jan 2023
+          <br>
+          <br>
+          01 Feb 2023
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="3c-dates">
+            Change dates</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    
+            <p class="govuk-body">
+              <a class="govuk-link button-link  govuk-link--no-visited-state" href="view">View vacancy</a> &nbsp;
+              <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone vacancy</a> &nbsp;
+            </p>
+        
+    <!-- END vacancy summary  -->
+    
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <!-- START vacancy analytics -->
+    
+        <h2 class="govuk-heading-m">Vacancy analytics</h2>
+    
+       <p>
+        To see how many people have looked at your vacancy, <a href="3b-vacancy-analytics">view vacancy analytics</a>.
+       </p> 
+    
+    <!-- END vacancy actions -->
+    
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
       </div>
     </div>
-
-    <br>
-
-    {{ govukButton({
-      text: "View vacancy analytics",
-      classes: "govuk-button--secondary",
-      href: '3b-vacancy-analytics'
-    }) }}
-<!-- vacancy actions END -->
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-<!-- Application actions -->
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <h2 class="govuk-heading-l">Manage applications</h2>
     
-    <div class="govuk-inset-text">
+    <!-- manage applications -->
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+    
+      <h2 class="govuk-heading-m">Applications (10)</h2>
+    
+    
+    <!-- search box START -->
+        <fieldset class="govuk-fieldset">
+        <legend class="govuk-visually-hidden">Search employer name or account name</legend>
+        <div class="govuk-form-group search-field search-field-darker">
+    
+          <div class="search-input search-input-with-button">
+            <label class="govuk-label" for="query">
+              <!--Client reference-->
+              Search applicant name
+            </label>
+    
+            <div class="autocomplete__parent_wrapper">
+              <div class="autocomplete__wrapper">
+                <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                  <span>No search results.</span>
+                  <span>,,</span>
+                </div>
+                <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
+              </div>
+            </div>
+            <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="">
+          </div>
+          <div class="search-submit">
+            <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
+          </div>
+        </div>
+      </fieldset>
+    <!-- search box END -->
+    
+    <!-- START multiple links -->
+    
       <p class="govuk-body" >
         <a href="6a-share-applications" class="govuk-link govuk-link--no-visited-state">Share multiple applications with employer</a>
       </p>
       <p class="govuk-body">
         <a href="8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications unsuccessful</a>
       </p>
+    <!-- END multiple links -->
+    
+    <!-- START disability confident -->
+    <div class="govuk-inset-text">
+      Gloucestershire Health and Care NHS Foundation Trust is signed up to the <a href="https://www.gov.uk/government/collections/disability-confident-campaign" class="govuk-link" rel="noreferrer noopener" target="_blank">Disability Confident scheme (opens in new tab)</a>.
     </div>
-  
-      </div>
+    <!-- END disability confident -->
+    
     </div>
-  <!-- end application actions -->
-
-  
-  <!-- search box START -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-visually-hidden">Search employer name or account name</legend>
-      <div class="govuk-form-group search-field search-field-darker">
-
-        <div class="search-input search-input-with-button">
-          <label class="govuk-label" for="query">
-            <!--Client reference-->
-            Search applicant name
-          </label>
-
-          <div class="autocomplete__parent_wrapper">
-            <div class="autocomplete__wrapper">
-              <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                <span>No search results.</span>
-                <span>,,</span>
-              </div>
-              <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
-            </div>
-          </div>
-          <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="">
-        </div>
-        <div class="search-submit">
-          <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
-        </div>
-      </div>
-    </fieldset>
-
-  </div>
-</div>
-<!-- search box END -->
+    </div>
 
 <!-- table START -->
 {%- from "govuk/components/tag/macro.njk" import govukTag -%}

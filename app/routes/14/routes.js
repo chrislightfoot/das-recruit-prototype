@@ -639,7 +639,7 @@ module.exports = function(router) {
     router.post('/' + base_url + '*/account/application-new', function(req, res) {
 
       if (req.body.application == "review") {
-        res.redirect(301, '/' + base_url + req.params[0] + '/account/application-review')
+        res.redirect(301, '/' + base_url + req.params[0] + '/view/3c-manage-applications-in-review')
       } else if (req.body.application == "share") {
         res.redirect(301, '/' + base_url + req.params[0] + "/view/3d-check-share");
       } else if (req.body.application == "shortlist") {

@@ -14,62 +14,129 @@ Manage vacancy
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Electronic Engineering Technician Apprentice</h1>
+    <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
+
+  
+    <p class="govuk-body-l">Advert reference: VAC1000000997</p>
+
+
+<!-- ////START vacancy summry//// -->
+<h2 class="govuk-heading-m">Advert summary</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
+        Live
+      </strong>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Close  <span class="govuk-visually-hidden"> advert</span>
+      </a>
+    </dd>
+  </div>
+
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Closing date
+      <br>
+      <br>
+      Possible start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      31 Jan 2023
+      <br>
+      <br>
+      01 Feb 2023
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="3c-dates">
+        Change<span class="govuk-visually-hidden"> advert dates</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+        <p class="govuk-body">
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="view">View advert</a> &nbsp;
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone advert</a> &nbsp;
+        </p>
+    
+<!-- END vacancy summary  -->
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<!-- START vacancy analytics -->
+
+    <h2 class="govuk-heading-m">Advert analytics</h2>
+
+   <p>
+    To see how many people have looked at your advert, <a href="3b-vacancy-analytics">view advert analytics</a>.
+   </p> 
+
+<!-- END vacancy actions -->
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
   </div>
 </div>
 
+<!-- manage applications -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+  <h2 class="govuk-heading-m">Applications (10)</h2>
 
 
-<!-- Application actions -->
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <div class="govuk-inset-text">
-      <p class="govuk-body">
-        <a href="8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications unsuccessful</a>
-      </p>
-    </div>
-  
-      </div>
-    </div>
-  <!-- end application actions -->
-
-  
-  <!-- search box START -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      
+<!-- search box START -->
     <fieldset class="govuk-fieldset">
-      <legend class="govuk-visually-hidden">Search employer name or account name</legend>
-      <div class="govuk-form-group search-field search-field-darker">
+    <legend class="govuk-visually-hidden">Search employer name or account name</legend>
+    <div class="govuk-form-group search-field search-field-darker">
 
-        <div class="search-input search-input-with-button">
-          <label class="govuk-label" for="query">
-            <!--Client reference-->
-            Search applicant name
-          </label>
+      <div class="search-input search-input-with-button">
+        <label class="govuk-label" for="query">
+          <!--Client reference-->
+          Search applicant name
+        </label>
 
-          <div class="autocomplete__parent_wrapper">
-            <div class="autocomplete__wrapper">
-              <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                <span>No search results.</span>
-                <span>,,</span>
-              </div>
-              <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
+        <div class="autocomplete__parent_wrapper">
+          <div class="autocomplete__wrapper">
+            <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+              <span>No search results.</span>
+              <span>,,</span>
             </div>
+            <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
           </div>
-          <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="">
         </div>
-        <div class="search-submit">
-          <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
-        </div>
+        <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="">
       </div>
-    </fieldset>
-
-  </div>
-</div>
+      <div class="search-submit">
+        <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
+      </div>
+    </div>
+  </fieldset>
 <!-- search box END -->
+
+<!-- START multiple links -->
+
+  <p class="govuk-body">
+    <a href="8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications unsuccessful</a>
+  </p>
+<!-- END multiple links -->
+
+<!-- START disability confident -->
+<div class="govuk-inset-text">
+  Gloucestershire Health and Care NHS Foundation Trust is a disability confident employer.
+</div>
+<!-- END disability confident -->
+
+</div>
+</div>
 
 <!-- table START -->
 {%- from "govuk/components/tag/macro.njk" import govukTag -%}
@@ -77,22 +144,22 @@ Manage vacancy
 {%
   set appsTableData = [
     {
-      name: "Faizal Dawood",
-      id: "C5662EA",
-      status: "in review",
-      link: "",
-      classes: "govuk-tag--yellow",
-      date: "13 Oct 2022",
-      disability: "Prefer not to say"
-    },
-    {
       name: "Keith Stewart",
       id: "678CFR0",
       status: "new",
       link: "../account/application-new",
       classes: "govuk-tag--blue",
-      date: "13 Oct 2022",
+      date: "13 Jan 2023",
       disability: "Prefer not to say"
+    },
+    {
+      name: "Ellen Collins",
+      id: "6H0IL55",
+      status: "new",
+      link: "../account/application-review-no",
+      classes: "govuk-tag--blue",
+      date: "13 Jan 2023",
+      disability: "No"
     },
     {
       name: "Cynthia Perez",
@@ -100,43 +167,43 @@ Manage vacancy
       status: "new",
       link: "",
       classes: "govuk-tag--blue",
-      date: "15 Oct 2022",
+      date: "15 Jan 2023",
       disability: "No"
     },
     {
       name: "Susie Noble",
       id: "LL13J9H",
-      status: "In review",
+      status: "New",
       link: "",
-      classes: "govuk-tag--yellow",
-      date: "15 Oct 2022",
+      classes: "govuk-tag--blue",
+      date: "15 Jan 2023",
       disability: "No"
     },
     {
       name: "Judy Ward",
       id: "897DW5T",
-      status: "in review",
+      status: "New",
       link: "",
-      classes: "govuk-tag--yellow",
-      date: "15 Oct 2022",
+      classes: "govuk-tag--blue",
+      date: "15 Jan 2023",
       disability: "No"
     },
     {
       name: "Charles Davis",
       id: "B2LH789",
-      status: "in review",
+      status: "New",
       link: "",
-      classes: "govuk-tag--yellow",
-      date: "15 Oct 2022",
+      classes: "govuk-tag--blue",
+      date: "15 Jan 2023",
       disability: "Prefer not to say"
     },
     {
       name: "Neena Patel",
       id: "78BH067",
-      status: "in review",
+      status: "New",
       link: "",
-      classes: "govuk-tag--yellow",
-      date: "15 Oct 2022",
+      classes: "govuk-tag--blue",
+      date: "15 Jan 2023",
       disability: "No"
     },
     {
@@ -145,7 +212,7 @@ Manage vacancy
       status: "New",
       link: "",
       classes: "govuk-tag--blue",
-      date: "15 Oct 2022",
+      date: "15 Jan 2023",
       disability: "Prefer not to say"
     },
     {
@@ -154,7 +221,7 @@ Manage vacancy
       status: "New",
       link: "",
       classes: "govuk-tag--blue",
-      date: "16 Oct 2022",
+      date: "16 Jan 2023",
       disability: "Yes"
     },
     {
@@ -163,98 +230,8 @@ Manage vacancy
       status: "New",
       link: "",
       classes: "govuk-tag--blue",
-      date: "16 Oct 2022",
+      date: "16 Jan 2023",
       disability: "Yes"
-    },
-    {
-      name: "Bryant Cantu",
-      id: "5J9L5BF",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Loretta Giles",
-      id: "3LN79HH",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Blake Peterson",
-      id: "FL7J007",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Regina Carey",
-      id: "98J98FG",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Millicent Thompson",
-      id: "NJLP6GF",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Deena Lawson",
-      id: "C78N0LK",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Garland Valenzuela",
-      id: "45DL0HV",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Jerome Cross",
-      id: "79ML444",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "17 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Ellen Collins",
-      id: "6H0IL55",
-      status: "Unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "13 Oct 2022",
-      disability: "No"
-    },
-    {
-      name: "Wes Arnold",
-      id: "PL67D9F",
-      status: "Unsuccessful",
-      link: "",
-      classes: "govuk-tag--red",
-      date: "13 Oct 2022",
-      disability: "No"
     }
 ]
 %}
@@ -274,9 +251,6 @@ Manage vacancy
           <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
             <a href="#" class="govuk-link das-table__sort">Date applied</a>
           </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Disability</a>
-          </th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -294,7 +268,6 @@ Manage vacancy
             }) }}
           </td>
           <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Disability">{{ applicant.disability }}</td>
         </tr>
         {% endfor %}
       </tbody>
