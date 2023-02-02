@@ -22,7 +22,7 @@ Adverts
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          Response for C5686EA sent: No, I don't want to interview this applicant
+          Response for C5564EA sent: Yes, I would like to interview this applicant.
         </h3>
         <p class="govuk-body">The training provider has been notified.</p>
       </div>
@@ -40,55 +40,96 @@ Adverts
 
 {%
   set appsTableData = [
-
-    {
-      id: "LP07688",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v1",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "LHK76TY",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v1",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "CP765D8",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v1",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "R384JP4",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v1",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "B1003GH",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v1",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "KR9678F",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v1",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
     {
       id: "C5662EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C5782EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C9068EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C1554EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C5768EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C9759EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C3444EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C6456EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C0873EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C1778EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "C5564EA",
+      status: "INTERVIEWING",
+      link: "../account/application-shared-yes",
+      classes: "govuk-tag--yellow",
+      date: "today"
+    },
+    {
+      id: "C5545EA",
+      status: "INTERVIEWING",
+      link: "../account/application-shared-yes",
+      classes: "govuk-tag--yellow",
+      date: "17 Nov 2022"
+    },
+    {
+      id: "C5676EA",
       status: "UNSUCCESSFUL",
       link: "../account/application-shared-no",
       classes: "govuk-tag--red",
-      date: "today"
+      date: "14 Nov 2022"
     }
 ]
 %}
@@ -141,17 +182,17 @@ Adverts
 
 <!-- Today's date -->
 <script>
-  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  var n = new Date();
-  var y = n.getFullYear();
-  var m = n.getMonth();
-  var d = n.getDate();
-  var todaysDate = d + " " + months[m] + " " + y;
-  var td = document.getElementsByClassName("todays-date");
-  for (let i = 0; i < td.length; i++) {
-    td[i].textContent = todaysDate
-  }
-  </script>
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var n = new Date();
+var y = n.getFullYear();
+var m = n.getMonth();
+var d = n.getDate();
+var todaysDate = d + " " + months[m] + " " + y;
+var td = document.getElementsByClassName("todays-date");
+for (let i = 0; i < td.length; i++) {
+  td[i].textContent = todaysDate
+}
+</script>
 
 <!-- Table sorts -->
 <script>

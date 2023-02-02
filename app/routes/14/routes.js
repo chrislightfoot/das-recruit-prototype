@@ -653,11 +653,11 @@ module.exports = function(router) {
     })
 
 
-    // EMPLOYER SHARED APPLICATION RESPONSE
-    router.post('/' + base_url + '*/account/application-shared', function(req, res) {
+    // EMPLOYER SHARED APPLICATION RESPONSE - V1 FOR USER TESTING
+    router.post('/' + base_url + '*/account/application-shared-v1', function(req, res) {
 
       if (req.body.response == "yes") {
-        res.redirect(301, '/' + base_url + req.params[0] + '/view/6b-shared-applications-yes')
+        res.redirect(301, '/' + base_url + req.params[0] + '/account/application-shared-saved-v1')
       } else if (req.body.response == "no") {
         res.redirect(301, '/' + base_url + req.params[0] + "/view/6b-shared-applications-no");
       }
