@@ -664,4 +664,16 @@ module.exports = function(router) {
   
     })
 
+
+    // EMPLOYER SHARED APPLICATION RESPONSE - V2 FOR USER TESTING
+    router.post('/' + base_url + '*/account/application-shared-v2', function(req, res) {
+
+      if (req.body.response == "yes") {
+        res.redirect(301, '/' + base_url + req.params[0] + '/view/6b-shared-applications-yes-v2')
+      } else if (req.body.response == "no") {
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/6b-shared-applications-no");
+      }
+  
+    })
+
 }
