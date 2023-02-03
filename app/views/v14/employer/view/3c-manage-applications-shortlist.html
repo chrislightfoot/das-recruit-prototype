@@ -1,4 +1,4 @@
-{% extends "ma-layout.html" %}
+{% extends "ma-home-layout.html" %}
 
 {% block pageTitle %}
 Manage vacancy
@@ -6,7 +6,7 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="3b-manage-vacancy" class="govuk-back-link">Back</a>
+<a href="6-employer-reviewed" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -14,12 +14,26 @@ Manage vacancy
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
-
-  
-    <p class="govuk-body-l">Advert reference: VAC1000000997</p>
-
-
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Done
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Keith Stewart's application status changed to 'interviewing'.
+        </h3>
+      </div>
+    </div>
+    
+            <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
+        <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
+    
+      
+        <p class="govuk-body-l">Vacancy reference: VAC1000000997</p>
+    
+    
 <!-- ////START vacancy summry//// -->
 <h2 class="govuk-heading-m">Advert summary</h2>
 
@@ -146,9 +160,9 @@ Manage vacancy
     {
       name: "Keith Stewart",
       id: "678CFR0",
-      status: "new",
-      link: "../account/application-new",
-      classes: "govuk-tag--blue",
+      status: "interviewing",
+      link: "../account/application-employer-reviewed-interviewing",
+      classes: "govuk-tag--yellow",
       date: "13 Jan 2023",
       disability: "Prefer not to say"
     },
@@ -240,7 +254,7 @@ Manage vacancy
         <tr class="govuk-table__row" role="row">
 
           <th scope="col" class="govuk-table__header" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name </a>
+            <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name</a>
           </th>
           <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
             <a href="#" class="govuk-link das-table__sort">Application ID</a>

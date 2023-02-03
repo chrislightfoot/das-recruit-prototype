@@ -1,4 +1,4 @@
-{% extends "ma-layout.html" %}
+{% extends "ma-home-layout.html" %}
 
 {% block pageTitle %}
 Manage vacancy
@@ -6,20 +6,36 @@ Manage vacancy
 
 {% block beforeContent %}
 {{super()}}
-<a href="3b-manage-vacancy" class="govuk-back-link">Back</a>
+<a href="3a-live" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Done
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Multiple applications made unsuccessful. 
+        </h3>
+      </div>
+    </div>
 
-  
-    <p class="govuk-body-l">Advert reference: VAC1000000997</p>
-
-
+    
+            <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
+        <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
+    
+      
+        <p class="govuk-body-l">Vacancy reference: VAC1000000997</p>
+    
+    
 <!-- ////START vacancy summry//// -->
 <h2 class="govuk-heading-m">Advert summary</h2>
 
@@ -124,9 +140,10 @@ Manage vacancy
 
 <!-- START multiple links -->
 
-  <p class="govuk-body">
+  <!-- <p class="govuk-body">
     <a href="8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications unsuccessful</a>
-  </p>
+  </p> -->
+
 <!-- END multiple links -->
 
 <!-- START disability confident -->
@@ -146,95 +163,86 @@ Manage vacancy
     {
       name: "Keith Stewart",
       id: "678CFR0",
-      status: "new",
-      link: "../account/application-new",
-      classes: "govuk-tag--blue",
+      status: "Successful",
+      link: "",
+      classes: "govuk-tag--green",
       date: "13 Jan 2023",
       disability: "Prefer not to say"
     },
     {
-      name: "Ellen Collins",
-      id: "6H0IL55",
-      status: "new",
-      link: "../account/application-review-no",
-      classes: "govuk-tag--blue",
-      date: "13 Jan 2023",
-      disability: "No"
-    },
-    {
       name: "Cynthia Perez",
       id: "FL13JK0",
-      status: "new",
+      status: "Unsuccessful",
       link: "",
-      classes: "govuk-tag--blue",
+      classes: "govuk-tag--red",
       date: "15 Jan 2023",
       disability: "No"
     },
     {
       name: "Susie Noble",
       id: "LL13J9H",
-      status: "New",
+      status: "Unsuccessful",
       link: "",
-      classes: "govuk-tag--blue",
-      date: "15 Jan 2023",
-      disability: "No"
-    },
-    {
-      name: "Judy Ward",
-      id: "897DW5T",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
+      classes: "govuk-tag--red",
       date: "15 Jan 2023",
       disability: "No"
     },
     {
       name: "Charles Davis",
       id: "B2LH789",
-      status: "New",
+      status: "Unsuccessful",
       link: "",
-      classes: "govuk-tag--blue",
+      classes: "govuk-tag--red",
       date: "15 Jan 2023",
       disability: "Prefer not to say"
     },
     {
       name: "Neena Patel",
       id: "78BH067",
-      status: "New",
+      status: "Unsuccessful",
       link: "",
-      classes: "govuk-tag--blue",
+      classes: "govuk-tag--red",
       date: "15 Jan 2023",
       disability: "No"
     },
-    {
-      name: "Jose Robinson",
-      id: "LY6TY44",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "15 Jan 2023",
-      disability: "Prefer not to say"
-    },
-    {
-      name: "John Smith",
-      id: "39DBE1A",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "16 Jan 2023",
-      disability: "Yes"
-    },
-    {
-      name: "Danielle Price",
-      id: "HAK9F56",
-      status: "New",
-      link: "",
-      classes: "govuk-tag--blue",
-      date: "16 Jan 2023",
-      disability: "Yes"
-    }
-]
-%}
+      {
+        name: "Jose Robinson",
+        id: "LY6TY44",
+        status: "Unsuccessful",
+        link: "",
+        classes: "govuk-tag--red",
+        date: "15 Jan 2023",
+        disability: "Prefer not to say"
+      },
+      {
+        name: "John Smith",
+        id: "39DBE1A",
+        status: "Unsuccessful",
+        link: "",
+        classes: "govuk-tag--red",
+        date: "16 Jan 2023",
+        disability: "Yes"
+      },
+      {
+        name: "Ellen Collins",
+        id: "6H0IL55",
+        status: "Unsuccessful",
+        link: "",
+        classes: "govuk-tag--red",
+        date: "13 Jan 2023",
+        disability: "No"
+      },
+      {
+        name: "Judy Ward",
+        id: "897DW5T",
+        status: "unsuccessful",
+        link: "../account/application-employer-reviewed-no",
+        classes: "govuk-tag--red",
+        date: "15 Jan 2023",
+        disability: "No"
+      }
+  ]
+  %}
     <table class="govuk-table responsive-table" data-module="das-table-sort">
       <thead class="govuk-table__header">
         <tr class="govuk-table__row" role="row">
