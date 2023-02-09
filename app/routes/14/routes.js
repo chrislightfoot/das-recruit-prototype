@@ -659,7 +659,7 @@ module.exports = function(router) {
       if (req.body.response == "yes") {
         res.redirect(301, '/' + base_url + req.params[0] + '/account/application-shared-saved-v1')
       } else if (req.body.response == "no") {
-        res.redirect(301, '/' + base_url + req.params[0] + "/view/6b-shared-applications-no");
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/6b-shared-applications-no-v1");
       }
   
     })
@@ -671,7 +671,7 @@ module.exports = function(router) {
       if (req.body.response == "yes") {
         res.redirect(301, '/' + base_url + req.params[0] + '/view/6b-shared-applications-yes-v2')
       } else if (req.body.response == "no") {
-        res.redirect(301, '/' + base_url + req.params[0] + "/view/6b-shared-applications-no");
+        res.redirect(301, '/' + base_url + req.params[0] + "/view/6b-shared-applications-no-v2");
       }
   
     })

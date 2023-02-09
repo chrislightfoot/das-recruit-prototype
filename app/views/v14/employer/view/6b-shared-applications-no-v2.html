@@ -14,7 +14,6 @@ Adverts
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
     <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -23,9 +22,11 @@ Adverts
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          You want to interview  applicant C5662EA. The applicant is now listed as Keith Stewart.
+          C5662EA has been unsuccessful. 
         </h3>
-        <p class="govuk-body">The applicant's contact details are now shown in their application. Your response has been sent to the training provider.</p>
+        <p>
+          Your response has been sent to the training provider.
+        </p>
       </div>
     </div>
 
@@ -85,10 +86,10 @@ Adverts
       date: "Not reviewed"
     },
     {
-      id: "Keith Stewart",
-      status: "INTERVIEWING",
-      link: "../account/application-shared-yes",
-      classes: "govuk-tag--yellow",
+      id: "C5662EA",
+      status: "UNSUCCESSFUL",
+      link: "../account/application-shared-no",
+      classes: "govuk-tag--red",
       date: "today"
     }
 ]
@@ -142,17 +143,17 @@ Adverts
 
 <!-- Today's date -->
 <script>
-var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var n = new Date();
-var y = n.getFullYear();
-var m = n.getMonth();
-var d = n.getDate();
-var todaysDate = d + " " + months[m] + " " + y;
-var td = document.getElementsByClassName("todays-date");
-for (let i = 0; i < td.length; i++) {
-  td[i].textContent = todaysDate
-}
-</script>
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var n = new Date();
+  var y = n.getFullYear();
+  var m = n.getMonth();
+  var d = n.getDate();
+  var todaysDate = d + " " + months[m] + " " + y;
+  var td = document.getElementsByClassName("todays-date");
+  for (let i = 0; i < td.length; i++) {
+    td[i].textContent = todaysDate
+  }
+  </script>
 
 <!-- Table sorts -->
 <script>
